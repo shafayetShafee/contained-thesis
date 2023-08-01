@@ -2,6 +2,7 @@ library(lme4)
 library(merDeriv)
 library(broom.mixed)
 library(purrr)
+library(stringr)
 library(tidyr)
 
 source(here::here("R/sim_utils.R"))
@@ -80,16 +81,20 @@ gen_mor_estimate <- function(m, n, sigma_b2, seed) {
           beta2_hat = beta2_hat, coverage = coverage))
 }
 
-out <- gen_mor_estimate(m = 100, n = 50, sigma_b2 = 2.5, seed = 1083)
+# out <- gen_mor_estimate(m = 100, n = 50, sigma_b2 = 2.5, seed = 1083)
 
 run_simulations <- function(m, n, sigma_b2, nsims = 1000, 
-                            log_file, append = TRUE) {
+                            log_file, append = FALSE) {
+  
+  cat(paste("Simulation Log for", Sys.Date(), "\n"),
+      file = log_file, append = append)
   
   out_mat <- matrix(NA, nrow = nsims, ncol = 7)
   colnames(out_mat) <- c("mor_hat", "se_mor_hat", "sigma_b2_hat", "beta0_hat", 
                          "beta1_hat", "beta2_hat", "coverage")
   cluster_info <- paste0("Started simulations for cluster size: ", n, " and #cluster: ", m, "\n")
   log_output(cluster_info, type = "Info", file = log_file)
+  has_problem <- 0
   
   for (i in 1:nsims) {
     seed <- floor(runif(1, 100, 1000000))
@@ -106,15 +111,28 @@ run_simulations <- function(m, n, sigma_b2, nsims = 1000,
     log_output(model_warnings, type = "warning", file = log_file)
     log_output(model_error, type = "error", file = log_file)
     
+    catch_msg <- "boundary (singular) fit"
+    prob_detected <- is_valid(str_detect(model_messages, pattern = fixed(catch_msg)))
+    if(prob_detected) {
+      zero_result <- rep(0, times = length(model_result))
+      names(zero_result) <- names(model_result)
+      model_result <- zero_result
+      has_problem <- has_problem + 1
+    } 
+    
     out_mat[i, ] <- model_result
-    cat(paste0("Stored output for iteration ", i), "\n")
+    log_output(paste0("Stored output for iteration ", i, "\n"), type="Info",
+               file = log_file)
   }
   
   out_mat_means <- colMeans(out_mat)
   sim_se_mor_hat <- sd(out_mat[, "mor_hat"])
+  runs_used = nrow(out_mat) - sum(apply(out_mat == 0, 1, all))
   
   return(c(cluster_number = m, cluster_size = n, out_mat_means, 
-    sim_se_mor_hat = sim_se_mor_hat))
+    sim_se_mor_hat = sim_se_mor_hat, 
+    problem_perc = has_problem / nsims,
+    runs_used = runs_used))
 }
 
 
@@ -130,9 +148,9 @@ cluster_params <- expand_grid(cluster_size = cluster_size,
                               cluster_numbers = cluster_numbers)
 log_file <- here::here("log/log_aug_01.txt")
 
-res1 <- map2(.x = cluster_params$cluster_numbers, 
+res1 <- map_dfr(.x = cluster_params$cluster_numbers, 
             .y = cluster_params$cluster_size, 
-            .f = ~ run_simulations(m = .x, n = .y, sigma_b2 = 2.5, nsims = 1000,
+            .f = ~ run_simulations(m = .x, n = .y, sigma_b2 = 2.5, nsims = 100,
                                    log_file = log_file)
             )
 

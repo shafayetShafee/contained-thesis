@@ -32,3 +32,8 @@ log_output <- function(x, type, file) {
   message(paste0(type, ": ", x, collapse = "\n"))
   cat(paste0(type, ": ", x, collapse = "\n"), "\n", file = file, append = TRUE)
 }
+
+
+is_valid <- function(x) {
+  !is.null(x) && !is.na(x) && x
+}
