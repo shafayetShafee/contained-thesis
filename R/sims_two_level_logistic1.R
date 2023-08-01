@@ -1,0 +1,125 @@
+library(lme4)
+library(merDeriv)
+library(broom.mixed)
+library(purrr)
+library(tidyr)
+
+gen_two_level_data <- function(m, n, sigma_b2, seed) {
+  # m => number of cluster
+  # n => size of each cluster
+  N = m*n 
+  
+  set.seed(seed)
+  
+  x1c <- rnorm(N)
+  x2 <- rnorm(N)
+  x2b <- ifelse(x2 <= 0.5, 0, 1)
+  
+  # sigma_b2 => variance of random effects
+  beta0 <- 2
+  beta1 <- 1.75
+  beta2 <- 0.67
+  
+  uj <- rep(rnorm(m, 0, sqrt(sigma_b2)), each = n)
+  eta_ij <- beta0 + beta1*x1c + beta2*x2b + uj
+  pi_ij <- exp(eta_ij) / (1 + exp(eta_ij))
+  
+  yij <- rbinom(N, size = 1, prob = pi_ij)
+  
+  multi_data <- data.frame(
+    cluster = rep(seq(m), each = n),
+    id = rep(seq(n), times = m),
+    uj = uj,
+    X1c = x1c,
+    X2b= x2b,
+    Yij = yij
+  )
+  
+  return(multi_data)
+}
+
+gen_mor_estimate <- function(m, n, sigma_b2, seed) {
+  multi_data <- gen_two_level_data(m, n, sigma_b2, seed)
+  multi_model <- glmer(Yij ~ X1c + X2b + (1 | cluster), 
+                       family = binomial("logit"),
+                       nAGQ = 20,
+                       data = multi_data)
+  
+  output_df <- tidy(multi_model)
+  fixed_effect <- output_df[output_df$effect == "fixed", ]$estimate
+  beta0_hat <- fixed_effect[1]
+  beta1_hat <- fixed_effect[2]
+  beta2_hat <- fixed_effect[3]
+  
+  sigma_b2_hat <- as.numeric(output_df[output_df$effect == "ran_pars", "estimate"]) ^ 2
+  
+  MOR_hat <- exp(sqrt(2 * sigma_b2_hat) * qnorm(0.75))
+  
+  vv <- merDeriv::vcov.glmerMod(multi_model, full = TRUE, ranpar = "sd")
+  se_sigma_b <- sqrt(diag(vv)[4])
+  # se_mor_hat <- MOR_hat * sqrt(2) * qnorm(0.75) * se_sigma_b
+  
+  log_mor_hat <- sqrt(2 * sigma_b2_hat) * qnorm(0.75)
+  log_se_mor_hat <- sqrt(2) * qnorm(0.75) * se_sigma_b
+  
+  ci <- log_mor_hat + c(-1, 1) * 1.96 * log_se_mor_hat
+  ci_exp <- exp(ci)
+  
+  true_sigma_b2 <- 2.5
+  true_MOR <- exp(sqrt(2 * true_sigma_b2) * qnorm(0.75))
+  
+  coverage <- as.numeric(ci_exp[1] <= true_MOR && ci_exp[2] >= true_MOR)
+  
+  se_mor_hat <- exp(sqrt(2) * qnorm(0.75) * se_sigma_b)
+  
+  return(c(mor_hat = MOR_hat, se_mor_hat = se_mor_hat,
+          sigma_b2_hat = sigma_b2_hat,
+          beta0_hat = beta0_hat, beta1_hat = beta1_hat, 
+          beta2_hat = beta2_hat, coverage = coverage))
+}
+
+
+# out <- gen_mor_estimate(m = 100, n = 50, sigma_b2 = 2.5, seed = 1083)
+
+run_simulations <- function(m, n, sigma_b2, nsims = 1000) {
+  
+  out_mat <- matrix(NA, nrow = nsims, ncol = 7)
+  colnames(out_mat) <- c("mor_hat", "se_mor_hat", "sigma_b2_hat", "beta0_hat", 
+                         "beta1_hat", "beta2_hat", "coverage")
+  message(paste0("\nStarted simulations for cluster size: ", n, " and #cluster: ", m, "\n"))
+  message("\nplaceholder matrix created\n")
+  
+  for (i in 1:nsims) {
+    out_mat[i, ] <- gen_mor_estimate(m = m, n = n, sigma_b2 = sigma_b2, 
+                                     seed = floor(runif(1, 200, 10000)))
+    message(paste0("Stored output for iteration ", i))
+  }
+  
+  out_mat_means <- colMeans(out_mat)
+  sim_se_mor_hat <- sd(out_mat[, "mor_hat"])
+  
+  return(c(cluster_number = m, cluster_size = n, out_mat_means, 
+    sim_se_mor_hat = sim_se_mor_hat))
+}
+
+# sigma_b2 <- 2.5
+# MOR <- exp(sqrt(2 * sigma_b2) * qnorm(0.75))
+# MOR
+
+# , 30, 50
+cluster_numbers <- c(50)
+# , 20, 30, 40, 50
+cluster_size <- c(5, 10, 15)
+cluster_params <- expand_grid(cluster_size = cluster_size, 
+                              cluster_numbers = cluster_numbers)
+
+res1 <- map2_dfr(.x = cluster_params$cluster_numbers, 
+            .y = cluster_params$cluster_size, 
+            .f = ~ run_simulations(m = .x, n = .y, sigma_b2 = 2.5, nsims = 1000)
+            )
+
+res3 <- dplyr::bind_rows(res, res1)
+            
+
+save(res3, file="sim_res3_23_jul.RData")
+saveRDS(res3, file="sim_res3_23_jul.rds")
