@@ -81,7 +81,6 @@ gen_mor_estimate <- function(m, n, sigma_b2, seed) {
           beta2_hat = beta2_hat, coverage = coverage))
 }
 
-# out <- gen_mor_estimate(m = 100, n = 50, sigma_b2 = 2.5, seed = 1083)
 
 run_simulations <- function(m, n, sigma_b2, nsims = 1000, 
                             log_file, append = FALSE) {
@@ -97,6 +96,7 @@ run_simulations <- function(m, n, sigma_b2, nsims = 1000,
   has_problem <- 0
   
   for (i in 1:nsims) {
+    # browser() 
     seed <- floor(runif(1, 100, 1000000))
     model_output <- safe_and_quietly(fun = gen_mor_estimate,
                                      m = m, n = n, sigma_b2 = sigma_b2, 
@@ -112,19 +112,23 @@ run_simulations <- function(m, n, sigma_b2, nsims = 1000,
     log_output(model_error, type = "error", file = log_file)
     
     catch_msg <- "boundary (singular) fit"
-    prob_detected <- is_valid(str_detect(model_messages, pattern = fixed(catch_msg)))
-    if(prob_detected) {
+    msg_prob_detected <- is_valid(str_detect(model_messages, pattern = fixed(catch_msg)))
+    
+    warning_detected <- is_valid_str(paste0(model_warnings, collapse = ""))
+    error_detected <- is_valid_str(paste0(model_error, collapse = ""))
+    
+    if(msg_prob_detected || warning_detected || error_detected) {
       zero_result <- rep(0, times = length(model_result))
       names(zero_result) <- names(model_result)
       model_result <- zero_result
       has_problem <- has_problem + 1
-    } 
+    }
     
     out_mat[i, ] <- model_result
     log_output(paste0("Stored output for iteration ", i, "\n"), type="Info",
                file = log_file)
   }
-  
+  print(out_mat)
   out_mat_means <- colMeans(out_mat)
   sim_se_mor_hat <- sd(out_mat[, "mor_hat"])
   runs_used = nrow(out_mat) - sum(apply(out_mat == 0, 1, all))
@@ -153,18 +157,24 @@ run_simulations <- function(m, n, sigma_b2, nsims = 1000,
 # MOR
 
 # , 30, 50
-cluster_numbers <- c(30)
+cluster_numbers <- c(50)
 # 10, 15, 20, 30, 40, 50
-cluster_size <- c(5)
+cluster_size <- c(50)
 cluster_params <- expand_grid(cluster_size = cluster_size, 
                               cluster_numbers = cluster_numbers)
 log_file <- here::here("log/log_aug_01.txt")
 
 res1 <- map_dfr(.x = cluster_params$cluster_numbers, 
             .y = cluster_params$cluster_size, 
-            .f = ~ run_simulations(m = .x, n = .y, sigma_b2 = 2.5, nsims = 50,
+            .f = ~ run_simulations(m = .x, n = .y, sigma_b2 = 2.5, nsims = 1000,
                                    log_file = log_file)
             )
+
+
+# problematic seed m = 10, n = 5
+# 869455 652503
+gen_mor_estimate(m = 10, n = 5, sigma_b2 = 2.5, seed = 869455)
+gen_mor_estimate(m = 10, n = 5, sigma_b2 = 2.5, seed = 652503)
 
 # res3 <- dplyr::bind_rows(res, res1)
 #             

@@ -34,6 +34,11 @@ log_output <- function(x, type, file) {
 }
 
 
+is_valid_str <- function(x) {
+  # `> 5` to prevent "NA"
+  !is.null(x) && !is.na(x) && is.character(x) && nchar(trimws(x)) > 5
+}
+
 is_valid <- function(x) {
   !is.null(x) && !is.na(x) && x
 }
