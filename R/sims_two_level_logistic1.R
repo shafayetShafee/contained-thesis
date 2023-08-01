@@ -69,8 +69,7 @@ gen_mor_estimate <- function(m, n, sigma_b2, seed) {
   ci <- log_mor_hat + c(-1, 1) * 1.96 * log_se_mor_hat
   ci_exp <- exp(ci)
   
-  true_sigma_b2 <- 2.5
-  true_MOR <- exp(sqrt(2 * true_sigma_b2) * qnorm(0.75))
+  true_MOR <- exp(sqrt(2 * sigma_b2) * qnorm(0.75))
   
   coverage <- as.numeric(ci_exp[1] <= true_MOR && ci_exp[2] >= true_MOR)
   
@@ -136,11 +135,14 @@ run_simulations <- function(m, n, sigma_b2, nsims = 1000,
                 labs(x = "log(MOR)",
                      title = cluster_info) +
                 theme_classic()
-  ggsave(paste0("hist_", m, "_", n, ".png"),
-         path = here::here("plots"))
+  ggsave(paste0("hist_", m, "_", n, ".png"), path = here::here("plots"))
+  
+  true_MOR <- exp(sqrt(2 * sigma_b2) * qnorm(0.75))
+  relative_bias <- as.numeric(((out_mat_means["mor_hat"] - true_MOR) / true_MOR) * 100)
   
   return(c(cluster_number = m, cluster_size = n, out_mat_means, 
     sim_se_mor_hat = sim_se_mor_hat, 
+    relative_bias = relative_bias,
     problem_perc = has_problem / nsims,
     runs_used = runs_used))
 }

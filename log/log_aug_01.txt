@@ -2,350 +2,352 @@ Simulation Log for 2023-08-02
 Info: Simulations for cluster size: 5 and #cluster: 30
  
 : -------------------------------------------------- 
-Using seed: 647137 
+Using seed: 591905 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 1
  
 : -------------------------------------------------- 
-Using seed: 559954 
+Using seed: 166517 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 2
  
 : -------------------------------------------------- 
-Using seed: 113650 
+Using seed: 435236 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 3
  
 : -------------------------------------------------- 
-Using seed: 600086 
+Using seed: 943027 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 4
  
 : -------------------------------------------------- 
-Using seed: 628226 
+Using seed: 934255 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 5
  
 : -------------------------------------------------- 
-Using seed: 359823 
+Using seed: 234474 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 6
  
 : -------------------------------------------------- 
-Using seed: 360074 
+Using seed: 317134 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 7
  
 : -------------------------------------------------- 
-Using seed: 426528 
+Using seed: 142261 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 8
  
 : -------------------------------------------------- 
-Using seed: 252056 
+Using seed: 354512 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 9
  
 : -------------------------------------------------- 
-Using seed: 49074 
+Using seed: 490159 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 10
  
 : -------------------------------------------------- 
-Using seed: 969422 
-message: NA 
+Using seed: 693377 
+message: boundary (singular) fit: see help('isSingular')
+ 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 11
  
 : -------------------------------------------------- 
-Using seed: 110811 
+Using seed: 787573 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 12
  
 : -------------------------------------------------- 
-Using seed: 855578 
+Using seed: 733830 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 13
  
 : -------------------------------------------------- 
-Using seed: 88111 
+Using seed: 977193 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 14
  
 : -------------------------------------------------- 
-Using seed: 804062 
+Using seed: 382591 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 15
  
 : -------------------------------------------------- 
-Using seed: 124961 
+Using seed: 197572 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 16
  
 : -------------------------------------------------- 
-Using seed: 643219 
+Using seed: 340000 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 17
  
 : -------------------------------------------------- 
-Using seed: 749603 
+Using seed: 355695 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 18
  
 : -------------------------------------------------- 
-Using seed: 642031 
+Using seed: 811170 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 19
  
 : -------------------------------------------------- 
-Using seed: 815718 
+Using seed: 332422 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 20
  
 : -------------------------------------------------- 
-Using seed: 558060 
+Using seed: 277261 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 21
  
 : -------------------------------------------------- 
-Using seed: 143715 
+Using seed: 705768 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 22
  
 : -------------------------------------------------- 
-Using seed: 458759 
+Using seed: 911836 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 23
  
 : -------------------------------------------------- 
-Using seed: 591427 
+Using seed: 578642 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 24
  
 : -------------------------------------------------- 
-Using seed: 471191 
+Using seed: 696486 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 25
  
 : -------------------------------------------------- 
-Using seed: 228359 
+Using seed: 486561 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 26
  
 : -------------------------------------------------- 
-Using seed: 155297 
+Using seed: 150424 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 27
  
 : -------------------------------------------------- 
-Using seed: 642348 
+Using seed: 29637 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 28
  
 : -------------------------------------------------- 
-Using seed: 198263 
+Using seed: 610552 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 29
  
 : -------------------------------------------------- 
-Using seed: 731880 
+Using seed: 583462 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 30
  
 : -------------------------------------------------- 
-Using seed: 311811 
+Using seed: 266009 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 31
  
 : -------------------------------------------------- 
-Using seed: 334145 
+Using seed: 200279 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 32
  
 : -------------------------------------------------- 
-Using seed: 895128 
+Using seed: 279377 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 33
  
 : -------------------------------------------------- 
-Using seed: 12163 
+Using seed: 977081 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 34
  
 : -------------------------------------------------- 
-Using seed: 262833 
+Using seed: 785516 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 35
  
 : -------------------------------------------------- 
-Using seed: 405975 
+Using seed: 91502 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 36
  
 : -------------------------------------------------- 
-Using seed: 593517 
+Using seed: 372478 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 37
  
 : -------------------------------------------------- 
-Using seed: 558677 
+Using seed: 532165 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 38
  
 : -------------------------------------------------- 
-Using seed: 931612 
+Using seed: 771409 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 39
  
 : -------------------------------------------------- 
-Using seed: 182981 
+Using seed: 971909 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 40
  
 : -------------------------------------------------- 
-Using seed: 77013 
+Using seed: 532537 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 41
  
 : -------------------------------------------------- 
-Using seed: 783385 
+Using seed: 638508 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 42
  
 : -------------------------------------------------- 
-Using seed: 522858 
+Using seed: 784529 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 43
  
 : -------------------------------------------------- 
-Using seed: 774639 
+Using seed: 980414 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 44
  
 : -------------------------------------------------- 
-Using seed: 284116 
+Using seed: 974650 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 45
  
 : -------------------------------------------------- 
-Using seed: 946028 
+Using seed: 787120 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 46
  
 : -------------------------------------------------- 
-Using seed: 998078 
-message: NA 
+Using seed: 629301 
+message: boundary (singular) fit: see help('isSingular')
+ 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 47
  
 : -------------------------------------------------- 
-Using seed: 460981 
+Using seed: 189869 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 48
  
 : -------------------------------------------------- 
-Using seed: 573994 
+Using seed: 79325 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 49
  
 : -------------------------------------------------- 
-Using seed: 149112 
+Using seed: 372499 
 message: NA 
 warning: NA 
 error: NA 
