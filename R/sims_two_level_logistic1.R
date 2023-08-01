@@ -4,6 +4,7 @@ library(broom.mixed)
 library(purrr)
 library(stringr)
 library(tidyr)
+library(ggplot2)
 
 source(here::here("R/sim_utils.R"))
 
@@ -92,7 +93,7 @@ run_simulations <- function(m, n, sigma_b2, nsims = 1000,
   out_mat <- matrix(NA, nrow = nsims, ncol = 7)
   colnames(out_mat) <- c("mor_hat", "se_mor_hat", "sigma_b2_hat", "beta0_hat", 
                          "beta1_hat", "beta2_hat", "coverage")
-  cluster_info <- paste0("Started simulations for cluster size: ", n, " and #cluster: ", m, "\n")
+  cluster_info <- paste0("Simulations for cluster size: ", n, " and #cluster: ", m, "\n")
   log_output(cluster_info, type = "Info", file = log_file)
   has_problem <- 0
   
@@ -129,6 +130,15 @@ run_simulations <- function(m, n, sigma_b2, nsims = 1000,
   sim_se_mor_hat <- sd(out_mat[, "mor_hat"])
   runs_used = nrow(out_mat) - sum(apply(out_mat == 0, 1, all))
   
+  log_mor_hat <- log(out_mat[, "mor_hat"])
+  hist_plot <- ggplot(tibble(log_mor_hat), aes(x = log_mor_hat)) +
+                geom_histogram(bins = 50) +
+                labs(x = "log(MOR)",
+                     title = cluster_info) +
+                theme_classic()
+  ggsave(paste0("hist_", m, "_", n, ".png"),
+         path = here::here("plots"))
+  
   return(c(cluster_number = m, cluster_size = n, out_mat_means, 
     sim_se_mor_hat = sim_se_mor_hat, 
     problem_perc = has_problem / nsims,
@@ -150,7 +160,7 @@ log_file <- here::here("log/log_aug_01.txt")
 
 res1 <- map_dfr(.x = cluster_params$cluster_numbers, 
             .y = cluster_params$cluster_size, 
-            .f = ~ run_simulations(m = .x, n = .y, sigma_b2 = 2.5, nsims = 100,
+            .f = ~ run_simulations(m = .x, n = .y, sigma_b2 = 2.5, nsims = 50,
                                    log_file = log_file)
             )
 
