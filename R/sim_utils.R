@@ -26,3 +26,9 @@ safe_and_quietly <- function(fun, ...){
   out <- map(out, length_zero_to_na)
   return(out)
 }
+
+
+log_output <- function(x, type, file) {
+  message(paste0(type, ": ", x, collapse = "\n"))
+  cat(paste0(type, ": ", x, collapse = "\n"), "\n", file = file, append = TRUE)
+}

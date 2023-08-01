@@ -1,0 +1,138 @@
+Info: Started simulations for cluster size: 5 and #cluster: 30
+ 
+: -------------------------------------------------- 
+Using seed: 211723 
+message: NA 
+warning: NA 
+error: NA 
+: -------------------------------------------------- 
+Using seed: 127591 
+message: NA 
+warning: NA 
+error: NA 
+: -------------------------------------------------- 
+Using seed: 727119 
+message: NA 
+warning: NA 
+error: NA 
+: -------------------------------------------------- 
+Using seed: 784330 
+message: NA 
+warning: NA 
+error: NA 
+: -------------------------------------------------- 
+Using seed: 215278 
+message: NA 
+warning: NA 
+error: NA 
+: -------------------------------------------------- 
+Using seed: 400226 
+message: NA 
+warning: NA 
+error: NA 
+: -------------------------------------------------- 
+Using seed: 188991 
+message: NA 
+warning: NA 
+error: NA 
+: -------------------------------------------------- 
+Using seed: 142083 
+message: NA 
+warning: NA 
+error: NA 
+: -------------------------------------------------- 
+Using seed: 883323 
+message: NA 
+warning: NA 
+error: NA 
+: -------------------------------------------------- 
+Using seed: 341821 
+message: NA 
+warning: NA 
+error: NA 
+: -------------------------------------------------- 
+Using seed: 53747 
+message: NA 
+warning: NA 
+error: NA 
+: -------------------------------------------------- 
+Using seed: 966818 
+message: NA 
+warning: NA 
+error: NA 
+: -------------------------------------------------- 
+Using seed: 98070 
+message: NA 
+warning: NA 
+error: NA 
+: -------------------------------------------------- 
+Using seed: 520267 
+message: NA 
+warning: NA 
+error: NA 
+: -------------------------------------------------- 
+Using seed: 80052 
+message: NA 
+warning: NA 
+error: NA 
+: -------------------------------------------------- 
+Using seed: 340630 
+message: NA 
+warning: NA 
+error: NA 
+: -------------------------------------------------- 
+Using seed: 73633 
+message: NA 
+warning: NA 
+error: NA 
+: -------------------------------------------------- 
+Using seed: 498107 
+message: boundary (singular) fit: see help('isSingular')
+ 
+warning: NA 
+error: NA 
+: -------------------------------------------------- 
+Using seed: 491344 
+message: NA 
+warning: NA 
+error: NA 
+: -------------------------------------------------- 
+Using seed: 342904 
+message: NA 
+warning: NA 
+error: NA 
+: -------------------------------------------------- 
+Using seed: 972886 
+message: NA 
+warning: NA 
+error: NA 
+: -------------------------------------------------- 
+Using seed: 586273 
+message: NA 
+warning: NA 
+error: NA 
+: -------------------------------------------------- 
+Using seed: 685613 
+message: NA 
+warning: NA 
+error: NA 
+: -------------------------------------------------- 
+Using seed: 867300 
+message: NA 
+warning: NA 
+error: NA 
+: -------------------------------------------------- 
+Using seed: 36749 
+message: NA 
+warning: NA 
+error: NA 
+: -------------------------------------------------- 
+Using seed: 945747 
+message: NA 
+warning: NA 
+error: NA 
+: -------------------------------------------------- 
+Using seed: 815412 
+message: NA 
+warning: NA 
+error: NA 

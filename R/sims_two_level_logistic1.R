@@ -4,6 +4,8 @@ library(broom.mixed)
 library(purrr)
 library(tidyr)
 
+source(here::here("R/sim_utils.R"))
+
 gen_two_level_data <- function(m, n, sigma_b2, seed) {
   # m => number of cluster
   # n => size of each cluster
@@ -78,21 +80,34 @@ gen_mor_estimate <- function(m, n, sigma_b2, seed) {
           beta2_hat = beta2_hat, coverage = coverage))
 }
 
+out <- gen_mor_estimate(m = 100, n = 50, sigma_b2 = 2.5, seed = 1083)
 
-# out <- gen_mor_estimate(m = 100, n = 50, sigma_b2 = 2.5, seed = 1083)
-
-run_simulations <- function(m, n, sigma_b2, nsims = 1000) {
+run_simulations <- function(m, n, sigma_b2, nsims = 1000, 
+                            log_file, append = TRUE) {
   
   out_mat <- matrix(NA, nrow = nsims, ncol = 7)
   colnames(out_mat) <- c("mor_hat", "se_mor_hat", "sigma_b2_hat", "beta0_hat", 
                          "beta1_hat", "beta2_hat", "coverage")
-  message(paste0("\nStarted simulations for cluster size: ", n, " and #cluster: ", m, "\n"))
-  message("\nplaceholder matrix created\n")
+  cluster_info <- paste0("Started simulations for cluster size: ", n, " and #cluster: ", m, "\n")
+  log_output(cluster_info, type = "Info", file = log_file)
   
   for (i in 1:nsims) {
-    out_mat[i, ] <- gen_mor_estimate(m = m, n = n, sigma_b2 = sigma_b2, 
-                                     seed = floor(runif(1, 200, 10000)))
-    message(paste0("Stored output for iteration ", i))
+    seed <- floor(runif(1, 100, 1000000))
+    model_output <- safe_and_quietly(fun = gen_mor_estimate,
+                                     m = m, n = n, sigma_b2 = sigma_b2, 
+                                     seed = seed)
+    model_result <- model_output$result
+    model_messages <- model_output$messages
+    model_warnings <- model_output$warnings
+    model_error <- model_output$error
+    log_output(paste0(rep("-", 50), collapse = ""), type = "", file = log_file)
+    log_output(seed, type = "Using seed", file = log_file)
+    log_output(model_messages, type = "message", file = log_file)
+    log_output(model_warnings, type = "warning", file = log_file)
+    log_output(model_error, type = "error", file = log_file)
+    
+    out_mat[i, ] <- model_result
+    cat(paste0("Stored output for iteration ", i), "\n")
   }
   
   out_mat_means <- colMeans(out_mat)
@@ -102,24 +117,27 @@ run_simulations <- function(m, n, sigma_b2, nsims = 1000) {
     sim_se_mor_hat = sim_se_mor_hat))
 }
 
+
 # sigma_b2 <- 2.5
 # MOR <- exp(sqrt(2 * sigma_b2) * qnorm(0.75))
 # MOR
 
 # , 30, 50
-cluster_numbers <- c(50)
-# , 20, 30, 40, 50
-cluster_size <- c(5, 10, 15)
+cluster_numbers <- c(30)
+# 10, 15, 20, 30, 40, 50
+cluster_size <- c(5)
 cluster_params <- expand_grid(cluster_size = cluster_size, 
                               cluster_numbers = cluster_numbers)
+log_file <- here::here("log/log_aug_01.txt")
 
-res1 <- map2_dfr(.x = cluster_params$cluster_numbers, 
+res1 <- map2(.x = cluster_params$cluster_numbers, 
             .y = cluster_params$cluster_size, 
-            .f = ~ run_simulations(m = .x, n = .y, sigma_b2 = 2.5, nsims = 1000)
+            .f = ~ run_simulations(m = .x, n = .y, sigma_b2 = 2.5, nsims = 1000,
+                                   log_file = log_file)
             )
 
-res3 <- dplyr::bind_rows(res, res1)
-            
-
-save(res3, file="sim_res3_23_jul.RData")
-saveRDS(res3, file="sim_res3_23_jul.rds")
+# res3 <- dplyr::bind_rows(res, res1)
+#             
+# 
+# save(res3, file="sim_res3_23_jul.RData")
+# saveRDS(res3, file="sim_res3_23_jul.rds")

@@ -19,3 +19,4 @@ m1 <- lmer(Reaction ~ Days + (Days|Subject), data = sleepstudy)
 vv1 <- vcov(m1, full=TRUE)
 
 sqrt(diag(vv1))
+
