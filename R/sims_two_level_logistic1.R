@@ -5,10 +5,10 @@ source(here::here("R/sim_funcs.R"))
 # MOR
 
 # m = 10, 30, 50
-cluster_numbers <- c(10, 30, 50)
+cluster_numbers <- c(30)
 
 # n = 10, 15, 30, 50
-cluster_size <- c(30)
+cluster_size <- c(50)
 
 cluster_params <- expand_grid(cluster_size = cluster_size, 
                               cluster_numbers = cluster_numbers)
@@ -23,5 +23,5 @@ res1 <- map2_dfr(.x = cluster_params$cluster_numbers,
 final_res <- dplyr::bind_rows(final_res, res1)
 
 
-save(final_res, file="sim_res_05_aug.RData")
-saveRDS(final_res, file="sim_res05_aug.rds")
+save(final_res, file=here::here("sim-results/rdata/sim_res_05_aug.RData"))
+saveRDS(final_res, file=here::here("sim-results/rds/sim_res05_aug.rds"))
