@@ -5,7 +5,7 @@ source(here::here("R/sim_funcs.R"))
 # MOR
 
 # m = 10, 30, 50
-cluster_numbers <- c(30)
+cluster_numbers <- c(50)
 
 # n = 10, 15, 30, 50
 cluster_size <- c(50)
