@@ -65,7 +65,8 @@ gen_mor_estimate <- function(m, n, sigma_b2, seed) {
   se_sigma_b <- sqrt(diag(vv)[4])
   # se_mor_hat <- MOR_hat * sqrt(2) * qnorm(0.75) * se_sigma_b
   
-  log_mor_hat <- sqrt(2 * sigma_b2_hat) * qnorm(0.75)
+  # log_mor_hat <- sqrt(2 * sigma_b2_hat) * qnorm(0.75)
+  log_mor_hat <- log(MOR_hat)
   log_se_mor_hat <- sqrt(2) * qnorm(0.75) * se_sigma_b
   
   ci <- log_mor_hat + c(-1, 1) * 1.96 * log_se_mor_hat
@@ -77,10 +78,18 @@ gen_mor_estimate <- function(m, n, sigma_b2, seed) {
   
   se_mor_hat <- exp(sqrt(2) * qnorm(0.75) * se_sigma_b)
   
-  return(c(mor_hat = MOR_hat, se_mor_hat = se_mor_hat,
-           sigma_b2_hat = sigma_b2_hat,
-           beta0_hat = beta0_hat, beta1_hat = beta1_hat, 
-           beta2_hat = beta2_hat, coverage = coverage))
+  out_vec <- c(mor_hat = MOR_hat, se_mor_hat = se_mor_hat,
+               sigma_b2_hat = sigma_b2_hat,
+               beta0_hat = beta0_hat, beta1_hat = beta1_hat, 
+               beta2_hat = beta2_hat, coverage = coverage)
+  
+  if(MOR_hat > 50) {
+    out_vec_names <- names(out_vec)
+    out_vec <- rep(NA, length(out_vec))
+    names(out_vec) <- out_vec_names
+  }
+  
+  return(out_vec)
 }
 
 
@@ -120,9 +129,9 @@ run_simulations <- function(m, n, sigma_b2, nsims = 1000,
     error_detected <- is_valid_str(paste0(model_error, collapse = ""))
     
     if(msg_prob_detected || warning_detected || error_detected) {
-      zero_result <- rep(0, times = length(model_result))
-      names(zero_result) <- names(model_result)
-      model_result <- zero_result
+      NA_result <- rep(NA, times = length(model_result))
+      names(NA_result) <- names(model_result)
+      model_result <- NA_result
       has_problem <- has_problem + 1
     }
     
@@ -131,17 +140,17 @@ run_simulations <- function(m, n, sigma_b2, nsims = 1000,
                file = log_file)
   }
   # print(out_mat)
-  out_mat_means <- colMeans(out_mat)
-  sim_se_mor_hat <- sd(out_mat[, "mor_hat"])
-  runs_used = nrow(out_mat) - sum(apply(out_mat == 0, 1, all))
+  out_mat_means <- colMeans(out_mat, na.rm = TRUE)
+  sim_se_mor_hat <- sd(out_mat[, "mor_hat"], na.rm = TRUE)
+  runs_used = nrow(out_mat) - sum(apply(is.na(out_mat), 1, all))
   
   log_mor_hat <- log(out_mat[, "mor_hat"])
   hist_plot <- ggplot(tibble(log_mor_hat), aes(x = log_mor_hat)) +
-    geom_histogram(bins = 50) +
+    geom_histogram(bins = 30) +
     labs(x = "log(MOR)",
          title = cluster_info) +
     theme_classic()
-  ggsave(paste0("hist_", m, "_", n, ".png"), path = here::here("plots"))
+  ggsave(paste0("hist_", m, "_", n, ".png"), path = here::here("plots/ran-int"))
   
   true_MOR <- exp(sqrt(2 * sigma_b2) * qnorm(0.75))
   relative_bias <- as.numeric(((out_mat_means["mor_hat"] - true_MOR) / true_MOR) * 100)
