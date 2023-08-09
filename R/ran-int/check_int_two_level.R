@@ -32,7 +32,7 @@ library(lme4)
 library(broom.mixed)
 
 multi_model <- glmer(Yij ~ X1c + X2b + (1 | cluster), 
-                     family = binomial("logit"),
+                     family = binomial("logit"), nAGQ = 20,
                      data = multi_data)
 
 summary(multi_model)
