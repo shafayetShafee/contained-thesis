@@ -38,38 +38,23 @@ multi_data <- data.frame(
   Yij = yij
 )
 
-library(lme4)
-library(broom.mixed)
+library(GLMMadaptive)
 
-# multi_model <- glmer(Yij ~ X1c + X2b + (X1c| cluster),
-#                      family = binomial("logit"), nAGQ = 1,
-#                      data = multi_data)
-# vc_slope <- VarCorr(multi_model2)
-# print(vc_slope, comp=c("Variance","Std.Dev."), corr = F)
-# 
-# sigma_u_hat <- (output_df[output_df$effect == "ran_pars", ]$estimate)
-#
-# library(merDeriv)
-#
-# vv <- merDeriv::vcov.glmerMod(multi_model, full = TRUE, ranpar = "var")
-# colnames(vv)
-# 
-# v <- diag(vv)[4:6]
+multi_model <- mixed_model(fixed = Yij ~ X1c + X2b,
+                           random = ~ X1c | cluster, data = multi_data,
+                           nAGQ = 11,
+                           family = binomial())
 
-multi_model2 <- GLMMadaptive::mixed_model(fixed = Yij ~ X1c + X2b,
-                                          random = ~ X1c | cluster, data = multi_data,
-                                          family = binomial())
-
-summary(multi_model2)
-
-sym_mat_to_vec <- function(x) x[upper.tri(x, diag = TRUE)]
-
-sigma_u_hat <- sym_mat_to_vec(multi_model2$D)
+summary(multi_model)
 
 
-v <- diag(vcov(multi_model2, parm = "var-cov"))
+
+sigma_u_hat <- sym_mat_to_vec(multi_model$D)
+
+rand_var <- vcov_orig_scale(multi_model)
 
 
+v <- diag(rand_var)
 v_mat <- diag(c(v[1], v[3], v[2]))
 
 library(numDeriv)
@@ -81,11 +66,31 @@ log_mor_expr <- function(x) {
 x1_val <- 0.5
 true_mor <- exp(sqrt(2*sigma2_u0 + 2*x1_val^2*sigma2_u1 + 4*x1_val*sigma2_01) * qnorm(0.75))
 
-mor_hat <- exp(sqrt(2*sigma_u_hat[1]^2 + 2*x1_val^2*sigma_u_hat[3] + 4*x1_val*prod(sigma_u_hat)) * qnorm(0.75))
+mor_hat <- exp(sqrt(2*sigma_u_hat[1] + 2*x1_val^2*sigma_u_hat[3] + 4*x1_val*prod(sigma_u_hat)) * qnorm(0.75))
 
 J <- numDeriv::jacobian(log_mor_expr, c(sigma_u_hat[1]^2, sigma_u_hat[3]^2, prod(sigma_u_hat))) # success
 
 var_log_mor <- as.numeric(J %*% v_mat %*% t(J))
 
-# MOR <- exp(sqrt(2 * sigma_b2) * qnorm(0.75))
-# MOR_hat <- exp(sqrt(2 * sigma_b2_hat) * qnorm(0.75))
+
+
+# attempt with lme4 -------------------------------------------------------
+
+# library(lme4)
+# library(broom.mixed)
+
+# multi_model <- glmer(Yij ~ X1c + X2b + (X1c| cluster),
+#                      family = binomial("logit"), nAGQ = 1,
+#                      data = multi_data)
+# vc_slope <- VarCorr(multi_model)
+# print(vc_slope, comp=c("Variance","Std.Dev."), corr = F)
+# 
+# sigma_u_hat <- (output_df[output_df$effect == "ran_pars", ]$estimate)
+#
+# library(merDeriv)
+#
+# vv <- merDeriv::vcov.glmerMod(multi_model, full = TRUE, ranpar = "var")
+# colnames(vv)
+# 
+# v <- diag(vv)[4:6]
+

@@ -39,6 +39,37 @@ is_valid_str <- function(x) {
   !is.null(x) && !is.na(x) && is.character(x) && nchar(trimws(x)) > 5
 }
 
+
 is_valid <- function(x) {
   !is.null(x) && !is.na(x) && x
+}
+
+
+sym_mat_to_vec <- function(x) x[upper.tri(x, diag = TRUE)]
+
+
+D_chol_to_D <- function(x) {
+  # transform the log-cholesky parameterized value back to original scale
+  D <- GLMMadaptive:::chol_transf(x)
+  D[upper.tri(D, diag = TRUE)]
+}
+
+
+vcov_orig_scale <- function(model, ...) {
+  D <- model$D
+  
+  # transform from covariance matrix to entries of cholesky factor with 
+  # log-transformed main diagonal
+  D_chol_entries <- GLMMadaptive:::chol_transf(D)
+  V_chol <- vcov(model, parm = "var-cov")
+  
+  J <- numDeriv::jacobian(D_chol_to_D, D_chol_entries)
+  # delta method (estimated covariance matrix of entries of D)
+  V <- J %*% V_chol %*% t(J)
+  
+  # se <- sqrt(diag(V))
+  # names(se) <- colnames(V_chol)
+  # return(se)
+  
+  return(V)
 }
