@@ -1,22 +1,22 @@
 source(here::here("R/sim_funcs.R"))
 
-# sigma_b2 <- 2.5
-# MOR <- exp(sqrt(2 * sigma_b2) * qnorm(0.75))
+# sigma_u_sq <- 2.5
+# MOR <- exp(sqrt(2 * sigma_u_sq) * qnorm(0.75))
 # MOR
 
 # m = 10, 30, 50
-cluster_numbers <- c(30, 50)
+cluster_numbers <- c(50)
 
 # n = 10, 15, 30, 50
-cluster_size <- c(10)
+cluster_size <- c(50)
 
 cluster_params <- expand_grid(cluster_size = cluster_size, 
                               cluster_numbers = cluster_numbers)
-log_file <- here::here("log/log_aug_08.txt")
+log_file <- here::here("log/log_aug_18.txt")
 
 res <- map2_dfr(.x = cluster_params$cluster_numbers, 
             .y = cluster_params$cluster_size, 
-            .f = ~ run_simulations(m = .x, n = .y, sigma_b2 = 2.5, nsims = 1000,
+            .f = ~ run_simulations(m = .x, n = .y, sigma_u_sq = 2.5, nsims = 10,
                                    log_file = log_file, append = TRUE)
             )
 
