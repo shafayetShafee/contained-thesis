@@ -1,5 +1,5 @@
-m = 100 # number of cluster
-n = 30 # size of each cluster
+m = 10 # number of cluster
+n = 10 # size of each cluster
 N = m*n 
 
 set.seed(1083)
@@ -11,9 +11,8 @@ x2b <- ifelse(x2 <= 0.5, 0, 1)
 sigma2_u0 <- 2.5
 sigma2_u1 <- 2.1
 sigma2_01 <- 0.75
-sigma_mat <- matrix(c(sigma2_u0, sigma2_01,
-                      sigma2_01, sigma2_u1), byrow = TRUE, 
-                    nrow = 2, ncol = 2)
+sigma_mat <- matrix(c(sigma2_u0, sigma2_01, sigma2_01, sigma2_u1), 
+                    byrow = TRUE, nrow = 2, ncol = 2)
 
 u <- MASS::mvrnorm(m, mu = c(0, 0), Sigma = sigma_mat)
 u0j <- rep(u[, 1], each = n)
@@ -40,19 +39,15 @@ multi_data <- data.frame(
 
 library(GLMMadaptive)
 
-multi_model <- mixed_model(fixed = Yij ~ X1c + X2b,
-                           random = ~ X1c | cluster, data = multi_data,
-                           nAGQ = 11,
-                           family = binomial())
+multi_model <- mixed_model(fixed = Yij ~ X1c + X2b, random = ~ X1c | cluster, 
+                           data = multi_data, nAGQ = 11, family = binomial())
 
 summary(multi_model)
+multi_model$D
 
-
-
-sigma_u_hat <- sym_mat_to_vec(multi_model$D)
+sigma_u_hat <- sym_mat_to_vec(multi_model$D) # var-cov matrix (estimate of random effects)
 
 rand_var <- vcov_orig_scale(multi_model)
-
 
 v <- diag(rand_var)
 v_mat <- diag(c(v[1], v[3], v[2]))
@@ -66,9 +61,12 @@ log_mor_expr <- function(x) {
 x1_val <- 0.5
 true_mor <- exp(sqrt(2*sigma2_u0 + 2*x1_val^2*sigma2_u1 + 4*x1_val*sigma2_01) * qnorm(0.75))
 
-mor_hat <- exp(sqrt(2*sigma_u_hat[1] + 2*x1_val^2*sigma_u_hat[3] + 4*x1_val*prod(sigma_u_hat)) * qnorm(0.75))
+mor_hat <- exp(
+      sqrt(2*sigma_u_hat[1] + 2*x1_val^2*sigma_u_hat[3] + 4*x1_val*sigma_u_hat[2]) 
+      * qnorm(0.75)
+  )
 
-J <- numDeriv::jacobian(log_mor_expr, c(sigma_u_hat[1]^2, sigma_u_hat[3]^2, prod(sigma_u_hat))) # success
+J <- numDeriv::jacobian(log_mor_expr, c(sigma_u_hat[1], sigma_u_hat[3], sigma_u_hat[2])) # success
 
 var_log_mor <- as.numeric(J %*% v_mat %*% t(J))
 
