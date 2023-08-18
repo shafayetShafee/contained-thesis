@@ -89,9 +89,9 @@ gen_int_mor_estimate <- function(m, n, sigma_u_sq, seed) {
                beta2_hat = beta2_hat, coverage = coverage,
                converged = is_model_converged)
   
-  if(!is_model_converged) {
+  if(!is_model_converged || mor_hat > 20) {
     out_vec_names <- names(out_vec)
-    out_vec <- c(rep(NA, length(out_vec) - 1), is_model_converged)
+    out_vec <- c(rep(NA, length(out_vec) - 1), FALSE)
     names(out_vec) <- out_vec_names
   }
   
@@ -195,7 +195,7 @@ run_simulations <- function(m, n, sigma_u_sq, nsims = 1000,
   out_mat <- sim_output$out_mat
   out_mat_means <- colMeans(out_mat, na.rm = TRUE)
   sim_se_mor_hat <- sd(out_mat[, "mor_hat"], na.rm = TRUE)
-  runs_used = unname(out_mat_means["converged"]) * nsims
+  runs_used = unname(sum(out_mat["converged"], na.rm = TRUE))
   
   # relative bias clac --------------------------
   true_mor <- sim_output$true_mor
