@@ -102,23 +102,15 @@ gen_int_mor_estimate <- function(m, n, sigma_u_sq, seed) {
 # gen_int_mor_estimate(50, 50, 2.5, 1083)
 
 
-log_sim_run <- function(obj, simulation_seed, log_file, iter_no) {
-  # obj => object returned by `safely_and_quietly`
-  
-  # extraction ---------------------
-  model_result <- obj$result
-  model_convergence <- model_result["converged"]
-  model_messages <- obj$messages
-  model_warnings <- obj$warnings
-  model_error <- obj$error
-  
+log_sim_run <- function(convergence, message, warning, error, 
+                        simulation_seed, log_file, iter_no) {
   # started logging ----------------
   log_output(paste0(rep("-", 50), collapse = ""), type = "", file = log_file)
   log_output(simulation_seed, type = "Using seed", file = log_file)
-  log_output(as.logical(model_convergence), type = "converged", file = log_file)
-  log_output(model_messages, type = "message", file = log_file)
-  log_output(model_warnings, type = "warning", file = log_file)
-  log_output(model_error, type = "error", file = log_file)
+  log_output(as.logical(convergence), type = "converged", file = log_file)
+  log_output(message, type = "message", file = log_file)
+  log_output(warning, type = "warning", file = log_file)
+  log_output(error, type = "error", file = log_file)
   log_output(
     paste0("Stored output for iteration ", iter_no, "\n"), 
     type="Info", file = log_file
@@ -140,12 +132,31 @@ simulate_int <- function(m, n, sigma_u_sq, nsims = 1000, log_file, ...) {
                                      m = m, n = n, sigma_u_sq = sigma_u_sq, 
                                      seed = seed)
     
-    # logging simulation run --------------------
-    log_sim_run(model_output, simulation_seed = seed, log_file = log_file,
-                iter_no = i)
+    # extraction ---------------------
+    model_result <- model_output$result
+    model_convergence <- model_result["converged"]
+    model_messages <- model_output$messages
+    model_warnings <- model_output$warnings
+    model_error <- model_output$error
     
+    # logging simulation run --------------------
+    log_sim_run(convergence = model_convergence, message = model_messages, 
+                warning = model_warnings, error = model_error,
+                simulation_seed = seed, log_file = log_file, iter_no = i)
+    
+    # account for error -------------------------
+    msg_prob_detected <- is_valid_str(paste0(model_messages, collapse = ""))
+    warning_detected <- is_valid_str(paste0(model_warnings, collapse = ""))
+    error_detected <- is_valid_str(paste0(model_error, collapse = ""))
+
+    if(msg_prob_detected || warning_detected || error_detected) {
+      NA_result <- rep(NA, times = length(model_result))
+      names(NA_result) <- names(model_result)
+      model_result <- NA_result
+    }
+
     # storing sim-run ---------------------------
-    out_mat[i, ] <- model_output$result
+    out_mat[i, ] <- model_result
   }
   
   # true MOR (needed for relative bias calculation)
@@ -163,7 +174,7 @@ simulate_int <- function(m, n, sigma_u_sq, nsims = 1000, log_file, ...) {
 run_simulations <- function(m, n, sigma_u_sq, nsims = 1000, 
                             simulation_type = c("int", "slope"),
                             log_file, append = FALSE) {
-  # browser()
+  
   cat(
     paste("Simulation Log for", Sys.time(), "\n"), 
     file = log_file, append = append
@@ -183,8 +194,8 @@ run_simulations <- function(m, n, sigma_u_sq, nsims = 1000,
                 )
   out_mat <- sim_output$out_mat
   out_mat_means <- colMeans(out_mat, na.rm = TRUE)
-  sim_se_mor_hat <- mean(out_mat[, "mor_hat"], na.rm = TRUE)
-  runs_used = out_mat_means["converged"] * 1000
+  sim_se_mor_hat <- sd(out_mat[, "mor_hat"], na.rm = TRUE)
+  runs_used = unname(out_mat_means["converged"]) * nsims
   
   # relative bias clac --------------------------
   true_mor <- sim_output$true_mor
@@ -212,18 +223,3 @@ run_simulations <- function(m, n, sigma_u_sq, nsims = 1000,
 
 # catch_msg <- "boundary (singular) fit"
 # msg_prob_detected <- is_valid(str_detect(model_messages, pattern = fixed(catch_msg)))
-# 
-# warning_detected <- is_valid_str(paste0(model_warnings, collapse = ""))
-# error_detected <- is_valid_str(paste0(model_error, collapse = ""))
-# 
-# if(msg_prob_detected || warning_detected || error_detected) {
-#   NA_result <- rep(NA, times = length(model_result))
-#   names(NA_result) <- names(model_result)
-#   model_result <- NA_result
-#   has_problem <- has_problem + 1
-# }
-# 
-# model_convergence <- model_result["converged"]
-# model_messages <- model_output$messages
-# model_warnings <- model_output$warnings
-# model_error <- model_output$error

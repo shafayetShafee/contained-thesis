@@ -4,11 +4,11 @@ source(here::here("R/sim_funcs.R"))
 # MOR <- exp(sqrt(2 * sigma_u_sq) * qnorm(0.75))
 # MOR
 
-# m = 10, 30, 50
-cluster_numbers <- c(50)
+# m = 10, 30, 50, 100
+cluster_numbers <- c(10)
 
-# n = 10, 15, 30, 50
-cluster_size <- c(50)
+# n = 5, 10, 30, 50
+cluster_size <- c(5)
 
 cluster_params <- expand_grid(cluster_size = cluster_size, 
                               cluster_numbers = cluster_numbers)

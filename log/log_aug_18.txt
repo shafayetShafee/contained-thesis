@@ -1,7186 +1,1539 @@
-Simulation Log for 2023-08-18 18:10:40.375534 
-Info: Simulations for cluster size: 50 and #cluster: 50
+
+
+Simulation Log for 2023-08-18 22:45:10.470274 
+Info: Simulations for cluster size: 5 and cluster number: 10
  
 : -------------------------------------------------- 
-Using seed: 321351 
+Using seed: 718142 
+converged: NA 
 message: NA 
 warning: NA 
-error: NA 
+error: A large coefficient value has been detected during the optimization.
+ Please re-scale you covariates and/or try setting the control argument
+ 'iter_EM = 0'. Alternatively, this may due to a
+ divergence of the optimization algorithm, indicating that an overly
+ complex model is fitted to the data. For example, this could be
+ caused when including random-effects terms (e.g., in the
+ zero-inflated part) that you do not need. Otherwise, adjust the
+ 'max_coef_value' control argument.
+ 
 Info: Stored output for iteration 1
  
 : -------------------------------------------------- 
-Using seed: 184135 
+Using seed: 871342 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 2
  
 : -------------------------------------------------- 
-Using seed: 463631 
+Using seed: 406043 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 3
  
 : -------------------------------------------------- 
-Using seed: 664849 
+Using seed: 792101 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 4
  
 : -------------------------------------------------- 
-Using seed: 541142 
+Using seed: 345333 
+converged: NA 
 message: NA 
 warning: NA 
-error: NA 
+error: A large coefficient value has been detected during the optimization.
+ Please re-scale you covariates and/or try setting the control argument
+ 'iter_EM = 0'. Alternatively, this may due to a
+ divergence of the optimization algorithm, indicating that an overly
+ complex model is fitted to the data. For example, this could be
+ caused when including random-effects terms (e.g., in the
+ zero-inflated part) that you do not need. Otherwise, adjust the
+ 'max_coef_value' control argument.
+ 
 Info: Stored output for iteration 5
  
 : -------------------------------------------------- 
-Using seed: 878027 
+Using seed: 956427 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 6
  
 : -------------------------------------------------- 
-Using seed: 140361 
+Using seed: 153962 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 7
  
 : -------------------------------------------------- 
-Using seed: 75532 
+Using seed: 730403 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 8
  
 : -------------------------------------------------- 
-Using seed: 551123 
+Using seed: 41926 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 9
  
 : -------------------------------------------------- 
-Using seed: 763520 
+Using seed: 535388 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 10
  
 : -------------------------------------------------- 
-Using seed: 997612 
+Using seed: 416259 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 11
  
 : -------------------------------------------------- 
-Using seed: 455163 
+Using seed: 97723 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 12
  
 : -------------------------------------------------- 
-Using seed: 55888 
+Using seed: 212432 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 13
  
 : -------------------------------------------------- 
-Using seed: 576940 
+Using seed: 670633 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 14
  
 : -------------------------------------------------- 
-Using seed: 727620 
+Using seed: 512745 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 15
  
 : -------------------------------------------------- 
-Using seed: 883059 
+Using seed: 958423 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 16
  
 : -------------------------------------------------- 
-Using seed: 834143 
+Using seed: 948408 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 17
  
 : -------------------------------------------------- 
-Using seed: 958095 
+Using seed: 5013 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 18
  
 : -------------------------------------------------- 
-Using seed: 698722 
+Using seed: 364462 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 19
  
 : -------------------------------------------------- 
-Using seed: 467497 
+Using seed: 833966 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 20
  
 : -------------------------------------------------- 
-Using seed: 412938 
+Using seed: 662110 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 21
  
 : -------------------------------------------------- 
-Using seed: 851387 
+Using seed: 251384 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 22
  
 : -------------------------------------------------- 
-Using seed: 128546 
+Using seed: 74854 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 23
  
 : -------------------------------------------------- 
-Using seed: 461990 
+Using seed: 666790 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 24
  
 : -------------------------------------------------- 
-Using seed: 954844 
+Using seed: 186205 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 25
  
 : -------------------------------------------------- 
-Using seed: 94815 
+Using seed: 156772 
+converged: NA 
 message: NA 
 warning: NA 
-error: NA 
+error: A large coefficient value has been detected during the optimization.
+ Please re-scale you covariates and/or try setting the control argument
+ 'iter_EM = 0'. Alternatively, this may due to a
+ divergence of the optimization algorithm, indicating that an overly
+ complex model is fitted to the data. For example, this could be
+ caused when including random-effects terms (e.g., in the
+ zero-inflated part) that you do not need. Otherwise, adjust the
+ 'max_coef_value' control argument.
+ 
 Info: Stored output for iteration 26
  
 : -------------------------------------------------- 
-Using seed: 804984 
+Using seed: 734004 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 27
  
 : -------------------------------------------------- 
-Using seed: 339228 
+Using seed: 182497 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 28
  
 : -------------------------------------------------- 
-Using seed: 900358 
+Using seed: 595821 
+converged: NA 
 message: NA 
 warning: NA 
-error: NA 
+error: A large coefficient value has been detected during the optimization.
+ Please re-scale you covariates and/or try setting the control argument
+ 'iter_EM = 0'. Alternatively, this may due to a
+ divergence of the optimization algorithm, indicating that an overly
+ complex model is fitted to the data. For example, this could be
+ caused when including random-effects terms (e.g., in the
+ zero-inflated part) that you do not need. Otherwise, adjust the
+ 'max_coef_value' control argument.
+ 
 Info: Stored output for iteration 29
  
 : -------------------------------------------------- 
-Using seed: 551846 
+Using seed: 957146 
+converged: NA 
 message: NA 
 warning: NA 
-error: NA 
+error: A large coefficient value has been detected during the optimization.
+ Please re-scale you covariates and/or try setting the control argument
+ 'iter_EM = 0'. Alternatively, this may due to a
+ divergence of the optimization algorithm, indicating that an overly
+ complex model is fitted to the data. For example, this could be
+ caused when including random-effects terms (e.g., in the
+ zero-inflated part) that you do not need. Otherwise, adjust the
+ 'max_coef_value' control argument.
+ 
 Info: Stored output for iteration 30
  
 : -------------------------------------------------- 
-Using seed: 585489 
+Using seed: 326640 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 31
  
 : -------------------------------------------------- 
-Using seed: 992129 
+Using seed: 864807 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 32
  
 : -------------------------------------------------- 
-Using seed: 428973 
+Using seed: 334779 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 33
  
 : -------------------------------------------------- 
-Using seed: 536564 
+Using seed: 187857 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 34
  
 : -------------------------------------------------- 
-Using seed: 688633 
+Using seed: 134584 
+converged: TRUE 
 message: NA 
-warning: NA 
+warning: Hessian matrix at convergence is not positive definite; unstable solution.
+
+warning: NaNs produced 
 error: NA 
 Info: Stored output for iteration 35
  
 : -------------------------------------------------- 
-Using seed: 557886 
+Using seed: 649378 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 36
  
 : -------------------------------------------------- 
-Using seed: 968338 
+Using seed: 19634 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 37
  
 : -------------------------------------------------- 
-Using seed: 200273 
+Using seed: 955801 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 38
  
 : -------------------------------------------------- 
-Using seed: 313863 
+Using seed: 892306 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 39
  
 : -------------------------------------------------- 
-Using seed: 449607 
+Using seed: 695445 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 40
  
 : -------------------------------------------------- 
-Using seed: 374854 
+Using seed: 384872 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 41
  
 : -------------------------------------------------- 
-Using seed: 86498 
+Using seed: 569576 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 42
  
 : -------------------------------------------------- 
-Using seed: 230417 
+Using seed: 794449 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 43
  
 : -------------------------------------------------- 
-Using seed: 478811 
+Using seed: 845258 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 44
  
 : -------------------------------------------------- 
-Using seed: 705713 
+Using seed: 392647 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 45
  
 : -------------------------------------------------- 
-Using seed: 254040 
+Using seed: 94869 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 46
  
 : -------------------------------------------------- 
-Using seed: 545524 
+Using seed: 122978 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 47
  
 : -------------------------------------------------- 
-Using seed: 728890 
+Using seed: 780536 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 48
  
 : -------------------------------------------------- 
-Using seed: 230321 
+Using seed: 429378 
+converged: FALSE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 49
  
 : -------------------------------------------------- 
-Using seed: 142739 
+Using seed: 383413 
+converged: NA 
 message: NA 
 warning: NA 
-error: NA 
+error: A large coefficient value has been detected during the optimization.
+ Please re-scale you covariates and/or try setting the control argument
+ 'iter_EM = 0'. Alternatively, this may due to a
+ divergence of the optimization algorithm, indicating that an overly
+ complex model is fitted to the data. For example, this could be
+ caused when including random-effects terms (e.g., in the
+ zero-inflated part) that you do not need. Otherwise, adjust the
+ 'max_coef_value' control argument.
+ 
 Info: Stored output for iteration 50
  
 : -------------------------------------------------- 
-Using seed: 271191 
+Using seed: 777045 
+converged: NA 
 message: NA 
 warning: NA 
-error: NA 
+error: A large coefficient value has been detected during the optimization.
+ Please re-scale you covariates and/or try setting the control argument
+ 'iter_EM = 0'. Alternatively, this may due to a
+ divergence of the optimization algorithm, indicating that an overly
+ complex model is fitted to the data. For example, this could be
+ caused when including random-effects terms (e.g., in the
+ zero-inflated part) that you do not need. Otherwise, adjust the
+ 'max_coef_value' control argument.
+ 
 Info: Stored output for iteration 51
  
 : -------------------------------------------------- 
-Using seed: 634744 
+Using seed: 483623 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 52
  
 : -------------------------------------------------- 
-Using seed: 364050 
+Using seed: 708768 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 53
  
 : -------------------------------------------------- 
-Using seed: 274435 
+Using seed: 172713 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 54
  
 : -------------------------------------------------- 
-Using seed: 847599 
+Using seed: 982003 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 55
  
 : -------------------------------------------------- 
-Using seed: 325428 
+Using seed: 708481 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 56
  
 : -------------------------------------------------- 
-Using seed: 665934 
+Using seed: 733597 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 57
  
 : -------------------------------------------------- 
-Using seed: 950735 
+Using seed: 438535 
+converged: NA 
 message: NA 
 warning: NA 
-error: NA 
+error: A large coefficient value has been detected during the optimization.
+ Please re-scale you covariates and/or try setting the control argument
+ 'iter_EM = 0'. Alternatively, this may due to a
+ divergence of the optimization algorithm, indicating that an overly
+ complex model is fitted to the data. For example, this could be
+ caused when including random-effects terms (e.g., in the
+ zero-inflated part) that you do not need. Otherwise, adjust the
+ 'max_coef_value' control argument.
+ 
 Info: Stored output for iteration 58
  
 : -------------------------------------------------- 
-Using seed: 486541 
+Using seed: 831494 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 59
  
 : -------------------------------------------------- 
-Using seed: 369711 
+Using seed: 186229 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 60
  
 : -------------------------------------------------- 
-Using seed: 226876 
+Using seed: 807472 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 61
  
 : -------------------------------------------------- 
-Using seed: 744724 
+Using seed: 64251 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 62
  
 : -------------------------------------------------- 
-Using seed: 975261 
+Using seed: 818235 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 63
  
 : -------------------------------------------------- 
-Using seed: 706972 
+Using seed: 192590 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 64
  
 : -------------------------------------------------- 
-Using seed: 253795 
+Using seed: 4595 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 65
  
 : -------------------------------------------------- 
-Using seed: 185524 
+Using seed: 37081 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 66
  
 : -------------------------------------------------- 
-Using seed: 711350 
+Using seed: 86601 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 67
  
 : -------------------------------------------------- 
-Using seed: 197939 
+Using seed: 51629 
+converged: NA 
 message: NA 
 warning: NA 
-error: NA 
+error: A large coefficient value has been detected during the optimization.
+ Please re-scale you covariates and/or try setting the control argument
+ 'iter_EM = 0'. Alternatively, this may due to a
+ divergence of the optimization algorithm, indicating that an overly
+ complex model is fitted to the data. For example, this could be
+ caused when including random-effects terms (e.g., in the
+ zero-inflated part) that you do not need. Otherwise, adjust the
+ 'max_coef_value' control argument.
+ 
 Info: Stored output for iteration 68
  
 : -------------------------------------------------- 
-Using seed: 610550 
+Using seed: 637403 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 69
  
 : -------------------------------------------------- 
-Using seed: 868875 
+Using seed: 647010 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 70
  
 : -------------------------------------------------- 
-Using seed: 388880 
+Using seed: 21915 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 71
  
 : -------------------------------------------------- 
-Using seed: 7139 
+Using seed: 636500 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 72
  
 : -------------------------------------------------- 
-Using seed: 913701 
+Using seed: 505784 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 73
  
 : -------------------------------------------------- 
-Using seed: 237630 
+Using seed: 335651 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 74
  
 : -------------------------------------------------- 
-Using seed: 332891 
+Using seed: 93100 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 75
  
 : -------------------------------------------------- 
-Using seed: 17624 
+Using seed: 519586 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 76
  
 : -------------------------------------------------- 
-Using seed: 368610 
+Using seed: 144302 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 77
  
 : -------------------------------------------------- 
-Using seed: 539679 
+Using seed: 140322 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 78
  
 : -------------------------------------------------- 
-Using seed: 274720 
+Using seed: 48099 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 79
  
 : -------------------------------------------------- 
-Using seed: 417679 
+Using seed: 396682 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 80
  
 : -------------------------------------------------- 
-Using seed: 527697 
+Using seed: 49995 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 81
  
 : -------------------------------------------------- 
-Using seed: 765319 
+Using seed: 153403 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 82
  
 : -------------------------------------------------- 
-Using seed: 342934 
+Using seed: 779015 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 83
  
 : -------------------------------------------------- 
-Using seed: 495428 
+Using seed: 954145 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 84
  
 : -------------------------------------------------- 
-Using seed: 701013 
+Using seed: 216786 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 85
  
 : -------------------------------------------------- 
-Using seed: 378324 
+Using seed: 381893 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 86
  
 : -------------------------------------------------- 
-Using seed: 833527 
+Using seed: 737467 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 87
  
 : -------------------------------------------------- 
-Using seed: 325612 
+Using seed: 321116 
+converged: TRUE 
 message: NA 
-warning: NA 
+warning: Hessian matrix at convergence is not positive definite; unstable solution.
+
+warning: NaNs produced 
 error: NA 
 Info: Stored output for iteration 88
  
 : -------------------------------------------------- 
-Using seed: 818801 
+Using seed: 99759 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 89
  
 : -------------------------------------------------- 
-Using seed: 380467 
+Using seed: 333721 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 90
  
 : -------------------------------------------------- 
-Using seed: 461691 
+Using seed: 984429 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 91
  
 : -------------------------------------------------- 
-Using seed: 123323 
+Using seed: 231942 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 92
  
 : -------------------------------------------------- 
-Using seed: 109254 
+Using seed: 133100 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 93
  
 : -------------------------------------------------- 
-Using seed: 628400 
+Using seed: 404432 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 94
  
 : -------------------------------------------------- 
-Using seed: 735929 
+Using seed: 808259 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 95
  
 : -------------------------------------------------- 
-Using seed: 172261 
+Using seed: 12969 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 96
  
 : -------------------------------------------------- 
-Using seed: 532962 
+Using seed: 792807 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 97
  
 : -------------------------------------------------- 
-Using seed: 928032 
+Using seed: 320170 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 98
  
 : -------------------------------------------------- 
-Using seed: 132772 
+Using seed: 929927 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 99
  
 : -------------------------------------------------- 
-Using seed: 573056 
+Using seed: 804505 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 100
  
 : -------------------------------------------------- 
-Using seed: 483318 
+Using seed: 723158 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 101
  
 : -------------------------------------------------- 
-Using seed: 350169 
+Using seed: 60733 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 102
  
 : -------------------------------------------------- 
-Using seed: 55160 
+Using seed: 247052 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 103
  
 : -------------------------------------------------- 
-Using seed: 109642 
+Using seed: 723168 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 104
  
 : -------------------------------------------------- 
-Using seed: 873557 
+Using seed: 165499 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 105
  
 : -------------------------------------------------- 
-Using seed: 196453 
+Using seed: 353342 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 106
  
 : -------------------------------------------------- 
-Using seed: 527436 
+Using seed: 181848 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 107
  
 : -------------------------------------------------- 
-Using seed: 969957 
+Using seed: 986071 
+converged: TRUE 
 message: NA 
-warning: NA 
+warning: Hessian matrix at convergence is not positive definite; unstable solution.
+
+warning: NaNs produced 
 error: NA 
 Info: Stored output for iteration 108
  
 : -------------------------------------------------- 
-Using seed: 723885 
+Using seed: 282850 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 109
  
 : -------------------------------------------------- 
-Using seed: 481812 
+Using seed: 329604 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 110
  
 : -------------------------------------------------- 
-Using seed: 371757 
+Using seed: 380693 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 111
  
 : -------------------------------------------------- 
-Using seed: 389141 
+Using seed: 319497 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 112
  
 : -------------------------------------------------- 
-Using seed: 893255 
+Using seed: 265220 
+converged: FALSE 
 message: NA 
-warning: NA 
+warning: Hessian matrix at convergence is not positive definite; unstable solution.
+
+warning: NaNs produced 
 error: NA 
 Info: Stored output for iteration 113
  
 : -------------------------------------------------- 
-Using seed: 173576 
+Using seed: 69116 
+converged: NA 
 message: NA 
-warning: NA 
-error: NA 
+warning: glm.fit: fitted probabilities numerically 0 or 1 occurred 
+error: A large coefficient value has been detected during the optimization.
+ Please re-scale you covariates and/or try setting the control argument
+ 'iter_EM = 0'. Alternatively, this may due to a
+ divergence of the optimization algorithm, indicating that an overly
+ complex model is fitted to the data. For example, this could be
+ caused when including random-effects terms (e.g., in the
+ zero-inflated part) that you do not need. Otherwise, adjust the
+ 'max_coef_value' control argument.
+ 
 Info: Stored output for iteration 114
  
 : -------------------------------------------------- 
-Using seed: 802801 
+Using seed: 211571 
+converged: NA 
 message: NA 
 warning: NA 
-error: NA 
+error: A large coefficient value has been detected during the optimization.
+ Please re-scale you covariates and/or try setting the control argument
+ 'iter_EM = 0'. Alternatively, this may due to a
+ divergence of the optimization algorithm, indicating that an overly
+ complex model is fitted to the data. For example, this could be
+ caused when including random-effects terms (e.g., in the
+ zero-inflated part) that you do not need. Otherwise, adjust the
+ 'max_coef_value' control argument.
+ 
 Info: Stored output for iteration 115
  
 : -------------------------------------------------- 
-Using seed: 533327 
+Using seed: 66541 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 116
  
 : -------------------------------------------------- 
-Using seed: 699621 
+Using seed: 771758 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 117
  
 : -------------------------------------------------- 
-Using seed: 840290 
+Using seed: 608734 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 118
  
 : -------------------------------------------------- 
-Using seed: 97496 
+Using seed: 402713 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 119
  
 : -------------------------------------------------- 
-Using seed: 721674 
+Using seed: 174134 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 120
  
 : -------------------------------------------------- 
-Using seed: 293079 
+Using seed: 564868 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 121
  
 : -------------------------------------------------- 
-Using seed: 336966 
+Using seed: 824491 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 122
  
 : -------------------------------------------------- 
-Using seed: 924624 
+Using seed: 422629 
+converged: NA 
 message: NA 
 warning: NA 
-error: NA 
+error: A large coefficient value has been detected during the optimization.
+ Please re-scale you covariates and/or try setting the control argument
+ 'iter_EM = 0'. Alternatively, this may due to a
+ divergence of the optimization algorithm, indicating that an overly
+ complex model is fitted to the data. For example, this could be
+ caused when including random-effects terms (e.g., in the
+ zero-inflated part) that you do not need. Otherwise, adjust the
+ 'max_coef_value' control argument.
+ 
 Info: Stored output for iteration 123
  
 : -------------------------------------------------- 
-Using seed: 205215 
+Using seed: 1898 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 124
  
 : -------------------------------------------------- 
-Using seed: 823897 
+Using seed: 587729 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 125
  
 : -------------------------------------------------- 
-Using seed: 909286 
+Using seed: 249078 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 126
  
 : -------------------------------------------------- 
-Using seed: 707902 
+Using seed: 793683 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 127
  
 : -------------------------------------------------- 
-Using seed: 211302 
+Using seed: 265083 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 128
  
 : -------------------------------------------------- 
-Using seed: 747721 
+Using seed: 833990 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 129
  
 : -------------------------------------------------- 
-Using seed: 183966 
+Using seed: 399036 
+converged: NA 
 message: NA 
 warning: NA 
-error: NA 
+error: A large coefficient value has been detected during the optimization.
+ Please re-scale you covariates and/or try setting the control argument
+ 'iter_EM = 0'. Alternatively, this may due to a
+ divergence of the optimization algorithm, indicating that an overly
+ complex model is fitted to the data. For example, this could be
+ caused when including random-effects terms (e.g., in the
+ zero-inflated part) that you do not need. Otherwise, adjust the
+ 'max_coef_value' control argument.
+ 
 Info: Stored output for iteration 130
  
 : -------------------------------------------------- 
-Using seed: 946112 
+Using seed: 682655 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 131
  
 : -------------------------------------------------- 
-Using seed: 81429 
+Using seed: 631871 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 132
  
 : -------------------------------------------------- 
-Using seed: 693940 
+Using seed: 259504 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 133
  
 : -------------------------------------------------- 
-Using seed: 635298 
+Using seed: 436712 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 134
  
 : -------------------------------------------------- 
-Using seed: 54737 
+Using seed: 266833 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 135
  
 : -------------------------------------------------- 
-Using seed: 107514 
+Using seed: 204021 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 136
  
 : -------------------------------------------------- 
-Using seed: 209296 
+Using seed: 831367 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 137
  
 : -------------------------------------------------- 
-Using seed: 959212 
+Using seed: 400201 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 138
  
 : -------------------------------------------------- 
-Using seed: 393216 
+Using seed: 813506 
+converged: NA 
 message: NA 
 warning: NA 
-error: NA 
+error: A large coefficient value has been detected during the optimization.
+ Please re-scale you covariates and/or try setting the control argument
+ 'iter_EM = 0'. Alternatively, this may due to a
+ divergence of the optimization algorithm, indicating that an overly
+ complex model is fitted to the data. For example, this could be
+ caused when including random-effects terms (e.g., in the
+ zero-inflated part) that you do not need. Otherwise, adjust the
+ 'max_coef_value' control argument.
+ 
 Info: Stored output for iteration 139
  
 : -------------------------------------------------- 
-Using seed: 751270 
+Using seed: 466596 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 140
  
 : -------------------------------------------------- 
-Using seed: 707592 
+Using seed: 622926 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 141
  
 : -------------------------------------------------- 
-Using seed: 504529 
+Using seed: 441138 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 142
  
 : -------------------------------------------------- 
-Using seed: 202761 
+Using seed: 56791 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 143
  
 : -------------------------------------------------- 
-Using seed: 706223 
+Using seed: 884538 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 144
  
 : -------------------------------------------------- 
-Using seed: 35082 
+Using seed: 959146 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 145
  
 : -------------------------------------------------- 
-Using seed: 495475 
+Using seed: 882584 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 146
  
 : -------------------------------------------------- 
-Using seed: 362571 
+Using seed: 617352 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 147
  
 : -------------------------------------------------- 
-Using seed: 60888 
+Using seed: 797248 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 148
  
 : -------------------------------------------------- 
-Using seed: 637194 
+Using seed: 544514 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 149
  
 : -------------------------------------------------- 
-Using seed: 848810 
+Using seed: 344445 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 150
  
 : -------------------------------------------------- 
-Using seed: 48957 
+Using seed: 397403 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 151
  
 : -------------------------------------------------- 
-Using seed: 773794 
+Using seed: 202417 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 152
  
 : -------------------------------------------------- 
-Using seed: 597454 
+Using seed: 255439 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 153
  
-: -------------------------------------------------- 
-Using seed: 477770 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 154
- 
-: -------------------------------------------------- 
-Using seed: 24346 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 155
- 
-: -------------------------------------------------- 
-Using seed: 274141 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 156
- 
-: -------------------------------------------------- 
-Using seed: 245767 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 157
- 
-: -------------------------------------------------- 
-Using seed: 104426 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 158
- 
-: -------------------------------------------------- 
-Using seed: 615458 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 159
- 
-: -------------------------------------------------- 
-Using seed: 203448 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 160
- 
-: -------------------------------------------------- 
-Using seed: 251317 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 161
- 
-: -------------------------------------------------- 
-Using seed: 861234 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 162
- 
-: -------------------------------------------------- 
-Using seed: 143114 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 163
- 
-: -------------------------------------------------- 
-Using seed: 530208 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 164
- 
-: -------------------------------------------------- 
-Using seed: 595969 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 165
- 
-: -------------------------------------------------- 
-Using seed: 846803 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 166
- 
-: -------------------------------------------------- 
-Using seed: 796133 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 167
- 
-: -------------------------------------------------- 
-Using seed: 407618 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 168
- 
-: -------------------------------------------------- 
-Using seed: 680977 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 169
- 
-: -------------------------------------------------- 
-Using seed: 644131 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 170
- 
-: -------------------------------------------------- 
-Using seed: 472187 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 171
- 
-: -------------------------------------------------- 
-Using seed: 778133 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 172
- 
-: -------------------------------------------------- 
-Using seed: 499612 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 173
- 
-: -------------------------------------------------- 
-Using seed: 698667 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 174
- 
-: -------------------------------------------------- 
-Using seed: 267172 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 175
- 
-: -------------------------------------------------- 
-Using seed: 70351 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 176
- 
-: -------------------------------------------------- 
-Using seed: 101258 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 177
- 
-: -------------------------------------------------- 
-Using seed: 451458 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 178
- 
-: -------------------------------------------------- 
-Using seed: 891372 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 179
- 
-: -------------------------------------------------- 
-Using seed: 198816 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 180
- 
-: -------------------------------------------------- 
-Using seed: 690275 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 181
- 
-: -------------------------------------------------- 
-Using seed: 129524 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 182
- 
-: -------------------------------------------------- 
-Using seed: 539802 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 183
- 
-: -------------------------------------------------- 
-Using seed: 12248 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 184
- 
-: -------------------------------------------------- 
-Using seed: 943353 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 185
- 
-: -------------------------------------------------- 
-Using seed: 59010 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 186
- 
-: -------------------------------------------------- 
-Using seed: 925803 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 187
- 
-: -------------------------------------------------- 
-Using seed: 660010 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 188
- 
-: -------------------------------------------------- 
-Using seed: 553207 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 189
- 
-: -------------------------------------------------- 
-Using seed: 766272 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 190
- 
-: -------------------------------------------------- 
-Using seed: 651759 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 191
- 
-: -------------------------------------------------- 
-Using seed: 116028 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 192
- 
-: -------------------------------------------------- 
-Using seed: 997951 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 193
- 
-: -------------------------------------------------- 
-Using seed: 81903 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 194
- 
-: -------------------------------------------------- 
-Using seed: 995794 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 195
- 
-: -------------------------------------------------- 
-Using seed: 820617 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 196
- 
-: -------------------------------------------------- 
-Using seed: 670852 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 197
- 
-: -------------------------------------------------- 
-Using seed: 39233 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 198
- 
-: -------------------------------------------------- 
-Using seed: 732658 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 199
- 
-: -------------------------------------------------- 
-Using seed: 847361 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 200
- 
-: -------------------------------------------------- 
-Using seed: 833033 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 201
- 
-: -------------------------------------------------- 
-Using seed: 630576 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 202
- 
-: -------------------------------------------------- 
-Using seed: 692643 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 203
- 
-: -------------------------------------------------- 
-Using seed: 695253 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 204
- 
-: -------------------------------------------------- 
-Using seed: 601570 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 205
- 
-: -------------------------------------------------- 
-Using seed: 772903 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 206
- 
-: -------------------------------------------------- 
-Using seed: 812464 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 207
- 
-: -------------------------------------------------- 
-Using seed: 19003 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 208
- 
-: -------------------------------------------------- 
-Using seed: 478043 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 209
- 
-: -------------------------------------------------- 
-Using seed: 261204 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 210
- 
-: -------------------------------------------------- 
-Using seed: 511003 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 211
- 
-: -------------------------------------------------- 
-Using seed: 120386 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 212
- 
-: -------------------------------------------------- 
-Using seed: 335069 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 213
- 
-: -------------------------------------------------- 
-Using seed: 154253 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 214
- 
-: -------------------------------------------------- 
-Using seed: 808761 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 215
- 
-: -------------------------------------------------- 
-Using seed: 56449 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 216
- 
-: -------------------------------------------------- 
-Using seed: 340800 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 217
- 
-: -------------------------------------------------- 
-Using seed: 510445 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 218
- 
-: -------------------------------------------------- 
-Using seed: 395560 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 219
- 
-: -------------------------------------------------- 
-Using seed: 329682 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 220
- 
-: -------------------------------------------------- 
-Using seed: 154316 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 221
- 
-: -------------------------------------------------- 
-Using seed: 88850 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 222
- 
-: -------------------------------------------------- 
-Using seed: 303617 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 223
- 
-: -------------------------------------------------- 
-Using seed: 319357 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 224
- 
-: -------------------------------------------------- 
-Using seed: 673657 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 225
- 
-: -------------------------------------------------- 
-Using seed: 273560 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 226
- 
-: -------------------------------------------------- 
-Using seed: 180948 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 227
- 
-: -------------------------------------------------- 
-Using seed: 649577 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 228
- 
-: -------------------------------------------------- 
-Using seed: 111122 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 229
- 
-: -------------------------------------------------- 
-Using seed: 243984 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 230
- 
-: -------------------------------------------------- 
-Using seed: 672923 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 231
- 
-: -------------------------------------------------- 
-Using seed: 436101 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 232
- 
-: -------------------------------------------------- 
-Using seed: 812030 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 233
- 
-: -------------------------------------------------- 
-Using seed: 579662 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 234
- 
-: -------------------------------------------------- 
-Using seed: 379002 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 235
- 
-: -------------------------------------------------- 
-Using seed: 253392 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 236
- 
-: -------------------------------------------------- 
-Using seed: 529382 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 237
- 
-: -------------------------------------------------- 
-Using seed: 567546 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 238
- 
-: -------------------------------------------------- 
-Using seed: 868371 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 239
- 
-: -------------------------------------------------- 
-Using seed: 36486 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 240
- 
-: -------------------------------------------------- 
-Using seed: 694285 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 241
- 
-: -------------------------------------------------- 
-Using seed: 460013 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 242
- 
-: -------------------------------------------------- 
-Using seed: 378466 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 243
- 
-: -------------------------------------------------- 
-Using seed: 430998 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 244
- 
-: -------------------------------------------------- 
-Using seed: 391518 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 245
- 
-: -------------------------------------------------- 
-Using seed: 98711 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 246
- 
-: -------------------------------------------------- 
-Using seed: 576215 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 247
- 
-: -------------------------------------------------- 
-Using seed: 796261 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 248
- 
-: -------------------------------------------------- 
-Using seed: 598717 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 249
- 
-: -------------------------------------------------- 
-Using seed: 440270 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 250
- 
-: -------------------------------------------------- 
-Using seed: 625639 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 251
- 
-: -------------------------------------------------- 
-Using seed: 598571 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 252
- 
-: -------------------------------------------------- 
-Using seed: 964961 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 253
- 
-: -------------------------------------------------- 
-Using seed: 598606 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 254
- 
-: -------------------------------------------------- 
-Using seed: 418084 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 255
- 
-: -------------------------------------------------- 
-Using seed: 453043 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 256
- 
-: -------------------------------------------------- 
-Using seed: 908331 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 257
- 
-: -------------------------------------------------- 
-Using seed: 368679 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 258
- 
-: -------------------------------------------------- 
-Using seed: 555697 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 259
- 
-: -------------------------------------------------- 
-Using seed: 674705 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 260
- 
-: -------------------------------------------------- 
-Using seed: 240853 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 261
- 
-: -------------------------------------------------- 
-Using seed: 917572 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 262
- 
-: -------------------------------------------------- 
-Using seed: 712603 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 263
- 
-: -------------------------------------------------- 
-Using seed: 484647 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 264
- 
-: -------------------------------------------------- 
-Using seed: 583887 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 265
- 
-: -------------------------------------------------- 
-Using seed: 79965 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 266
- 
-: -------------------------------------------------- 
-Using seed: 760447 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 267
- 
-: -------------------------------------------------- 
-Using seed: 446505 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 268
- 
-: -------------------------------------------------- 
-Using seed: 396990 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 269
- 
-: -------------------------------------------------- 
-Using seed: 864317 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 270
- 
-: -------------------------------------------------- 
-Using seed: 771599 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 271
- 
-: -------------------------------------------------- 
-Using seed: 810897 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 272
- 
-: -------------------------------------------------- 
-Using seed: 673079 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 273
- 
-: -------------------------------------------------- 
-Using seed: 809237 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 274
- 
-: -------------------------------------------------- 
-Using seed: 145910 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 275
- 
-: -------------------------------------------------- 
-Using seed: 991114 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 276
- 
-: -------------------------------------------------- 
-Using seed: 837773 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 277
- 
-: -------------------------------------------------- 
-Using seed: 672333 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 278
- 
-: -------------------------------------------------- 
-Using seed: 828204 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 279
- 
-: -------------------------------------------------- 
-Using seed: 484278 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 280
- 
-: -------------------------------------------------- 
-Using seed: 589609 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 281
- 
-: -------------------------------------------------- 
-Using seed: 607991 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 282
- 
-: -------------------------------------------------- 
-Using seed: 739637 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 283
- 
-: -------------------------------------------------- 
-Using seed: 266703 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 284
- 
-: -------------------------------------------------- 
-Using seed: 720387 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 285
- 
-: -------------------------------------------------- 
-Using seed: 636118 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 286
- 
-: -------------------------------------------------- 
-Using seed: 996647 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 287
- 
-: -------------------------------------------------- 
-Using seed: 352718 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 288
- 
-: -------------------------------------------------- 
-Using seed: 867327 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 289
- 
-: -------------------------------------------------- 
-Using seed: 149996 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 290
- 
-: -------------------------------------------------- 
-Using seed: 270761 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 291
- 
-: -------------------------------------------------- 
-Using seed: 144069 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 292
- 
-: -------------------------------------------------- 
-Using seed: 522085 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 293
- 
-: -------------------------------------------------- 
-Using seed: 856110 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 294
- 
-: -------------------------------------------------- 
-Using seed: 890109 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 295
- 
-: -------------------------------------------------- 
-Using seed: 819641 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 296
- 
-: -------------------------------------------------- 
-Using seed: 57303 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 297
- 
-: -------------------------------------------------- 
-Using seed: 100687 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 298
- 
-: -------------------------------------------------- 
-Using seed: 255071 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 299
- 
-: -------------------------------------------------- 
-Using seed: 437145 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 300
- 
-: -------------------------------------------------- 
-Using seed: 562877 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 301
- 
-: -------------------------------------------------- 
-Using seed: 826598 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 302
- 
-: -------------------------------------------------- 
-Using seed: 798300 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 303
- 
-: -------------------------------------------------- 
-Using seed: 926228 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 304
- 
-: -------------------------------------------------- 
-Using seed: 764019 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 305
- 
-: -------------------------------------------------- 
-Using seed: 342087 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 306
- 
-: -------------------------------------------------- 
-Using seed: 626631 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 307
- 
-: -------------------------------------------------- 
-Using seed: 927671 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 308
- 
-: -------------------------------------------------- 
-Using seed: 609883 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 309
- 
-: -------------------------------------------------- 
-Using seed: 382778 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 310
- 
-: -------------------------------------------------- 
-Using seed: 899299 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 311
- 
-: -------------------------------------------------- 
-Using seed: 283511 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 312
- 
-: -------------------------------------------------- 
-Using seed: 13643 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 313
- 
-: -------------------------------------------------- 
-Using seed: 845437 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 314
- 
-: -------------------------------------------------- 
-Using seed: 723025 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 315
- 
-: -------------------------------------------------- 
-Using seed: 88619 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 316
- 
-: -------------------------------------------------- 
-Using seed: 477409 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 317
- 
-: -------------------------------------------------- 
-Using seed: 120384 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 318
- 
-: -------------------------------------------------- 
-Using seed: 220243 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 319
- 
-: -------------------------------------------------- 
-Using seed: 755545 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 320
- 
-: -------------------------------------------------- 
-Using seed: 968534 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 321
- 
-: -------------------------------------------------- 
-Using seed: 185493 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 322
- 
-: -------------------------------------------------- 
-Using seed: 635163 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 323
- 
-: -------------------------------------------------- 
-Using seed: 446336 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 324
- 
-: -------------------------------------------------- 
-Using seed: 562333 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 325
- 
-: -------------------------------------------------- 
-Using seed: 221057 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 326
- 
-: -------------------------------------------------- 
-Using seed: 606828 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 327
- 
-: -------------------------------------------------- 
-Using seed: 26927 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 328
- 
-: -------------------------------------------------- 
-Using seed: 711554 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 329
- 
-: -------------------------------------------------- 
-Using seed: 112654 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 330
- 
-: -------------------------------------------------- 
-Using seed: 385480 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 331
- 
-: -------------------------------------------------- 
-Using seed: 177763 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 332
- 
-: -------------------------------------------------- 
-Using seed: 168682 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 333
- 
-: -------------------------------------------------- 
-Using seed: 363764 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 334
- 
-: -------------------------------------------------- 
-Using seed: 395657 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 335
- 
-: -------------------------------------------------- 
-Using seed: 364048 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 336
- 
-: -------------------------------------------------- 
-Using seed: 906923 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 337
- 
-: -------------------------------------------------- 
-Using seed: 583991 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 338
- 
-: -------------------------------------------------- 
-Using seed: 16446 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 339
- 
-: -------------------------------------------------- 
-Using seed: 60284 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 340
- 
-: -------------------------------------------------- 
-Using seed: 417378 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 341
- 
-: -------------------------------------------------- 
-Using seed: 149448 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 342
- 
-: -------------------------------------------------- 
-Using seed: 461503 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 343
- 
-: -------------------------------------------------- 
-Using seed: 797994 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 344
- 
-: -------------------------------------------------- 
-Using seed: 503331 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 345
- 
-: -------------------------------------------------- 
-Using seed: 203206 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 346
- 
-: -------------------------------------------------- 
-Using seed: 384958 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 347
- 
-: -------------------------------------------------- 
-Using seed: 816365 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 348
- 
-: -------------------------------------------------- 
-Using seed: 122313 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 349
- 
-: -------------------------------------------------- 
-Using seed: 395821 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 350
- 
-: -------------------------------------------------- 
-Using seed: 181136 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 351
- 
-: -------------------------------------------------- 
-Using seed: 487155 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 352
- 
-: -------------------------------------------------- 
-Using seed: 632695 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 353
- 
-: -------------------------------------------------- 
-Using seed: 960970 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 354
- 
-: -------------------------------------------------- 
-Using seed: 45901 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 355
- 
-: -------------------------------------------------- 
-Using seed: 521916 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 356
- 
-: -------------------------------------------------- 
-Using seed: 478623 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 357
- 
-: -------------------------------------------------- 
-Using seed: 881517 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 358
- 
-: -------------------------------------------------- 
-Using seed: 858292 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 359
- 
-: -------------------------------------------------- 
-Using seed: 7014 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 360
- 
-: -------------------------------------------------- 
-Using seed: 707299 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 361
- 
-: -------------------------------------------------- 
-Using seed: 428879 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 362
- 
-: -------------------------------------------------- 
-Using seed: 144850 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 363
- 
-: -------------------------------------------------- 
-Using seed: 776384 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 364
- 
-: -------------------------------------------------- 
-Using seed: 228544 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 365
- 
-: -------------------------------------------------- 
-Using seed: 876805 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 366
- 
-: -------------------------------------------------- 
-Using seed: 311055 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 367
- 
-: -------------------------------------------------- 
-Using seed: 430767 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 368
- 
-: -------------------------------------------------- 
-Using seed: 625829 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 369
- 
-: -------------------------------------------------- 
-Using seed: 566779 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 370
- 
-: -------------------------------------------------- 
-Using seed: 626848 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 371
- 
-: -------------------------------------------------- 
-Using seed: 957951 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 372
- 
-: -------------------------------------------------- 
-Using seed: 723168 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 373
- 
-: -------------------------------------------------- 
-Using seed: 638308 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 374
- 
-: -------------------------------------------------- 
-Using seed: 873627 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 375
- 
-: -------------------------------------------------- 
-Using seed: 909566 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 376
- 
-: -------------------------------------------------- 
-Using seed: 323532 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 377
- 
-: -------------------------------------------------- 
-Using seed: 613769 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 378
- 
-: -------------------------------------------------- 
-Using seed: 538458 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 379
- 
-: -------------------------------------------------- 
-Using seed: 114230 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 380
- 
-: -------------------------------------------------- 
-Using seed: 739879 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 381
- 
-: -------------------------------------------------- 
-Using seed: 321528 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 382
- 
-: -------------------------------------------------- 
-Using seed: 411853 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 383
- 
-: -------------------------------------------------- 
-Using seed: 293319 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 384
- 
-: -------------------------------------------------- 
-Using seed: 511801 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 385
- 
-: -------------------------------------------------- 
-Using seed: 204322 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 386
- 
-: -------------------------------------------------- 
-Using seed: 838365 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 387
- 
-: -------------------------------------------------- 
-Using seed: 914625 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 388
- 
-: -------------------------------------------------- 
-Using seed: 919145 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 389
- 
-: -------------------------------------------------- 
-Using seed: 892730 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 390
- 
-: -------------------------------------------------- 
-Using seed: 472319 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 391
- 
-: -------------------------------------------------- 
-Using seed: 98934 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 392
- 
-: -------------------------------------------------- 
-Using seed: 521881 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 393
- 
-: -------------------------------------------------- 
-Using seed: 760019 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 394
- 
-: -------------------------------------------------- 
-Using seed: 724389 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 395
- 
-: -------------------------------------------------- 
-Using seed: 631581 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 396
- 
-: -------------------------------------------------- 
-Using seed: 711985 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 397
- 
-: -------------------------------------------------- 
-Using seed: 700912 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 398
- 
-: -------------------------------------------------- 
-Using seed: 343091 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 399
- 
-: -------------------------------------------------- 
-Using seed: 195519 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 400
- 
-: -------------------------------------------------- 
-Using seed: 355690 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 401
- 
-: -------------------------------------------------- 
-Using seed: 956225 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 402
- 
-: -------------------------------------------------- 
-Using seed: 93993 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 403
- 
-: -------------------------------------------------- 
-Using seed: 471646 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 404
- 
-: -------------------------------------------------- 
-Using seed: 628026 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 405
- 
-: -------------------------------------------------- 
-Using seed: 349308 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 406
- 
-: -------------------------------------------------- 
-Using seed: 659845 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 407
- 
-: -------------------------------------------------- 
-Using seed: 718113 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 408
- 
-: -------------------------------------------------- 
-Using seed: 867093 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 409
- 
-: -------------------------------------------------- 
-Using seed: 22880 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 410
- 
-: -------------------------------------------------- 
-Using seed: 52470 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 411
- 
-: -------------------------------------------------- 
-Using seed: 435057 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 412
- 
-: -------------------------------------------------- 
-Using seed: 820814 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 413
- 
-: -------------------------------------------------- 
-Using seed: 211725 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 414
- 
-: -------------------------------------------------- 
-Using seed: 427833 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 415
- 
-: -------------------------------------------------- 
-Using seed: 889414 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 416
- 
-: -------------------------------------------------- 
-Using seed: 543612 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 417
- 
-: -------------------------------------------------- 
-Using seed: 507497 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 418
- 
-: -------------------------------------------------- 
-Using seed: 779416 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 419
- 
-: -------------------------------------------------- 
-Using seed: 499514 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 420
- 
-: -------------------------------------------------- 
-Using seed: 889566 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 421
- 
-: -------------------------------------------------- 
-Using seed: 520051 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 422
- 
-: -------------------------------------------------- 
-Using seed: 570924 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 423
- 
-: -------------------------------------------------- 
-Using seed: 160208 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 424
- 
-: -------------------------------------------------- 
-Using seed: 689509 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 425
- 
-: -------------------------------------------------- 
-Using seed: 891098 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 426
- 
-: -------------------------------------------------- 
-Using seed: 890529 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 427
- 
-: -------------------------------------------------- 
-Using seed: 896656 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 428
- 
-: -------------------------------------------------- 
-Using seed: 790790 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 429
- 
-: -------------------------------------------------- 
-Using seed: 884302 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 430
- 
-: -------------------------------------------------- 
-Using seed: 216190 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 431
- 
-: -------------------------------------------------- 
-Using seed: 789791 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 432
- 
-: -------------------------------------------------- 
-Using seed: 405145 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 433
- 
-: -------------------------------------------------- 
-Using seed: 491520 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 434
- 
-: -------------------------------------------------- 
-Using seed: 733110 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 435
- 
-: -------------------------------------------------- 
-Using seed: 171652 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 436
- 
-: -------------------------------------------------- 
-Using seed: 318826 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 437
- 
-: -------------------------------------------------- 
-Using seed: 731499 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 438
- 
-: -------------------------------------------------- 
-Using seed: 556523 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 439
- 
-: -------------------------------------------------- 
-Using seed: 960744 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 440
- 
-: -------------------------------------------------- 
-Using seed: 645463 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 441
- 
-: -------------------------------------------------- 
-Using seed: 431445 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 442
- 
-: -------------------------------------------------- 
-Using seed: 470485 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 443
- 
-: -------------------------------------------------- 
-Using seed: 63212 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 444
- 
-: -------------------------------------------------- 
-Using seed: 267056 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 445
- 
-: -------------------------------------------------- 
-Using seed: 281673 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 446
- 
-: -------------------------------------------------- 
-Using seed: 738243 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 447
- 
-: -------------------------------------------------- 
-Using seed: 732082 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 448
- 
-: -------------------------------------------------- 
-Using seed: 458315 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 449
- 
-: -------------------------------------------------- 
-Using seed: 710616 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 450
- 
-: -------------------------------------------------- 
-Using seed: 155707 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 451
- 
-: -------------------------------------------------- 
-Using seed: 279201 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 452
- 
-: -------------------------------------------------- 
-Using seed: 873558 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 453
- 
-: -------------------------------------------------- 
-Using seed: 723907 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 454
- 
-: -------------------------------------------------- 
-Using seed: 21762 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 455
- 
-: -------------------------------------------------- 
-Using seed: 182606 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 456
- 
-: -------------------------------------------------- 
-Using seed: 962202 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 457
- 
-: -------------------------------------------------- 
-Using seed: 575582 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 458
- 
-: -------------------------------------------------- 
-Using seed: 301534 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 459
- 
-: -------------------------------------------------- 
-Using seed: 647378 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 460
- 
-: -------------------------------------------------- 
-Using seed: 185594 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 461
- 
-: -------------------------------------------------- 
-Using seed: 375395 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 462
- 
-: -------------------------------------------------- 
-Using seed: 796925 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 463
- 
-: -------------------------------------------------- 
-Using seed: 450191 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 464
- 
-: -------------------------------------------------- 
-Using seed: 352411 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 465
- 
-: -------------------------------------------------- 
-Using seed: 822144 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 466
- 
-: -------------------------------------------------- 
-Using seed: 911669 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 467
- 
-: -------------------------------------------------- 
-Using seed: 435798 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 468
- 
-: -------------------------------------------------- 
-Using seed: 739990 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 469
- 
-: -------------------------------------------------- 
-Using seed: 769674 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 470
- 
-: -------------------------------------------------- 
-Using seed: 351716 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 471
- 
-: -------------------------------------------------- 
-Using seed: 254905 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 472
- 
-: -------------------------------------------------- 
-Using seed: 482727 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 473
- 
-: -------------------------------------------------- 
-Using seed: 517226 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 474
- 
-: -------------------------------------------------- 
-Using seed: 202639 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 475
- 
-: -------------------------------------------------- 
-Using seed: 655495 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 476
- 
-: -------------------------------------------------- 
-Using seed: 254720 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 477
- 
-: -------------------------------------------------- 
-Using seed: 421041 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 478
- 
-: -------------------------------------------------- 
-Using seed: 357196 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 479
- 
-: -------------------------------------------------- 
-Using seed: 189618 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 480
- 
-: -------------------------------------------------- 
-Using seed: 162466 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 481
- 
-: -------------------------------------------------- 
-Using seed: 868599 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 482
- 
-: -------------------------------------------------- 
-Using seed: 409120 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 483
- 
-: -------------------------------------------------- 
-Using seed: 509607 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 484
- 
-: -------------------------------------------------- 
-Using seed: 576553 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 485
- 
-: -------------------------------------------------- 
-Using seed: 779808 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 486
- 
-: -------------------------------------------------- 
-Using seed: 362951 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 487
- 
-: -------------------------------------------------- 
-Using seed: 316721 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 488
- 
-: -------------------------------------------------- 
-Using seed: 980393 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 489
- 
-: -------------------------------------------------- 
-Using seed: 286543 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 490
- 
-: -------------------------------------------------- 
-Using seed: 648675 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 491
- 
-: -------------------------------------------------- 
-Using seed: 144322 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 492
- 
-: -------------------------------------------------- 
-Using seed: 925026 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 493
- 
-: -------------------------------------------------- 
-Using seed: 208835 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 494
- 
-: -------------------------------------------------- 
-Using seed: 626635 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 495
- 
-: -------------------------------------------------- 
-Using seed: 855069 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 496
- 
-: -------------------------------------------------- 
-Using seed: 702609 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 497
- 
-: -------------------------------------------------- 
-Using seed: 760997 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 498
- 
-: -------------------------------------------------- 
-Using seed: 304994 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 499
- 
-: -------------------------------------------------- 
-Using seed: 834027 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 500
- 
-: -------------------------------------------------- 
-Using seed: 528667 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 501
- 
-: -------------------------------------------------- 
-Using seed: 522583 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 502
- 
-: -------------------------------------------------- 
-Using seed: 191995 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 503
- 
-: -------------------------------------------------- 
-Using seed: 666479 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 504
- 
-: -------------------------------------------------- 
-Using seed: 605927 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 505
- 
-: -------------------------------------------------- 
-Using seed: 342202 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 506
- 
-: -------------------------------------------------- 
-Using seed: 880360 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 507
- 
-: -------------------------------------------------- 
-Using seed: 149320 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 508
- 
-: -------------------------------------------------- 
-Using seed: 650418 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 509
- 
-: -------------------------------------------------- 
-Using seed: 305568 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 510
- 
-: -------------------------------------------------- 
-Using seed: 54715 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 511
- 
-: -------------------------------------------------- 
-Using seed: 115279 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 512
- 
-: -------------------------------------------------- 
-Using seed: 190897 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 513
- 
-: -------------------------------------------------- 
-Using seed: 463490 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 514
- 
-: -------------------------------------------------- 
-Using seed: 784700 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 515
- 
-: -------------------------------------------------- 
-Using seed: 920280 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 516
- 
-: -------------------------------------------------- 
-Using seed: 710133 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 517
- 
-: -------------------------------------------------- 
-Using seed: 389408 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 518
- 
-: -------------------------------------------------- 
-Using seed: 252192 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 519
- 
-: -------------------------------------------------- 
-Using seed: 827661 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 520
- 
-: -------------------------------------------------- 
-Using seed: 248165 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 521
- 
-: -------------------------------------------------- 
-Using seed: 102250 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 522
- 
-: -------------------------------------------------- 
-Using seed: 697796 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 523
- 
-: -------------------------------------------------- 
-Using seed: 5496 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 524
- 
-: -------------------------------------------------- 
-Using seed: 464123 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 525
- 
-: -------------------------------------------------- 
-Using seed: 493097 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 526
- 
-: -------------------------------------------------- 
-Using seed: 660908 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 527
- 
-: -------------------------------------------------- 
-Using seed: 476350 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 528
- 
-: -------------------------------------------------- 
-Using seed: 463411 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 529
- 
-: -------------------------------------------------- 
-Using seed: 851387 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 530
- 
-: -------------------------------------------------- 
-Using seed: 128546 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 531
- 
-: -------------------------------------------------- 
-Using seed: 461990 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 532
- 
-: -------------------------------------------------- 
-Using seed: 954844 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 533
- 
-: -------------------------------------------------- 
-Using seed: 94815 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 534
- 
-: -------------------------------------------------- 
-Using seed: 804984 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 535
- 
-: -------------------------------------------------- 
-Using seed: 339228 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 536
- 
-: -------------------------------------------------- 
-Using seed: 900358 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 537
- 
-: -------------------------------------------------- 
-Using seed: 551846 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 538
- 
-: -------------------------------------------------- 
-Using seed: 585489 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 539
- 
-: -------------------------------------------------- 
-Using seed: 992129 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 540
- 
-: -------------------------------------------------- 
-Using seed: 428973 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 541
- 
-: -------------------------------------------------- 
-Using seed: 536564 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 542
- 
-: -------------------------------------------------- 
-Using seed: 688633 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 543
- 
-: -------------------------------------------------- 
-Using seed: 557886 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 544
- 
-: -------------------------------------------------- 
-Using seed: 968338 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 545
- 
-: -------------------------------------------------- 
-Using seed: 200273 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 546
- 
-: -------------------------------------------------- 
-Using seed: 313863 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 547
- 
-: -------------------------------------------------- 
-Using seed: 449607 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 548
- 
-: -------------------------------------------------- 
-Using seed: 374854 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 549
- 
-: -------------------------------------------------- 
-Using seed: 86498 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 550
- 
-: -------------------------------------------------- 
-Using seed: 230417 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 551
- 
-: -------------------------------------------------- 
-Using seed: 478811 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 552
- 
-: -------------------------------------------------- 
-Using seed: 705713 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 553
- 
-: -------------------------------------------------- 
-Using seed: 254040 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 554
- 
-: -------------------------------------------------- 
-Using seed: 545524 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 555
- 
-: -------------------------------------------------- 
-Using seed: 728890 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 556
- 
-: -------------------------------------------------- 
-Using seed: 230321 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 557
- 
-: -------------------------------------------------- 
-Using seed: 142739 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 558
- 
-: -------------------------------------------------- 
-Using seed: 271191 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 559
- 
-: -------------------------------------------------- 
-Using seed: 634744 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 560
- 
-: -------------------------------------------------- 
-Using seed: 364050 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 561
- 
-: -------------------------------------------------- 
-Using seed: 274435 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 562
- 
-: -------------------------------------------------- 
-Using seed: 847599 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 563
- 
-: -------------------------------------------------- 
-Using seed: 325428 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 564
- 
-: -------------------------------------------------- 
-Using seed: 665934 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 565
- 
-: -------------------------------------------------- 
-Using seed: 950735 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 566
- 
-: -------------------------------------------------- 
-Using seed: 486541 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 567
- 
-: -------------------------------------------------- 
-Using seed: 369711 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 568
- 
-: -------------------------------------------------- 
-Using seed: 226876 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 569
- 
-: -------------------------------------------------- 
-Using seed: 744724 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 570
- 
-: -------------------------------------------------- 
-Using seed: 975261 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 571
- 
-: -------------------------------------------------- 
-Using seed: 706972 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 572
- 
-: -------------------------------------------------- 
-Using seed: 253795 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 573
- 
-: -------------------------------------------------- 
-Using seed: 185524 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 574
- 
-: -------------------------------------------------- 
-Using seed: 711350 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 575
- 
-: -------------------------------------------------- 
-Using seed: 197939 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 576
- 
-: -------------------------------------------------- 
-Using seed: 610550 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 577
- 
-: -------------------------------------------------- 
-Using seed: 868875 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 578
- 
-: -------------------------------------------------- 
-Using seed: 388880 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 579
- 
-: -------------------------------------------------- 
-Using seed: 7139 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 580
- 
-: -------------------------------------------------- 
-Using seed: 913701 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 581
- 
-: -------------------------------------------------- 
-Using seed: 237630 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 582
- 
-: -------------------------------------------------- 
-Using seed: 332891 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 583
- 
-: -------------------------------------------------- 
-Using seed: 17624 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 584
- 
-: -------------------------------------------------- 
-Using seed: 368610 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 585
- 
-: -------------------------------------------------- 
-Using seed: 539679 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 586
- 
-: -------------------------------------------------- 
-Using seed: 274720 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 587
- 
-: -------------------------------------------------- 
-Using seed: 417679 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 588
- 
-: -------------------------------------------------- 
-Using seed: 527697 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 589
- 
-: -------------------------------------------------- 
-Using seed: 765319 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 590
- 
-: -------------------------------------------------- 
-Using seed: 342934 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 591
- 
-: -------------------------------------------------- 
-Using seed: 495428 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 592
- 
-: -------------------------------------------------- 
-Using seed: 701013 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 593
- 
-: -------------------------------------------------- 
-Using seed: 378324 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 594
- 
-: -------------------------------------------------- 
-Using seed: 833527 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 595
- 
-: -------------------------------------------------- 
-Using seed: 325612 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 596
- 
-: -------------------------------------------------- 
-Using seed: 818801 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 597
- 
-: -------------------------------------------------- 
-Using seed: 380467 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 598
- 
-: -------------------------------------------------- 
-Using seed: 461691 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 599
- 
-: -------------------------------------------------- 
-Using seed: 123323 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 600
- 
-: -------------------------------------------------- 
-Using seed: 109254 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 601
- 
-: -------------------------------------------------- 
-Using seed: 628400 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 602
- 
-: -------------------------------------------------- 
-Using seed: 735929 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 603
- 
-: -------------------------------------------------- 
-Using seed: 172261 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 604
- 
-: -------------------------------------------------- 
-Using seed: 532962 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 605
- 
-: -------------------------------------------------- 
-Using seed: 928032 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 606
- 
-: -------------------------------------------------- 
-Using seed: 132772 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 607
- 
-: -------------------------------------------------- 
-Using seed: 573056 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 608
- 
-: -------------------------------------------------- 
-Using seed: 483318 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 609
- 
-: -------------------------------------------------- 
-Using seed: 350169 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 610
- 
-: -------------------------------------------------- 
-Using seed: 55160 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 611
- 
-: -------------------------------------------------- 
-Using seed: 109642 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 612
- 
-: -------------------------------------------------- 
-Using seed: 873557 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 613
- 
-: -------------------------------------------------- 
-Using seed: 196453 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 614
- 
-: -------------------------------------------------- 
-Using seed: 527436 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 615
- 
-: -------------------------------------------------- 
-Using seed: 969957 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 616
- 
-: -------------------------------------------------- 
-Using seed: 723885 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 617
- 
-: -------------------------------------------------- 
-Using seed: 481812 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 618
- 
-: -------------------------------------------------- 
-Using seed: 371757 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 619
- 
-: -------------------------------------------------- 
-Using seed: 389141 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 620
- 
-: -------------------------------------------------- 
-Using seed: 893255 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 621
- 
-: -------------------------------------------------- 
-Using seed: 173576 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 622
- 
-: -------------------------------------------------- 
-Using seed: 802801 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 623
- 
-: -------------------------------------------------- 
-Using seed: 533327 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 624
- 
-: -------------------------------------------------- 
-Using seed: 699621 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 625
- 
-: -------------------------------------------------- 
-Using seed: 840290 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 626
- 
-: -------------------------------------------------- 
-Using seed: 97496 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 627
- 
-: -------------------------------------------------- 
-Using seed: 721674 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 628
- 
-: -------------------------------------------------- 
-Using seed: 293079 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 629
- 
-: -------------------------------------------------- 
-Using seed: 336966 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 630
- 
-: -------------------------------------------------- 
-Using seed: 924624 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 631
- 
-: -------------------------------------------------- 
-Using seed: 205215 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 632
- 
-: -------------------------------------------------- 
-Using seed: 823897 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 633
- 
-: -------------------------------------------------- 
-Using seed: 909286 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 634
- 
-: -------------------------------------------------- 
-Using seed: 707902 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 635
- 
-: -------------------------------------------------- 
-Using seed: 211302 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 636
- 
-: -------------------------------------------------- 
-Using seed: 747721 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 637
- 
-: -------------------------------------------------- 
-Using seed: 183966 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 638
- 
-: -------------------------------------------------- 
-Using seed: 946112 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 639
- 
-: -------------------------------------------------- 
-Using seed: 81429 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 640
- 
-: -------------------------------------------------- 
-Using seed: 693940 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 641
- 
-: -------------------------------------------------- 
-Using seed: 635298 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 642
- 
-: -------------------------------------------------- 
-Using seed: 54737 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 643
- 
-: -------------------------------------------------- 
-Using seed: 107514 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 644
- 
-: -------------------------------------------------- 
-Using seed: 209296 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 645
- 
-: -------------------------------------------------- 
-Using seed: 959212 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 646
- 
-: -------------------------------------------------- 
-Using seed: 393216 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 647
- 
-: -------------------------------------------------- 
-Using seed: 751270 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 648
- 
-: -------------------------------------------------- 
-Using seed: 707592 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 649
- 
-: -------------------------------------------------- 
-Using seed: 504529 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 650
- 
-: -------------------------------------------------- 
-Using seed: 202761 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 651
- 
-: -------------------------------------------------- 
-Using seed: 706223 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 652
- 
-: -------------------------------------------------- 
-Using seed: 35082 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 653
- 
-: -------------------------------------------------- 
-Using seed: 495475 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 654
- 
-: -------------------------------------------------- 
-Using seed: 362571 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 655
- 
-: -------------------------------------------------- 
-Using seed: 60888 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 656
- 
-: -------------------------------------------------- 
-Using seed: 637194 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 657
- 
-: -------------------------------------------------- 
-Using seed: 848810 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 658
- 
-: -------------------------------------------------- 
-Using seed: 48957 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 659
- 
-: -------------------------------------------------- 
-Using seed: 773794 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 660
- 
-: -------------------------------------------------- 
-Using seed: 597454 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 661
- 
-: -------------------------------------------------- 
-Using seed: 477770 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 662
- 
-: -------------------------------------------------- 
-Using seed: 24346 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 663
- 
-: -------------------------------------------------- 
-Using seed: 274141 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 664
- 
-: -------------------------------------------------- 
-Using seed: 245767 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 665
- 
-: -------------------------------------------------- 
-Using seed: 104426 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 666
- 
-: -------------------------------------------------- 
-Using seed: 615458 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 667
- 
-: -------------------------------------------------- 
-Using seed: 203448 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 668
- 
-: -------------------------------------------------- 
-Using seed: 251317 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 669
- 
-: -------------------------------------------------- 
-Using seed: 861234 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 670
- 
-: -------------------------------------------------- 
-Using seed: 143114 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 671
- 
-: -------------------------------------------------- 
-Using seed: 530208 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 672
- 
-: -------------------------------------------------- 
-Using seed: 595969 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 673
- 
-: -------------------------------------------------- 
-Using seed: 846803 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 674
- 
-: -------------------------------------------------- 
-Using seed: 796133 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 675
- 
-: -------------------------------------------------- 
-Using seed: 407618 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 676
- 
-: -------------------------------------------------- 
-Using seed: 680977 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 677
- 
-: -------------------------------------------------- 
-Using seed: 644131 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 678
- 
-: -------------------------------------------------- 
-Using seed: 472187 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 679
- 
-: -------------------------------------------------- 
-Using seed: 778133 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 680
- 
-: -------------------------------------------------- 
-Using seed: 499612 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 681
- 
-: -------------------------------------------------- 
-Using seed: 698667 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 682
- 
-: -------------------------------------------------- 
-Using seed: 267172 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 683
- 
-: -------------------------------------------------- 
-Using seed: 70351 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 684
- 
-: -------------------------------------------------- 
-Using seed: 101258 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 685
- 
-: -------------------------------------------------- 
-Using seed: 451458 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 686
- 
-: -------------------------------------------------- 
-Using seed: 891372 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 687
- 
-: -------------------------------------------------- 
-Using seed: 198816 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 688
- 
-: -------------------------------------------------- 
-Using seed: 690275 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 689
- 
-: -------------------------------------------------- 
-Using seed: 129524 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 690
- 
-: -------------------------------------------------- 
-Using seed: 539802 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 691
- 
-: -------------------------------------------------- 
-Using seed: 12248 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 692
- 
-: -------------------------------------------------- 
-Using seed: 943353 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 693
- 
-: -------------------------------------------------- 
-Using seed: 59010 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 694
- 
-: -------------------------------------------------- 
-Using seed: 925803 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 695
- 
-: -------------------------------------------------- 
-Using seed: 660010 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 696
- 
-: -------------------------------------------------- 
-Using seed: 553207 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 697
- 
-: -------------------------------------------------- 
-Using seed: 766272 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 698
- 
-: -------------------------------------------------- 
-Using seed: 651759 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 699
- 
-: -------------------------------------------------- 
-Using seed: 116028 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 700
- 
-: -------------------------------------------------- 
-Using seed: 997951 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 701
- 
-: -------------------------------------------------- 
-Using seed: 81903 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 702
- 
-: -------------------------------------------------- 
-Using seed: 995794 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 703
- 
-: -------------------------------------------------- 
-Using seed: 820617 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 704
- 
-: -------------------------------------------------- 
-Using seed: 670852 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 705
- 
-: -------------------------------------------------- 
-Using seed: 39233 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 706
- 
-: -------------------------------------------------- 
-Using seed: 732658 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 707
- 
-: -------------------------------------------------- 
-Using seed: 847361 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 708
- 
-: -------------------------------------------------- 
-Using seed: 833033 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 709
- 
-: -------------------------------------------------- 
-Using seed: 630576 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 710
- 
-: -------------------------------------------------- 
-Using seed: 692643 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 711
- 
-: -------------------------------------------------- 
-Using seed: 695253 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 712
- 
-: -------------------------------------------------- 
-Using seed: 601570 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 713
- 
-: -------------------------------------------------- 
-Using seed: 772903 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 714
- 
-: -------------------------------------------------- 
-Using seed: 812464 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 715
- 
-: -------------------------------------------------- 
-Using seed: 19003 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 716
- 
-: -------------------------------------------------- 
-Using seed: 478043 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 717
- 
-: -------------------------------------------------- 
-Using seed: 261204 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 718
- 
-: -------------------------------------------------- 
-Using seed: 511003 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 719
- 
-: -------------------------------------------------- 
-Using seed: 120386 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 720
- 
-: -------------------------------------------------- 
-Using seed: 335069 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 721
- 
-: -------------------------------------------------- 
-Using seed: 154253 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 722
- 
-: -------------------------------------------------- 
-Using seed: 808761 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 723
- 
-: -------------------------------------------------- 
-Using seed: 56449 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 724
- 
-: -------------------------------------------------- 
-Using seed: 340800 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 725
- 
-: -------------------------------------------------- 
-Using seed: 510445 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 726
- 
-: -------------------------------------------------- 
-Using seed: 395560 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 727
- 
-: -------------------------------------------------- 
-Using seed: 329682 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 728
- 
-: -------------------------------------------------- 
-Using seed: 154316 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 729
- 
-: -------------------------------------------------- 
-Using seed: 88850 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 730
- 
-: -------------------------------------------------- 
-Using seed: 303617 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 731
- 
-: -------------------------------------------------- 
-Using seed: 319357 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 732
- 
-: -------------------------------------------------- 
-Using seed: 673657 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 733
- 
-: -------------------------------------------------- 
-Using seed: 273560 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 734
- 
-: -------------------------------------------------- 
-Using seed: 180948 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 735
- 
-: -------------------------------------------------- 
-Using seed: 649577 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 736
- 
-: -------------------------------------------------- 
-Using seed: 111122 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 737
- 
-: -------------------------------------------------- 
-Using seed: 243984 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 738
- 
-: -------------------------------------------------- 
-Using seed: 672923 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 739
- 
-: -------------------------------------------------- 
-Using seed: 436101 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 740
- 
-: -------------------------------------------------- 
-Using seed: 812030 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 741
- 
-: -------------------------------------------------- 
-Using seed: 579662 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 742
- 
-: -------------------------------------------------- 
-Using seed: 379002 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 743
- 
-: -------------------------------------------------- 
-Using seed: 253392 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 744
- 
-: -------------------------------------------------- 
-Using seed: 529382 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 745
- 
-: -------------------------------------------------- 
-Using seed: 567546 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 746
- 
-: -------------------------------------------------- 
-Using seed: 868371 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 747
- 
-: -------------------------------------------------- 
-Using seed: 36486 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 748
- 
-: -------------------------------------------------- 
-Using seed: 694285 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 749
- 
-: -------------------------------------------------- 
-Using seed: 460013 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 750
- 
-: -------------------------------------------------- 
-Using seed: 378466 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 751
- 
-: -------------------------------------------------- 
-Using seed: 430998 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 752
- 
-: -------------------------------------------------- 
-Using seed: 391518 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 753
- 
-: -------------------------------------------------- 
-Using seed: 98711 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 754
- 
-: -------------------------------------------------- 
-Using seed: 576215 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 755
- 
-: -------------------------------------------------- 
-Using seed: 796261 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 756
- 
-: -------------------------------------------------- 
-Using seed: 598717 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 757
- 
-: -------------------------------------------------- 
-Using seed: 440270 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 758
- 
-: -------------------------------------------------- 
-Using seed: 625639 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 759
- 
-: -------------------------------------------------- 
-Using seed: 598571 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 760
- 
-: -------------------------------------------------- 
-Using seed: 964961 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 761
- 
-: -------------------------------------------------- 
-Using seed: 598606 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 762
- 
-: -------------------------------------------------- 
-Using seed: 418084 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 763
- 
-: -------------------------------------------------- 
-Using seed: 453043 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 764
- 
-: -------------------------------------------------- 
-Using seed: 908331 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 765
- 
-: -------------------------------------------------- 
-Using seed: 368679 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 766
- 
-: -------------------------------------------------- 
-Using seed: 555697 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 767
- 
-: -------------------------------------------------- 
-Using seed: 674705 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 768
- 
-: -------------------------------------------------- 
-Using seed: 240853 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 769
- 
-: -------------------------------------------------- 
-Using seed: 917572 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 770
- 
-: -------------------------------------------------- 
-Using seed: 712603 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 771
- 
-: -------------------------------------------------- 
-Using seed: 484647 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 772
- 
-: -------------------------------------------------- 
-Using seed: 583887 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 773
- 
-: -------------------------------------------------- 
-Using seed: 79965 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 774
- 
-: -------------------------------------------------- 
-Using seed: 760447 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 775
- 
-: -------------------------------------------------- 
-Using seed: 446505 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 776
- 
-: -------------------------------------------------- 
-Using seed: 396990 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 777
- 
-: -------------------------------------------------- 
-Using seed: 864317 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 778
- 
-: -------------------------------------------------- 
-Using seed: 771599 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 779
- 
-: -------------------------------------------------- 
-Using seed: 810897 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 780
- 
-: -------------------------------------------------- 
-Using seed: 673079 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 781
- 
-: -------------------------------------------------- 
-Using seed: 809237 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 782
- 
-: -------------------------------------------------- 
-Using seed: 145910 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 783
- 
-: -------------------------------------------------- 
-Using seed: 991114 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 784
- 
-: -------------------------------------------------- 
-Using seed: 837773 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 785
- 
-: -------------------------------------------------- 
-Using seed: 672333 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 786
- 
-: -------------------------------------------------- 
-Using seed: 828204 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 787
- 
-: -------------------------------------------------- 
-Using seed: 484278 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 788
- 
-: -------------------------------------------------- 
-Using seed: 589609 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 789
- 
-: -------------------------------------------------- 
-Using seed: 607991 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 790
- 
-: -------------------------------------------------- 
-Using seed: 739637 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 791
- 
-: -------------------------------------------------- 
-Using seed: 266703 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 792
- 
-: -------------------------------------------------- 
-Using seed: 720387 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 793
- 
-: -------------------------------------------------- 
-Using seed: 636118 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 794
- 
-: -------------------------------------------------- 
-Using seed: 996647 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 795
- 
-: -------------------------------------------------- 
-Using seed: 352718 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 796
- 
-: -------------------------------------------------- 
-Using seed: 867327 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 797
- 
-: -------------------------------------------------- 
-Using seed: 149996 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 798
- 
-: -------------------------------------------------- 
-Using seed: 270761 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 799
- 
-: -------------------------------------------------- 
-Using seed: 144069 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 800
- 
-: -------------------------------------------------- 
-Using seed: 522085 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 801
- 
-: -------------------------------------------------- 
-Using seed: 856110 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 802
- 
-: -------------------------------------------------- 
-Using seed: 890109 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 803
- 
-: -------------------------------------------------- 
-Using seed: 819641 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 804
- 
-: -------------------------------------------------- 
-Using seed: 57303 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 805
- 
-: -------------------------------------------------- 
-Using seed: 100687 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 806
- 
-: -------------------------------------------------- 
-Using seed: 255071 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 807
- 
-: -------------------------------------------------- 
-Using seed: 437145 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 808
- 
-: -------------------------------------------------- 
-Using seed: 562877 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 809
- 
-: -------------------------------------------------- 
-Using seed: 826598 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 810
- 
-: -------------------------------------------------- 
-Using seed: 798300 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 811
- 
-: -------------------------------------------------- 
-Using seed: 926228 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 812
- 
-: -------------------------------------------------- 
-Using seed: 764019 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 813
- 
-: -------------------------------------------------- 
-Using seed: 342087 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 814
- 
-: -------------------------------------------------- 
-Using seed: 626631 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 815
- 
-: -------------------------------------------------- 
-Using seed: 927671 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 816
- 
-: -------------------------------------------------- 
-Using seed: 609883 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 817
- 
-: -------------------------------------------------- 
-Using seed: 382778 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 818
- 
-: -------------------------------------------------- 
-Using seed: 899299 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 819
- 
-: -------------------------------------------------- 
-Using seed: 283511 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 820
- 
-: -------------------------------------------------- 
-Using seed: 13643 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 821
- 
-: -------------------------------------------------- 
-Using seed: 845437 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 822
- 
-: -------------------------------------------------- 
-Using seed: 723025 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 823
- 
-: -------------------------------------------------- 
-Using seed: 88619 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 824
- 
-: -------------------------------------------------- 
-Using seed: 477409 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 825
- 
-: -------------------------------------------------- 
-Using seed: 120384 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 826
- 
-: -------------------------------------------------- 
-Using seed: 220243 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 827
- 
-: -------------------------------------------------- 
-Using seed: 755545 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 828
- 
-: -------------------------------------------------- 
-Using seed: 968534 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 829
- 
-: -------------------------------------------------- 
-Using seed: 185493 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 830
- 
-: -------------------------------------------------- 
-Using seed: 635163 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 831
- 
-: -------------------------------------------------- 
-Using seed: 446336 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 832
- 
-: -------------------------------------------------- 
-Using seed: 562333 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 833
- 
-: -------------------------------------------------- 
-Using seed: 221057 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 834
- 
-: -------------------------------------------------- 
-Using seed: 606828 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 835
- 
-: -------------------------------------------------- 
-Using seed: 26927 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 836
- 
-: -------------------------------------------------- 
-Using seed: 711554 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 837
- 
-: -------------------------------------------------- 
-Using seed: 112654 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 838
- 
-: -------------------------------------------------- 
-Using seed: 385480 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 839
- 
-: -------------------------------------------------- 
-Using seed: 177763 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 840
- 
-: -------------------------------------------------- 
-Using seed: 168682 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 841
- 
-: -------------------------------------------------- 
-Using seed: 363764 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 842
- 
-: -------------------------------------------------- 
-Using seed: 395657 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 843
- 
-: -------------------------------------------------- 
-Using seed: 364048 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 844
- 
-: -------------------------------------------------- 
-Using seed: 906923 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 845
- 
-: -------------------------------------------------- 
-Using seed: 583991 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 846
- 
-: -------------------------------------------------- 
-Using seed: 16446 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 847
- 
-: -------------------------------------------------- 
-Using seed: 60284 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 848
- 
-: -------------------------------------------------- 
-Using seed: 417378 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 849
- 
-: -------------------------------------------------- 
-Using seed: 149448 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 850
- 
-: -------------------------------------------------- 
-Using seed: 461503 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 851
- 
-: -------------------------------------------------- 
-Using seed: 797994 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 852
- 
-: -------------------------------------------------- 
-Using seed: 503331 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 853
- 
-: -------------------------------------------------- 
-Using seed: 203206 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 854
- 
-: -------------------------------------------------- 
-Using seed: 384958 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 855
- 
-: -------------------------------------------------- 
-Using seed: 816365 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 856
- 
-: -------------------------------------------------- 
-Using seed: 122313 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 857
- 
-: -------------------------------------------------- 
-Using seed: 395821 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 858
- 
-: -------------------------------------------------- 
-Using seed: 181136 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 859
- 
-: -------------------------------------------------- 
-Using seed: 487155 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 860
- 
-: -------------------------------------------------- 
-Using seed: 632695 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 861
- 
-: -------------------------------------------------- 
-Using seed: 960970 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 862
- 
-: -------------------------------------------------- 
-Using seed: 45901 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 863
- 
-: -------------------------------------------------- 
-Using seed: 521916 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 864
- 
-: -------------------------------------------------- 
-Using seed: 478623 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 865
- 
-: -------------------------------------------------- 
-Using seed: 881517 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 866
- 
-: -------------------------------------------------- 
-Using seed: 858292 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 867
- 
-: -------------------------------------------------- 
-Using seed: 7014 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 868
- 
-: -------------------------------------------------- 
-Using seed: 707299 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 869
- 
-: -------------------------------------------------- 
-Using seed: 428879 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 870
- 
-: -------------------------------------------------- 
-Using seed: 144850 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 871
- 
-: -------------------------------------------------- 
-Using seed: 776384 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 872
- 
-: -------------------------------------------------- 
-Using seed: 228544 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 873
- 
-: -------------------------------------------------- 
-Using seed: 876805 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 874
- 
-: -------------------------------------------------- 
-Using seed: 311055 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 875
- 
-: -------------------------------------------------- 
-Using seed: 430767 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 876
- 
-: -------------------------------------------------- 
-Using seed: 625829 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 877
- 
-: -------------------------------------------------- 
-Using seed: 566779 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 878
- 
-: -------------------------------------------------- 
-Using seed: 626848 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 879
- 
-: -------------------------------------------------- 
-Using seed: 957951 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 880
- 
-: -------------------------------------------------- 
-Using seed: 723168 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 881
- 
-: -------------------------------------------------- 
-Using seed: 638308 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 882
- 
-: -------------------------------------------------- 
-Using seed: 873627 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 883
- 
-: -------------------------------------------------- 
-Using seed: 909566 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 884
- 
-: -------------------------------------------------- 
-Using seed: 323532 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 885
- 
-: -------------------------------------------------- 
-Using seed: 613769 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 886
- 
-: -------------------------------------------------- 
-Using seed: 538458 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 887
- 
-: -------------------------------------------------- 
-Using seed: 114230 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 888
- 
-: -------------------------------------------------- 
-Using seed: 739879 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 889
- 
-: -------------------------------------------------- 
-Using seed: 321528 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 890
- 
-: -------------------------------------------------- 
-Using seed: 411853 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 891
- 
-: -------------------------------------------------- 
-Using seed: 293319 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 892
- 
-: -------------------------------------------------- 
-Using seed: 511801 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 893
- 
-: -------------------------------------------------- 
-Using seed: 204322 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 894
- 
-: -------------------------------------------------- 
-Using seed: 838365 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 895
- 
-: -------------------------------------------------- 
-Using seed: 914625 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 896
- 
-: -------------------------------------------------- 
-Using seed: 919145 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 897
- 
-: -------------------------------------------------- 
-Using seed: 892730 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 898
- 
-: -------------------------------------------------- 
-Using seed: 472319 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 899
- 
-: -------------------------------------------------- 
-Using seed: 98934 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 900
- 
-: -------------------------------------------------- 
-Using seed: 521881 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 901
- 
-: -------------------------------------------------- 
-Using seed: 760019 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 902
- 
-: -------------------------------------------------- 
-Using seed: 724389 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 903
- 
-: -------------------------------------------------- 
-Using seed: 631581 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 904
- 
-: -------------------------------------------------- 
-Using seed: 711985 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 905
- 
-: -------------------------------------------------- 
-Using seed: 700912 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 906
- 
-: -------------------------------------------------- 
-Using seed: 343091 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 907
- 
-: -------------------------------------------------- 
-Using seed: 195519 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 908
- 
-: -------------------------------------------------- 
-Using seed: 355690 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 909
- 
-: -------------------------------------------------- 
-Using seed: 956225 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 910
- 
-: -------------------------------------------------- 
-Using seed: 93993 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 911
- 
-: -------------------------------------------------- 
-Using seed: 471646 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 912
- 
-: -------------------------------------------------- 
-Using seed: 628026 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 913
- 
-: -------------------------------------------------- 
-Using seed: 349308 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 914
- 
-: -------------------------------------------------- 
-Using seed: 659845 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 915
- 
-: -------------------------------------------------- 
-Using seed: 718113 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 916
- 
-: -------------------------------------------------- 
-Using seed: 867093 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 917
- 
-: -------------------------------------------------- 
-Using seed: 22880 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 918
- 
-: -------------------------------------------------- 
-Using seed: 52470 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 919
- 
-: -------------------------------------------------- 
-Using seed: 435057 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 920
- 
-: -------------------------------------------------- 
-Using seed: 820814 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 921
- 
-: -------------------------------------------------- 
-Using seed: 211725 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 922
- 
-: -------------------------------------------------- 
-Using seed: 427833 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 923
- 
-: -------------------------------------------------- 
-Using seed: 889414 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 924
- 
-: -------------------------------------------------- 
-Using seed: 543612 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 925
- 
-: -------------------------------------------------- 
-Using seed: 507497 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 926
- 
-: -------------------------------------------------- 
-Using seed: 779416 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 927
- 
-: -------------------------------------------------- 
-Using seed: 499514 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 928
- 
-: -------------------------------------------------- 
-Using seed: 889566 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 929
- 
-: -------------------------------------------------- 
-Using seed: 520051 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 930
- 
-: -------------------------------------------------- 
-Using seed: 570924 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 931
- 
-: -------------------------------------------------- 
-Using seed: 160208 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 932
- 
-: -------------------------------------------------- 
-Using seed: 689509 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 933
- 
-: -------------------------------------------------- 
-Using seed: 891098 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 934
- 
-: -------------------------------------------------- 
-Using seed: 890529 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 935
- 
-: -------------------------------------------------- 
-Using seed: 896656 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 936
- 
-: -------------------------------------------------- 
-Using seed: 790790 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 937
- 
-: -------------------------------------------------- 
-Using seed: 884302 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 938
- 
-: -------------------------------------------------- 
-Using seed: 216190 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 939
- 
-: -------------------------------------------------- 
-Using seed: 789791 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 940
- 
-: -------------------------------------------------- 
-Using seed: 405145 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 941
- 
-: -------------------------------------------------- 
-Using seed: 491520 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 942
- 
-: -------------------------------------------------- 
-Using seed: 733110 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 943
- 
-: -------------------------------------------------- 
-Using seed: 171652 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 944
- 
-: -------------------------------------------------- 
-Using seed: 318826 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 945
- 
-: -------------------------------------------------- 
-Using seed: 731499 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 946
- 
-: -------------------------------------------------- 
-Using seed: 556523 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 947
- 
-: -------------------------------------------------- 
-Using seed: 960744 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 948
- 
-: -------------------------------------------------- 
-Using seed: 645463 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 949
- 
-: -------------------------------------------------- 
-Using seed: 431445 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 950
- 
-: -------------------------------------------------- 
-Using seed: 470485 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 951
- 
-: -------------------------------------------------- 
-Using seed: 63212 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 952
- 
-: -------------------------------------------------- 
-Using seed: 267056 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 953
- 
-: -------------------------------------------------- 
-Using seed: 281673 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 954
- 
-: -------------------------------------------------- 
-Using seed: 738243 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 955
- 
-: -------------------------------------------------- 
-Using seed: 732082 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 956
- 
-: -------------------------------------------------- 
-Using seed: 458315 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 957
- 
-: -------------------------------------------------- 
-Using seed: 710616 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 958
- 
-: -------------------------------------------------- 
-Using seed: 155707 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 959
- 
-: -------------------------------------------------- 
-Using seed: 279201 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 960
- 
-: -------------------------------------------------- 
-Using seed: 873558 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 961
- 
-: -------------------------------------------------- 
-Using seed: 723907 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 962
- 
-: -------------------------------------------------- 
-Using seed: 21762 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 963
- 
-: -------------------------------------------------- 
-Using seed: 182606 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 964
- 
-: -------------------------------------------------- 
-Using seed: 962202 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 965
- 
-: -------------------------------------------------- 
-Using seed: 575582 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 966
- 
-: -------------------------------------------------- 
-Using seed: 301534 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 967
- 
-: -------------------------------------------------- 
-Using seed: 647378 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 968
- 
-: -------------------------------------------------- 
-Using seed: 185594 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 969
- 
-: -------------------------------------------------- 
-Using seed: 375395 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 970
- 
-: -------------------------------------------------- 
-Using seed: 796925 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 971
- 
-: -------------------------------------------------- 
-Using seed: 450191 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 972
- 
-: -------------------------------------------------- 
-Using seed: 352411 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 973
+Simulation Log for 2023-08-18 23:07:25.499798 
+Info: Simulations for cluster size: 5 and cluster number: 10
  
-: -------------------------------------------------- 
-Using seed: 822144 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 974
- 
-: -------------------------------------------------- 
-Using seed: 911669 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 975
- 
-: -------------------------------------------------- 
-Using seed: 435798 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 976
- 
-: -------------------------------------------------- 
-Using seed: 739990 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 977
- 
-: -------------------------------------------------- 
-Using seed: 769674 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 978
- 
-: -------------------------------------------------- 
-Using seed: 351716 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 979
- 
-: -------------------------------------------------- 
-Using seed: 254905 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 980
- 
-: -------------------------------------------------- 
-Using seed: 482727 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 981
- 
-: -------------------------------------------------- 
-Using seed: 517226 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 982
- 
-: -------------------------------------------------- 
-Using seed: 202639 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 983
- 
-: -------------------------------------------------- 
-Using seed: 655495 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 984
- 
-: -------------------------------------------------- 
-Using seed: 254720 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 985
- 
-: -------------------------------------------------- 
-Using seed: 421041 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 986
- 
-: -------------------------------------------------- 
-Using seed: 357196 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 987
- 
-: -------------------------------------------------- 
-Using seed: 189618 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 988
- 
-: -------------------------------------------------- 
-Using seed: 162466 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 989
- 
-: -------------------------------------------------- 
-Using seed: 868599 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 990
- 
-: -------------------------------------------------- 
-Using seed: 409120 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 991
- 
-: -------------------------------------------------- 
-Using seed: 509607 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 992
- 
-: -------------------------------------------------- 
-Using seed: 576553 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 993
- 
-: -------------------------------------------------- 
-Using seed: 779808 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 994
- 
-: -------------------------------------------------- 
-Using seed: 362951 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 995
- 
-: -------------------------------------------------- 
-Using seed: 316721 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 996
- 
-: -------------------------------------------------- 
-Using seed: 980393 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 997
- 
-: -------------------------------------------------- 
-Using seed: 286543 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 998
- 
-: -------------------------------------------------- 
-Using seed: 648675 
-message: NA 
-warning: NA 
-error: NA 
-Info: Stored output for iteration 999
+Simulation Log for 2023-08-18 23:10:06.286639 
+Info: Simulations for cluster size: 5 and cluster number: 10
  
 : -------------------------------------------------- 
-Using seed: 144322 
+Using seed: 786207 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
-Info: Stored output for iteration 1000
+Info: Stored output for iteration 1
  
-Simulation Log for 2023-08-18 20:06:38.889995 
-Info: Simulations for cluster size: 50 and #cluster: 50
+Simulation Log for 2023-08-18 23:16:48.979126 
+Info: Simulations for cluster size: 5 and cluster number: 10
  
 : -------------------------------------------------- 
-Using seed: 145028 
-converged: : 1 
+Using seed: 814523 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 1
  
 : -------------------------------------------------- 
-Using seed: 306468 
-converged: : 1 
+Using seed: 497134 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 2
  
 : -------------------------------------------------- 
-Using seed: 388364 
-converged: : 1 
+Using seed: 448294 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 3
  
 : -------------------------------------------------- 
-Using seed: 139310 
-converged: : 1 
+Using seed: 152104 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 4
  
 : -------------------------------------------------- 
-Using seed: 290509 
-converged: : 1 
+Using seed: 511597 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 5
  
 : -------------------------------------------------- 
-Using seed: 459762 
-converged: : 1 
+Using seed: 189157 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 6
  
 : -------------------------------------------------- 
-Using seed: 230732 
-converged: : 1 
+Using seed: 493683 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 7
  
 : -------------------------------------------------- 
-Using seed: 294764 
-converged: : 1 
+Using seed: 903039 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 8
  
 : -------------------------------------------------- 
-Using seed: 233529 
-converged: : 1 
+Using seed: 732245 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 9
  
 : -------------------------------------------------- 
-Using seed: 796338 
-converged: : 1 
+Using seed: 137081 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 10
  
-Simulation Log for 2023-08-18 20:10:20.870549 
-Info: Simulations for cluster size: 50 and #cluster: 50
+Simulation Log for 2023-08-18 23:17:16.831423 
+Info: Simulations for cluster size: 5 and cluster number: 10
  
 : -------------------------------------------------- 
-Using seed: 136378 
-converged: : 1 
+Using seed: 669856 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 1
  
 : -------------------------------------------------- 
-Using seed: 99237 
-converged: : 1 
+Using seed: 809864 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 2
  
 : -------------------------------------------------- 
-Using seed: 205846 
-converged: : 1 
+Using seed: 839786 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 3
  
 : -------------------------------------------------- 
-Using seed: 497189 
-converged: : 1 
+Using seed: 249041 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 4
  
 : -------------------------------------------------- 
-Using seed: 93911 
-converged: : 1 
+Using seed: 563258 
+converged: FALSE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 5
  
 : -------------------------------------------------- 
-Using seed: 305957 
-converged: : 1 
+Using seed: 710788 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 6
  
 : -------------------------------------------------- 
-Using seed: 370832 
-converged: : 1 
+Using seed: 68684 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 7
  
 : -------------------------------------------------- 
-Using seed: 631686 
-converged: : 1 
+Using seed: 952357 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 8
  
 : -------------------------------------------------- 
-Using seed: 909422 
-converged: : 1 
+Using seed: 83455 
+converged: TRUE 
 message: NA 
-warning: NA 
+warning: Hessian matrix at convergence is not positive definite; unstable solution.
+
+warning: NaNs produced 
 error: NA 
 Info: Stored output for iteration 9
  
 : -------------------------------------------------- 
-Using seed: 517257 
-converged: : 1 
+Using seed: 569258 
+converged: TRUE 
 message: NA 
 warning: NA 
 error: NA 
 Info: Stored output for iteration 10
  
-Simulation Log for 2023-08-18 22:26:39.452633 
-Info: Simulations for cluster size: 50 and cluster number: 50
+Simulation Log for 2023-08-18 23:18:38.805223 
+Info: Simulations for cluster size: 5 and cluster number: 10
  
 : -------------------------------------------------- 
-Using seed: 262448 
-converged: TRUE 
-message: NA 
-warning: NA 
-error: NA 
-Simulation Log for 2023-08-18 22:27:54.131871 
-Info: Simulations for cluster size: 50 and cluster number: 50
- 
-: -------------------------------------------------- 
-Using seed: 746572 
+Using seed: 232186 
 converged: TRUE 
 message: NA 
 warning: NA 
@@ -7188,7 +1541,7 @@ error: NA
 Info: Stored output for iteration 1
  
 : -------------------------------------------------- 
-Using seed: 803924 
+Using seed: 460497 
 converged: TRUE 
 message: NA 
 warning: NA 
@@ -7196,15 +1549,23 @@ error: NA
 Info: Stored output for iteration 2
  
 : -------------------------------------------------- 
-Using seed: 523302 
-converged: TRUE 
+Using seed: 857336 
+converged: NA 
 message: NA 
 warning: NA 
-error: NA 
+error: A large coefficient value has been detected during the optimization.
+ Please re-scale you covariates and/or try setting the control argument
+ 'iter_EM = 0'. Alternatively, this may due to a
+ divergence of the optimization algorithm, indicating that an overly
+ complex model is fitted to the data. For example, this could be
+ caused when including random-effects terms (e.g., in the
+ zero-inflated part) that you do not need. Otherwise, adjust the
+ 'max_coef_value' control argument.
+ 
 Info: Stored output for iteration 3
  
 : -------------------------------------------------- 
-Using seed: 966661 
+Using seed: 116351 
 converged: TRUE 
 message: NA 
 warning: NA 
@@ -7212,7 +1573,7 @@ error: NA
 Info: Stored output for iteration 4
  
 : -------------------------------------------------- 
-Using seed: 709238 
+Using seed: 528269 
 converged: TRUE 
 message: NA 
 warning: NA 
@@ -7220,7 +1581,7 @@ error: NA
 Info: Stored output for iteration 5
  
 : -------------------------------------------------- 
-Using seed: 682142 
+Using seed: 742256 
 converged: TRUE 
 message: NA 
 warning: NA 
@@ -7228,7 +1589,7 @@ error: NA
 Info: Stored output for iteration 6
  
 : -------------------------------------------------- 
-Using seed: 605421 
+Using seed: 307329 
 converged: TRUE 
 message: NA 
 warning: NA 
@@ -7236,7 +1597,7 @@ error: NA
 Info: Stored output for iteration 7
  
 : -------------------------------------------------- 
-Using seed: 313758 
+Using seed: 894651 
 converged: TRUE 
 message: NA 
 warning: NA 
@@ -7244,7 +1605,7 @@ error: NA
 Info: Stored output for iteration 8
  
 : -------------------------------------------------- 
-Using seed: 371029 
+Using seed: 497847 
 converged: TRUE 
 message: NA 
 warning: NA 
@@ -7252,7 +1613,182 @@ error: NA
 Info: Stored output for iteration 9
  
 : -------------------------------------------------- 
-Using seed: 671986 
+Using seed: 302482 
+converged: NA 
+message: NA 
+warning: glm.fit: algorithm did not converge
+warning: glm.fit: fitted probabilities numerically 0 or 1 occurred 
+error: A large coefficient value has been detected during the optimization.
+ Please re-scale you covariates and/or try setting the control argument
+ 'iter_EM = 0'. Alternatively, this may due to a
+ divergence of the optimization algorithm, indicating that an overly
+ complex model is fitted to the data. For example, this could be
+ caused when including random-effects terms (e.g., in the
+ zero-inflated part) that you do not need. Otherwise, adjust the
+ 'max_coef_value' control argument.
+ 
+Info: Stored output for iteration 10
+ 
+Simulation Log for 2023-08-18 23:18:54.818165 
+Info: Simulations for cluster size: 5 and cluster number: 10
+ 
+: -------------------------------------------------- 
+Using seed: 747558 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 1
+ 
+: -------------------------------------------------- 
+Using seed: 926579 
+converged: FALSE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 2
+ 
+: -------------------------------------------------- 
+Using seed: 647301 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 3
+ 
+: -------------------------------------------------- 
+Using seed: 423990 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 4
+ 
+: -------------------------------------------------- 
+Using seed: 745019 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 5
+ 
+: -------------------------------------------------- 
+Using seed: 374968 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 6
+ 
+: -------------------------------------------------- 
+Using seed: 267702 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 7
+ 
+: -------------------------------------------------- 
+Using seed: 329221 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 8
+ 
+: -------------------------------------------------- 
+Using seed: 619964 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 9
+ 
+: -------------------------------------------------- 
+Using seed: 569860 
+converged: FALSE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 10
+ 
+Simulation Log for 2023-08-18 23:20:06.748977 
+Info: Simulations for cluster size: 5 and cluster number: 10
+ 
+: -------------------------------------------------- 
+Using seed: 380420 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 1
+ 
+: -------------------------------------------------- 
+Using seed: 526362 
+converged: FALSE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 2
+ 
+: -------------------------------------------------- 
+Using seed: 640395 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 3
+ 
+: -------------------------------------------------- 
+Using seed: 817196 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 4
+ 
+: -------------------------------------------------- 
+Using seed: 120957 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 5
+ 
+: -------------------------------------------------- 
+Using seed: 299249 
+converged: FALSE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 6
+ 
+: -------------------------------------------------- 
+Using seed: 813848 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 7
+ 
+: -------------------------------------------------- 
+Using seed: 549420 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 8
+ 
+: -------------------------------------------------- 
+Using seed: 226618 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 9
+ 
+: -------------------------------------------------- 
+Using seed: 869756 
 converged: TRUE 
 message: NA 
 warning: NA 
