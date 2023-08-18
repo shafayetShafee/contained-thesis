@@ -40,6 +40,7 @@ gen_two_level_int_data <- function(m, n, sigma_u_sq, seed) {
   return(multi_data)
 }
 
+
 gen_int_mor_estimate <- function(m, n, sigma_u_sq, seed) {
   # data generation ----------------
   multi_data_int <- gen_two_level_int_data(m, n, sigma_u_sq, seed)
@@ -97,10 +98,70 @@ gen_int_mor_estimate <- function(m, n, sigma_u_sq, seed) {
   return(out_vec)
 }
 
+
 # gen_int_mor_estimate(50, 50, 2.5, 1083)
 
 
+log_sim_run <- function(obj, simulation_seed, log_file, iter_no) {
+  # obj => object returned by `safely_and_quietly`
+  
+  # extraction ---------------------
+  model_result <- obj$result
+  model_convergence <- model_result["converged"]
+  model_messages <- obj$messages
+  model_warnings <- obj$warnings
+  model_error <- obj$error
+  
+  # started logging ----------------
+  log_output(paste0(rep("-", 50), collapse = ""), type = "", file = log_file)
+  log_output(simulation_seed, type = "Using seed", file = log_file)
+  log_output(as.logical(model_convergence), type = "converged", file = log_file)
+  log_output(model_messages, type = "message", file = log_file)
+  log_output(model_warnings, type = "warning", file = log_file)
+  log_output(model_error, type = "error", file = log_file)
+  log_output(
+    paste0("Stored output for iteration ", iter_no, "\n"), 
+    type="Info", file = log_file
+  )
+}
+
+
+simulate_int <- function(m, n, sigma_u_sq, nsims = 1000, log_file, ...) {
+  
+  # creating placeholder matrix for result ------
+  out_mat <- matrix(NA, nrow = nsims, ncol = 8)
+  colnames(out_mat) <- c("mor_hat", "se_mor_hat", "sigma_u_sq_hat", "beta0_hat", 
+                         "beta1_hat", "beta2_hat", "coverage", "converged")
+  
+  # starting simulation -------------------------
+  for (i in 1:nsims) {
+    seed <- floor(runif(1, 100, 1000000))
+    model_output <- safe_and_quietly(fun = gen_int_mor_estimate,
+                                     m = m, n = n, sigma_u_sq = sigma_u_sq, 
+                                     seed = seed)
+    
+    # logging simulation run --------------------
+    log_sim_run(model_output, simulation_seed = seed, log_file = log_file,
+                iter_no = i)
+    
+    # storing sim-run ---------------------------
+    out_mat[i, ] <- model_output$result
+  }
+  
+  # true MOR (needed for relative bias calculation)
+  true_mor <- exp(sqrt(2 * sigma_u_sq) * qnorm(0.75))
+  
+  return(
+    list(
+      out_mat = out_mat,
+      true_mor = true_mor
+    )
+  )
+}
+
+
 run_simulations <- function(m, n, sigma_u_sq, nsims = 1000, 
+                            simulation_type = c("int", "slope"),
                             log_file, append = FALSE) {
   # browser()
   cat(
@@ -108,69 +169,61 @@ run_simulations <- function(m, n, sigma_u_sq, nsims = 1000,
     file = log_file, append = append
   )
   
-  out_mat <- matrix(NA, nrow = nsims, ncol = 8)
-  colnames(out_mat) <- c("mor_hat", "se_mor_hat", "sigma_u_sq_hat", "beta0_hat", 
-                         "beta1_hat", "beta2_hat", "coverage", "converged")
-  cluster_info <- paste0("Simulations for cluster size: ", n, " and #cluster: ", m, "\n")
+  # logging simulation param info ---------------
+  cluster_info <- paste0("Simulations for cluster size: ", n, 
+                         " and cluster number: ", m, "\n")
   log_output(cluster_info, type = "Info", file = log_file)
-  # has_problem <- 0
   
-  for (i in 1:nsims) {
-    # browser() 
-    seed <- floor(runif(1, 100, 1000000))
-    model_output <- safe_and_quietly(fun = gen_int_mor_estimate,
-                                     m = m, n = n, sigma_u_sq = sigma_u_sq, 
-                                     seed = seed)
-    model_result <- model_output$result
-    model_convergence <- model_result["converged"]
-    model_messages <- model_output$messages
-    model_warnings <- model_output$warnings
-    model_error <- model_output$error
-    
-    out_mat[i, ] <- model_result
-    
-    log_output(paste0(rep("-", 50), collapse = ""), type = "", file = log_file)
-    log_output(seed, type = "Using seed", file = log_file)
-    log_output(model_convergence, type = "converged: ", file = log_file)
-    log_output(model_messages, type = "message", file = log_file)
-    log_output(model_warnings, type = "warning", file = log_file)
-    log_output(model_error, type = "error", file = log_file)
-    log_output(
-      paste0("Stored output for iteration ", i, "\n"), 
-      type="Info", file = log_file
-    )
-    
-    # catch_msg <- "boundary (singular) fit"
-    # msg_prob_detected <- is_valid(str_detect(model_messages, pattern = fixed(catch_msg)))
-    # 
-    # warning_detected <- is_valid_str(paste0(model_warnings, collapse = ""))
-    # error_detected <- is_valid_str(paste0(model_error, collapse = ""))
-    # 
-    # if(msg_prob_detected || warning_detected || error_detected) {
-    #   NA_result <- rep(NA, times = length(model_result))
-    #   names(NA_result) <- names(model_result)
-    #   model_result <- NA_result
-    #   has_problem <- has_problem + 1
-    # }
-  }
-  # print(out_mat)
+  # getting simulation matrix -------------------
+  sim_type <- match.arg(simulation_type)
+  sim_output <- switch(sim_type, 
+                  int = simulate_int(m = m, n = n, sigma_u_sq = sigma_u_sq,
+                                     nsims = nsims, log_file = log_file), 
+                  slope = "PASS_FOR_NOW"
+                )
+  out_mat <- sim_output$out_mat
   out_mat_means <- colMeans(out_mat, na.rm = TRUE)
-  sim_se_mor_hat <- sd(out_mat[, "mor_hat"], na.rm = TRUE)
+  sim_se_mor_hat <- mean(out_mat[, "mor_hat"], na.rm = TRUE)
   runs_used = out_mat_means["converged"] * 1000
   
+  # relative bias clac --------------------------
+  true_mor <- sim_output$true_mor
+  relative_bias <- as.numeric(((out_mat_means["mor_hat"] - true_mor) / true_mor) * 100)
+  
+  # generating histograms for checking ----------
   log_mor_hat <- log(out_mat[, "mor_hat"])
   hist_plot <- ggplot(tibble(log_mor_hat), aes(x = log_mor_hat)) +
     geom_histogram(bins = 30) +
     labs(x = "log(MOR)",
          title = cluster_info) +
     theme_classic()
-  ggsave(paste0("hist_", m, "_", n, ".png"), path = here::here("plots/ran-int"))
-  
-  true_mor <- exp(sqrt(2 * sigma_u_sq) * qnorm(0.75))
-  relative_bias <- as.numeric(((out_mat_means["mor_hat"] - true_mor) / true_mor) * 100)
-  
+  plot_path <- switch(sim_type,
+    int = here::here("plots/ran-int"),
+    slope = here::here("plots/ran-slope")
+  )
+  ggsave(paste0("hist_", m, "_", n, ".png"), path = plot_path)
+
   return(c(cluster_number = m, cluster_size = n, out_mat_means, 
            sim_se_mor_hat = sim_se_mor_hat, 
            relative_bias = relative_bias,
            runs_used = runs_used))
 }
+
+
+# catch_msg <- "boundary (singular) fit"
+# msg_prob_detected <- is_valid(str_detect(model_messages, pattern = fixed(catch_msg)))
+# 
+# warning_detected <- is_valid_str(paste0(model_warnings, collapse = ""))
+# error_detected <- is_valid_str(paste0(model_error, collapse = ""))
+# 
+# if(msg_prob_detected || warning_detected || error_detected) {
+#   NA_result <- rep(NA, times = length(model_result))
+#   names(NA_result) <- names(model_result)
+#   model_result <- NA_result
+#   has_problem <- has_problem + 1
+# }
+# 
+# model_convergence <- model_result["converged"]
+# model_messages <- model_output$messages
+# model_warnings <- model_output$warnings
+# model_error <- model_output$error

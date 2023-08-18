@@ -7167,3 +7167,95 @@ warning: NA
 error: NA 
 Info: Stored output for iteration 10
  
+Simulation Log for 2023-08-18 22:26:39.452633 
+Info: Simulations for cluster size: 50 and cluster number: 50
+ 
+: -------------------------------------------------- 
+Using seed: 262448 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Simulation Log for 2023-08-18 22:27:54.131871 
+Info: Simulations for cluster size: 50 and cluster number: 50
+ 
+: -------------------------------------------------- 
+Using seed: 746572 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 1
+ 
+: -------------------------------------------------- 
+Using seed: 803924 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 2
+ 
+: -------------------------------------------------- 
+Using seed: 523302 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 3
+ 
+: -------------------------------------------------- 
+Using seed: 966661 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 4
+ 
+: -------------------------------------------------- 
+Using seed: 709238 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 5
+ 
+: -------------------------------------------------- 
+Using seed: 682142 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 6
+ 
+: -------------------------------------------------- 
+Using seed: 605421 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 7
+ 
+: -------------------------------------------------- 
+Using seed: 313758 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 8
+ 
+: -------------------------------------------------- 
+Using seed: 371029 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 9
+ 
+: -------------------------------------------------- 
+Using seed: 671986 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 10
+ 
