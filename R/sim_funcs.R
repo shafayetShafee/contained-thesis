@@ -7,12 +7,12 @@ library(GLMMadaptive)
 
 source(here::here("R/sim_utils.R"))
 
-gen_two_level_int_data <- function(m, n, sigma_u_sq, seed) {
+gen_two_level_int_data <- function(m, n, sigma_u_sq, data_seed) {
   # m => number of cluster
   # n => size of each cluster
   N = m*n 
   
-  set.seed(seed)
+  set.seed(data_seed)
   
   x1c <- rnorm(N)
   x2 <- rnorm(N)
@@ -41,9 +41,9 @@ gen_two_level_int_data <- function(m, n, sigma_u_sq, seed) {
 }
 
 
-gen_int_mor_estimate <- function(m, n, sigma_u_sq, seed) {
+gen_int_mor_estimate <- function(m, n, sigma_u_sq, data_seed) {
   # data generation ----------------
-  multi_data_int <- gen_two_level_int_data(m, n, sigma_u_sq, seed)
+  multi_data_int <- gen_two_level_int_data(m, n, sigma_u_sq, data_seed)
   
   # model fitting ------------------
   multi_model_int <- mixed_model(fixed = Yij ~ X1c + X2b, 
@@ -89,7 +89,7 @@ gen_int_mor_estimate <- function(m, n, sigma_u_sq, seed) {
                beta2_hat = beta2_hat, coverage = coverage,
                converged = is_model_converged)
   
-  if(!is_model_converged || mor_hat > 20) {
+  if(!is_model_converged || mor_hat > 40) {
     out_vec_names <- names(out_vec)
     out_vec <- c(rep(NA, length(out_vec) - 1), FALSE)
     names(out_vec) <- out_vec_names
@@ -103,10 +103,10 @@ gen_int_mor_estimate <- function(m, n, sigma_u_sq, seed) {
 
 
 log_sim_run <- function(convergence, message, warning, error, 
-                        simulation_seed, log_file, iter_no) {
+                        data_seed, log_file, iter_no) {
   # started logging ----------------
   log_output(paste0(rep("-", 50), collapse = ""), type = "", file = log_file)
-  log_output(simulation_seed, type = "Using seed", file = log_file)
+  log_output(data_seed, type = "Using data_seed", file = log_file)
   log_output(as.logical(convergence), type = "converged", file = log_file)
   log_output(message, type = "message", file = log_file)
   log_output(warning, type = "warning", file = log_file)
@@ -118,19 +118,22 @@ log_sim_run <- function(convergence, message, warning, error,
 }
 
 
-simulate_int <- function(m, n, sigma_u_sq, nsims = 1000, log_file, ...) {
+simulate_int <- function(m, n, sigma_u_sq, nsims = 1000, log_file, seed, ...) {
   
   # creating placeholder matrix for result ------
   out_mat <- matrix(NA, nrow = nsims, ncol = 8)
   colnames(out_mat) <- c("mor_hat", "se_mor_hat", "sigma_u_sq_hat", "beta0_hat", 
                          "beta1_hat", "beta2_hat", "coverage", "converged")
   
+  # set the random state iniitating seed
+  set.seed(seed)
+  iteration_seeds <- sample(x = 10:1000000, size = nsims, replace = FALSE)
   # starting simulation -------------------------
   for (i in 1:nsims) {
-    seed <- floor(runif(1, 100, 1000000))
+    data_seed <- iteration_seeds[i]
     model_output <- safe_and_quietly(fun = gen_int_mor_estimate,
                                      m = m, n = n, sigma_u_sq = sigma_u_sq, 
-                                     seed = seed)
+                                     data_seed = data_seed)
     
     # extraction ---------------------
     model_result <- model_output$result
@@ -142,7 +145,7 @@ simulate_int <- function(m, n, sigma_u_sq, nsims = 1000, log_file, ...) {
     # logging simulation run --------------------
     log_sim_run(convergence = model_convergence, message = model_messages, 
                 warning = model_warnings, error = model_error,
-                simulation_seed = seed, log_file = log_file, iter_no = i)
+                data_seed = data_seed, log_file = log_file, iter_no = i)
     
     # account for error -------------------------
     msg_prob_detected <- is_valid_str(paste0(model_messages, collapse = ""))
@@ -173,7 +176,7 @@ simulate_int <- function(m, n, sigma_u_sq, nsims = 1000, log_file, ...) {
 
 run_simulations <- function(m, n, sigma_u_sq, nsims = 1000, 
                             simulation_type = c("int", "slope"),
-                            log_file, append = FALSE) {
+                            seed = 1083, log_file, append = FALSE) {
   
   cat(
     paste("Simulation Log for", Sys.time(), "\n"), 
@@ -189,7 +192,8 @@ run_simulations <- function(m, n, sigma_u_sq, nsims = 1000,
   sim_type <- match.arg(simulation_type)
   sim_output <- switch(sim_type, 
                   int = simulate_int(m = m, n = n, sigma_u_sq = sigma_u_sq,
-                                     nsims = nsims, log_file = log_file), 
+                                     nsims = nsims, log_file = log_file,
+                                     seed = seed), 
                   slope = "PASS_FOR_NOW"
                 )
   out_mat <- sim_output$out_mat
