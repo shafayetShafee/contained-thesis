@@ -5,16 +5,16 @@ source(here::here("R/sim_funcs.R"))
 # MOR
 
 # m = 10, 30, 50, 100
-cluster_numbers <- c(50)
+cluster_numbers <- c(100)
 
 # n = 5, 10, 30, 50
-cluster_size <- c(30)
+cluster_size <- c(50)
 
-cluster_params <- expand_grid(cluster_size = cluster_size, 
+cluster_params <- tidyr::expand_grid(cluster_size = cluster_size, 
                               cluster_numbers = cluster_numbers)
 log_file <- here::here("log/log_aug_18.txt")
 
-res <- map2_dfr(.x = cluster_params$cluster_numbers, 
+res <- purrr::map2_dfr(.x = cluster_params$cluster_numbers, 
             .y = cluster_params$cluster_size, 
             .f = ~ run_simulations(m = .x, n = .y, sigma_u_sq = 2.5, 
                               nsims = 1000, seed = 1083,
