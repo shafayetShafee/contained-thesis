@@ -8,7 +8,7 @@ source(here::here("R/sim_funcs.R"))
 cluster_numbers <- c(50)
 
 # n = 5, 10, 30, 50
-cluster_size <- c(10)
+cluster_size <- c(30)
 
 cluster_params <- expand_grid(cluster_size = cluster_size, 
                               cluster_numbers = cluster_numbers)
