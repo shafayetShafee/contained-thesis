@@ -89,7 +89,7 @@ gen_int_mor_estimate <- function(m, n, sigma_u_sq, data_seed) {
                beta2_hat = beta2_hat, coverage = coverage,
                converged = is_model_converged)
   
-  if(!is_model_converged || mor_hat > 40) {
+  if(!is_model_converged || mor_hat > 40 || se_mor_hat > 30) {
     out_vec_names <- names(out_vec)
     out_vec <- c(rep(NA, length(out_vec) - 1), FALSE)
     names(out_vec) <- out_vec_names
@@ -198,7 +198,9 @@ run_simulations <- function(m, n, sigma_u_sq, nsims = 1000,
                 )
   out_mat <- sim_output$out_mat
   out_mat_means <- colMeans(out_mat, na.rm = TRUE)
-  sim_se_mor_hat <- sd(out_mat[, "mor_hat"], na.rm = TRUE)
+  log_mor_hat <- log(out_mat[, "mor_hat"])
+  sim_se_mor_hat <- exp(sd(log_mor_hat, na.rm = TRUE))
+  # sim_se_mor_hat <- sd(out_mat[, "mor_hat"], na.rm = TRUE)
   runs_used = unname(sum(out_mat[, "converged"], na.rm = TRUE))
   
   # relative bias clac --------------------------
@@ -206,7 +208,6 @@ run_simulations <- function(m, n, sigma_u_sq, nsims = 1000,
   relative_bias <- as.numeric(((out_mat_means["mor_hat"] - true_mor) / true_mor) * 100)
   
   # generating histograms for checking ----------
-  log_mor_hat <- log(out_mat[, "mor_hat"])
   hist_plot <- ggplot(tibble(log_mor_hat), aes(x = log_mor_hat)) +
     geom_histogram(bins = 30) +
     labs(x = "log(MOR)",
