@@ -5,10 +5,10 @@ source(here::here("R/sim_funcs.R"))
 # MOR
 
 # m = 10, 30, 50, 100
-cluster_numbers <- c(100)
+cluster_numbers <- c(50)
 
 # n = 5, 10, 30, 50
-cluster_size <- c(5)
+cluster_size <- c(10)
 
 cluster_params <- expand_grid(cluster_size = cluster_size, 
                               cluster_numbers = cluster_numbers)
