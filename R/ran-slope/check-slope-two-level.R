@@ -1,3 +1,6 @@
+library(numDeriv)
+library(GLMMadaptive)
+
 m = 10 # number of cluster
 n = 10 # size of each cluster
 N = m*n 
@@ -37,7 +40,7 @@ multi_data <- data.frame(
   Yij = yij
 )
 
-library(GLMMadaptive)
+
 
 multi_model <- mixed_model(fixed = Yij ~ X1c + X2b, random = ~ X1c | cluster, 
                            data = multi_data, nAGQ = 11, family = binomial())
@@ -46,30 +49,38 @@ summary(multi_model)
 multi_model$D
 
 sigma_u_hat <- sym_mat_to_vec(multi_model$D) # var-cov matrix (estimate of random effects)
-
-rand_var <- vcov_orig_scale(multi_model)
-
-v <- diag(rand_var)
-v_mat <- diag(c(v[1], v[3], v[2]))
-
-library(numDeriv)
-
-log_mor_expr <- function(x) {
-  sqrt((2*x[1]) + (2*0.5^2*x[2]) + (4*0.5*x[3])) * qnorm(0.75)
-}
+var_ran_effect <- var_slope_rand_effect(multi_model)
+var_ran_effect
 
 x1_val <- 0.5
 true_mor <- exp(sqrt(2*sigma2_u0 + 2*x1_val^2*sigma2_u1 + 4*x1_val*sigma2_01) * qnorm(0.75))
+true_mor
 
 mor_hat <- exp(
       sqrt(2*sigma_u_hat[1] + 2*x1_val^2*sigma_u_hat[3] + 4*x1_val*sigma_u_hat[2]) 
       * qnorm(0.75)
   )
+mor_hat
 
-J <- numDeriv::jacobian(log_mor_expr, c(sigma_u_hat[1], sigma_u_hat[3], sigma_u_hat[2])) # success
 
-var_log_mor <- as.numeric(J %*% v_mat %*% t(J))
+J <- numDeriv::jacobian(log_mor_expr, c(sigma_u_hat[1], sigma_u_hat[3], sigma_u_hat[2]), 
+                        x1_val = x1_val) # success
 
+var_log_mor <- as.numeric(J %*% var_ran_effect %*% t(J))
+sqrt(var_log_mor)
+
+
+
+
+
+
+
+
+
+
+
+
+# calc_slope_se_mor(sigma_u_hat, var_ran_effect, x1_val = 0.5)
 
 
 # attempt with lme4 -------------------------------------------------------
