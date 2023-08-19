@@ -195,7 +195,7 @@ run_simulations <- function(m, n, sigma_u_sq, nsims = 1000,
   out_mat <- sim_output$out_mat
   out_mat_means <- colMeans(out_mat, na.rm = TRUE)
   sim_se_mor_hat <- sd(out_mat[, "mor_hat"], na.rm = TRUE)
-  runs_used = unname(sum(out_mat["converged"], na.rm = TRUE))
+  runs_used = unname(sum(out_mat[, "converged"], na.rm = TRUE))
   
   # relative bias clac --------------------------
   true_mor <- sim_output$true_mor
