@@ -5,7 +5,7 @@ source(here::here("R/sim_funcs.R"))
 # MOR
 
 # m = 10, 30, 50, 100
-cluster_numbers <- c(10, 30, 50)
+cluster_numbers <- c(100)
 
 # n = 5, 10, 30, 50
 cluster_size <- c(5)
@@ -21,7 +21,7 @@ res <- map2_dfr(.x = cluster_params$cluster_numbers,
                               log_file = log_file, append = TRUE)
             )
 
-final_res <- res
+# final_res <- res
 final_res <- dplyr::bind_rows(final_res, res)
 
 save(final_res, file=here::here("sim-results/rdata/ran-int/sim_res_18_aug.RData"))
