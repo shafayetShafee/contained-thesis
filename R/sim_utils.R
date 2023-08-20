@@ -55,7 +55,7 @@ D_chol_to_D <- function(x) {
 }
 
 
-vcov_orig_scale <- function(model, ...) {
+vcov_orig_scale <- function(model) {
   D <- model$D
   
   # transform from covariance matrix to entries of cholesky factor with 
@@ -67,9 +67,39 @@ vcov_orig_scale <- function(model, ...) {
   # delta method (estimated covariance matrix of entries of D)
   V <- J %*% V_chol %*% t(J)
   
+  colnames(V) <- colnames(V_chol)
+  rownames(V) <- rownames(V_chol)
   # se <- sqrt(diag(V))
   # names(se) <- colnames(V_chol)
   # return(se)
   
   return(V)
+}
+
+
+var_slope_rand_effect <- function(model) {
+  rand_var <- vcov_orig_scale(model)
+  v <- diag(rand_var)
+  # v[1] => D_11
+  # v[2] => D_12
+  # v[3] => D_22
+  v_mat <- diag(c(v[1], v[3], v[2]))
+  rownames(v_mat) <- c("D_11", "D_22", "D_12")
+  colnames(v_mat) <- c("D_11", "D_22", "D_12")
+  return(v_mat)
+}
+
+
+calc_slope_se_mor <- function(sigma_u_hat, var_ran_effect, x1_val) {
+  
+  log_mor_expr <- function(x, x1_val) {
+    sqrt((2*x[1]) + (2*x1_val^2*x[2]) + (4*x1_val*x[3])) * qnorm(0.75)
+  }
+  
+  J <- numDeriv::jacobian(log_mor_expr, 
+                          c(sigma_u_hat[1], sigma_u_hat[3], sigma_u_hat[2]),
+                          x1_val = x1_val)
+  
+  var_log_mor <- as.numeric(J %*% var_ran_effect %*% t(J))
+  return(sqrt(var_log_mor))
 }

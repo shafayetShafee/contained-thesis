@@ -89,7 +89,7 @@ gen_int_mor_estimate <- function(m, n, sigma_u_sq, data_seed) {
                beta2_hat = beta2_hat, coverage = coverage,
                converged = is_model_converged)
   
-  if(!is_model_converged || mor_hat > 40 || se_mor_hat > 30) {
+  if(is.na(is_model_converged) || !is_model_converged || mor_hat > 40 || se_mor_hat > 30) {
     out_vec_names <- names(out_vec)
     out_vec <- c(rep(NA, length(out_vec) - 1), FALSE)
     names(out_vec) <- out_vec_names
@@ -120,29 +120,49 @@ log_sim_run <- function(convergence, message, warning, error,
 
 simulate_int <- function(m, n, sigma_u_sq, nsims = 1000, log_file, seed, ...) {
   
-  # creating placeholder matrix for result ------
-  out_mat <- matrix(NA, nrow = nsims, ncol = 8)
+  # creating extra sims to get nsims after accounting 
+  # for non-converged cases ---------------------
+  total_sims = nsims + min(nsims, 500)
+  conv_case_num = 0
+  runs_required = 0
+
+  # creating placeholder matrix for result --------
+  out_mat <- matrix(NA, nrow = total_sims, ncol = 8)
   colnames(out_mat) <- c("mor_hat", "se_mor_hat", "sigma_u_sq_hat", "beta0_hat", 
                          "beta1_hat", "beta2_hat", "coverage", "converged")
   
-  # set the random state iniitating seed
+  # set the random state initiating seed
   set.seed(seed)
-  iteration_seeds <- sample(x = 10:1000000, size = nsims, replace = FALSE)
-  # starting simulation -------------------------
-  for (i in 1:nsims) {
+  iteration_seeds <- sample(x = 10:1000000, size = total_sims, replace = FALSE)
+  # starting simulation ---------------------------
+  for (i in 1:total_sims) {
+    
+    # checking for converged nsims ----------------
+    if (conv_case_num == nsims) { 
+      break
+    } else {
+      runs_required = runs_required + 1
+    }
+    
     data_seed <- iteration_seeds[i]
     model_output <- safe_and_quietly(fun = gen_int_mor_estimate,
-                                     m = m, n = n, sigma_u_sq = sigma_u_sq, 
+                                     m = m, n = n, 
+                                     sigma_u_sq = sigma_u_sq, 
                                      data_seed = data_seed)
     
-    # extraction ---------------------
+    # extraction ---------------------------------
     model_result <- model_output$result
-    model_convergence <- model_result["converged"]
+    model_convergence <- dplyr::coalesce(model_result["converged"], FALSE)
     model_messages <- model_output$messages
     model_warnings <- model_output$warnings
     model_error <- model_output$error
     
-    # logging simulation run --------------------
+    # checking total number of converged cases ----
+    if(model_convergence) {
+      conv_case_num = conv_case_num + 1
+    }
+    
+    # logging simulation run ----------------------
     log_sim_run(convergence = model_convergence, message = model_messages, 
                 warning = model_warnings, error = model_error,
                 data_seed = data_seed, log_file = log_file, iter_no = i)
@@ -168,7 +188,8 @@ simulate_int <- function(m, n, sigma_u_sq, nsims = 1000, log_file, seed, ...) {
   return(
     list(
       out_mat = out_mat,
-      true_mor = true_mor
+      true_mor = true_mor,
+      runs_required = runs_required
     )
   )
 }
@@ -202,6 +223,7 @@ run_simulations <- function(m, n, sigma_u_sq, nsims = 1000,
   sim_se_mor_hat <- exp(sd(log_mor_hat, na.rm = TRUE))
   # sim_se_mor_hat <- sd(out_mat[, "mor_hat"], na.rm = TRUE)
   runs_used = unname(sum(out_mat[, "converged"], na.rm = TRUE))
+  runs_required = sim_output$runs_required
   
   # relative bias clac --------------------------
   true_mor <- sim_output$true_mor
@@ -219,10 +241,13 @@ run_simulations <- function(m, n, sigma_u_sq, nsims = 1000,
   )
   ggsave(paste0("hist_", m, "_", n, ".png"), path = plot_path)
 
-  return(c(cluster_number = m, cluster_size = n, out_mat_means, 
-           sim_se_mor_hat = sim_se_mor_hat, 
-           relative_bias = relative_bias,
-           runs_used = runs_used))
+  return(
+    c(cluster_number = m, cluster_size = n, out_mat_means, 
+      sim_se_mor_hat = sim_se_mor_hat, 
+      relative_bias = relative_bias,
+      runs_used = runs_used,
+      runs_required = runs_required)
+    )
 }
 
 
