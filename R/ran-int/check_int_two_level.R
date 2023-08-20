@@ -55,6 +55,10 @@ J <- numDeriv::jacobian(log_mor_int_expr, x = sigma_u_sq_hat)
 log_se_mor_hat <- as.numeric(sqrt(t(J) %*% var_sigma_u_sq_hat %*% J))
 
 
+# ------ prevalence
+
+m_data = gen_two_level_int_data(10, 5, 2.5, sample(1:10000, 1, F))
+mean(m_data$Yij)
 
 # library(lme4)
 # library(broom.mixed)

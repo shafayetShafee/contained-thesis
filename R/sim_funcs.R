@@ -7,9 +7,10 @@ library(GLMMadaptive)
 
 source(here::here("R/sim_utils.R"))
 
-gen_two_level_int_data <- function(m, n, sigma_u_sq, data_seed) {
+gen_two_level_int_data <- function(m, n, fixed_coeff, sigma_u_sq, data_seed) {
   # m => number of cluster
   # n => size of each cluster
+  # sigma_u_sq => variance of random effects
   N = m*n 
   
   set.seed(data_seed)
@@ -18,10 +19,14 @@ gen_two_level_int_data <- function(m, n, sigma_u_sq, data_seed) {
   x2 <- rnorm(N)
   x2b <- ifelse(x2 <= 0.5, 0, 1)
   
-  # sigma_u_sq => variance of random effects
-  beta0 <- 2
-  beta1 <- 1.75
-  beta2 <- 0.67
+  if(length(fixed_coeff) != 3) {
+    stop("fixed_coeff needs to be a vector of three element")
+  }
+  
+  beta0 <- fixed_coeff[1]
+  beta1 <- fixed_coeff[2]
+  beta2 <- fixed_coeff[3]
+  # 2 1.75 0.67
   
   uj <- rep(rnorm(m, 0, sqrt(sigma_u_sq)), each = n)
   eta_ij <- beta0 + beta1*x1c + beta2*x2b + uj
@@ -41,9 +46,13 @@ gen_two_level_int_data <- function(m, n, sigma_u_sq, data_seed) {
 }
 
 
-gen_int_mor_estimate <- function(m, n, sigma_u_sq, data_seed) {
+gen_int_mor_estimate <- function(m, n, fixed_coeff, sigma_u_sq, data_seed) {
   # data generation ----------------
-  multi_data_int <- gen_two_level_int_data(m, n, sigma_u_sq, data_seed)
+  multi_data_int <- gen_two_level_int_data(m, n, fixed_coeff,
+                                           sigma_u_sq, data_seed)
+  
+  # prevalence ---------------------
+  prevalence <- mean(multi_data_int$Yij, na.rm = TRUE)
   
   # model fitting ------------------
   multi_model_int <- mixed_model(fixed = Yij ~ X1c + X2b, 
@@ -87,6 +96,7 @@ gen_int_mor_estimate <- function(m, n, sigma_u_sq, data_seed) {
                sigma_u_sq_hat = sigma_u_sq_hat,
                beta0_hat = beta0_hat, beta1_hat = beta1_hat, 
                beta2_hat = beta2_hat, coverage = coverage,
+               prevalence = prevalence,
                converged = is_model_converged)
   
   if(is.na(is_model_converged) || !is_model_converged || mor_hat > 40 || se_mor_hat > 30) {
@@ -118,7 +128,8 @@ log_sim_run <- function(convergence, message, warning, error,
 }
 
 
-simulate_int <- function(m, n, sigma_u_sq, nsims = 1000, log_file, seed, ...) {
+simulate_int <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000, 
+                         log_file, seed, ...) {
   
   # creating extra sims to get nsims after accounting 
   # for non-converged cases ---------------------
@@ -127,9 +138,10 @@ simulate_int <- function(m, n, sigma_u_sq, nsims = 1000, log_file, seed, ...) {
   runs_required = 0
 
   # creating placeholder matrix for result --------
-  out_mat <- matrix(NA, nrow = total_sims, ncol = 8)
+  out_mat <- matrix(NA, nrow = total_sims, ncol = 9)
   colnames(out_mat) <- c("mor_hat", "se_mor_hat", "sigma_u_sq_hat", "beta0_hat", 
-                         "beta1_hat", "beta2_hat", "coverage", "converged")
+                         "beta1_hat", "beta2_hat", "coverage", "prevalence",
+                         "converged")
   
   # set the random state initiating seed
   set.seed(seed)
@@ -147,6 +159,7 @@ simulate_int <- function(m, n, sigma_u_sq, nsims = 1000, log_file, seed, ...) {
     data_seed <- iteration_seeds[i]
     model_output <- safe_and_quietly(fun = gen_int_mor_estimate,
                                      m = m, n = n, 
+                                     fixed_coeff = fixed_coeff,
                                      sigma_u_sq = sigma_u_sq, 
                                      data_seed = data_seed)
     
@@ -195,7 +208,7 @@ simulate_int <- function(m, n, sigma_u_sq, nsims = 1000, log_file, seed, ...) {
 }
 
 
-run_simulations <- function(m, n, sigma_u_sq, nsims = 1000, 
+run_simulations <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000, 
                             simulation_type = c("int", "slope"),
                             seed = 1083, log_file, append = FALSE) {
   
@@ -212,8 +225,11 @@ run_simulations <- function(m, n, sigma_u_sq, nsims = 1000,
   # getting simulation matrix -------------------
   sim_type <- match.arg(simulation_type)
   sim_output <- switch(sim_type, 
-                  int = simulate_int(m = m, n = n, sigma_u_sq = sigma_u_sq,
-                                     nsims = nsims, log_file = log_file,
+                  int = simulate_int(m = m, n = n, 
+                                     fixed_coeff = fixed_coeff,
+                                     sigma_u_sq = sigma_u_sq,
+                                     nsims = nsims, 
+                                     log_file = log_file,
                                      seed = seed), 
                   slope = "PASS_FOR_NOW"
                 )
