@@ -130,7 +130,8 @@ gen_int_mor_estimate <- function(m, n, fixed_coeff, sigma_u_sq, data_seed) {
   is_model_converged <- multi_model_int$converged
   
   # creating output vector ---------
-  out_vec <- c(mor_hat = mor_hat, se_mor_hat = se_mor_hat,
+  out_vec <- c(true_mor = true_mor, mor_hat = mor_hat, 
+               se_mor_hat = se_mor_hat,
                sigma_u_sq_hat = sigma_u_sq_hat,
                beta0_hat = beta0_hat, beta1_hat = beta1_hat, 
                beta2_hat = beta2_hat, coverage = coverage,
@@ -213,7 +214,8 @@ gen_slope_mor_estimate <- function(m, n, fixed_coeff, sigma_mat, data_seed) {
   is_model_converged <- multi_model_slope$converged
   
   # creating output vector ---------
-  out_vec <- c(mor_hat = mor_hat, se_mor_hat = se_mor_hat,
+  out_vec <- c(true_mor = true_mor, mor_hat = mor_hat, 
+               se_mor_hat = se_mor_hat,
                sigma_u1_sq_hat = sigma_u1_sq_hat,
                sigma_u12_sq_hat = sigma_u12_sq_hat,
                sigma_u2_sq_hat = sigma_u2_sq_hat,
@@ -246,8 +248,8 @@ simulate_int <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000,
   runs_required = 0
 
   # creating placeholder matrix for result --------
-  out_mat <- matrix(NA, nrow = total_sims, ncol = 9)
-  colnames(out_mat) <- c("mor_hat", "se_mor_hat", "sigma_u_sq_hat", "beta0_hat", 
+  out_mat <- matrix(NA, nrow = total_sims, ncol = 10)
+  colnames(out_mat) <- c("true_mor", "mor_hat", "se_mor_hat", "sigma_u_sq_hat", "beta0_hat", 
                          "beta1_hat", "beta2_hat", "coverage", "prevalence",
                          "converged")
   
@@ -303,13 +305,9 @@ simulate_int <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000,
     out_mat[i, ] <- model_result
   }
   
-  # true MOR (needed for relative bias calculation)
-  true_mor <- exp(sqrt(2 * sigma_u_sq) * qnorm(0.75))
-  
   return(
     list(
       out_mat = out_mat,
-      true_mor = true_mor,
       runs_required = runs_required
     )
   )
@@ -396,6 +394,8 @@ simulate_slope <- function(m, n, fixed_coeff, sigma_mat, nsims = 1000,
 run_simulations <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000, 
                             simulation_type = c("int", "slope"),
                             seed = 1083, log_file, append = FALSE) {
+  # sigma_u_sq => a single element for (int)
+  # sigma_u_sq => a 2x2 matrix for (slope)
   
   cat(
     paste("Simulation Log for", Sys.time(), "\n"), 

@@ -124,7 +124,7 @@ gen_slope_mor_estimate <- function(m, n, fixed_coeff, sigma_mat, data_seed) {
 }
 
 simulate_slope <- function(m, n, fixed_coeff, sigma_mat, nsims = 1000, 
-                         log_file, seed, ...) {
+                           log_file, seed, ...) {
   
   # creating extra sims to get nsims after accounting 
   # for non-converged cases ---------------------
@@ -194,7 +194,6 @@ simulate_slope <- function(m, n, fixed_coeff, sigma_mat, nsims = 1000,
   return(
     list(
       out_mat = out_mat,
-      # true_mor = true_mor,
       runs_required = runs_required
     )
   )

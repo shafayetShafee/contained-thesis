@@ -13,10 +13,10 @@ cluster_size <- c(5)
 cluster_params <- tidyr::expand_grid(cluster_size = cluster_size, 
                               cluster_numbers = cluster_numbers)
 
-fixed_coeff <- c(-3, 1.75, 0.67)
+fixed_coeff <- c(2, 1.75, 0.67)
 sigma_u_sq <- 2.5
 
-log_file <- here::here("log/log_aug_20.txt")
+log_file <- here::here("test.txt")
 
 tictoc::tic()
 res <- purrr::map2_dfr(.x = cluster_params$cluster_numbers, 
@@ -24,7 +24,8 @@ res <- purrr::map2_dfr(.x = cluster_params$cluster_numbers,
             .f = ~ run_simulations(m = .x, n = .y, 
                               fixed_coeff = fixed_coeff,
                               sigma_u_sq = sigma_u_sq, 
-                              nsims = 1000, seed = 1083,
+                              simulation_type = "int",
+                              nsims = 10, seed = 1083,
                               log_file = log_file, append = TRUE)
             )
 
