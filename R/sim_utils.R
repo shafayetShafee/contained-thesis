@@ -83,9 +83,9 @@ var_slope_rand_effect <- function(model) {
   # v[1] => D_11
   # v[2] => D_12
   # v[3] => D_22
-  v_mat <- diag(c(v[1], v[3], v[2]))
-  rownames(v_mat) <- c("D_11", "D_22", "D_12")
-  colnames(v_mat) <- c("D_11", "D_22", "D_12")
+  v_mat <- diag(v)
+  rownames(v_mat) <- c("D_11", "D_12", "D_22")
+  colnames(v_mat) <- c("D_11", "D_12", "D_22")
   return(v_mat)
 }
 

@@ -5,7 +5,7 @@ source(here::here("R/sim_funcs.R"))
 # MOR
 
 # m = 10, 30, 50, 100
-cluster_numbers <- c(10, 30)
+cluster_numbers <- c(10)
 
 # n = 5, 10, 30, 50
 cluster_size <- c(5)
@@ -13,7 +13,7 @@ cluster_size <- c(5)
 cluster_params <- tidyr::expand_grid(cluster_size = cluster_size, 
                               cluster_numbers = cluster_numbers)
 
-fixed_coeff <- c(2, 1.75, 0.67)
+fixed_coeff <- c(-3, 1.75, 0.67)
 sigma_u_sq <- 2.5
 
 log_file <- here::here("log/log_aug_20.txt")
