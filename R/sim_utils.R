@@ -34,6 +34,23 @@ log_output <- function(x, type, file) {
 }
 
 
+log_sim_run <- function(convergence, message, warning, error, 
+                        data_seed, log_file, iter_no) {
+  # started logging ----------------
+  log_output(paste0(rep("-", 50), collapse = ""), type = "", file = log_file)
+  log_output(data_seed, type = "Using data_seed", file = log_file)
+  log_output(as.logical(convergence), type = "converged", file = log_file)
+  log_output(message, type = "message", file = log_file)
+  log_output(warning, type = "warning", file = log_file)
+  log_output(error, type = "error", file = log_file)
+  log_output(
+    paste0("Stored output for iteration ", iter_no, "\n"), 
+    type="Info", file = log_file
+  )
+}
+
+
+
 is_valid_str <- function(x) {
   # `> 5` to prevent "NA"
   !is.null(x) && !is.na(x) && is.character(x) && nchar(trimws(x)) > 5

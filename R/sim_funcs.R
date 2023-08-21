@@ -236,22 +236,6 @@ gen_slope_mor_estimate <- function(m, n, fixed_coeff, sigma_mat, data_seed) {
 # gen_int_mor_estimate(50, 50, 2.5, 1083)
 
 
-log_sim_run <- function(convergence, message, warning, error, 
-                        data_seed, log_file, iter_no) {
-  # started logging ----------------
-  log_output(paste0(rep("-", 50), collapse = ""), type = "", file = log_file)
-  log_output(data_seed, type = "Using data_seed", file = log_file)
-  log_output(as.logical(convergence), type = "converged", file = log_file)
-  log_output(message, type = "message", file = log_file)
-  log_output(warning, type = "warning", file = log_file)
-  log_output(error, type = "error", file = log_file)
-  log_output(
-    paste0("Stored output for iteration ", iter_no, "\n"), 
-    type="Info", file = log_file
-  )
-}
-
-
 simulate_int <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000, 
                          log_file, seed, ...) {
   
@@ -332,6 +316,83 @@ simulate_int <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000,
 }
 
 
+simulate_slope <- function(m, n, fixed_coeff, sigma_mat, nsims = 1000, 
+                           log_file, seed, ...) {
+  
+  # creating extra sims to get nsims after accounting 
+  # for non-converged cases ---------------------
+  total_sims = nsims + min(nsims, 500)
+  conv_case_num = 0
+  runs_required = 0
+  
+  # creating placeholder matrix for result --------
+  out_mat <- matrix(NA, nrow = total_sims, ncol = 12)
+  colnames(out_mat) <- c("true_mor", "mor_hat", "se_mor_hat", 
+                         "sigma_u1_sq_hat", "sigma_u12_sq_hat", "sigma_u2_sq_hat",
+                         "beta0_hat", "beta1_hat", "beta2_hat", 
+                         "coverage", "prevalence", "converged")
+  
+  # set the random state initiating seed
+  set.seed(seed)
+  iteration_seeds <- sample(x = 10:1000000, size = total_sims, replace = FALSE)
+  # starting simulation ---------------------------
+  for (i in 1:total_sims) {
+    
+    # checking for converged nsims ----------------
+    if (conv_case_num == nsims) { 
+      break
+    } else {
+      runs_required = runs_required + 1
+    }
+    
+    data_seed <- iteration_seeds[i]
+    model_output <- safe_and_quietly(fun = gen_slope_mor_estimate,
+                                     m = m, n = n, 
+                                     fixed_coeff = fixed_coeff,
+                                     sigma_mat = sigma_mat, 
+                                     data_seed = data_seed)
+    
+    # extraction ---------------------------------
+    model_result <- model_output$result
+    model_convergence <- dplyr::coalesce(model_result["converged"], FALSE)
+    model_messages <- model_output$messages
+    model_warnings <- model_output$warnings
+    model_error <- model_output$error
+    
+    # checking total number of converged cases ----
+    if(model_convergence) {
+      conv_case_num = conv_case_num + 1
+    }
+    
+    # logging simulation run ----------------------
+    log_sim_run(convergence = model_convergence, message = model_messages, 
+                warning = model_warnings, error = model_error,
+                data_seed = data_seed, log_file = log_file, iter_no = i)
+    
+    # account for error -------------------------
+    msg_prob_detected <- is_valid_str(paste0(model_messages, collapse = ""))
+    warning_detected <- is_valid_str(paste0(model_warnings, collapse = ""))
+    error_detected <- is_valid_str(paste0(model_error, collapse = ""))
+    
+    if(msg_prob_detected || warning_detected || error_detected) {
+      NA_result <- rep(NA, times = length(model_result))
+      names(NA_result) <- names(model_result)
+      model_result <- NA_result
+    }
+    
+    # storing sim-run ---------------------------
+    out_mat[i, ] <- model_result
+  }
+  
+  return(
+    list(
+      out_mat = out_mat,
+      runs_required = runs_required
+    )
+  )
+}
+
+
 run_simulations <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000, 
                             simulation_type = c("int", "slope"),
                             seed = 1083, log_file, append = FALSE) {
@@ -355,7 +416,12 @@ run_simulations <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000,
                                      nsims = nsims, 
                                      log_file = log_file,
                                      seed = seed), 
-                  slope = "PASS_FOR_NOW"
+                  slope = simulate_slope(m = m, n = n,
+                                         fixed_coeff = fixed_coeff,
+                                         sigma_mat = sigma_u_sq,
+                                         nsims = nsims,
+                                         log_file = log_file,
+                                         seed = seed)
                 )
   out_mat <- sim_output$out_mat
   out_mat_means <- colMeans(out_mat, na.rm = TRUE)
@@ -366,7 +432,7 @@ run_simulations <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000,
   runs_required = sim_output$runs_required
   
   # relative bias clac --------------------------
-  true_mor <- sim_output$true_mor
+  true_mor <- out_mat_means["true_mor"]
   relative_bias <- as.numeric(((out_mat_means["mor_hat"] - true_mor) / true_mor) * 100)
   
   # generating histograms for checking ----------
