@@ -1,4 +1,4 @@
-source(here::here("R/sim_funcs.R"))
+source(here::here("R/run_simulations.R"))
 
 # sigma_u_sq <- 2.5
 # MOR <- exp(sqrt(2 * sigma_u_sq) * qnorm(0.75))

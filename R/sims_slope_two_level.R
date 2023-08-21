@@ -1,4 +1,4 @@
-source(here::here("R/sim_funcs.R"))
+source(here::here("R/run_simulations.R"))
 
 fixed_coeff <- c(2, 1.75, 0.67)
 
