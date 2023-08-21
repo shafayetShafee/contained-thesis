@@ -1,0 +1,186 @@
+---
+title: "Simulation Result For Two-Level Intercept Model"
+author: Shafayet Khan Shafee
+date: "08-19-2023"
+date-format: "DD MMMM YYYY"
+format: 
+  pdf:
+    classoption: titlepage
+    fig-pos: 'H'
+    keep-tex: true
+    geometry:
+      - top=20mm
+      - bottom=5mm
+    include-in-header:
+      text: |
+        \usepackage{typearea}
+---
+
+\newpage
+
+# Histograms for $log(\widehat{MOR})$ When Number of Cluster is 10
+
+\vspace{5mm}
+
+::: {layout="[[50, 50], [-20], [50,50]]"}
+
+![For cluster size 5](../plots/ran-int/hist_10_5.png){#m10n5}
+
+![For cluster size 10](../plots/ran-int/hist_10_10.png){#m10n10}
+
+![For cluster size 30](../plots/ran-int/hist_10_30.png){#m10n30}
+
+
+![For cluster size 50](../plots/ran-int/hist_10_50.png){#m10n50}
+
+:::
+
+\newpage
+
+<!-- --------------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------------- -->
+
+
+# Histograms for $log(\widehat{MOR})$ When Number of Cluster is 30
+
+\vspace{5mm}
+
+::: {layout="[[50, 50], [-20], [50,50]]"}
+
+![For cluster size 5](../plots/ran-int/hist_30_5.png){#m30n5}
+
+![For cluster size 10](../plots/ran-int/hist_30_10.png){#m30n10}
+
+![For cluster size 30](../plots/ran-int/hist_30_30.png){#m30n30}
+
+
+![For cluster size 50](../plots/ran-int/hist_30_50.png){#m30n50}
+
+:::
+
+\newpage
+
+<!-- --------------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------------- -->
+
+
+# Histograms for $log(\widehat{MOR})$ When Number of Cluster is 50
+
+\vspace{5mm}
+
+::: {layout="[[50, 50], [-20], [50,50]]"}
+
+![For cluster size 5](../plots/ran-int/hist_50_5.png){#m50n5}
+
+![For cluster size 10](../plots/ran-int/hist_50_10.png){#m50n10}
+
+![For cluster size 30](../plots/ran-int/hist_50_30.png){#m50n30}
+
+
+
+![For cluster size 50](../plots/ran-int/hist_50_50.png){#m50n50}
+
+:::
+
+\newpage
+
+<!-- --------------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------------- -->
+
+
+# Histograms for $log(\widehat{MOR})$ When Number of Cluster is 100
+
+\vspace{5mm}
+
+::: {layout="[[50, 50], [-20], [50,50]]"}
+
+![For cluster size 5](../plots/ran-int/hist_100_5.png){#m100n5}
+
+![For cluster size 10](../plots/ran-int/hist_100_10.png){#m100n10}
+
+![For cluster size 30](../plots/ran-int/hist_100_30.png){#m100n30}
+
+
+![For cluster size 50](../plots/ran-int/hist_100_50.png){#m100n50}
+
+:::
+
+
+<!-- --------------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------------- -->
+
+\newpage
+
+\KOMAoptions{usegeometry,paper=landscape,pagesize}
+\recalctypearea
+\newgeometry{right=10mm,left=20mm}
+
+# Simulation Result Table
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(dplyr)
+library(kableExtra)
+```
+
+
+```{r}
+#| echo: false
+
+final_res <- readRDS(here::here("sim-results","rds/ran-int/sim_res18_aug.rds"))
+
+sim_output_table <- final_res %>% 
+  arrange(cluster_number) %>% 
+  select(cluster_number, cluster_size, beta0_hat, beta1_hat, beta2_hat, 
+         sigma_u_sq_hat, mor_hat, se_mor_hat, sim_se_mor_hat, coverage, 
+         relative_bias, runs_used)
+```
+
+
+\begingroup
+<!-- \setlength{\LTleft}{0pt minus 5000pt} -->
+<!-- \setlength{\LTright}{0pt minus 5000pt} -->
+\fontsize{12pt}{18pt}\selectfont
+\addtolength{\tabcolsep}{0.5pt}
+
+
+```{r}
+#| echo: false
+kableExtra::kbl(sim_output_table, booktabs = TRUE, digits = 2, linesep = "",
+                align = paste0(rep('c', ncol(sim_output_table)),collapse = ""),
+                col.names = c("Number of Cluster", "Cluster Size",
+                            "$\\widehat{\\beta_0}$", "$\\widehat{\\beta_1}$", 
+                            "$\\widehat{\\beta_2}$", "$\\widehat{\\sigma_u^2}$",
+                            "$\\widehat{MOR}$", "$\\widehat{\\sigma}_{MOR}$",
+                            "Simulation $\\widehat{\\sigma}_{MOR}$", "CI coverage (95\\%)",
+                            "Relative Bias (\\%)", "Runs used"), escape = FALSE) %>% 
+  column_spec(1:ncol(sim_output_table), width = "1.60cm", latex_valign = "m") %>% 
+  row_spec(
+    seq(
+      n_distinct(sim_output_table$cluster_number), 
+      nrow(sim_output_table) - 1, 
+      n_distinct(sim_output_table$cluster_size)), hline_after = TRUE
+  )
+  
+
+```
+
+
+\endgroup
+
+\vspace{10mm}
+
+Here,
+
+- True $MOR$ is 4.52
+- True $\sigma^2_u$ is 2.5
+- True Values of $\beta_0 = 2$, $\beta_1 = 1.75$, $\beta_2 = 0.67$ 
+- "Runs used" column represent how many simulation runs were used to calculate the numbers in the corresponding row.
+

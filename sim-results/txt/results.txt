@@ -1,5 +1,0 @@
-cluster_number cluster_size mor_hat se_mor_hat sigma_b2_hat beta0_hat beta1_hat beta2_hat
-         <dbl>        <dbl>   <dbl>      <dbl>        <dbl>     <dbl>     <dbl>     <dbl>
-          100            5    4.31      1.25          2.29      2.02      1.78     0.687
-          100           10    4.42      0.862         2.41      2.00      1.75     0.665
-          100           15    4.39      0.731         2.39      2.02      1.73     0.669 
