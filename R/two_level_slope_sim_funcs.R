@@ -1,6 +1,6 @@
 gen_two_level_slope_data <- function(m, n, fixed_coeff, sigma_mat, data_seed) {
-  m = 10 # number of cluster
-  n = 10 # size of each cluster
+  # m => number of cluster
+  # n => size of each cluster
   N = m*n 
   
   set.seed(data_seed)
