@@ -35,21 +35,9 @@ res <- purrr::map2_dfr(.x = cluster_params$cluster_numbers,
 
 tictoc::toc()
 
-# test <- simulate_two_lvl_int(10, 5, fixed_coeff, sigma_u_sq, 10, "test.txt", 1083)
 
-# 2.38 hour (high prev)
-
-# 570.033 sec
-
-# 350.176 sec
-# 268.038 sec
-# 470.205 sec
-# 497.333 sec
-# 544.111 sec
-# 1055 sec
-# 697.838 sec
-# 806.708 sec
-# 1616.712
+# 2 hour 22 mins (high prev)
+# 2 hour 20 mins (low prev)
 
 # final_res_int_low_prev <- res
 final_res_int_low_prev <- dplyr::bind_rows(final_res_int_low_prev, res)
