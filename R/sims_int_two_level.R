@@ -5,18 +5,18 @@ source(here::here("R/run_simulations.R"))
 # MOR
 
 # m = 10, 30, 50, 100
-cluster_numbers <- c(100)
+cluster_numbers <- c(10, 30)
 
 # n = 5, 10, 30, 50
-cluster_size <- c(50)
+cluster_size <- c(5)
 
 cluster_params <- tidyr::expand_grid(cluster_size = cluster_size, 
                               cluster_numbers = cluster_numbers)
 
-fixed_coeff <- c(2, 1.75, 0.67)
+fixed_coeff <- c(-2, 1.75, 0.67)
 sigma_u_sq <- 2.5
 
-log_file <- here::here("log/log_aug_20.txt")
+log_file <- here::here("log/log_two_lvl_int_low_prev.txt")
 
 tictoc::tic()
 res <- purrr::map2_dfr(.x = cluster_params$cluster_numbers, 
@@ -25,8 +25,9 @@ res <- purrr::map2_dfr(.x = cluster_params$cluster_numbers,
                               fixed_coeff = fixed_coeff,
                               sigma_u_sq = sigma_u_sq, 
                               simulation_type = "int",
-                              nsims = 1000, seed = 1083,
-                              log_file = log_file, append = TRUE)
+                              nsims = 10, seed = 1083,
+                              log_file = log_file, append = TRUE,
+                              pl)
             )
 
 tictoc::toc()
@@ -35,9 +36,10 @@ tictoc::toc()
 
 # final_res <- res
 final_res <- dplyr::bind_rows(final_res, res)
+final_res_int_low_prev <- final_res
 
-save(final_res, 
-     file = here::here("sim-results/rdata/two-level/ran-int/sim_res_high_prev_20_aug.RData"))
+save(final_res_int_low_prev, 
+     file = here::here("sim-results/rdata/sim_res_two_lvl_int_low_prev.RData"))
 
-saveRDS(final_res, 
-        file=here::here("sim-results/rds/two-level/ran-int/sim_res_high_prev_20_aug.rds"))
+saveRDS(final_res_int_low_prev, 
+        file=here::here("sim-results/rds/sim_res_two_lvl_int_low_prev.rds"))

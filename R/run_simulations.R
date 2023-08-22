@@ -12,7 +12,8 @@ source(here::here("R/two_level_slope_sim_funcs.R"))
 
 run_simulations <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000, 
                             simulation_type = c("int", "slope"),
-                            seed = 1083, log_file, append = FALSE) {
+                            seed = 1083, log_file, append = FALSE,
+                            plot_path) {
   # sigma_u_sq => a single element for (int)
   # sigma_u_sq => a 2x2 matrix for (slope)
   
@@ -58,12 +59,12 @@ run_simulations <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000,
   hist_plot <- ggplot(tibble(log_mor_hat), aes(x = log_mor_hat)) +
     geom_histogram(bins = 30) +
     labs(x = "log(MOR)",
-         title = cluster_info) +
+         y = "frequency") +
     theme_classic()
-  plot_path <- switch(sim_type,
-                      int = here::here("plots/ran-int"),
-                      slope = here::here("plots/ran-slope")
-  )
+  # plot_path <- switch(sim_type,
+  #                     int = here::here("plots/ran-int"),
+  #                     slope = here::here("plots/ran-slope")
+  # )
   ggsave(paste0("hist_", m, "_", n, ".png"), path = plot_path)
   
   return(
