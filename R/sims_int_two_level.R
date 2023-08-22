@@ -8,7 +8,7 @@ source(here::here("R/run_simulations.R"))
 cluster_numbers <- c(10, 30)
 
 # n = 5, 10, 30, 50
-cluster_size <- c(5)
+cluster_size <- c(10)
 
 cluster_params <- tidyr::expand_grid(cluster_size = cluster_size, 
                               cluster_numbers = cluster_numbers)
@@ -39,11 +39,12 @@ tictoc::toc()
 
 # 2.38 hour (high prev)
 
-# 570.276 sec
+# 570.033 sec
 
-# final_res <- res
-final_res <- dplyr::bind_rows(final_res, res)
-final_res_int_low_prev <- final_res
+# 350.176 sec
+
+# final_res_int_low_prev <- res
+final_res_int_low_prev <- dplyr::bind_rows(final_res_int_low_prev, res)
 
 save(final_res_int_low_prev, 
      file = here::here("sim-results/rdata/sim_res_two_lvl_int_low_prev.RData"))
