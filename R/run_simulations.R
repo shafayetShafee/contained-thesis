@@ -46,6 +46,9 @@ run_simulations <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000,
   out_mat <- sim_output$out_mat
   out_mat_means <- colMeans(out_mat, na.rm = TRUE)
   log_mor_hat <- log(out_mat[, "mor_hat"])
+  log_se_mor_hat <- log(out_mat[, "se_mor_hat"])
+  out_mat_means["mor_hat"] <- exp(mean(log_mor_hat, na.rm = TRUE))
+  out_mat_means["se_mor_hat"] <- exp(mean(log_se_mor_hat, na.rm = TRUE))
   sim_se_mor_hat <- exp(sd(log_mor_hat, na.rm = TRUE))
   # sim_se_mor_hat <- sd(out_mat[, "mor_hat"], na.rm = TRUE)
   runs_used = unname(sum(out_mat[, "converged"], na.rm = TRUE))
