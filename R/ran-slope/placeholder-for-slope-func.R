@@ -11,6 +11,8 @@ sigma2_01 <- 0 # 0.75
 sigma_mat <- matrix(c(sigma2_u0, sigma2_01, sigma2_01, sigma2_u1), 
                     byrow = TRUE, nrow = 2, ncol = 2)
 
+# test <- simulate_two_lvl_slope(10, 5, fixed_coeff, sigma_mat, nsims = 10, "test.txt", 1083)
+
 m_data <- gen_two_level_slope_data(10, 10, fixed_coeff = fixed_coeff,
                                    sigma_mat, 1083)
 

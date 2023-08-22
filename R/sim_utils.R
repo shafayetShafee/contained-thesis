@@ -61,6 +61,9 @@ is_valid <- function(x) {
   !is.null(x) && !is.na(x) && x
 }
 
+is_na_result <- function(x) {
+  length(x) == 1 && is.na(x)
+}
 
 sym_mat_to_vec <- function(x) x[upper.tri(x, diag = TRUE)]
 

@@ -113,9 +113,10 @@ simulate_two_lvl_int <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000,
   
   # creating placeholder matrix for result --------
   out_mat <- matrix(NA, nrow = total_sims, ncol = 10)
-  colnames(out_mat) <- c("true_mor", "mor_hat", "se_mor_hat", "sigma_u_sq_hat", 
-                         "beta0_hat", "beta1_hat", "beta2_hat", "coverage", 
-                         "prevalence", "converged")
+  out_colnames <- c("true_mor", "mor_hat", "se_mor_hat", "sigma_u_sq_hat", 
+                    "beta0_hat", "beta1_hat", "beta2_hat", "coverage", 
+                    "prevalence", "converged")
+  colnames(out_mat) <- out_colnames
   
   # set the random state initiating seed
   set.seed(seed)
@@ -139,10 +140,24 @@ simulate_two_lvl_int <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000,
     
     # extraction ---------------------------------
     model_result <- model_output$result
-    model_convergence <- dplyr::coalesce(model_result["converged"], FALSE)
     model_messages <- model_output$messages
     model_warnings <- model_output$warnings
     model_error <- model_output$error
+    
+    # account for error -------------------------
+    msg_prob_detected <- is_valid_str(paste0(model_messages, collapse = ""))
+    warning_detected <- is_valid_str(paste0(model_warnings, collapse = ""))
+    error_detected <- is_valid_str(paste0(model_error, collapse = ""))
+    
+    if(is_na_result(model_result) || 
+       msg_prob_detected || warning_detected || error_detected) {
+      # setting model_result to be vec of NA in case of 
+      # non-convergence
+      model_result <- c(rep(NA, ncol(out_mat) - 1), 0)
+      names(model_result) <- out_colnames
+    }
+    
+    model_convergence <- as.logical(model_result["converged"])
     
     # checking total number of converged cases ----
     if(model_convergence) {
@@ -153,17 +168,6 @@ simulate_two_lvl_int <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000,
     log_sim_run(convergence = model_convergence, message = model_messages, 
                 warning = model_warnings, error = model_error,
                 data_seed = data_seed, log_file = log_file, iter_no = i)
-    
-    # account for error -------------------------
-    msg_prob_detected <- is_valid_str(paste0(model_messages, collapse = ""))
-    warning_detected <- is_valid_str(paste0(model_warnings, collapse = ""))
-    error_detected <- is_valid_str(paste0(model_error, collapse = ""))
-    
-    if(msg_prob_detected || warning_detected || error_detected) {
-      NA_result <- rep(NA, times = length(model_result))
-      names(NA_result) <- names(model_result)
-      model_result <- NA_result
-    }
     
     # storing sim-run ---------------------------
     out_mat[i, ] <- model_result

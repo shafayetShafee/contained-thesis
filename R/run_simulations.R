@@ -16,7 +16,7 @@ run_simulations <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000,
                             plot_path, plot_name_suffix) {
   # sigma_u_sq => a single element for (int)
   # sigma_u_sq => a 2x2 matrix for (slope)
-  
+
   cat(
     paste("Simulation Log for", Sys.time(), "\n"), 
     file = log_file, append = append
@@ -56,15 +56,12 @@ run_simulations <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000,
   relative_bias <- as.numeric(((out_mat_means["mor_hat"] - true_mor) / true_mor) * 100)
   
   # generating histograms for checking ----------
-  hist_plot <- ggplot(tibble(log_mor_hat), aes(x = log_mor_hat)) +
+  hist_plot <- ggplot(drop_na(tibble(log_mor_hat)), aes(x = log_mor_hat)) +
     geom_histogram(bins = 30) +
     labs(x = "log(MOR)",
          y = "frequency") +
     theme_classic()
-  # plot_path <- switch(sim_type,
-  #                     int = here::here("plots/ran-int"),
-  #                     slope = here::here("plots/ran-slope")
-  # )
+
   ggsave(paste0("hist_", m, "_", n, "_", plot_name_suffix, ".png"), path = plot_path)
   
   return(
