@@ -1,7 +1,7 @@
 ---
-title: "Simulation Result For Two-Level Intercept Model"
+title: "Simulation Result For Two-Level Intercept Model With High Prevalence"
 author: Shafayet Khan Shafee
-date: "08-19-2023"
+date: last-modified
 date-format: "DD MMMM YYYY"
 format: 
   pdf:
@@ -18,20 +18,42 @@ format:
 
 \newpage
 
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(dplyr)
+library(kableExtra)
+
+final_res_int_high_prev <- readRDS(
+  here::here("sim-results/rds/sim_res_two_lvl_int_high_prev.rds")
+  )
+
+mean_prevalence <- round(mean(final_res_int_high_prev$prevalence), 2)*100
+```
+
+<!-- **Note:  `r `** -->
+
+---
+subtitle: "The mean prevalence for this simulation is `r mean_prevalence` %"
+---
+
 # Histograms for $log(\widehat{MOR})$ When Number of Cluster is 10
 
 \vspace{5mm}
 
 ::: {layout="[[50, 50], [-20], [50,50]]"}
 
-![For cluster size 5](../plots/ran-int/hist_10_5.png){#m10n5}
+![For cluster size 5](../../plots/two-lvl-ran-int/high-prev/hist_10_5.png){#m10n5}
 
-![For cluster size 10](../plots/ran-int/hist_10_10.png){#m10n10}
+![For cluster size 10](../../plots/two-lvl-ran-int/high-prev/hist_10_10.png){#m10n10}
 
-![For cluster size 30](../plots/ran-int/hist_10_30.png){#m10n30}
+![For cluster size 30](../../plots/two-lvl-ran-int/high-prev/hist_10_30.png){#m10n30}
 
 
-![For cluster size 50](../plots/ran-int/hist_10_50.png){#m10n50}
+![For cluster size 50](../../plots/two-lvl-ran-int/high-prev/hist_10_50.png){#m10n50}
 
 :::
 
@@ -48,14 +70,14 @@ format:
 
 ::: {layout="[[50, 50], [-20], [50,50]]"}
 
-![For cluster size 5](../plots/ran-int/hist_30_5.png){#m30n5}
+![For cluster size 5](../../plots/two-lvl-ran-int/high-prev/hist_30_5.png){#m30n5}
 
-![For cluster size 10](../plots/ran-int/hist_30_10.png){#m30n10}
+![For cluster size 10](../../plots/two-lvl-ran-int/high-prev/hist_30_10.png){#m30n10}
 
-![For cluster size 30](../plots/ran-int/hist_30_30.png){#m30n30}
+![For cluster size 30](../../plots/two-lvl-ran-int/high-prev/hist_30_30.png){#m30n30}
 
 
-![For cluster size 50](../plots/ran-int/hist_30_50.png){#m30n50}
+![For cluster size 50](../../plots/two-lvl-ran-int/high-prev/hist_30_50.png){#m30n50}
 
 :::
 
@@ -72,15 +94,15 @@ format:
 
 ::: {layout="[[50, 50], [-20], [50,50]]"}
 
-![For cluster size 5](../plots/ran-int/hist_50_5.png){#m50n5}
+![For cluster size 5](../../plots/two-lvl-ran-int/high-prev/hist_50_5.png){#m50n5}
 
-![For cluster size 10](../plots/ran-int/hist_50_10.png){#m50n10}
+![For cluster size 10](../../plots/two-lvl-ran-int/high-prev/hist_50_10.png){#m50n10}
 
-![For cluster size 30](../plots/ran-int/hist_50_30.png){#m50n30}
+![For cluster size 30](../../plots/two-lvl-ran-int/high-prev/hist_50_30.png){#m50n30}
 
 
 
-![For cluster size 50](../plots/ran-int/hist_50_50.png){#m50n50}
+![For cluster size 50](../../plots/two-lvl-ran-int/high-prev/hist_50_50.png){#m50n50}
 
 :::
 
@@ -97,14 +119,14 @@ format:
 
 ::: {layout="[[50, 50], [-20], [50,50]]"}
 
-![For cluster size 5](../plots/ran-int/hist_100_5.png){#m100n5}
+![For cluster size 5](../../plots/two-lvl-ran-int/high-prev/hist_100_5.png){#m100n5}
 
-![For cluster size 10](../plots/ran-int/hist_100_10.png){#m100n10}
+![For cluster size 10](../../plots/two-lvl-ran-int/high-prev/hist_100_10.png){#m100n10}
 
-![For cluster size 30](../plots/ran-int/hist_100_30.png){#m100n30}
+![For cluster size 30](../../plots/two-lvl-ran-int/high-prev/hist_100_30.png){#m100n30}
 
 
-![For cluster size 50](../plots/ran-int/hist_100_50.png){#m100n50}
+![For cluster size 50](../../plots/two-lvl-ran-int/high-prev/hist_100_50.png){#m100n50}
 
 :::
 
@@ -117,38 +139,27 @@ format:
 
 \KOMAoptions{usegeometry,paper=landscape,pagesize}
 \recalctypearea
-\newgeometry{right=10mm,left=20mm}
+\newgeometry{right=10mm,left=10mm}
 
 # Simulation Result Table
 
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-
-library(dplyr)
-library(kableExtra)
-```
-
 
 ```{r}
 #| echo: false
-
-final_res <- readRDS(here::here("sim-results","rds/ran-int/sim_res18_aug.rds"))
-
-sim_output_table <- final_res %>% 
+sim_output_table <- final_res_int_high_prev %>% 
   arrange(cluster_number) %>% 
+  mutate(ratio = se_mor_hat / sim_se_mor_hat) %>% 
   select(cluster_number, cluster_size, beta0_hat, beta1_hat, beta2_hat, 
-         sigma_u_sq_hat, mor_hat, se_mor_hat, sim_se_mor_hat, coverage, 
-         relative_bias, runs_used)
+         sigma_u_sq_hat, mor_hat, relative_bias, se_mor_hat, sim_se_mor_hat, 
+         ratio, coverage, runs_used, runs_required)
 ```
 
 
 \begingroup
 <!-- \setlength{\LTleft}{0pt minus 5000pt} -->
 <!-- \setlength{\LTright}{0pt minus 5000pt} -->
-\fontsize{12pt}{18pt}\selectfont
-\addtolength{\tabcolsep}{0.5pt}
+\fontsize{10pt}{14pt}\selectfont
+\addtolength{\tabcolsep}{0.2pt}
 
 
 ```{r}
@@ -158,17 +169,26 @@ kableExtra::kbl(sim_output_table, booktabs = TRUE, digits = 2, linesep = "",
                 col.names = c("Number of Cluster", "Cluster Size",
                             "$\\widehat{\\beta_0}$", "$\\widehat{\\beta_1}$", 
                             "$\\widehat{\\beta_2}$", "$\\widehat{\\sigma_u^2}$",
-                            "$\\widehat{MOR}$", "$\\widehat{\\sigma}_{MOR}$",
-                            "Simulation $\\widehat{\\sigma}_{MOR}$", "CI coverage (95\\%)",
-                            "Relative Bias (\\%)", "Runs used"), escape = FALSE) %>% 
-  column_spec(1:ncol(sim_output_table), width = "1.60cm", latex_valign = "m") %>% 
+                            "$\\widehat{MOR}$", "Relative Bias (\\%)",
+                            "$\\widehat{SE}_{MOR}$", 
+                            "Simulation $\\widehat{SE}_{MOR}$", 
+                            "Ratio\\textsuperscript{1}",
+                            "CI coverage (95\\%)", "Runs used",
+                            "Runs Required"), escape = FALSE) %>% 
+  column_spec(1:ncol(sim_output_table), width = "1.4cm", latex_valign = "m") %>% 
   row_spec(
     seq(
       n_distinct(sim_output_table$cluster_number), 
       nrow(sim_output_table) - 1, 
       n_distinct(sim_output_table$cluster_size)), hline_after = TRUE
+  ) %>% 
+  footnote(
+    general = paste0("The mean prevalence for this simulation is ", mean_prevalence, "\\\\%"),
+    threeparttable = TRUE,
+    # footnote_as_chunk = TRUE,
+    number = c("Ratio$\\\\;=\\\\;\\\\dfrac{\\\\widehat{SE}_{MOR}}{Simulation\\\\;\\\\widehat{SE}_{MOR}}$"), 
+    escape = FALSE
   )
-  
 
 ```
 
@@ -176,6 +196,8 @@ kableExtra::kbl(sim_output_table, booktabs = TRUE, digits = 2, linesep = "",
 \endgroup
 
 \vspace{10mm}
+
+\newpage
 
 Here,
 

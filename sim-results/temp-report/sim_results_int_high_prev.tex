@@ -156,7 +156,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
-  pdftitle={Simulation Result For Two-Level Intercept Model},
+  pdftitle={Simulation Result For Two-Level Intercept Model With High Prevalence},
   pdfauthor={Shafayet Khan Shafee},
   colorlinks=true,
   linkcolor={blue},
@@ -165,13 +165,21 @@
   urlcolor={Blue},
   pdfcreator={LaTeX via pandoc}}
 
-\title{Simulation Result For Two-Level Intercept Model}
+\title{Simulation Result For Two-Level Intercept Model With High
+Prevalence}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{The mean prevalence for this simulation is 77 \%}
 \author{Shafayet Khan Shafee}
-\date{19 August 2023}
+\date{23 August 2023}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, interior hidden, sharp corners, borderline west={3pt}{0pt}{shadecolor}, breakable, boxrule=0pt, enhanced]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, interior hidden, frame hidden, boxrule=0pt, sharp corners, borderline west={3pt}{0pt}{shadecolor}, enhanced]}{\end{tcolorbox}}\fi
 
 \newpage
 
@@ -190,7 +198,7 @@ Number of Cluster is
 
 \raisebox{-\height}{
 
-\includegraphics{../plots/ran-int/hist_10_5.png}
+\includegraphics{../../plots/two-lvl-ran-int/high-prev/hist_10_5.png}
 
 }
 
@@ -206,7 +214,7 @@ Number of Cluster is
 
 \raisebox{-\height}{
 
-\includegraphics{../plots/ran-int/hist_10_10.png}
+\includegraphics{../../plots/two-lvl-ran-int/high-prev/hist_10_10.png}
 
 }
 
@@ -232,7 +240,7 @@ Number of Cluster is
 
 \raisebox{-\height}{
 
-\includegraphics{../plots/ran-int/hist_10_30.png}
+\includegraphics{../../plots/two-lvl-ran-int/high-prev/hist_10_30.png}
 
 }
 
@@ -248,7 +256,7 @@ Number of Cluster is
 
 \raisebox{-\height}{
 
-\includegraphics{../plots/ran-int/hist_10_50.png}
+\includegraphics{../../plots/two-lvl-ran-int/high-prev/hist_10_50.png}
 
 }
 
@@ -277,7 +285,7 @@ Number of Cluster is
 
 \raisebox{-\height}{
 
-\includegraphics{../plots/ran-int/hist_30_5.png}
+\includegraphics{../../plots/two-lvl-ran-int/high-prev/hist_30_5.png}
 
 }
 
@@ -293,7 +301,7 @@ Number of Cluster is
 
 \raisebox{-\height}{
 
-\includegraphics{../plots/ran-int/hist_30_10.png}
+\includegraphics{../../plots/two-lvl-ran-int/high-prev/hist_30_10.png}
 
 }
 
@@ -319,7 +327,7 @@ Number of Cluster is
 
 \raisebox{-\height}{
 
-\includegraphics{../plots/ran-int/hist_30_30.png}
+\includegraphics{../../plots/two-lvl-ran-int/high-prev/hist_30_30.png}
 
 }
 
@@ -335,7 +343,7 @@ Number of Cluster is
 
 \raisebox{-\height}{
 
-\includegraphics{../plots/ran-int/hist_30_50.png}
+\includegraphics{../../plots/two-lvl-ran-int/high-prev/hist_30_50.png}
 
 }
 
@@ -364,7 +372,7 @@ Number of Cluster is
 
 \raisebox{-\height}{
 
-\includegraphics{../plots/ran-int/hist_50_5.png}
+\includegraphics{../../plots/two-lvl-ran-int/high-prev/hist_50_5.png}
 
 }
 
@@ -380,7 +388,7 @@ Number of Cluster is
 
 \raisebox{-\height}{
 
-\includegraphics{../plots/ran-int/hist_50_10.png}
+\includegraphics{../../plots/two-lvl-ran-int/high-prev/hist_50_10.png}
 
 }
 
@@ -406,7 +414,7 @@ Number of Cluster is
 
 \raisebox{-\height}{
 
-\includegraphics{../plots/ran-int/hist_50_30.png}
+\includegraphics{../../plots/two-lvl-ran-int/high-prev/hist_50_30.png}
 
 }
 
@@ -422,7 +430,7 @@ Number of Cluster is
 
 \raisebox{-\height}{
 
-\includegraphics{../plots/ran-int/hist_50_50.png}
+\includegraphics{../../plots/two-lvl-ran-int/high-prev/hist_50_50.png}
 
 }
 
@@ -451,7 +459,7 @@ Number of Cluster is
 
 \raisebox{-\height}{
 
-\includegraphics{../plots/ran-int/hist_100_5.png}
+\includegraphics{../../plots/two-lvl-ran-int/high-prev/hist_100_5.png}
 
 }
 
@@ -467,7 +475,7 @@ Number of Cluster is
 
 \raisebox{-\height}{
 
-\includegraphics{../plots/ran-int/hist_100_10.png}
+\includegraphics{../../plots/two-lvl-ran-int/high-prev/hist_100_10.png}
 
 }
 
@@ -493,7 +501,7 @@ Number of Cluster is
 
 \raisebox{-\height}{
 
-\includegraphics{../plots/ran-int/hist_100_30.png}
+\includegraphics{../../plots/two-lvl-ran-int/high-prev/hist_100_30.png}
 
 }
 
@@ -509,7 +517,7 @@ Number of Cluster is
 
 \raisebox{-\height}{
 
-\includegraphics{../plots/ran-int/hist_100_50.png}
+\includegraphics{../../plots/two-lvl-ran-int/high-prev/hist_100_50.png}
 
 }
 
@@ -525,45 +533,54 @@ Number of Cluster is
 
 \KOMAoptions{usegeometry,paper=landscape,pagesize}
 \recalctypearea
-\newgeometry{right=10mm,left=20mm}
+\newgeometry{right=10mm,left=10mm}
 
 \hypertarget{simulation-result-table}{%
 \section{Simulation Result Table}\label{simulation-result-table}}
 
 \begingroup
 
-\fontsize{12pt}{18pt}\selectfont
-\addtolength{\tabcolsep}{0.5pt}
+\fontsize{10pt}{14pt}\selectfont
+\addtolength{\tabcolsep}{0.2pt}
 
-\begin{tabular}[t]{>{\centering\arraybackslash}m{1.60cm}>{\centering\arraybackslash}m{1.60cm}>{\centering\arraybackslash}m{1.60cm}>{\centering\arraybackslash}m{1.60cm}>{\centering\arraybackslash}m{1.60cm}>{\centering\arraybackslash}m{1.60cm}>{\centering\arraybackslash}m{1.60cm}>{\centering\arraybackslash}m{1.60cm}>{\centering\arraybackslash}m{1.60cm}>{\centering\arraybackslash}m{1.60cm}>{\centering\arraybackslash}m{1.60cm}>{\centering\arraybackslash}m{1.60cm}}
+\begin{threeparttable}
+\begin{tabular}[t]{>{\centering\arraybackslash}m{1.4cm}>{\centering\arraybackslash}m{1.4cm}>{\centering\arraybackslash}m{1.4cm}>{\centering\arraybackslash}m{1.4cm}>{\centering\arraybackslash}m{1.4cm}>{\centering\arraybackslash}m{1.4cm}>{\centering\arraybackslash}m{1.4cm}>{\centering\arraybackslash}m{1.4cm}>{\centering\arraybackslash}m{1.4cm}>{\centering\arraybackslash}m{1.4cm}>{\centering\arraybackslash}m{1.4cm}>{\centering\arraybackslash}m{1.4cm}>{\centering\arraybackslash}m{1.4cm}>{\centering\arraybackslash}m{1.4cm}}
 \toprule
-Number of Cluster & Cluster Size & $\widehat{\beta_0}$ & $\widehat{\beta_1}$ & $\widehat{\beta_2}$ & $\widehat{\sigma_u^2}$ & $\widehat{MOR}$ & $\widehat{\sigma}_{MOR}$ & Simulation $\widehat{\sigma}_{MOR}$ & CI coverage (95\%) & Relative Bias (\%) & Runs used\\
+Number of Cluster & Cluster Size & $\widehat{\beta_0}$ & $\widehat{\beta_1}$ & $\widehat{\beta_2}$ & $\widehat{\sigma_u^2}$ & $\widehat{MOR}$ & Relative Bias (\%) & $\widehat{SE}_{MOR}$ & Simulation $\widehat{SE}_{MOR}$ & Ratio\textsuperscript{1} & CI coverage (95\%) & Runs used & Runs Required\\
 \midrule
-10 & 5 & 2.19 & 2.04 & 0.75 & 2.74 & 5.69 & 3.24 & 2.39 & 0.91 & 25.81 & 797\\
-10 & 10 & 2.17 & 1.90 & 0.79 & 2.83 & 5.58 & 2.09 & 1.97 & 0.96 & 23.51 & 968\\
-10 & 30 & 2.04 & 1.79 & 0.71 & 2.37 & 4.52 & 1.55 & 1.56 & 0.88 & 0.13 & 999\\
-10 & 50 & 2.01 & 1.76 & 0.66 & 2.35 & 4.45 & 1.48 & 1.50 & 0.86 & -1.41 & 1000\\
+10 & 5 & 2.17 & 2.01 & 0.76 & 2.74 & 5.68 & 25.65 & 3.19 & 2.39 & 1.34 & 0.91 & 1000 & 1255\\
+10 & 10 & 2.17 & 1.90 & 0.78 & 2.83 & 5.59 & 23.63 & 2.09 & 1.98 & 1.05 & 0.95 & 1000 & 1033\\
+10 & 30 & 2.04 & 1.79 & 0.71 & 2.37 & 4.53 & 0.23 & 1.55 & 1.56 & 0.99 & 0.88 & 1000 & 1001\\
+10 & 50 & 2.01 & 1.76 & 0.66 & 2.35 & 4.45 & -1.41 & 1.48 & 1.50 & 0.99 & 0.86 & 1000 & 1000\\
 \midrule
-30 & 5 & 2.09 & 1.86 & 0.76 & 2.92 & 5.53 & 1.80 & 1.77 & 0.97 & 22.35 & 985\\
-30 & 10 & 2.05 & 1.79 & 0.70 & 2.63 & 4.85 & 1.45 & 1.49 & 0.93 & 7.26 & 1000\\
-30 & 30 & 2.01 & 1.76 & 0.68 & 2.47 & 4.54 & 1.29 & 1.30 & 0.92 & 0.50 & 1000\\
-30 & 50 & 2.01 & 1.76 & 0.67 & 2.43 & 4.47 & 1.26 & 1.26 & 0.92 & -1.18 & 1000\\
+30 & 5 & 2.08 & 1.86 & 0.76 & 2.92 & 5.52 & 22.11 & 1.80 & 1.77 & 1.02 & 0.98 & 1000 & 1015\\
+30 & 10 & 2.05 & 1.79 & 0.70 & 2.63 & 4.85 & 7.26 & 1.45 & 1.49 & 0.98 & 0.93 & 1000 & 1000\\
+30 & 30 & 2.01 & 1.76 & 0.68 & 2.47 & 4.54 & 0.50 & 1.29 & 1.30 & 0.99 & 0.92 & 1000 & 1000\\
+30 & 50 & 2.01 & 1.76 & 0.67 & 2.43 & 4.47 & -1.18 & 1.26 & 1.26 & 1.00 & 0.92 & 1000 & 1000\\
 \midrule
-50 & 5 & 2.07 & 1.82 & 0.70 & 2.72 & 5.01 & 1.53 & 1.54 & 0.96 & 10.82 & 1000\\
-50 & 10 & 2.01 & 1.77 & 0.69 & 2.51 & 4.59 & 1.32 & 1.32 & 0.94 & 1.64 & 1000\\
-50 & 30 & 2.00 & 1.76 & 0.68 & 2.48 & 4.52 & 1.22 & 1.22 & 0.94 & -0.06 & 1000\\
-50 & 50 & 1.99 & 1.75 & 0.67 & 2.45 & 4.47 & 1.20 & 1.19 & 0.94 & -0.99 & 1000\\
+50 & 5 & 2.07 & 1.82 & 0.70 & 2.72 & 5.01 & 10.82 & 1.53 & 1.54 & 1.00 & 0.96 & 1000 & 1000\\
+50 & 10 & 2.01 & 1.77 & 0.69 & 2.51 & 4.59 & 1.64 & 1.32 & 1.32 & 1.00 & 0.94 & 1000 & 1000\\
+50 & 30 & 2.00 & 1.76 & 0.68 & 2.48 & 4.52 & -0.06 & 1.22 & 1.22 & 1.00 & 0.94 & 1000 & 1000\\
+50 & 50 & 1.99 & 1.75 & 0.67 & 2.45 & 4.47 & -0.99 & 1.20 & 1.19 & 1.01 & 0.94 & 1000 & 1000\\
 \midrule
-100 & 5 & 2.01 & 1.77 & 0.68 & 2.54 & 4.64 & 1.33 & 1.34 & 0.94 & 2.76 & 1000\\
-100 & 10 & 2.00 & 1.76 & 0.67 & 2.50 & 4.55 & 1.22 & 1.23 & 0.93 & 0.59 & 1000\\
-100 & 30 & 2.00 & 1.75 & 0.68 & 2.47 & 4.49 & 1.15 & 1.15 & 0.93 & -0.54 & 1000\\
-100 & 50 & 1.99 & 1.75 & 0.67 & 2.48 & 4.51 & 1.14 & 1.13 & 0.95 & -0.30 & 1000\\
+100 & 5 & 2.01 & 1.77 & 0.68 & 2.54 & 4.64 & 2.76 & 1.33 & 1.34 & 1.00 & 0.94 & 1000 & 1000\\
+100 & 10 & 2.00 & 1.76 & 0.67 & 2.50 & 4.55 & 0.59 & 1.22 & 1.23 & 0.99 & 0.93 & 1000 & 1000\\
+100 & 30 & 2.00 & 1.75 & 0.68 & 2.47 & 4.49 & -0.54 & 1.15 & 1.15 & 1.00 & 0.93 & 1000 & 1000\\
+100 & 50 & 1.99 & 1.75 & 0.67 & 2.48 & 4.51 & -0.30 & 1.14 & 1.13 & 1.00 & 0.95 & 1000 & 1000\\
 \bottomrule
 \end{tabular}
+\begin{tablenotes}
+\item \textit{Note: } 
+\item The mean prevalence for this simulation is 77\%
+\item[1] Ratio$\;=\;\dfrac{\widehat{SE}_{MOR}}{Simulation\;\widehat{SE}_{MOR}}$
+\end{tablenotes}
+\end{threeparttable}
 
 \endgroup
 
 \vspace{10mm}
+
+\newpage
 
 Here,
 
