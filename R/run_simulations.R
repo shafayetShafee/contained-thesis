@@ -13,7 +13,7 @@ source(here::here("R/two_level_slope_sim_funcs.R"))
 run_simulations <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000, 
                             simulation_type = c("int", "slope"),
                             seed = 1083, log_file, append = FALSE,
-                            plot_path) {
+                            plot_path, plot_name_suffix) {
   # sigma_u_sq => a single element for (int)
   # sigma_u_sq => a 2x2 matrix for (slope)
   
@@ -65,7 +65,7 @@ run_simulations <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000,
   #                     int = here::here("plots/ran-int"),
   #                     slope = here::here("plots/ran-slope")
   # )
-  ggsave(paste0("hist_", m, "_", n, ".png"), path = plot_path)
+  ggsave(paste0("hist_", m, "_", n, "_", plot_name_suffix, ".png"), path = plot_path)
   
   return(
     c(cluster_number = m, cluster_size = n, out_mat_means, 
