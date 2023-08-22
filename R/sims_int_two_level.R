@@ -8,7 +8,7 @@ source(here::here("R/run_simulations.R"))
 cluster_numbers <- c(100)
 
 # n = 5, 10, 30, 50
-cluster_size <- c(10)
+cluster_size <- c(50)
 
 cluster_params <- tidyr::expand_grid(cluster_size = cluster_size, 
                               cluster_numbers = cluster_numbers)
@@ -31,11 +31,7 @@ res <- purrr::map2_dfr(.x = cluster_params$cluster_numbers,
 
 tictoc::toc()
 
-# 1000.431 sec
-# 564.732 sec
-# 366.413 sec
-# 280.404 sec
-# 505.074 sec
+# 2.38 hour (high prev)
 
 # final_res <- res
 final_res <- dplyr::bind_rows(final_res, res)
