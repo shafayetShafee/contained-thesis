@@ -5,10 +5,10 @@ source(here::here("R/run_simulations.R"))
 # MOR
 
 # m = 10, 30, 50, 100
-cluster_numbers <- c(10, 30)
+cluster_numbers <- c(100)
 
 # n = 5, 10, 30, 50
-cluster_size <- c(10)
+cluster_size <- c(50)
 
 cluster_params <- tidyr::expand_grid(cluster_size = cluster_size, 
                               cluster_numbers = cluster_numbers)
@@ -42,6 +42,14 @@ tictoc::toc()
 # 570.033 sec
 
 # 350.176 sec
+# 268.038 sec
+# 470.205 sec
+# 497.333 sec
+# 544.111 sec
+# 1055 sec
+# 697.838 sec
+# 806.708 sec
+# 1616.712
 
 # final_res_int_low_prev <- res
 final_res_int_low_prev <- dplyr::bind_rows(final_res_int_low_prev, res)
