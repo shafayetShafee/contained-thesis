@@ -9,7 +9,7 @@ sigma_mat <- matrix(c(sigma2_u1, sigma2_12, sigma2_12, sigma2_u2),
                     byrow = TRUE, nrow = 2, ncol = 2)
 
 # m = 10, 30, 50, 100
-cluster_numbers <- c(10)
+cluster_numbers <- c(30)
 
 # n = 5, 10, 30, 50
 cluster_size <- c(5)
@@ -29,7 +29,7 @@ res <- purrr::map2_dfr(.x = cluster_params$cluster_numbers,
                                               fixed_coeff = fixed_coeff,
                                               sigma_u_sq = sigma_mat, 
                                               simulation_type = "slope",
-                                              nsims = 100, seed = 1083,
+                                              nsims = 1000, seed = 1083,
                                               log_file = log_file, append = TRUE,
                                               plot_path = plot_path,
                                               plot_name_suffix = plot_name_prefix)
@@ -37,10 +37,11 @@ res <- purrr::map2_dfr(.x = cluster_params$cluster_numbers,
 
 tictoc::toc()
 
-# 1563.629 sec
+# 2355.765 sec
+# 2751.28 sec
 
-final_res_slp_high_prev <- res
-# final_res_slp_high_prev <- dplyr::bind_rows(final_res, res)
+# final_res_slp_high_prev <- res
+final_res_slp_high_prev <- dplyr::bind_rows(final_res_slp_high_prev, res)
 
 save(final_res_slp_high_prev, 
      file=here::here("sim-results/rdata/sim_res_two_lvl_slp_high_prev.RData"))
