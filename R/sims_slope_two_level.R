@@ -12,7 +12,7 @@ sigma_mat <- matrix(c(sigma2_u1, sigma2_12, sigma2_12, sigma2_u2),
 cluster_numbers <- c(100)
 
 # n = 5, 10, 30, 50
-cluster_size <- c(5)
+cluster_size <- c(10)
 
 cluster_params <- tidyr::expand_grid(cluster_size = cluster_size, 
                                      cluster_numbers = cluster_numbers)
@@ -20,7 +20,6 @@ cluster_params <- tidyr::expand_grid(cluster_size = cluster_size,
 log_file <- here::here("log/log_two_lvl_slp_high_prev.txt")
 plot_path <- here::here("plots/two-lvl-ran-slope/high-prev/")
 plot_name_prefix <- "two_lvl_slp_high_prev"
-
 
 tictoc::tic()
 res <- purrr::map2_dfr(.x = cluster_params$cluster_numbers, 
@@ -40,6 +39,11 @@ tictoc::toc()
 # 2355.765 sec
 # 2751.28 sec
 # 3057.014 sec
+# 4121.232 sec
+# 1521.497 sec
+# 1702.711 sec
+# 2058.664 sec
+# 3291.829 sec
 
 # final_res_slp_high_prev <- res
 final_res_slp_high_prev <- dplyr::bind_rows(final_res_slp_high_prev, res)
