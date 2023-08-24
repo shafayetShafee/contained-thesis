@@ -9,7 +9,7 @@ sigma_mat <- matrix(c(sigma2_u1, sigma2_12, sigma2_12, sigma2_u2),
                     byrow = TRUE, nrow = 2, ncol = 2)
 
 # m = 10, 30, 50, 100
-cluster_numbers <- c(30)
+cluster_numbers <- c(100)
 
 # n = 5, 10, 30, 50
 cluster_size <- c(5)
@@ -39,6 +39,7 @@ tictoc::toc()
 
 # 2355.765 sec
 # 2751.28 sec
+# 3057.014 sec
 
 # final_res_slp_high_prev <- res
 final_res_slp_high_prev <- dplyr::bind_rows(final_res_slp_high_prev, res)
