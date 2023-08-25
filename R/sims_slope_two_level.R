@@ -9,10 +9,10 @@ sigma_mat <- matrix(c(sigma2_u1, sigma2_12, sigma2_12, sigma2_u2),
                     byrow = TRUE, nrow = 2, ncol = 2)
 
 # m = 10, 30, 50, 100
-cluster_numbers <- c(100)
+cluster_numbers <- c(30)
 
 # n = 5, 10, 30, 50
-cluster_size <- c(30)
+cluster_size <- c(50)
 
 cluster_params <- tidyr::expand_grid(cluster_size = cluster_size, 
                                      cluster_numbers = cluster_numbers)
@@ -47,6 +47,9 @@ tictoc::toc()
 # 1101.72 sec
 # 1557.225 sec
 # 2541.727 sec
+# 4222 sec
+# 1208.229 sec
+# 2232.343 sec
 
 # final_res_slp_high_prev <- res
 final_res_slp_high_prev <- dplyr::bind_rows(final_res_slp_high_prev, res)
