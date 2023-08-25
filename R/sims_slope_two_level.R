@@ -4,8 +4,8 @@ fixed_coeff <- c(2, 1.75, 0.67)
 
 sigma2_u1 <- 1
 sigma2_u2 <- 2
-sigma2_12 <- 0 # 0.75
-sigma_mat <- matrix(c(sigma2_u1, sigma2_12, sigma2_12, sigma2_u2), 
+sigma2_u12 <- 0 # 0.75
+sigma_mat <- matrix(c(sigma2_u1, sigma2_u12, sigma2_12, sigma2_u2), 
                     byrow = TRUE, nrow = 2, ncol = 2)
 
 # m = 10, 30, 50, 100

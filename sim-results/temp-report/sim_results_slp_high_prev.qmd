@@ -1,0 +1,209 @@
+---
+title: "Simulation Result For Two-Level Slope Model With High Prevalence"
+author: Shafayet Khan Shafee
+date: last-modified
+date-format: "DD MMMM YYYY"
+format: 
+  pdf:
+    classoption: titlepage
+    fig-pos: 'H'
+    keep-tex: true
+    geometry:
+      - top=20mm
+      - bottom=5mm
+    include-in-header:
+      text: |
+        \usepackage{typearea}
+---
+
+\newpage
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(dplyr)
+library(kableExtra)
+
+final_res_slp_high_prev <- readRDS(
+  here::here("sim-results/rds/sim_res_two_lvl_slp_high_prev.rds")
+  )
+
+mean_prevalence <- round(mean(final_res_slp_high_prev$prevalence), 2)*100
+```
+
+
+---
+subtitle: "The mean prevalence for this simulation is `r mean_prevalence` %"
+---
+
+# Histograms for $log(\widehat{MOR})$ When Number of Cluster is 10
+
+\vspace{5mm}
+
+::: {layout="[[50, 50], [-20], [50,50]]"}
+
+![For cluster size 5](../../plots/two-lvl-ran-slope/high-prev/hist_10_5_two_lvl_slp_high_prev.png){#m10n5}
+
+![For cluster size 10](../../plots/two-lvl-ran-slope/high-prev/hist_10_10_two_lvl_slp_high_prev.png){#m10n10}
+
+![For cluster size 30](../../plots/two-lvl-ran-slope/high-prev/hist_10_30_two_lvl_slp_high_prev.png){#m10n30}
+
+
+![For cluster size 50](../../plots/two-lvl-ran-slope/high-prev/hist_10_50_two_lvl_slp_high_prev.png){#m10n50}
+
+:::
+
+\newpage
+
+<!-- --------------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------------- -->
+
+
+# Histograms for $log(\widehat{MOR})$ When Number of Cluster is 30
+
+\vspace{5mm}
+
+::: {layout="[[50, 50], [-20], [50,50]]"}
+
+![For cluster size 5](../../plots/two-lvl-ran-slope/high-prev/hist_30_5_two_lvl_slp_high_prev.png){#m30n5}
+
+![For cluster size 10](../../plots/two-lvl-ran-slope/high-prev/hist_30_10_two_lvl_slp_high_prev.png){#m30n10}
+
+![For cluster size 30](../../plots/two-lvl-ran-slope/high-prev/hist_30_30_two_lvl_slp_high_prev.png){#m30n30}
+
+
+![For cluster size 50](../../plots/two-lvl-ran-slope/high-prev/hist_30_50_two_lvl_slp_high_prev.png){#m30n50}
+
+:::
+
+\newpage
+
+<!-- --------------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------------- -->
+
+
+# Histograms for $log(\widehat{MOR})$ When Number of Cluster is 50
+
+\vspace{5mm}
+
+::: {layout="[[50, 50], [-20], [50,50]]"}
+
+![For cluster size 5](../../plots/two-lvl-ran-slope/high-prev/hist_50_5_two_lvl_slp_high_prev.png){#m50n5}
+
+![For cluster size 10](../../plots/two-lvl-ran-slope/high-prev/hist_50_10_two_lvl_slp_high_prev.png){#m50n10}
+
+![For cluster size 30](../../plots/two-lvl-ran-slope/high-prev/hist_50_30_two_lvl_slp_high_prev.png){#m50n30}
+
+
+
+![For cluster size 50](../../plots/two-lvl-ran-slope/high-prev/hist_50_50_two_lvl_slp_high_prev.png){#m50n50}
+
+:::
+
+\newpage
+
+<!-- --------------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------------- -->
+
+
+# Histograms for $log(\widehat{MOR})$ When Number of Cluster is 100
+
+\vspace{5mm}
+
+::: {layout="[[50, 50], [-20], [50,50]]"}
+
+![For cluster size 5](../../plots/two-lvl-ran-slope/high-prev/hist_100_5_two_lvl_slp_high_prev.png){#m100n5}
+
+![For cluster size 10](../../plots/two-lvl-ran-slope/high-prev/hist_100_10_two_lvl_slp_high_prev.png){#m100n10}
+
+![For cluster size 30](../../plots/two-lvl-ran-slope/high-prev/hist_100_30_two_lvl_slp_high_prev.png){#m100n30}
+
+
+![For cluster size 50](../../plots/two-lvl-ran-slope/high-prev/hist_100_50_two_lvl_slp_high_prev.png){#m100n50}
+
+:::
+
+
+<!-- --------------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------------- -->
+
+\newpage
+
+\KOMAoptions{usegeometry,paper=landscape,pagesize}
+\recalctypearea
+\newgeometry{right=10mm,left=10mm}
+
+# Simulation Result Table
+
+
+```{r}
+#| echo: false
+sim_output_table <- final_res_slp_high_prev %>% 
+  arrange(cluster_number) %>% 
+  mutate(ratio = se_mor_hat / sim_se_mor_hat) %>% 
+  select(cluster_number, cluster_size, beta0_hat, beta1_hat, beta2_hat, 
+         sigma_u1_sq_hat, sigma_u2_sq_hat, sigma_u12_sq_hat,
+         true_mor, mor_hat, relative_bias, se_mor_hat, sim_se_mor_hat, 
+         ratio, coverage, runs_used, runs_required)
+```
+
+
+\begingroup
+<!-- \setlength{\LTleft}{0pt minus 5000pt} -->
+<!-- \setlength{\LTright}{0pt minus 5000pt} -->
+\fontsize{8pt}{12pt}\selectfont
+\addtolength{\tabcolsep}{0.1pt}
+
+
+```{r}
+#| echo: false
+kableExtra::kbl(sim_output_table, booktabs = TRUE, digits = 2, linesep = "",
+                align = paste0(rep('c', ncol(sim_output_table)),collapse = ""),
+                col.names = c("Number of Cluster", "Cluster Size",
+                            "$\\widehat{\\beta_0}$", "$\\widehat{\\beta_1}$", 
+                            "$\\widehat{\\beta_2}$", 
+                            "$\\widehat{\\sigma_{u_1}^2}$", "$\\widehat{\\sigma_{u_2}^2}$",
+                            "$\\widehat{\\sigma_{u_{12}}^2}$",
+                            "$MOR$", "$\\widehat{MOR}$", "Relative Bias (\\%)",
+                            "$\\widehat{SE}_{MOR}$", 
+                            "Simulation $\\widehat{SE}_{MOR}$", 
+                            "Ratio\\textsuperscript{1}",
+                            "CI coverage (95\\%)", "Runs used",
+                            "Runs Required"), escape = FALSE) %>% 
+  column_spec(1:ncol(sim_output_table), width = "1.1cm", latex_valign = "m") %>% 
+  row_spec(
+    seq(
+      n_distinct(sim_output_table$cluster_number), 
+      nrow(sim_output_table) - 1, 
+      n_distinct(sim_output_table$cluster_size)), hline_after = TRUE
+  ) %>% 
+  footnote(
+    general = paste0("The mean prevalence for this simulation is ", mean_prevalence, "\\\\%"),
+    threeparttable = TRUE,
+    # footnote_as_chunk = TRUE,
+    number = c("Ratio$\\\\;=\\\\;\\\\dfrac{\\\\widehat{SE}_{MOR}}{Simulation\\\\;\\\\widehat{SE}_{MOR}}$"), 
+    escape = FALSE
+  )
+
+```
+
+
+\endgroup
+
+\vspace{10mm}
+
+\newpage
+
+Here,
+
+- True $\sigma^2_{u_1}$ = $1$, $\sigma^2_{u_2}$ = $2$, $\sigma^2_{u_{12}}$ = $0$ 
+- True Values of $\beta_0 = 2$, $\beta_1 = 1.75$, $\beta_2 = 0.67$ 
+- "Runs used" column represent how many simulation runs were used to calculate the numbers in the corresponding row.
+
