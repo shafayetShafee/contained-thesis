@@ -9,10 +9,10 @@ sigma_mat <- matrix(c(sigma2_u1, sigma2_u12, sigma2_u12, sigma2_u2),
                     byrow = TRUE, nrow = 2, ncol = 2)
 
 # m = 10, 30, 50, 100
-cluster_numbers <- c(100)
+cluster_numbers <- c(50)
 
 # n = 5, 10, 30, 50
-cluster_size <- c(5)
+cluster_size <- c(10)
 
 cluster_params <- tidyr::expand_grid(cluster_size = cluster_size, 
                                      cluster_numbers = cluster_numbers)
@@ -37,7 +37,7 @@ res <- purrr::map2_dfr(.x = cluster_params$cluster_numbers,
 tictoc::toc()
 
 # 12 hour 32 mins (high prev)
-# c(2208.19, 2321.421, 2586.075, 3426.504)
+# c(2208.19, 2321.421, 2586.075, 3426.504, 1486.212, 1392.129, 1845.036)
 
 # final_res_slp_low_prev <- res
 final_res_slp_low_prev <- dplyr::bind_rows(final_res_slp_low_prev, res)
