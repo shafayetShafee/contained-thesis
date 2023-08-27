@@ -123,11 +123,11 @@ est_two_lvl_slope_mor <- function(m, n, fixed_coeff, sigma_mat, data_seed) {
 
 
 simulate_two_lvl_slope <- function(m, n, fixed_coeff, sigma_mat, nsims = 1000, 
-                           log_file, seed, ...) {
+                           log_file, seed, more_iter, ...) {
 
   # creating extra sims to get nsims after accounting 
   # for non-converged cases ---------------------
-  total_sims = nsims + min(nsims, 500)
+  total_sims = nsims + more_iter
   conv_case_num = 0
   runs_required = 0
   

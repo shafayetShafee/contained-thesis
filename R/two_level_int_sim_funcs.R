@@ -103,11 +103,11 @@ est_two_lvl_int_mor <- function(m, n, fixed_coeff, sigma_u_sq, data_seed) {
 
 
 simulate_two_lvl_int <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000, 
-                         log_file, seed, ...) {
+                         log_file, seed, more_iter, ...) {
   
   # creating extra sims to get nsims after accounting 
   # for non-converged cases ---------------------
-  total_sims = nsims + min(nsims, 500)
+  total_sims = nsims + more_iter
   conv_case_num = 0
   runs_required = 0
   

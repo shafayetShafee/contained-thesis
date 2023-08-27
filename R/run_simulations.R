@@ -13,7 +13,8 @@ source(here::here("R/two_level_slope_sim_funcs.R"))
 run_simulations <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000, 
                             simulation_type = c("int", "slope"),
                             seed = 1083, log_file, append = FALSE,
-                            plot_path, plot_name_suffix) {
+                            plot_path, plot_name_suffix, 
+                            more_iter) {
   # sigma_u_sq => a single element for (int)
   # sigma_u_sq => a 2x2 matrix for (slope)
 
@@ -35,13 +36,15 @@ run_simulations <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000,
                                           sigma_u_sq = sigma_u_sq,
                                           nsims = nsims, 
                                           log_file = log_file,
-                                          seed = seed), 
+                                          seed = seed,
+                                          more_iter = more_iter), 
                        slope = simulate_two_lvl_slope(m = m, n = n,
                                               fixed_coeff = fixed_coeff,
                                               sigma_mat = sigma_u_sq,
                                               nsims = nsims,
                                               log_file = log_file,
-                                              seed = seed)
+                                              seed = seed, 
+                                              more_iter = more_iter)
   )
   out_mat <- sim_output$out_mat
   out_mat_means <- colMeans(out_mat, na.rm = TRUE)
