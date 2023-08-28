@@ -5,7 +5,7 @@ source(here::here("R/run_simulations.R"))
 # MOR
 
 # m = 10, 30, 50, 100
-cluster_numbers <- c(30)
+cluster_numbers <- c(100)
 
 # n = 5, 10, 30, 50
 cluster_size <- c(30)
@@ -45,7 +45,7 @@ tictoc::toc()
 beepr::beep(3)
 
 # c(649.719, 725.747, 989.899, 1385.295, 645.026, 645.026, 847.469, 412.631, 
-#  734.688)
+#  734.688, 1229.286s)
 
 
 # final_res_int_low_prev <- res

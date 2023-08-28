@@ -94082,7 +94082,7 @@ warning: NA
 error: NA 
 Info: Stored output for iteration 1000
  
-Simulation Log for 2023-08-28 22:11:00.253197 
+Simulation Log for 2023-08-28 23:17:15.048581 
 Info: Simulations for cluster size: 30 and cluster number: 50
  
 : -------------------------------------------------- 
@@ -97404,4 +97404,4684 @@ message: NA
 warning: NA 
 error: NA 
 Info: Stored output for iteration 415
+ 
+: -------------------------------------------------- 
+Using data_seed: 733731 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 416
+ 
+: -------------------------------------------------- 
+Using data_seed: 354993 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 417
+ 
+: -------------------------------------------------- 
+Using data_seed: 188790 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 418
+ 
+: -------------------------------------------------- 
+Using data_seed: 573404 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 419
+ 
+: -------------------------------------------------- 
+Using data_seed: 686376 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 420
+ 
+: -------------------------------------------------- 
+Using data_seed: 103835 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 421
+ 
+: -------------------------------------------------- 
+Using data_seed: 630964 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 422
+ 
+: -------------------------------------------------- 
+Using data_seed: 100888 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 423
+ 
+: -------------------------------------------------- 
+Using data_seed: 957205 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 424
+ 
+: -------------------------------------------------- 
+Using data_seed: 417910 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 425
+ 
+: -------------------------------------------------- 
+Using data_seed: 616262 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 426
+ 
+: -------------------------------------------------- 
+Using data_seed: 991060 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 427
+ 
+: -------------------------------------------------- 
+Using data_seed: 911164 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 428
+ 
+: -------------------------------------------------- 
+Using data_seed: 64838 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 429
+ 
+: -------------------------------------------------- 
+Using data_seed: 522432 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 430
+ 
+: -------------------------------------------------- 
+Using data_seed: 63524 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 431
+ 
+: -------------------------------------------------- 
+Using data_seed: 237986 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 432
+ 
+: -------------------------------------------------- 
+Using data_seed: 336271 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 433
+ 
+: -------------------------------------------------- 
+Using data_seed: 90148 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 434
+ 
+: -------------------------------------------------- 
+Using data_seed: 116611 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 435
+ 
+: -------------------------------------------------- 
+Using data_seed: 55991 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 436
+ 
+: -------------------------------------------------- 
+Using data_seed: 148415 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 437
+ 
+: -------------------------------------------------- 
+Using data_seed: 924636 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 438
+ 
+: -------------------------------------------------- 
+Using data_seed: 159215 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 439
+ 
+: -------------------------------------------------- 
+Using data_seed: 187277 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 440
+ 
+: -------------------------------------------------- 
+Using data_seed: 287743 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 441
+ 
+: -------------------------------------------------- 
+Using data_seed: 477993 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 442
+ 
+: -------------------------------------------------- 
+Using data_seed: 46081 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 443
+ 
+: -------------------------------------------------- 
+Using data_seed: 608242 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 444
+ 
+: -------------------------------------------------- 
+Using data_seed: 3532 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 445
+ 
+: -------------------------------------------------- 
+Using data_seed: 37291 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 446
+ 
+: -------------------------------------------------- 
+Using data_seed: 941826 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 447
+ 
+: -------------------------------------------------- 
+Using data_seed: 831939 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 448
+ 
+: -------------------------------------------------- 
+Using data_seed: 877891 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 449
+ 
+: -------------------------------------------------- 
+Using data_seed: 780537 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 450
+ 
+: -------------------------------------------------- 
+Using data_seed: 511573 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 451
+ 
+: -------------------------------------------------- 
+Using data_seed: 188984 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 452
+ 
+: -------------------------------------------------- 
+Using data_seed: 700606 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 453
+ 
+: -------------------------------------------------- 
+Using data_seed: 335118 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 454
+ 
+: -------------------------------------------------- 
+Using data_seed: 418110 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 455
+ 
+: -------------------------------------------------- 
+Using data_seed: 504155 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 456
+ 
+: -------------------------------------------------- 
+Using data_seed: 875085 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 457
+ 
+: -------------------------------------------------- 
+Using data_seed: 20107 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 458
+ 
+: -------------------------------------------------- 
+Using data_seed: 170007 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 459
+ 
+: -------------------------------------------------- 
+Using data_seed: 559969 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 460
+ 
+: -------------------------------------------------- 
+Using data_seed: 397679 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 461
+ 
+: -------------------------------------------------- 
+Using data_seed: 530948 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 462
+ 
+: -------------------------------------------------- 
+Using data_seed: 179001 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 463
+ 
+: -------------------------------------------------- 
+Using data_seed: 381592 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 464
+ 
+: -------------------------------------------------- 
+Using data_seed: 946079 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 465
+ 
+: -------------------------------------------------- 
+Using data_seed: 910699 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 466
+ 
+: -------------------------------------------------- 
+Using data_seed: 477787 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 467
+ 
+: -------------------------------------------------- 
+Using data_seed: 100916 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 468
+ 
+: -------------------------------------------------- 
+Using data_seed: 814011 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 469
+ 
+: -------------------------------------------------- 
+Using data_seed: 332847 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 470
+ 
+: -------------------------------------------------- 
+Using data_seed: 488310 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 471
+ 
+: -------------------------------------------------- 
+Using data_seed: 763981 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 472
+ 
+: -------------------------------------------------- 
+Using data_seed: 161982 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 473
+ 
+: -------------------------------------------------- 
+Using data_seed: 55053 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 474
+ 
+: -------------------------------------------------- 
+Using data_seed: 589985 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 475
+ 
+: -------------------------------------------------- 
+Using data_seed: 841613 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 476
+ 
+: -------------------------------------------------- 
+Using data_seed: 393170 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 477
+ 
+: -------------------------------------------------- 
+Using data_seed: 415883 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 478
+ 
+: -------------------------------------------------- 
+Using data_seed: 72605 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 479
+ 
+: -------------------------------------------------- 
+Using data_seed: 934820 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 480
+ 
+: -------------------------------------------------- 
+Using data_seed: 990338 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 481
+ 
+: -------------------------------------------------- 
+Using data_seed: 364235 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 482
+ 
+: -------------------------------------------------- 
+Using data_seed: 834815 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 483
+ 
+: -------------------------------------------------- 
+Using data_seed: 936151 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 484
+ 
+: -------------------------------------------------- 
+Using data_seed: 185843 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 485
+ 
+: -------------------------------------------------- 
+Using data_seed: 528022 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 486
+ 
+: -------------------------------------------------- 
+Using data_seed: 576281 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 487
+ 
+: -------------------------------------------------- 
+Using data_seed: 277979 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 488
+ 
+: -------------------------------------------------- 
+Using data_seed: 360371 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 489
+ 
+: -------------------------------------------------- 
+Using data_seed: 726183 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 490
+ 
+: -------------------------------------------------- 
+Using data_seed: 380917 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 491
+ 
+: -------------------------------------------------- 
+Using data_seed: 717464 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 492
+ 
+: -------------------------------------------------- 
+Using data_seed: 224813 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 493
+ 
+: -------------------------------------------------- 
+Using data_seed: 565870 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 494
+ 
+: -------------------------------------------------- 
+Using data_seed: 256631 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 495
+ 
+: -------------------------------------------------- 
+Using data_seed: 840960 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 496
+ 
+: -------------------------------------------------- 
+Using data_seed: 12386 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 497
+ 
+: -------------------------------------------------- 
+Using data_seed: 840246 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 498
+ 
+: -------------------------------------------------- 
+Using data_seed: 853956 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 499
+ 
+: -------------------------------------------------- 
+Using data_seed: 554981 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 500
+ 
+: -------------------------------------------------- 
+Using data_seed: 290792 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 501
+ 
+: -------------------------------------------------- 
+Using data_seed: 765254 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 502
+ 
+: -------------------------------------------------- 
+Using data_seed: 479626 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 503
+ 
+: -------------------------------------------------- 
+Using data_seed: 521850 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 504
+ 
+: -------------------------------------------------- 
+Using data_seed: 456578 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 505
+ 
+: -------------------------------------------------- 
+Using data_seed: 296518 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 506
+ 
+: -------------------------------------------------- 
+Using data_seed: 692420 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 507
+ 
+: -------------------------------------------------- 
+Using data_seed: 518194 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 508
+ 
+: -------------------------------------------------- 
+Using data_seed: 996075 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 509
+ 
+: -------------------------------------------------- 
+Using data_seed: 488725 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 510
+ 
+: -------------------------------------------------- 
+Using data_seed: 346240 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 511
+ 
+: -------------------------------------------------- 
+Using data_seed: 562239 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 512
+ 
+: -------------------------------------------------- 
+Using data_seed: 286113 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 513
+ 
+: -------------------------------------------------- 
+Using data_seed: 334921 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 514
+ 
+: -------------------------------------------------- 
+Using data_seed: 316256 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 515
+ 
+: -------------------------------------------------- 
+Using data_seed: 350407 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 516
+ 
+: -------------------------------------------------- 
+Using data_seed: 696363 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 517
+ 
+: -------------------------------------------------- 
+Using data_seed: 297969 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 518
+ 
+: -------------------------------------------------- 
+Using data_seed: 878051 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 519
+ 
+: -------------------------------------------------- 
+Using data_seed: 534370 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 520
+ 
+: -------------------------------------------------- 
+Using data_seed: 741383 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 521
+ 
+: -------------------------------------------------- 
+Using data_seed: 449274 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 522
+ 
+: -------------------------------------------------- 
+Using data_seed: 374863 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 523
+ 
+: -------------------------------------------------- 
+Using data_seed: 330441 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 524
+ 
+: -------------------------------------------------- 
+Using data_seed: 80232 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 525
+ 
+: -------------------------------------------------- 
+Using data_seed: 295990 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 526
+ 
+: -------------------------------------------------- 
+Using data_seed: 489425 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 527
+ 
+: -------------------------------------------------- 
+Using data_seed: 877820 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 528
+ 
+: -------------------------------------------------- 
+Using data_seed: 278523 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 529
+ 
+: -------------------------------------------------- 
+Using data_seed: 390983 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 530
+ 
+: -------------------------------------------------- 
+Using data_seed: 782523 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 531
+ 
+: -------------------------------------------------- 
+Using data_seed: 527350 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 532
+ 
+: -------------------------------------------------- 
+Using data_seed: 960774 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 533
+ 
+: -------------------------------------------------- 
+Using data_seed: 607876 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 534
+ 
+: -------------------------------------------------- 
+Using data_seed: 566105 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 535
+ 
+: -------------------------------------------------- 
+Using data_seed: 671619 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 536
+ 
+: -------------------------------------------------- 
+Using data_seed: 161406 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 537
+ 
+: -------------------------------------------------- 
+Using data_seed: 948781 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 538
+ 
+: -------------------------------------------------- 
+Using data_seed: 478067 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 539
+ 
+: -------------------------------------------------- 
+Using data_seed: 492881 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 540
+ 
+: -------------------------------------------------- 
+Using data_seed: 121024 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 541
+ 
+: -------------------------------------------------- 
+Using data_seed: 323435 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 542
+ 
+: -------------------------------------------------- 
+Using data_seed: 779749 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 543
+ 
+: -------------------------------------------------- 
+Using data_seed: 659531 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 544
+ 
+: -------------------------------------------------- 
+Using data_seed: 780839 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 545
+ 
+: -------------------------------------------------- 
+Using data_seed: 179268 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 546
+ 
+: -------------------------------------------------- 
+Using data_seed: 167261 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 547
+ 
+: -------------------------------------------------- 
+Using data_seed: 449809 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 548
+ 
+: -------------------------------------------------- 
+Using data_seed: 674881 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 549
+ 
+: -------------------------------------------------- 
+Using data_seed: 870390 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 550
+ 
+: -------------------------------------------------- 
+Using data_seed: 127176 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 551
+ 
+: -------------------------------------------------- 
+Using data_seed: 938587 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 552
+ 
+: -------------------------------------------------- 
+Using data_seed: 581309 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 553
+ 
+: -------------------------------------------------- 
+Using data_seed: 957195 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 554
+ 
+: -------------------------------------------------- 
+Using data_seed: 343487 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 555
+ 
+: -------------------------------------------------- 
+Using data_seed: 123078 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 556
+ 
+: -------------------------------------------------- 
+Using data_seed: 433950 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 557
+ 
+: -------------------------------------------------- 
+Using data_seed: 57528 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 558
+ 
+: -------------------------------------------------- 
+Using data_seed: 968005 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 559
+ 
+: -------------------------------------------------- 
+Using data_seed: 853837 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 560
+ 
+: -------------------------------------------------- 
+Using data_seed: 659939 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 561
+ 
+: -------------------------------------------------- 
+Using data_seed: 108950 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 562
+ 
+: -------------------------------------------------- 
+Using data_seed: 972310 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 563
+ 
+: -------------------------------------------------- 
+Using data_seed: 685124 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 564
+ 
+: -------------------------------------------------- 
+Using data_seed: 19947 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 565
+ 
+: -------------------------------------------------- 
+Using data_seed: 774908 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 566
+ 
+: -------------------------------------------------- 
+Using data_seed: 360877 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 567
+ 
+: -------------------------------------------------- 
+Using data_seed: 645173 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 568
+ 
+: -------------------------------------------------- 
+Using data_seed: 860398 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 569
+ 
+: -------------------------------------------------- 
+Using data_seed: 398267 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 570
+ 
+: -------------------------------------------------- 
+Using data_seed: 93029 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 571
+ 
+: -------------------------------------------------- 
+Using data_seed: 777994 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 572
+ 
+: -------------------------------------------------- 
+Using data_seed: 600575 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 573
+ 
+: -------------------------------------------------- 
+Using data_seed: 631761 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 574
+ 
+: -------------------------------------------------- 
+Using data_seed: 888252 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 575
+ 
+: -------------------------------------------------- 
+Using data_seed: 245782 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 576
+ 
+: -------------------------------------------------- 
+Using data_seed: 114123 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 577
+ 
+: -------------------------------------------------- 
+Using data_seed: 786341 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 578
+ 
+: -------------------------------------------------- 
+Using data_seed: 308686 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 579
+ 
+: -------------------------------------------------- 
+Using data_seed: 975132 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 580
+ 
+: -------------------------------------------------- 
+Using data_seed: 36973 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 581
+ 
+: -------------------------------------------------- 
+Using data_seed: 38954 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 582
+ 
+: -------------------------------------------------- 
+Using data_seed: 422716 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 583
+ 
+: -------------------------------------------------- 
+Using data_seed: 50429 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 584
+ 
+: -------------------------------------------------- 
+Using data_seed: 258003 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 585
+ 
+: -------------------------------------------------- 
+Using data_seed: 759669 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 586
+ 
+: -------------------------------------------------- 
+Using data_seed: 660245 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 587
+ 
+: -------------------------------------------------- 
+Using data_seed: 504171 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 588
+ 
+: -------------------------------------------------- 
+Using data_seed: 192929 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 589
+ 
+: -------------------------------------------------- 
+Using data_seed: 523012 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 590
+ 
+: -------------------------------------------------- 
+Using data_seed: 848610 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 591
+ 
+: -------------------------------------------------- 
+Using data_seed: 118813 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 592
+ 
+: -------------------------------------------------- 
+Using data_seed: 535314 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 593
+ 
+: -------------------------------------------------- 
+Using data_seed: 609635 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 594
+ 
+: -------------------------------------------------- 
+Using data_seed: 254981 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 595
+ 
+: -------------------------------------------------- 
+Using data_seed: 199983 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 596
+ 
+: -------------------------------------------------- 
+Using data_seed: 840529 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 597
+ 
+: -------------------------------------------------- 
+Using data_seed: 802791 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 598
+ 
+: -------------------------------------------------- 
+Using data_seed: 92939 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 599
+ 
+: -------------------------------------------------- 
+Using data_seed: 680810 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 600
+ 
+: -------------------------------------------------- 
+Using data_seed: 654133 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 601
+ 
+: -------------------------------------------------- 
+Using data_seed: 974690 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 602
+ 
+: -------------------------------------------------- 
+Using data_seed: 873816 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 603
+ 
+: -------------------------------------------------- 
+Using data_seed: 654167 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 604
+ 
+: -------------------------------------------------- 
+Using data_seed: 717888 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 605
+ 
+: -------------------------------------------------- 
+Using data_seed: 640592 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 606
+ 
+: -------------------------------------------------- 
+Using data_seed: 674291 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 607
+ 
+: -------------------------------------------------- 
+Using data_seed: 872654 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 608
+ 
+: -------------------------------------------------- 
+Using data_seed: 883810 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 609
+ 
+: -------------------------------------------------- 
+Using data_seed: 632268 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 610
+ 
+: -------------------------------------------------- 
+Using data_seed: 942260 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 611
+ 
+: -------------------------------------------------- 
+Using data_seed: 83381 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 612
+ 
+: -------------------------------------------------- 
+Using data_seed: 130453 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 613
+ 
+: -------------------------------------------------- 
+Using data_seed: 929162 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 614
+ 
+: -------------------------------------------------- 
+Using data_seed: 572412 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 615
+ 
+: -------------------------------------------------- 
+Using data_seed: 656840 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 616
+ 
+: -------------------------------------------------- 
+Using data_seed: 70448 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 617
+ 
+: -------------------------------------------------- 
+Using data_seed: 331532 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 618
+ 
+: -------------------------------------------------- 
+Using data_seed: 664849 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 619
+ 
+: -------------------------------------------------- 
+Using data_seed: 924843 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 620
+ 
+: -------------------------------------------------- 
+Using data_seed: 914883 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 621
+ 
+: -------------------------------------------------- 
+Using data_seed: 907910 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 622
+ 
+: -------------------------------------------------- 
+Using data_seed: 80874 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 623
+ 
+: -------------------------------------------------- 
+Using data_seed: 574563 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 624
+ 
+: -------------------------------------------------- 
+Using data_seed: 769014 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 625
+ 
+: -------------------------------------------------- 
+Using data_seed: 888351 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 626
+ 
+: -------------------------------------------------- 
+Using data_seed: 945987 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 627
+ 
+: -------------------------------------------------- 
+Using data_seed: 243901 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 628
+ 
+: -------------------------------------------------- 
+Using data_seed: 806264 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 629
+ 
+: -------------------------------------------------- 
+Using data_seed: 905977 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 630
+ 
+: -------------------------------------------------- 
+Using data_seed: 832585 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 631
+ 
+: -------------------------------------------------- 
+Using data_seed: 248824 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 632
+ 
+: -------------------------------------------------- 
+Using data_seed: 525749 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 633
+ 
+: -------------------------------------------------- 
+Using data_seed: 110935 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 634
+ 
+: -------------------------------------------------- 
+Using data_seed: 500623 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 635
+ 
+: -------------------------------------------------- 
+Using data_seed: 815366 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 636
+ 
+: -------------------------------------------------- 
+Using data_seed: 531599 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 637
+ 
+: -------------------------------------------------- 
+Using data_seed: 295941 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 638
+ 
+: -------------------------------------------------- 
+Using data_seed: 290311 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 639
+ 
+: -------------------------------------------------- 
+Using data_seed: 9417 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 640
+ 
+: -------------------------------------------------- 
+Using data_seed: 840596 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 641
+ 
+: -------------------------------------------------- 
+Using data_seed: 289389 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 642
+ 
+: -------------------------------------------------- 
+Using data_seed: 115595 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 643
+ 
+: -------------------------------------------------- 
+Using data_seed: 850838 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 644
+ 
+: -------------------------------------------------- 
+Using data_seed: 893702 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 645
+ 
+: -------------------------------------------------- 
+Using data_seed: 308218 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 646
+ 
+: -------------------------------------------------- 
+Using data_seed: 275735 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 647
+ 
+: -------------------------------------------------- 
+Using data_seed: 267583 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 648
+ 
+: -------------------------------------------------- 
+Using data_seed: 201541 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 649
+ 
+: -------------------------------------------------- 
+Using data_seed: 548085 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 650
+ 
+: -------------------------------------------------- 
+Using data_seed: 690234 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 651
+ 
+: -------------------------------------------------- 
+Using data_seed: 71788 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 652
+ 
+: -------------------------------------------------- 
+Using data_seed: 129804 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 653
+ 
+: -------------------------------------------------- 
+Using data_seed: 541355 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 654
+ 
+: -------------------------------------------------- 
+Using data_seed: 216422 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 655
+ 
+: -------------------------------------------------- 
+Using data_seed: 724792 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 656
+ 
+: -------------------------------------------------- 
+Using data_seed: 837396 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 657
+ 
+: -------------------------------------------------- 
+Using data_seed: 83128 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 658
+ 
+: -------------------------------------------------- 
+Using data_seed: 977488 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 659
+ 
+: -------------------------------------------------- 
+Using data_seed: 428195 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 660
+ 
+: -------------------------------------------------- 
+Using data_seed: 390543 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 661
+ 
+: -------------------------------------------------- 
+Using data_seed: 963989 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 662
+ 
+: -------------------------------------------------- 
+Using data_seed: 41321 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 663
+ 
+: -------------------------------------------------- 
+Using data_seed: 61488 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 664
+ 
+: -------------------------------------------------- 
+Using data_seed: 955217 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 665
+ 
+: -------------------------------------------------- 
+Using data_seed: 103974 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 666
+ 
+: -------------------------------------------------- 
+Using data_seed: 371984 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 667
+ 
+: -------------------------------------------------- 
+Using data_seed: 799342 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 668
+ 
+: -------------------------------------------------- 
+Using data_seed: 764215 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 669
+ 
+: -------------------------------------------------- 
+Using data_seed: 849672 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 670
+ 
+: -------------------------------------------------- 
+Using data_seed: 614692 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 671
+ 
+: -------------------------------------------------- 
+Using data_seed: 817793 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 672
+ 
+: -------------------------------------------------- 
+Using data_seed: 816785 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 673
+ 
+: -------------------------------------------------- 
+Using data_seed: 352748 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 674
+ 
+: -------------------------------------------------- 
+Using data_seed: 109473 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 675
+ 
+: -------------------------------------------------- 
+Using data_seed: 929920 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 676
+ 
+: -------------------------------------------------- 
+Using data_seed: 670977 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 677
+ 
+: -------------------------------------------------- 
+Using data_seed: 37416 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 678
+ 
+: -------------------------------------------------- 
+Using data_seed: 318085 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 679
+ 
+: -------------------------------------------------- 
+Using data_seed: 823306 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 680
+ 
+: -------------------------------------------------- 
+Using data_seed: 3141 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 681
+ 
+: -------------------------------------------------- 
+Using data_seed: 263560 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 682
+ 
+: -------------------------------------------------- 
+Using data_seed: 398628 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 683
+ 
+: -------------------------------------------------- 
+Using data_seed: 329662 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 684
+ 
+: -------------------------------------------------- 
+Using data_seed: 954028 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 685
+ 
+: -------------------------------------------------- 
+Using data_seed: 696644 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 686
+ 
+: -------------------------------------------------- 
+Using data_seed: 625404 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 687
+ 
+: -------------------------------------------------- 
+Using data_seed: 380471 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 688
+ 
+: -------------------------------------------------- 
+Using data_seed: 272173 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 689
+ 
+: -------------------------------------------------- 
+Using data_seed: 60381 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 690
+ 
+: -------------------------------------------------- 
+Using data_seed: 762218 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 691
+ 
+: -------------------------------------------------- 
+Using data_seed: 19659 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 692
+ 
+: -------------------------------------------------- 
+Using data_seed: 853865 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 693
+ 
+: -------------------------------------------------- 
+Using data_seed: 775863 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 694
+ 
+: -------------------------------------------------- 
+Using data_seed: 925059 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 695
+ 
+: -------------------------------------------------- 
+Using data_seed: 658882 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 696
+ 
+: -------------------------------------------------- 
+Using data_seed: 890100 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 697
+ 
+: -------------------------------------------------- 
+Using data_seed: 41529 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 698
+ 
+: -------------------------------------------------- 
+Using data_seed: 288722 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 699
+ 
+: -------------------------------------------------- 
+Using data_seed: 81058 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 700
+ 
+: -------------------------------------------------- 
+Using data_seed: 263935 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 701
+ 
+: -------------------------------------------------- 
+Using data_seed: 370220 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 702
+ 
+: -------------------------------------------------- 
+Using data_seed: 361203 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 703
+ 
+: -------------------------------------------------- 
+Using data_seed: 817223 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 704
+ 
+: -------------------------------------------------- 
+Using data_seed: 793339 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 705
+ 
+: -------------------------------------------------- 
+Using data_seed: 884135 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 706
+ 
+: -------------------------------------------------- 
+Using data_seed: 215366 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 707
+ 
+: -------------------------------------------------- 
+Using data_seed: 632862 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 708
+ 
+: -------------------------------------------------- 
+Using data_seed: 65976 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 709
+ 
+: -------------------------------------------------- 
+Using data_seed: 537201 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 710
+ 
+: -------------------------------------------------- 
+Using data_seed: 301247 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 711
+ 
+: -------------------------------------------------- 
+Using data_seed: 861598 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 712
+ 
+: -------------------------------------------------- 
+Using data_seed: 910295 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 713
+ 
+: -------------------------------------------------- 
+Using data_seed: 712187 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 714
+ 
+: -------------------------------------------------- 
+Using data_seed: 875897 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 715
+ 
+: -------------------------------------------------- 
+Using data_seed: 303576 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 716
+ 
+: -------------------------------------------------- 
+Using data_seed: 968652 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 717
+ 
+: -------------------------------------------------- 
+Using data_seed: 546515 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 718
+ 
+: -------------------------------------------------- 
+Using data_seed: 470172 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 719
+ 
+: -------------------------------------------------- 
+Using data_seed: 360239 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 720
+ 
+: -------------------------------------------------- 
+Using data_seed: 972671 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 721
+ 
+: -------------------------------------------------- 
+Using data_seed: 609190 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 722
+ 
+: -------------------------------------------------- 
+Using data_seed: 7499 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 723
+ 
+: -------------------------------------------------- 
+Using data_seed: 882632 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 724
+ 
+: -------------------------------------------------- 
+Using data_seed: 166605 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 725
+ 
+: -------------------------------------------------- 
+Using data_seed: 982117 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 726
+ 
+: -------------------------------------------------- 
+Using data_seed: 749144 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 727
+ 
+: -------------------------------------------------- 
+Using data_seed: 738019 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 728
+ 
+: -------------------------------------------------- 
+Using data_seed: 64142 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 729
+ 
+: -------------------------------------------------- 
+Using data_seed: 19008 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 730
+ 
+: -------------------------------------------------- 
+Using data_seed: 954932 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 731
+ 
+: -------------------------------------------------- 
+Using data_seed: 650605 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 732
+ 
+: -------------------------------------------------- 
+Using data_seed: 734430 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 733
+ 
+: -------------------------------------------------- 
+Using data_seed: 893401 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 734
+ 
+: -------------------------------------------------- 
+Using data_seed: 916325 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 735
+ 
+: -------------------------------------------------- 
+Using data_seed: 941288 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 736
+ 
+: -------------------------------------------------- 
+Using data_seed: 553625 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 737
+ 
+: -------------------------------------------------- 
+Using data_seed: 224806 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 738
+ 
+: -------------------------------------------------- 
+Using data_seed: 415940 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 739
+ 
+: -------------------------------------------------- 
+Using data_seed: 395765 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 740
+ 
+: -------------------------------------------------- 
+Using data_seed: 212334 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 741
+ 
+: -------------------------------------------------- 
+Using data_seed: 450485 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 742
+ 
+: -------------------------------------------------- 
+Using data_seed: 486447 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 743
+ 
+: -------------------------------------------------- 
+Using data_seed: 118220 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 744
+ 
+: -------------------------------------------------- 
+Using data_seed: 132261 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 745
+ 
+: -------------------------------------------------- 
+Using data_seed: 245991 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 746
+ 
+: -------------------------------------------------- 
+Using data_seed: 155426 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 747
+ 
+: -------------------------------------------------- 
+Using data_seed: 753496 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 748
+ 
+: -------------------------------------------------- 
+Using data_seed: 317192 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 749
+ 
+: -------------------------------------------------- 
+Using data_seed: 649697 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 750
+ 
+: -------------------------------------------------- 
+Using data_seed: 503174 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 751
+ 
+: -------------------------------------------------- 
+Using data_seed: 846489 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 752
+ 
+: -------------------------------------------------- 
+Using data_seed: 145738 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 753
+ 
+: -------------------------------------------------- 
+Using data_seed: 603062 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 754
+ 
+: -------------------------------------------------- 
+Using data_seed: 401439 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 755
+ 
+: -------------------------------------------------- 
+Using data_seed: 667367 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 756
+ 
+: -------------------------------------------------- 
+Using data_seed: 994720 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 757
+ 
+: -------------------------------------------------- 
+Using data_seed: 919002 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 758
+ 
+: -------------------------------------------------- 
+Using data_seed: 820024 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 759
+ 
+: -------------------------------------------------- 
+Using data_seed: 841390 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 760
+ 
+: -------------------------------------------------- 
+Using data_seed: 107634 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 761
+ 
+: -------------------------------------------------- 
+Using data_seed: 821480 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 762
+ 
+: -------------------------------------------------- 
+Using data_seed: 245112 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 763
+ 
+: -------------------------------------------------- 
+Using data_seed: 407662 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 764
+ 
+: -------------------------------------------------- 
+Using data_seed: 965826 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 765
+ 
+: -------------------------------------------------- 
+Using data_seed: 518984 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 766
+ 
+: -------------------------------------------------- 
+Using data_seed: 307173 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 767
+ 
+: -------------------------------------------------- 
+Using data_seed: 116834 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 768
+ 
+: -------------------------------------------------- 
+Using data_seed: 663792 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 769
+ 
+: -------------------------------------------------- 
+Using data_seed: 270164 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 770
+ 
+: -------------------------------------------------- 
+Using data_seed: 608323 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 771
+ 
+: -------------------------------------------------- 
+Using data_seed: 894523 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 772
+ 
+: -------------------------------------------------- 
+Using data_seed: 192570 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 773
+ 
+: -------------------------------------------------- 
+Using data_seed: 826933 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 774
+ 
+: -------------------------------------------------- 
+Using data_seed: 987389 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 775
+ 
+: -------------------------------------------------- 
+Using data_seed: 311511 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 776
+ 
+: -------------------------------------------------- 
+Using data_seed: 147005 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 777
+ 
+: -------------------------------------------------- 
+Using data_seed: 652350 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 778
+ 
+: -------------------------------------------------- 
+Using data_seed: 92112 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 779
+ 
+: -------------------------------------------------- 
+Using data_seed: 417969 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 780
+ 
+: -------------------------------------------------- 
+Using data_seed: 876905 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 781
+ 
+: -------------------------------------------------- 
+Using data_seed: 281366 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 782
+ 
+: -------------------------------------------------- 
+Using data_seed: 850874 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 783
+ 
+: -------------------------------------------------- 
+Using data_seed: 394310 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 784
+ 
+: -------------------------------------------------- 
+Using data_seed: 447969 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 785
+ 
+: -------------------------------------------------- 
+Using data_seed: 619759 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 786
+ 
+: -------------------------------------------------- 
+Using data_seed: 415071 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 787
+ 
+: -------------------------------------------------- 
+Using data_seed: 993738 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 788
+ 
+: -------------------------------------------------- 
+Using data_seed: 772022 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 789
+ 
+: -------------------------------------------------- 
+Using data_seed: 840536 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 790
+ 
+: -------------------------------------------------- 
+Using data_seed: 334915 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 791
+ 
+: -------------------------------------------------- 
+Using data_seed: 85295 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 792
+ 
+: -------------------------------------------------- 
+Using data_seed: 870905 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 793
+ 
+: -------------------------------------------------- 
+Using data_seed: 123597 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 794
+ 
+: -------------------------------------------------- 
+Using data_seed: 979901 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 795
+ 
+: -------------------------------------------------- 
+Using data_seed: 720573 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 796
+ 
+: -------------------------------------------------- 
+Using data_seed: 299352 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 797
+ 
+: -------------------------------------------------- 
+Using data_seed: 355850 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 798
+ 
+: -------------------------------------------------- 
+Using data_seed: 779073 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 799
+ 
+: -------------------------------------------------- 
+Using data_seed: 105869 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 800
+ 
+: -------------------------------------------------- 
+Using data_seed: 500122 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 801
+ 
+: -------------------------------------------------- 
+Using data_seed: 441726 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 802
+ 
+: -------------------------------------------------- 
+Using data_seed: 116172 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 803
+ 
+: -------------------------------------------------- 
+Using data_seed: 165300 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 804
+ 
+: -------------------------------------------------- 
+Using data_seed: 588133 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 805
+ 
+: -------------------------------------------------- 
+Using data_seed: 465214 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 806
+ 
+: -------------------------------------------------- 
+Using data_seed: 350714 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 807
+ 
+: -------------------------------------------------- 
+Using data_seed: 327828 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 808
+ 
+: -------------------------------------------------- 
+Using data_seed: 794375 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 809
+ 
+: -------------------------------------------------- 
+Using data_seed: 571924 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 810
+ 
+: -------------------------------------------------- 
+Using data_seed: 43545 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 811
+ 
+: -------------------------------------------------- 
+Using data_seed: 50851 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 812
+ 
+: -------------------------------------------------- 
+Using data_seed: 807302 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 813
+ 
+: -------------------------------------------------- 
+Using data_seed: 437839 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 814
+ 
+: -------------------------------------------------- 
+Using data_seed: 430462 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 815
+ 
+: -------------------------------------------------- 
+Using data_seed: 324462 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 816
+ 
+: -------------------------------------------------- 
+Using data_seed: 600586 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 817
+ 
+: -------------------------------------------------- 
+Using data_seed: 725179 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 818
+ 
+: -------------------------------------------------- 
+Using data_seed: 887042 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 819
+ 
+: -------------------------------------------------- 
+Using data_seed: 458433 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 820
+ 
+: -------------------------------------------------- 
+Using data_seed: 167909 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 821
+ 
+: -------------------------------------------------- 
+Using data_seed: 264991 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 822
+ 
+: -------------------------------------------------- 
+Using data_seed: 45499 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 823
+ 
+: -------------------------------------------------- 
+Using data_seed: 984429 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 824
+ 
+: -------------------------------------------------- 
+Using data_seed: 773425 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 825
+ 
+: -------------------------------------------------- 
+Using data_seed: 651161 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 826
+ 
+: -------------------------------------------------- 
+Using data_seed: 41766 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 827
+ 
+: -------------------------------------------------- 
+Using data_seed: 879892 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 828
+ 
+: -------------------------------------------------- 
+Using data_seed: 866784 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 829
+ 
+: -------------------------------------------------- 
+Using data_seed: 743244 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 830
+ 
+: -------------------------------------------------- 
+Using data_seed: 155997 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 831
+ 
+: -------------------------------------------------- 
+Using data_seed: 989151 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 832
+ 
+: -------------------------------------------------- 
+Using data_seed: 722018 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 833
+ 
+: -------------------------------------------------- 
+Using data_seed: 261669 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 834
+ 
+: -------------------------------------------------- 
+Using data_seed: 293647 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 835
+ 
+: -------------------------------------------------- 
+Using data_seed: 339805 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 836
+ 
+: -------------------------------------------------- 
+Using data_seed: 917128 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 837
+ 
+: -------------------------------------------------- 
+Using data_seed: 507812 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 838
+ 
+: -------------------------------------------------- 
+Using data_seed: 338261 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 839
+ 
+: -------------------------------------------------- 
+Using data_seed: 450304 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 840
+ 
+: -------------------------------------------------- 
+Using data_seed: 302653 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 841
+ 
+: -------------------------------------------------- 
+Using data_seed: 369739 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 842
+ 
+: -------------------------------------------------- 
+Using data_seed: 355362 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 843
+ 
+: -------------------------------------------------- 
+Using data_seed: 109925 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 844
+ 
+: -------------------------------------------------- 
+Using data_seed: 36472 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 845
+ 
+: -------------------------------------------------- 
+Using data_seed: 363503 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 846
+ 
+: -------------------------------------------------- 
+Using data_seed: 33453 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 847
+ 
+: -------------------------------------------------- 
+Using data_seed: 604195 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 848
+ 
+: -------------------------------------------------- 
+Using data_seed: 970104 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 849
+ 
+: -------------------------------------------------- 
+Using data_seed: 883336 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 850
+ 
+: -------------------------------------------------- 
+Using data_seed: 538415 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 851
+ 
+: -------------------------------------------------- 
+Using data_seed: 244041 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 852
+ 
+: -------------------------------------------------- 
+Using data_seed: 219234 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 853
+ 
+: -------------------------------------------------- 
+Using data_seed: 327223 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 854
+ 
+: -------------------------------------------------- 
+Using data_seed: 951392 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 855
+ 
+: -------------------------------------------------- 
+Using data_seed: 760664 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 856
+ 
+: -------------------------------------------------- 
+Using data_seed: 472441 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 857
+ 
+: -------------------------------------------------- 
+Using data_seed: 120344 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 858
+ 
+: -------------------------------------------------- 
+Using data_seed: 154902 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 859
+ 
+: -------------------------------------------------- 
+Using data_seed: 120512 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 860
+ 
+: -------------------------------------------------- 
+Using data_seed: 441174 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 861
+ 
+: -------------------------------------------------- 
+Using data_seed: 54707 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 862
+ 
+: -------------------------------------------------- 
+Using data_seed: 639910 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 863
+ 
+: -------------------------------------------------- 
+Using data_seed: 807313 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 864
+ 
+: -------------------------------------------------- 
+Using data_seed: 542329 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 865
+ 
+: -------------------------------------------------- 
+Using data_seed: 519764 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 866
+ 
+: -------------------------------------------------- 
+Using data_seed: 502840 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 867
+ 
+: -------------------------------------------------- 
+Using data_seed: 212928 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 868
+ 
+: -------------------------------------------------- 
+Using data_seed: 614204 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 869
+ 
+: -------------------------------------------------- 
+Using data_seed: 619903 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 870
+ 
+: -------------------------------------------------- 
+Using data_seed: 480860 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 871
+ 
+: -------------------------------------------------- 
+Using data_seed: 880610 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 872
+ 
+: -------------------------------------------------- 
+Using data_seed: 641561 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 873
+ 
+: -------------------------------------------------- 
+Using data_seed: 973447 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 874
+ 
+: -------------------------------------------------- 
+Using data_seed: 790455 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 875
+ 
+: -------------------------------------------------- 
+Using data_seed: 244269 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 876
+ 
+: -------------------------------------------------- 
+Using data_seed: 579353 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 877
+ 
+: -------------------------------------------------- 
+Using data_seed: 625045 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 878
+ 
+: -------------------------------------------------- 
+Using data_seed: 749036 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 879
+ 
+: -------------------------------------------------- 
+Using data_seed: 956870 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 880
+ 
+: -------------------------------------------------- 
+Using data_seed: 644407 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 881
+ 
+: -------------------------------------------------- 
+Using data_seed: 941442 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 882
+ 
+: -------------------------------------------------- 
+Using data_seed: 883800 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 883
+ 
+: -------------------------------------------------- 
+Using data_seed: 734647 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 884
+ 
+: -------------------------------------------------- 
+Using data_seed: 571678 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 885
+ 
+: -------------------------------------------------- 
+Using data_seed: 285518 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 886
+ 
+: -------------------------------------------------- 
+Using data_seed: 470930 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 887
+ 
+: -------------------------------------------------- 
+Using data_seed: 149251 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 888
+ 
+: -------------------------------------------------- 
+Using data_seed: 100755 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 889
+ 
+: -------------------------------------------------- 
+Using data_seed: 226967 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 890
+ 
+: -------------------------------------------------- 
+Using data_seed: 589676 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 891
+ 
+: -------------------------------------------------- 
+Using data_seed: 640580 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 892
+ 
+: -------------------------------------------------- 
+Using data_seed: 508252 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 893
+ 
+: -------------------------------------------------- 
+Using data_seed: 282900 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 894
+ 
+: -------------------------------------------------- 
+Using data_seed: 658802 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 895
+ 
+: -------------------------------------------------- 
+Using data_seed: 354278 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 896
+ 
+: -------------------------------------------------- 
+Using data_seed: 579139 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 897
+ 
+: -------------------------------------------------- 
+Using data_seed: 639749 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 898
+ 
+: -------------------------------------------------- 
+Using data_seed: 16936 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 899
+ 
+: -------------------------------------------------- 
+Using data_seed: 55286 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 900
+ 
+: -------------------------------------------------- 
+Using data_seed: 243436 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 901
+ 
+: -------------------------------------------------- 
+Using data_seed: 585356 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 902
+ 
+: -------------------------------------------------- 
+Using data_seed: 211475 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 903
+ 
+: -------------------------------------------------- 
+Using data_seed: 148682 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 904
+ 
+: -------------------------------------------------- 
+Using data_seed: 716830 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 905
+ 
+: -------------------------------------------------- 
+Using data_seed: 107284 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 906
+ 
+: -------------------------------------------------- 
+Using data_seed: 587749 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 907
+ 
+: -------------------------------------------------- 
+Using data_seed: 515586 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 908
+ 
+: -------------------------------------------------- 
+Using data_seed: 787672 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 909
+ 
+: -------------------------------------------------- 
+Using data_seed: 226725 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 910
+ 
+: -------------------------------------------------- 
+Using data_seed: 905637 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 911
+ 
+: -------------------------------------------------- 
+Using data_seed: 825617 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 912
+ 
+: -------------------------------------------------- 
+Using data_seed: 602645 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 913
+ 
+: -------------------------------------------------- 
+Using data_seed: 757207 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 914
+ 
+: -------------------------------------------------- 
+Using data_seed: 906434 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 915
+ 
+: -------------------------------------------------- 
+Using data_seed: 431056 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 916
+ 
+: -------------------------------------------------- 
+Using data_seed: 430524 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 917
+ 
+: -------------------------------------------------- 
+Using data_seed: 830758 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 918
+ 
+: -------------------------------------------------- 
+Using data_seed: 15229 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 919
+ 
+: -------------------------------------------------- 
+Using data_seed: 844799 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 920
+ 
+: -------------------------------------------------- 
+Using data_seed: 267470 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 921
+ 
+: -------------------------------------------------- 
+Using data_seed: 879639 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 922
+ 
+: -------------------------------------------------- 
+Using data_seed: 918938 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 923
+ 
+: -------------------------------------------------- 
+Using data_seed: 856717 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 924
+ 
+: -------------------------------------------------- 
+Using data_seed: 416246 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 925
+ 
+: -------------------------------------------------- 
+Using data_seed: 618861 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 926
+ 
+: -------------------------------------------------- 
+Using data_seed: 761171 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 927
+ 
+: -------------------------------------------------- 
+Using data_seed: 647630 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 928
+ 
+: -------------------------------------------------- 
+Using data_seed: 775241 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 929
+ 
+: -------------------------------------------------- 
+Using data_seed: 256019 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 930
+ 
+: -------------------------------------------------- 
+Using data_seed: 288467 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 931
+ 
+: -------------------------------------------------- 
+Using data_seed: 818860 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 932
+ 
+: -------------------------------------------------- 
+Using data_seed: 249704 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 933
+ 
+: -------------------------------------------------- 
+Using data_seed: 399955 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 934
+ 
+: -------------------------------------------------- 
+Using data_seed: 466754 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 935
+ 
+: -------------------------------------------------- 
+Using data_seed: 324599 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 936
+ 
+: -------------------------------------------------- 
+Using data_seed: 459131 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 937
+ 
+: -------------------------------------------------- 
+Using data_seed: 990483 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 938
+ 
+: -------------------------------------------------- 
+Using data_seed: 569041 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 939
+ 
+: -------------------------------------------------- 
+Using data_seed: 338309 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 940
+ 
+: -------------------------------------------------- 
+Using data_seed: 469422 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 941
+ 
+: -------------------------------------------------- 
+Using data_seed: 601273 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 942
+ 
+: -------------------------------------------------- 
+Using data_seed: 502500 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 943
+ 
+: -------------------------------------------------- 
+Using data_seed: 255593 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 944
+ 
+: -------------------------------------------------- 
+Using data_seed: 257722 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 945
+ 
+: -------------------------------------------------- 
+Using data_seed: 724151 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 946
+ 
+: -------------------------------------------------- 
+Using data_seed: 436295 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 947
+ 
+: -------------------------------------------------- 
+Using data_seed: 857758 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 948
+ 
+: -------------------------------------------------- 
+Using data_seed: 368947 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 949
+ 
+: -------------------------------------------------- 
+Using data_seed: 617840 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 950
+ 
+: -------------------------------------------------- 
+Using data_seed: 680390 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 951
+ 
+: -------------------------------------------------- 
+Using data_seed: 552899 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 952
+ 
+: -------------------------------------------------- 
+Using data_seed: 524925 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 953
+ 
+: -------------------------------------------------- 
+Using data_seed: 929713 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 954
+ 
+: -------------------------------------------------- 
+Using data_seed: 605892 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 955
+ 
+: -------------------------------------------------- 
+Using data_seed: 192387 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 956
+ 
+: -------------------------------------------------- 
+Using data_seed: 67004 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 957
+ 
+: -------------------------------------------------- 
+Using data_seed: 852878 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 958
+ 
+: -------------------------------------------------- 
+Using data_seed: 15701 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 959
+ 
+: -------------------------------------------------- 
+Using data_seed: 425632 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 960
+ 
+: -------------------------------------------------- 
+Using data_seed: 79771 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 961
+ 
+: -------------------------------------------------- 
+Using data_seed: 165318 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 962
+ 
+: -------------------------------------------------- 
+Using data_seed: 280764 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 963
+ 
+: -------------------------------------------------- 
+Using data_seed: 94000 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 964
+ 
+: -------------------------------------------------- 
+Using data_seed: 826805 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 965
+ 
+: -------------------------------------------------- 
+Using data_seed: 424898 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 966
+ 
+: -------------------------------------------------- 
+Using data_seed: 570384 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 967
+ 
+: -------------------------------------------------- 
+Using data_seed: 370079 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 968
+ 
+: -------------------------------------------------- 
+Using data_seed: 603681 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 969
+ 
+: -------------------------------------------------- 
+Using data_seed: 398749 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 970
+ 
+: -------------------------------------------------- 
+Using data_seed: 733405 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 971
+ 
+: -------------------------------------------------- 
+Using data_seed: 444465 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 972
+ 
+: -------------------------------------------------- 
+Using data_seed: 331054 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 973
+ 
+: -------------------------------------------------- 
+Using data_seed: 544043 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 974
+ 
+: -------------------------------------------------- 
+Using data_seed: 111714 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 975
+ 
+: -------------------------------------------------- 
+Using data_seed: 301277 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 976
+ 
+: -------------------------------------------------- 
+Using data_seed: 972519 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 977
+ 
+: -------------------------------------------------- 
+Using data_seed: 621493 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 978
+ 
+: -------------------------------------------------- 
+Using data_seed: 682715 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 979
+ 
+: -------------------------------------------------- 
+Using data_seed: 187511 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 980
+ 
+: -------------------------------------------------- 
+Using data_seed: 140931 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 981
+ 
+: -------------------------------------------------- 
+Using data_seed: 679633 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 982
+ 
+: -------------------------------------------------- 
+Using data_seed: 940090 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 983
+ 
+: -------------------------------------------------- 
+Using data_seed: 716848 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 984
+ 
+: -------------------------------------------------- 
+Using data_seed: 169561 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 985
+ 
+: -------------------------------------------------- 
+Using data_seed: 668177 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 986
+ 
+: -------------------------------------------------- 
+Using data_seed: 792864 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 987
+ 
+: -------------------------------------------------- 
+Using data_seed: 393339 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 988
+ 
+: -------------------------------------------------- 
+Using data_seed: 591942 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 989
+ 
+: -------------------------------------------------- 
+Using data_seed: 925875 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 990
+ 
+: -------------------------------------------------- 
+Using data_seed: 504960 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 991
+ 
+: -------------------------------------------------- 
+Using data_seed: 828651 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 992
+ 
+: -------------------------------------------------- 
+Using data_seed: 674641 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 993
+ 
+: -------------------------------------------------- 
+Using data_seed: 351337 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 994
+ 
+: -------------------------------------------------- 
+Using data_seed: 240240 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 995
+ 
+: -------------------------------------------------- 
+Using data_seed: 994738 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 996
+ 
+: -------------------------------------------------- 
+Using data_seed: 390766 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 997
+ 
+: -------------------------------------------------- 
+Using data_seed: 652491 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 998
+ 
+: -------------------------------------------------- 
+Using data_seed: 573955 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 999
+ 
+: -------------------------------------------------- 
+Using data_seed: 396125 
+converged: TRUE 
+message: NA 
+warning: NA 
+error: NA 
+Info: Stored output for iteration 1000
  
