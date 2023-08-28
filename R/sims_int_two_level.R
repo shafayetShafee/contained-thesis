@@ -8,7 +8,7 @@ source(here::here("R/run_simulations.R"))
 cluster_numbers <- c(100)
 
 # n = 5, 10, 30, 50
-cluster_size <- c(5)
+cluster_size <- c(10)
 
 cluster_params <- tidyr::expand_grid(cluster_size = cluster_size, 
                               cluster_numbers = cluster_numbers)
@@ -44,7 +44,7 @@ res <- purrr::map2_dfr(.x = cluster_params$cluster_numbers,
 tictoc::toc()
 beepr::beep(3)
 
-# c(649.719, 725.747, 989.899, 1385.295)
+# c(649.719, 725.747, 989.899, 1385.295, 645.026, 645.026, 847.469)
 
 
 # final_res_int_low_prev <- res
