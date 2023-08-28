@@ -5,7 +5,7 @@ source(here::here("R/run_simulations.R"))
 # MOR
 
 # m = 10, 30, 50, 100
-cluster_numbers <- c(100)
+cluster_numbers <- c(50)
 
 # n = 5, 10, 30, 50
 cluster_size <- c(5)
@@ -13,11 +13,11 @@ cluster_size <- c(5)
 cluster_params <- tidyr::expand_grid(cluster_size = cluster_size, 
                               cluster_numbers = cluster_numbers)
 
-fixed_coeff <- c(-4, 1.75, 0.67)
+fixed_coeff <- c(-4.1, 1.75, 0.67)
 sigma_u_sq <- 2.5
 
 # moderate prevalence => -1.85 (30%)
-# low prev => -4 (10%)
+# low prev => -4.1 (10%)
 
 log_file <- here::here("log/log_two_lvl_int_low_prev.txt")
 plot_path <- here::here("plots/two-lvl-ran-int/low-prev/")
@@ -44,7 +44,7 @@ res <- purrr::map2_dfr(.x = cluster_params$cluster_numbers,
 tictoc::toc()
 beepr::beep(3)
 
-# c(609.368, 689.718, 1338.552)
+# c(649.719, 725.747, 989.899)
 
 
 # final_res_int_low_prev <- res
