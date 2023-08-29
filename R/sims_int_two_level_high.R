@@ -3,10 +3,10 @@
 source(here::here("R/run_simulations.R"))
 
 # m = 10, 30, 50, 100
-cluster_numbers <- c(10, 30, 50)
+cluster_numbers <- c(100)
 
 # n = 5, 10, 30, 50
-cluster_size <- c(30)
+cluster_size <- c(50)
 
 cluster_params <- tidyr::expand_grid(cluster_size = cluster_size, 
                                      cluster_numbers = cluster_numbers)
@@ -39,7 +39,7 @@ res <- purrr::map2_dfr(.x = cluster_params$cluster_numbers,
 tictoc::toc()
 # beepr::beep(3)
 
-# c(383.327, 500, 647.147, 608.921  )
+# c(383.327, 500, 647.147, 608.921  ,1300.373)
 
 # final_res_int_high_prev <- res
 final_res_int_high_prev <- dplyr::bind_rows(final_res_int_high_prev, res)
