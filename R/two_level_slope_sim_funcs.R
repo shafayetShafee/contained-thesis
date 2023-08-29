@@ -35,6 +35,51 @@ gen_two_level_slope_data <- function(m, n, fixed_coeff, sigma_mat, data_seed) {
 }
 
 
+calc_two_lvl_slp_mor_stats <- function(sigma_mat, sigma_u_sq_hat,
+                                       var_sigma_u_sq_hat, x1_val) {
+  
+  # sigma mat components -----------
+  sigma_u1_sq <- sigma_mat[1, 1]
+  sigma_u12_sq <- sigma_mat[1, 2]
+  sigma_u2_sq <- sigma_mat[2, 2]
+  
+  # calc mor -----------------------
+  mor_hat <- exp(
+    sqrt(2*sigma_u_sq_hat[1] + 2*x1_val^2*sigma_u_sq_hat[3] + 4*x1_val*sigma_u_sq_hat[2]) 
+    * qnorm(0.75)
+  )
+  log_mor_hat <- log(mor_hat)
+  
+  
+  # delta method -------------------
+  log_mor_expr <- function(x, x1_val) {
+    sqrt((2*x[1]) + (2*x1_val^2*x[3]) + (4*x1_val*x[2])) * qnorm(0.75)
+  }
+  
+  J <- numDeriv::jacobian(log_mor_expr, sigma_u_sq_hat, x1_val = x1_val)
+  log_se_mor_hat <- sqrt(as.numeric(J %*% var_sigma_u_sq_hat %*% t(J)))
+  se_mor_hat <- exp(log_se_mor_hat)
+  
+  # coverage calc ------------------
+  ci <- log_mor_hat + c(-1, 1) * 1.96 * log_se_mor_hat
+  ci_exp <- exp(ci)
+  
+  true_mor <- exp(
+    sqrt(2*sigma_u1_sq + 2*x1_val^2*sigma_u2_sq + 4*x1_val*sigma_u12_sq) * qnorm(0.75)
+  )
+  coverage <- as.numeric(ci_exp[1] <= true_mor && ci_exp[2] >= true_mor)
+  
+  rel_bias <- (mor_hat - true_mor) / true_mor
+  
+  return(
+    c(true_mor = true_mor, mor_hat = mor_hat, se_mor_hat = se_mor_hat, 
+      coverage = coverage, rel_bias = rel_bias)
+  )
+  
+}
+
+
+
 est_two_lvl_slope_mor <- function(m, n, fixed_coeff, sigma_mat, data_seed) {
   
   # data generation ----------------
@@ -65,54 +110,59 @@ est_two_lvl_slope_mor <- function(m, n, fixed_coeff, sigma_mat, data_seed) {
   sigma_u12_sq_hat <- sigma_u_sq_hat[2]
   sigma_u2_sq_hat <- sigma_u_sq_hat[3]
   
+  is_model_converged <- multi_model_slope$converged
+  
   # gets variance of rand effect
   # D_11 D_12 D_22 
   var_sigma_u_sq_hat <- var_slope_rand_effect(multi_model_slope) 
   
-  
   # mor calc. ----------------------
-  x1_val <- mean(multi_data_slope$X1c)
-  mor_hat <- exp(
-    sqrt(2*sigma_u_sq_hat[1] + 2*x1_val^2*sigma_u_sq_hat[3] + 4*x1_val*sigma_u_sq_hat[2]) 
-    * qnorm(0.75)
-  )
-  log_mor_hat <- log(mor_hat)
+  x1_q1 <- unnamed_quantile(multi_data_slope$X1c, probs = 0.25)
+  x1_q2 <- mean(multi_data_slope$X1c)
+  x1_q3 <- unnamed_quantile(multi_data_slope$X1c, probs = 0.75)
   
+  mor_stats_q1 <- calc_two_lvl_slp_mor_stats(sigma_mat, sigma_u_sq_hat,
+                                             var_sigma_u_sq_hat, x1_q1)
+  names(mor_stats_q1) <- paste0(names(mor_stats_q1), "_q1")
   
-  # delta method -------------------
-  log_mor_expr <- function(x, x1_val) {
-    sqrt((2*x[1]) + (2*x1_val^2*x[3]) + (4*x1_val*x[2])) * qnorm(0.75)
-  }
+  mor_stats_q2 <- calc_two_lvl_slp_mor_stats(sigma_mat, sigma_u_sq_hat,
+                                             var_sigma_u_sq_hat, x1_q2)
+  names(mor_stats_q2) <- paste0(names(mor_stats_q2), "_q2")
   
+  mor_stats_q3 <- calc_two_lvl_slp_mor_stats(sigma_mat, sigma_u_sq_hat,
+                                             var_sigma_u_sq_hat, x1_q3)
+  names(mor_stats_q3) <- paste0(names(mor_stats_q3), "_q3")
   
-  J <- numDeriv::jacobian(log_mor_expr, sigma_u_sq_hat, x1_val = x1_val)
-  log_se_mor_hat <- sqrt(as.numeric(J %*% var_sigma_u_sq_hat %*% t(J)))
-  se_mor_hat <- exp(log_se_mor_hat)
-  
-  # coverage calc ------------------
-  ci <- log_mor_hat + c(-1, 1) * 1.96 * log_se_mor_hat
-  ci_exp <- exp(ci)
-  
-  true_mor <- exp(
-    sqrt(2*sigma_u1_sq + 2*x1_val^2*sigma_u2_sq + 4*x1_val*sigma_u12_sq) * qnorm(0.75)
-  )
-  coverage <- as.numeric(ci_exp[1] <= true_mor && ci_exp[2] >= true_mor)
-  
-  is_model_converged <- multi_model_slope$converged
+  # returned values by above three is 
+  # true_mor, mor_hat, se_mor_hat, coverage, rel_bias
   
   # creating output vector ---------
-  out_vec <- c(true_mor = true_mor, mor_hat = mor_hat, 
-               se_mor_hat = se_mor_hat,
-               sigma_u1_sq_hat = sigma_u1_sq_hat,
-               sigma_u12_sq_hat = sigma_u12_sq_hat,
-               sigma_u2_sq_hat = sigma_u2_sq_hat,
-               beta0_hat = beta0_hat, beta1_hat = beta1_hat, 
-               beta2_hat = beta2_hat, coverage = coverage,
-               prevalence = prevalence,
-               converged = is_model_converged)
+  # out_vec <- c(true_mor = true_mor, mor_hat = mor_hat, 
+  #              se_mor_hat = se_mor_hat,
+  #              coverage = coverage,
+
+  
+  out_vec <- c(mor_stats_q1, mor_stats_q2, mor_stats_q3,
+              sigma_u1_sq_hat = sigma_u1_sq_hat,
+              sigma_u12_sq_hat = sigma_u12_sq_hat,
+              sigma_u2_sq_hat = sigma_u2_sq_hat,
+              beta0_hat = beta0_hat, beta1_hat = beta1_hat,
+              beta2_hat = beta2_hat,
+              prevalence = prevalence,
+              converged = is_model_converged)
   # ***reminder `converged` needs to be the last column****
   
-  if(is.na(is_model_converged) || !is_model_converged || mor_hat > 40 || se_mor_hat > 30) {
+  # getting mean_mor and mean_se_mor to catch unstable estimate
+  mean_mor_hat <- mean(
+    c(mor_stats_q1[2], mor_stats_q2[2], mor_stats_q3[2]), na.rm = FALSE
+      )
+  
+  mean_se_mor_hat <- mean(
+    c(mor_stats_q1[3], mor_stats_q2[3], mor_stats_q3[3]), na.rm = FALSE
+  )
+  
+  if(is.na(is_model_converged) || !is_model_converged || mean_mor_hat > 20 || 
+     mean_se_mor_hat > 20) {
     out_vec_names <- names(out_vec)
     out_vec <- c(rep(NA, length(out_vec) - 1), FALSE)
     names(out_vec) <- out_vec_names
@@ -132,11 +182,19 @@ simulate_two_lvl_slope <- function(m, n, fixed_coeff, sigma_mat, nsims = 1000,
   runs_required = 0
   
   # creating placeholder matrix for result --------
-  out_mat <- matrix(NA, nrow = total_sims, ncol = 12)
-  out_colnames <- c("true_mor", "mor_hat", "se_mor_hat", 
+  out_mat <- matrix(NA, nrow = total_sims, ncol = 23)
+  
+  # mor stats names -----
+  mor_stats_names <- c("true_mor", "mor_hat", "se_mor_hat", "coverage","rel_bias")
+  mor_stats_names_q1 <- paste0(mor_stats_names, "_q1")
+  mor_stats_names_q2 <- paste0(mor_stats_names, "_q2")
+  mor_stats_names_q3 <- paste0(mor_stats_names, "_q3")
+  
+  out_colnames <- c(mor_stats_names_q1, mor_stats_names_q2,
+                    mor_stats_names_q3,
                     "sigma_u1_sq_hat", "sigma_u12_sq_hat", "sigma_u2_sq_hat",
                     "beta0_hat", "beta1_hat", "beta2_hat", 
-                    "coverage", "prevalence", "converged")
+                    "prevalence", "converged")
   colnames(out_mat) <- out_colnames
   
   # set the random state initiating seed

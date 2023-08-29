@@ -50,13 +50,12 @@ log_sim_run <- function(convergence, message, warning, error,
 }
 
 
-
 is_valid_str <- function(x) {
   # `> 5` to prevent "NA"
   !is.null(x) && !is.na(x) && is.character(x) && nchar(trimws(x)) > 5
 }
 
-
+# not used any more
 is_valid <- function(x) {
   !is.null(x) && !is.na(x) && x
 }
@@ -109,7 +108,7 @@ var_slope_rand_effect <- function(model) {
   return(v_mat)
 }
 
-
+# not used so far
 calc_slope_se_mor <- function(sigma_u_hat, var_ran_effect, x1_val) {
   
   log_mor_expr <- function(x, x1_val) {
@@ -122,4 +121,22 @@ calc_slope_se_mor <- function(sigma_u_hat, var_ran_effect, x1_val) {
   
   var_log_mor <- as.numeric(J %*% var_ran_effect %*% t(J))
   return(sqrt(var_log_mor))
+}
+
+
+unnamed_quantile <- function(...) unname(quantile(...))
+
+
+save_plot <- function(m, n, log_mor_hat, plot_name_suffix, plot_path) {
+  hist_plot <- ggplot(drop_na(tibble(log_mor_hat)), aes(x = log_mor_hat)) +
+    geom_histogram(bins = 30) +
+    labs(x = "log(MOR)",
+         y = "frequency") +
+    theme_classic()
+  
+  ggsave(
+    filename = paste0("hist_", m, "_", n, "_", plot_name_suffix, ".png"), 
+    plot = hist_plot,
+    path = plot_path
+  )  
 }
