@@ -150,7 +150,7 @@ sim_output_table <- final_res_int_low_prev %>%
   mutate(ratio = se_mor_hat / sim_se_mor_hat) %>% 
   select(cluster_number, cluster_size, beta0_hat, beta1_hat, beta2_hat, 
          sigma_u_sq_hat, mor_hat, relative_bias, se_mor_hat, sim_se_mor_hat, 
-         ratio, coverage, runs_used, runs_required)
+         ratio, coverage, convergence = converged)
 ```
 
 
@@ -158,7 +158,7 @@ sim_output_table <- final_res_int_low_prev %>%
 <!-- \setlength{\LTleft}{0pt minus 5000pt} -->
 <!-- \setlength{\LTright}{0pt minus 5000pt} -->
 \fontsize{10pt}{14pt}\selectfont
-\addtolength{\tabcolsep}{0.2pt}
+\addtolength{\tabcolsep}{0.1pt}
 
 
 ```{r}
@@ -172,9 +172,9 @@ kableExtra::kbl(sim_output_table, booktabs = TRUE, digits = 2, linesep = "",
                             "$\\widehat{SE}_{MOR}$", 
                             "Simulation $\\widehat{SE}_{MOR}$", 
                             "Ratio\\textsuperscript{1}",
-                            "CI coverage (95\\%)", "Runs used",
-                            "Runs Required"), escape = FALSE) %>% 
-  column_spec(1:ncol(sim_output_table), width = "1.4cm", latex_valign = "m") %>% 
+                            "CI coverage (95\\%)",
+                            "Model Convergence"), escape = FALSE) %>% 
+  column_spec(1:ncol(sim_output_table), width = "1.55cm", latex_valign = "m") %>% 
   row_spec(
     seq(
       n_distinct(sim_output_table$cluster_number), 
@@ -202,6 +202,6 @@ Here,
 
 - True $MOR$ is 4.52
 - True $\sigma^2_u$ is 2.5
-- True Values of $\beta_0 = -2$, $\beta_1 = 1.75$, $\beta_2 = 0.67$ 
+- True Values of $\beta_0 = -4.1$, $\beta_1 = 1.75$, $\beta_2 = 0.67$ 
 - "Runs used" column represent how many simulation runs were used to calculate the numbers in the corresponding row.
 

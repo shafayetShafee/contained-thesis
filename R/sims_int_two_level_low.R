@@ -1,11 +1,7 @@
 source(here::here("R/run_simulations.R"))
 
-# sigma_u_sq <- 2.5
-# MOR <- exp(sqrt(2 * sigma_u_sq) * qnorm(0.75))
-# MOR
-
 # m = 10, 30, 50, 100
-cluster_numbers <- c(10, 30)
+cluster_numbers <- c(100)
 
 # n = 5, 10, 30, 50
 cluster_size <- c(50)
@@ -23,10 +19,6 @@ log_file <- here::here("log/log_two_lvl_int_low_prev.txt")
 plot_path <- here::here("plots/two-lvl-ran-int/low-prev/")
 plot_name_prefix <- "two_lvl_low_prev"
 
-# log_file <- here::here("test.txt")
-# plot_path <- here::here()
-# plot_name_prefix <- "test"
-
 tictoc::tic()
 res <- purrr::map2_dfr(.x = cluster_params$cluster_numbers, 
             .y = cluster_params$cluster_size, 
@@ -43,10 +35,6 @@ res <- purrr::map2_dfr(.x = cluster_params$cluster_numbers,
 
 tictoc::toc()
 beepr::beep(3)
-
-# c(649.719, 725.747, 989.899, 1385.295, 645.026, 645.026, 847.469, 412.631, 
-#  734.688, 1229.286s)
-
 
 # final_res_int_low_prev <- res
 final_res_int_low_prev <- dplyr::bind_rows(final_res_int_low_prev, res)

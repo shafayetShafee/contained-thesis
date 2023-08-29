@@ -1,5 +1,3 @@
-# high prev ---------------------------------------------------------------
-
 source(here::here("R/run_simulations.R"))
 
 # m = 10, 30, 50, 100
@@ -38,8 +36,6 @@ res <- purrr::map2_dfr(.x = cluster_params$cluster_numbers,
 
 tictoc::toc()
 # beepr::beep(3)
-
-# c(383.327, 500, 647.147, 608.921  ,1300.373)
 
 # final_res_int_high_prev <- res
 final_res_int_high_prev <- dplyr::bind_rows(final_res_int_high_prev, res)

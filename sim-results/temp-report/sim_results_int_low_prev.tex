@@ -173,13 +173,13 @@ Prevalence}
   \apptocmd{\@title}{\par {\large #1 \par}}{}{}
 }
 \makeatother
-\subtitle{The mean prevalence for this simulation is 27 \%}
+\subtitle{The mean prevalence for this simulation is 10 \%}
 \author{Shafayet Khan Shafee}
-\date{23 August 2023}
+\date{29 August 2023}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, boxrule=0pt, interior hidden, borderline west={3pt}{0pt}{shadecolor}, breakable, enhanced, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, sharp corners, boxrule=0pt, frame hidden, enhanced, borderline west={3pt}{0pt}{shadecolor}, interior hidden]}{\end{tcolorbox}}\fi
 
 \newpage
 
@@ -541,37 +541,37 @@ Number of Cluster is
 \begingroup
 
 \fontsize{10pt}{14pt}\selectfont
-\addtolength{\tabcolsep}{0.2pt}
+\addtolength{\tabcolsep}{0.1pt}
 
 \begin{threeparttable}
-\begin{tabular}[t]{>{\centering\arraybackslash}m{1.4cm}>{\centering\arraybackslash}m{1.4cm}>{\centering\arraybackslash}m{1.4cm}>{\centering\arraybackslash}m{1.4cm}>{\centering\arraybackslash}m{1.4cm}>{\centering\arraybackslash}m{1.4cm}>{\centering\arraybackslash}m{1.4cm}>{\centering\arraybackslash}m{1.4cm}>{\centering\arraybackslash}m{1.4cm}>{\centering\arraybackslash}m{1.4cm}>{\centering\arraybackslash}m{1.4cm}>{\centering\arraybackslash}m{1.4cm}>{\centering\arraybackslash}m{1.4cm}>{\centering\arraybackslash}m{1.4cm}}
+\begin{tabular}[t]{>{\centering\arraybackslash}m{1.55cm}>{\centering\arraybackslash}m{1.55cm}>{\centering\arraybackslash}m{1.55cm}>{\centering\arraybackslash}m{1.55cm}>{\centering\arraybackslash}m{1.55cm}>{\centering\arraybackslash}m{1.55cm}>{\centering\arraybackslash}m{1.55cm}>{\centering\arraybackslash}m{1.55cm}>{\centering\arraybackslash}m{1.55cm}>{\centering\arraybackslash}m{1.55cm}>{\centering\arraybackslash}m{1.55cm}>{\centering\arraybackslash}m{1.55cm}>{\centering\arraybackslash}m{1.55cm}}
 \toprule
-Number of Cluster & Cluster Size & $\widehat{\beta_0}$ & $\widehat{\beta_1}$ & $\widehat{\beta_2}$ & $\widehat{\sigma_u^2}$ & $\widehat{MOR}$ & Relative Bias (\%) & $\widehat{SE}_{MOR}$ & Simulation $\widehat{SE}_{MOR}$ & Ratio\textsuperscript{1} & CI coverage (95\%) & Runs used & Runs Required\\
+Number of Cluster & Cluster Size & $\widehat{\beta_0}$ & $\widehat{\beta_1}$ & $\widehat{\beta_2}$ & $\widehat{\sigma_u^2}$ & $\widehat{MOR}$ & Relative Bias (\%) & $\widehat{SE}_{MOR}$ & Simulation $\widehat{SE}_{MOR}$ & Ratio\textsuperscript{1} & CI coverage (95\%) & Model Convergence\\
 \midrule
-10 & 5 & -2.21 & 2.06 & 0.69 & 3.09 & 6.34 & 40.29 & 3.18 & 2.41 & 1.32 & 0.94 & 1000 & 1157\\
-10 & 10 & -2.08 & 1.89 & 0.70 & 2.90 & 5.62 & 24.42 & 1.96 & 1.89 & 1.03 & 0.94 & 1000 & 1036\\
-10 & 30 & -2.05 & 1.80 & 0.69 & 2.45 & 4.65 & 2.89 & 1.54 & 1.58 & 0.97 & 0.87 & 1000 & 1001\\
-10 & 50 & -2.03 & 1.78 & 0.69 & 2.30 & 4.38 & -3.05 & 1.46 & 1.49 & 0.98 & 0.86 & 1000 & 1000\\
+10 & 5 & -4.09 & 1.94 & 0.77 & 2.19 & 4.84 & 7.08 & 4.69 & 2.50 & 1.87 & 0.91 & 0.55\\
+10 & 10 & -4.30 & 1.93 & 0.70 & 2.67 & 5.48 & 21.26 & 2.85 & 2.30 & 1.24 & 0.92 & 0.87\\
+10 & 30 & -4.24 & 1.82 & 0.67 & 2.50 & 4.82 & 6.59 & 1.80 & 1.77 & 1.02 & 0.89 & 0.99\\
+10 & 50 & -4.17 & 1.79 & 0.66 & 2.34 & 4.53 & 0.24 & 1.62 & 1.65 & 0.98 & 0.86 & 1.00\\
 \midrule
-30 & 5 & -2.10 & 1.86 & 0.67 & 2.90 & 5.43 & 20.19 & 1.72 & 1.71 & 1.01 & 0.98 & 1000 & 1020\\
-30 & 10 & -2.03 & 1.80 & 0.67 & 2.59 & 4.77 & 5.58 & 1.42 & 1.44 & 0.99 & 0.94 & 1000 & 1000\\
-30 & 30 & -2.01 & 1.76 & 0.66 & 2.48 & 4.54 & 0.43 & 1.28 & 1.29 & 0.99 & 0.93 & 1000 & 1000\\
-30 & 50 & -2.02 & 1.76 & 0.67 & 2.46 & 4.50 & -0.34 & 1.25 & 1.26 & 1.00 & 0.92 & 1000 & 1000\\
+30 & 5 & -4.37 & 1.92 & 0.64 & 3.02 & 6.01 & 32.91 & 2.61 & 2.15 & 1.21 & 0.97 & 0.93\\
+30 & 10 & -4.24 & 1.81 & 0.69 & 2.64 & 4.94 & 9.28 & 1.69 & 1.65 & 1.03 & 0.97 & 0.99\\
+30 & 30 & -4.14 & 1.77 & 0.65 & 2.52 & 4.63 & 2.54 & 1.37 & 1.39 & 0.99 & 0.91 & 1.00\\
+30 & 50 & -4.13 & 1.77 & 0.65 & 2.46 & 4.52 & -0.04 & 1.32 & 1.30 & 1.01 & 0.94 & 1.00\\
 \midrule
-50 & 5 & -2.05 & 1.82 & 0.68 & 2.76 & 5.12 & 13.40 & 1.50 & 1.54 & 0.97 & 0.96 & 1000 & 1002\\
-50 & 10 & -2.03 & 1.78 & 0.67 & 2.59 & 4.71 & 4.17 & 1.31 & 1.31 & 1.00 & 0.94 & 1000 & 1000\\
-50 & 30 & -2.01 & 1.75 & 0.67 & 2.47 & 4.50 & -0.32 & 1.21 & 1.21 & 1.00 & 0.94 & 1000 & 1000\\
-50 & 50 & -2.02 & 1.75 & 0.67 & 2.45 & 4.47 & -1.07 & 1.19 & 1.18 & 1.01 & 0.94 & 1000 & 1000\\
+50 & 5 & -4.29 & 1.87 & 0.67 & 2.88 & 5.56 & 23.12 & 1.94 & 1.88 & 1.03 & 0.99 & 0.96\\
+50 & 10 & -4.19 & 1.79 & 0.69 & 2.65 & 4.88 & 7.92 & 1.48 & 1.48 & 0.99 & 0.96 & 1.00\\
+50 & 30 & -4.11 & 1.77 & 0.66 & 2.47 & 4.53 & 0.24 & 1.27 & 1.28 & 1.00 & 0.93 & 1.00\\
+50 & 50 & -4.12 & 1.76 & 0.67 & 2.47 & 4.51 & -0.11 & 1.24 & 1.23 & 1.00 & 0.95 & 1.00\\
 \midrule
-100 & 5 & -2.02 & 1.76 & 0.67 & 2.58 & 4.70 & 3.96 & 1.31 & 1.32 & 0.99 & 0.95 & 1000 & 1000\\
-100 & 10 & -2.02 & 1.76 & 0.68 & 2.50 & 4.54 & 0.54 & 1.21 & 1.21 & 1.00 & 0.95 & 1000 & 1000\\
-100 & 30 & -2.01 & 1.75 & 0.67 & 2.46 & 4.48 & -0.78 & 1.14 & 1.14 & 1.00 & 0.95 & 1000 & 1000\\
-100 & 50 & -2.01 & 1.75 & 0.67 & 2.48 & 4.50 & -0.38 & 1.13 & 1.13 & 1.00 & 0.95 & 1000 & 1000\\
+100 & 5 & -4.19 & 1.80 & 0.69 & 2.67 & 4.92 & 8.87 & 1.52 & 1.51 & 1.01 & 0.98 & 1.00\\
+100 & 10 & -4.14 & 1.77 & 0.66 & 2.54 & 4.64 & 2.62 & 1.30 & 1.31 & 1.00 & 0.94 & 1.00\\
+100 & 30 & -4.11 & 1.76 & 0.67 & 2.47 & 4.49 & -0.58 & 1.19 & 1.18 & 1.00 & 0.94 & 1.00\\
+100 & 50 & -4.12 & 1.75 & 0.67 & 2.47 & 4.49 & -0.60 & 1.16 & 1.16 & 1.00 & 0.93 & 1.00\\
 \bottomrule
 \end{tabular}
 \begin{tablenotes}
 \item \textit{Note: } 
-\item The mean prevalence for this simulation is 27\%
+\item The mean prevalence for this simulation is 10\%
 \item[1] Ratio$\;=\;\dfrac{\widehat{SE}_{MOR}}{Simulation\;\widehat{SE}_{MOR}}$
 \end{tablenotes}
 \end{threeparttable}
@@ -591,7 +591,7 @@ Here,
 \item
   True \(\sigma^2_u\) is 2.5
 \item
-  True Values of \(\beta_0 = -2\), \(\beta_1 = 1.75\),
+  True Values of \(\beta_0 = -4.1\), \(\beta_1 = 1.75\),
   \(\beta_2 = 0.67\)
 \item
   ``Runs used'' column represent how many simulation runs were used to
