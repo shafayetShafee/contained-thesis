@@ -1,6 +1,6 @@
 source(here::here("R/run_simulations.R"))
 
-fixed_coeff <- c(-1.85, 1.75, 0.67)
+fixed_coeff <- c(-4.1, 1.75, 0.67)
 
 sigma2_u1 <- 1
 sigma2_u2 <- 2
@@ -9,10 +9,10 @@ sigma_mat <- matrix(c(sigma2_u1, sigma2_u12, sigma2_u12, sigma2_u2),
                     byrow = TRUE, nrow = 2, ncol = 2)
 
 # m = 10, 30, 50, 100
-cluster_numbers <- c(10)
+cluster_numbers <- c(30)
 
 # n = 5, 10, 30, 50
-cluster_size <- c(10)
+cluster_size <- c(5)
 
 cluster_params <- tidyr::expand_grid(cluster_size = cluster_size, 
                                      cluster_numbers = cluster_numbers)
@@ -31,16 +31,15 @@ res <- purrr::map2_dfr(.x = cluster_params$cluster_numbers,
                                               nsims = 1000, seed = 1083,
                                               log_file = log_file, append = TRUE,
                                               plot_path = plot_path,
-                                              plot_name_suffix = plot_name_prefix)
+                                              plot_name_suffix = plot_name_prefix,
+                                              more_iter = 6000)
 )
 
 tictoc::toc()
-beepr::beep(3)
+# beepr::beep(3)
 
-# 12 hour 32 mins (high prev)
-# sum(c(2208.19, 2321.421, 2586.075, 3426.504, 1486.212, 1392.129, 1845.036,
-# 2961.062, 1003.516, 1534.007, 2579.796, 4899.562, 1090.046, 2207.91, 3929.402,
-# 7795.227))/3600
+# c(7222, 5962.328 )
+
 
 # final_res_slp_low_prev <- res
 final_res_slp_low_prev <- dplyr::bind_rows(final_res_slp_low_prev, res)
