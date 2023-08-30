@@ -9,10 +9,10 @@ sigma_mat <- matrix(c(sigma2_u1, sigma2_u12, sigma2_u12, sigma2_u2),
                     byrow = TRUE, nrow = 2, ncol = 2)
 
 # m = 10, 30, 50, 100
-cluster_numbers <- c(100)
+cluster_numbers <- c(10)
 
 # n = 5, 10, 30, 50
-cluster_size <- c(5)
+cluster_size <- c(10)
 
 cluster_params <- tidyr::expand_grid(cluster_size = cluster_size, 
                                      cluster_numbers = cluster_numbers)
