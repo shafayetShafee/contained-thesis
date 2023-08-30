@@ -9,7 +9,7 @@ sigma_mat <- matrix(c(sigma2_u1, sigma2_u12, sigma2_u12, sigma2_u2),
                     byrow = TRUE, nrow = 2, ncol = 2)
 
 # m = 10, 30, 50, 100
-cluster_numbers <- c(50)
+cluster_numbers <- c(100)
 
 # n = 5, 10, 30, 50
 cluster_size <- c(5)
@@ -38,7 +38,7 @@ res <- purrr::map2_dfr(.x = cluster_params$cluster_numbers,
 tictoc::toc()
 # beepr::beep(3)
 
-# c(7222, 5962.328 ) 
+# c(7222, 5962.328, 6032.467  ) 
 
 
 # final_res_slp_low_prev <- res
