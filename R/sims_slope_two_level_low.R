@@ -21,6 +21,7 @@ log_file <- here::here("log/log_two_lvl_slp_low_prev.txt")
 plot_path <- here::here("plots/two-lvl-ran-slope/low-prev/")
 plot_name_prefix <- "two_lvl_slp_low_prev"
 
+tictoc::tic()
 res <- purrr::map2_dfr(.x = cluster_params$cluster_numbers, 
                        .y = cluster_params$cluster_size, 
                        .f = ~ run_simulations(m = .x, n = .y, 
