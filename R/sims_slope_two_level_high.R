@@ -12,7 +12,7 @@ sigma_mat <- matrix(c(sigma2_u1, sigma2_u12, sigma2_u12, sigma2_u2),
 cluster_numbers <- c(10)
 
 # n = 5, 10, 30, 50
-cluster_size <- c(10)
+cluster_size <- c(5)
 
 cluster_params <- tidyr::expand_grid(cluster_size = cluster_size, 
                                      cluster_numbers = cluster_numbers)
@@ -28,21 +28,22 @@ res <- purrr::map2_dfr(.x = cluster_params$cluster_numbers,
                                               fixed_coeff = fixed_coeff,
                                               sigma_u_sq = sigma_mat,
                                               simulation_type = "slope",
-                                              nsims = 10, seed = 1083,
+                                              nsims = 1000, seed = 1083,
                                               log_file = log_file, append = TRUE,
                                               plot_path = plot_path,
                                               plot_name_suffix = plot_name_prefix,
-                                              more_iter = 2)
+                                              more_iter = 1500)
 )
 
 tictoc::toc()
+beepr::beep(3)
 
 # library(dplyr)
 # res %>% 
 #   select(!ends_with("q2")) %>% 
 #   select(!ends_with("q3")) %>% View()
 
-# 12 hour 32 mins (high prev)
+# c(3072.542, 2310.165)
 
 # final_res_slp_high_prev <- res
 final_res_slp_high_prev <- dplyr::bind_rows(final_res_slp_high_prev, res)
