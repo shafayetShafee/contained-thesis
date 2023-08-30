@@ -9,7 +9,7 @@ sigma_mat <- matrix(c(sigma2_u1, sigma2_u12, sigma2_u12, sigma2_u2),
                     byrow = TRUE, nrow = 2, ncol = 2)
 
 # m = 10, 30, 50, 100
-cluster_numbers <- c(10)
+cluster_numbers <- c(30)
 
 # n = 5, 10, 30, 50
 cluster_size <- c(30)
