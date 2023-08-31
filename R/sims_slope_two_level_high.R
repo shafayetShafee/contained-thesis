@@ -12,7 +12,7 @@ sigma_mat <- matrix(c(sigma2_u1, sigma2_u12, sigma2_u12, sigma2_u2),
 cluster_numbers <- c(100)
 
 # n = 5, 10, 30, 50
-cluster_size <- c(30)
+cluster_size <- c(50)
 
 cluster_params <- tidyr::expand_grid(cluster_size = cluster_size, 
                                      cluster_numbers = cluster_numbers)
@@ -32,7 +32,7 @@ res <- purrr::map2_dfr(.x = cluster_params$cluster_numbers,
                                               log_file = log_file, append = TRUE,
                                               plot_path = plot_path,
                                               plot_name_suffix = plot_name_prefix,
-                                              more_iter = 500)
+                                              more_iter = 50)
 )
 
 tictoc::toc()
