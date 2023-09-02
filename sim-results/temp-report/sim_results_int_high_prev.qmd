@@ -14,6 +14,8 @@ format:
     include-in-header:
       text: |
         \usepackage{typearea}
+        \usepackage{caption}
+        \captionsetup{font=tiny}
 ---
 
 \newpage
@@ -34,99 +36,56 @@ final_res_int_high_prev <- readRDS(
 mean_prevalence <- round(mean(final_res_int_high_prev$prevalence), 2)*100
 ```
 
-<!-- **Note:  `r `** -->
 
 ---
 subtitle: "The mean prevalence for this simulation is `r mean_prevalence` %"
 ---
 
-# Histograms for $log(\widehat{MOR})$ When Number of Cluster is 10
+# Histograms for $log(\widehat{MOR})$
 
-\vspace{5mm}
+\vspace{10mm}
 
-::: {layout="[[50, 50], [-20], [50,50]]"}
+::: {layout="[[0.2,1,1,1,1], [-3], [0.2,1,1,1,1], [-3], [0.2,1,1,1,1], [-3], [0.2,1,1,1,1]]"}
 
-![For cluster size 5](../../plots/two-lvl-ran-int/high-prev/hist_10_5_two_lvl_high_prev.png){#m10n5}
+\rotatebox[origin=br]{90}{\tiny Cluster Number 10}
 
-![For cluster size 10](../../plots/two-lvl-ran-int/high-prev/hist_10_10_two_lvl_high_prev.png){#m10n10}
+![Cluster size 5](../../plots/two-lvl-ran-int/high-prev/hist_10_5_two_lvl_high_prev.png){#m10n5}
 
-![For cluster size 30](../../plots/two-lvl-ran-int/high-prev/hist_10_30_two_lvl_high_prev.png){#m10n30}
+![Cluster size 10](../../plots/two-lvl-ran-int/high-prev/hist_10_10_two_lvl_high_prev.png){#m10n10}
 
+![Cluster size 30](../../plots/two-lvl-ran-int/high-prev/hist_10_30_two_lvl_high_prev.png){#m10n30}
 
-![For cluster size 50](../../plots/two-lvl-ran-int/high-prev/hist_10_50_two_lvl_high_prev.png){#m10n50}
+![Cluster size 50](../../plots/two-lvl-ran-int/high-prev/hist_10_50_two_lvl_high_prev.png){#m10n50}
 
-:::
+\rotatebox[origin=br]{90}{\tiny Cluster Number 30}
 
-\newpage
+![Cluster size 5](../../plots/two-lvl-ran-int/high-prev/hist_30_5_two_lvl_high_prev.png){#m30n5}
 
-<!-- --------------------------------------------------------------------------- -->
-<!-- --------------------------------------------------------------------------- -->
-<!-- --------------------------------------------------------------------------- -->
+![Cluster size 10](../../plots/two-lvl-ran-int/high-prev/hist_30_10_two_lvl_high_prev.png){#m30n10}
 
+![Cluster size 30](../../plots/two-lvl-ran-int/high-prev/hist_30_30_two_lvl_high_prev.png){#m30n30}
 
-# Histograms for $log(\widehat{MOR})$ When Number of Cluster is 30
+![Cluster size 50](../../plots/two-lvl-ran-int/high-prev/hist_30_50_two_lvl_high_prev.png){#m30n50}
 
-\vspace{5mm}
+\rotatebox[origin=br]{90}{\tiny Cluster Number 50}
 
-::: {layout="[[50, 50], [-20], [50,50]]"}
+![Cluster size 5](../../plots/two-lvl-ran-int/high-prev/hist_50_5_two_lvl_high_prev.png){#m50n5}
 
-![For cluster size 5](../../plots/two-lvl-ran-int/high-prev/hist_30_5_two_lvl_high_prev.png){#m30n5}
+![Cluster size 10](../../plots/two-lvl-ran-int/high-prev/hist_50_10_two_lvl_high_prev.png){#m50n10}
 
-![For cluster size 10](../../plots/two-lvl-ran-int/high-prev/hist_30_10_two_lvl_high_prev.png){#m30n10}
+![Cluster size 30](../../plots/two-lvl-ran-int/high-prev/hist_50_30_two_lvl_high_prev.png){#m50n30}
 
-![For cluster size 30](../../plots/two-lvl-ran-int/high-prev/hist_30_30_two_lvl_high_prev.png){#m30n30}
+![Cluster size 50](../../plots/two-lvl-ran-int/high-prev/hist_50_50_two_lvl_high_prev.png){#m50n50}
 
+\rotatebox[origin=br]{90}{\tiny Cluster Number 100}
 
-![For cluster size 50](../../plots/two-lvl-ran-int/high-prev/hist_30_50_two_lvl_high_prev.png){#m30n50}
+![Cluster size 5](../../plots/two-lvl-ran-int/high-prev/hist_100_5_two_lvl_high_prev.png){#m100n5}
 
-:::
+![Cluster size 10](../../plots/two-lvl-ran-int/high-prev/hist_100_10_two_lvl_high_prev.png){#m100n10}
 
-\newpage
+![Cluster size 30](../../plots/two-lvl-ran-int/high-prev/hist_100_30_two_lvl_high_prev.png){#m100n30}
 
-<!-- --------------------------------------------------------------------------- -->
-<!-- --------------------------------------------------------------------------- -->
-<!-- --------------------------------------------------------------------------- -->
-
-
-# Histograms for $log(\widehat{MOR})$ When Number of Cluster is 50
-
-\vspace{5mm}
-
-::: {layout="[[50, 50], [-20], [50,50]]"}
-
-![For cluster size 5](../../plots/two-lvl-ran-int/high-prev/hist_50_5_two_lvl_high_prev.png){#m50n5}
-
-![For cluster size 10](../../plots/two-lvl-ran-int/high-prev/hist_50_10_two_lvl_high_prev.png){#m50n10}
-
-![For cluster size 30](../../plots/two-lvl-ran-int/high-prev/hist_50_30_two_lvl_high_prev.png){#m50n30}
-
-
-
-![For cluster size 50](../../plots/two-lvl-ran-int/high-prev/hist_50_50_two_lvl_high_prev.png){#m50n50}
-
-:::
-
-\newpage
-
-<!-- --------------------------------------------------------------------------- -->
-<!-- --------------------------------------------------------------------------- -->
-<!-- --------------------------------------------------------------------------- -->
-
-
-# Histograms for $log(\widehat{MOR})$ When Number of Cluster is 100
-
-\vspace{5mm}
-
-::: {layout="[[50, 50], [-20], [50,50]]"}
-
-![For cluster size 5](../../plots/two-lvl-ran-int/high-prev/hist_100_5_two_lvl_high_prev.png){#m100n5}
-
-![For cluster size 10](../../plots/two-lvl-ran-int/high-prev/hist_100_10_two_lvl_high_prev.png){#m100n10}
-
-![For cluster size 30](../../plots/two-lvl-ran-int/high-prev/hist_100_30_two_lvl_high_prev.png){#m100n30}
-
-
-![For cluster size 50](../../plots/two-lvl-ran-int/high-prev/hist_100_50_two_lvl_high_prev.png){#m100n50}
+![Cluster size 50](../../plots/two-lvl-ran-int/high-prev/hist_100_50_two_lvl_high_prev.png){#m100n50}
 
 :::
 
@@ -183,10 +142,14 @@ kableExtra::kbl(sim_output_table, booktabs = TRUE, digits = 2, linesep = "",
       n_distinct(sim_output_table$cluster_size)), hline_after = TRUE
   ) %>% 
   footnote(
-    general = paste0("The mean prevalence for this simulation is ", mean_prevalence, "\\\\%"),
-    threeparttable = TRUE,
-    # footnote_as_chunk = TRUE,
-    number = c("Ratio$\\\\;=\\\\;\\\\dfrac{\\\\widehat{SE}_{MOR}}{Simulation\\\\;\\\\widehat{SE}_{MOR}}$"), 
+    general = " ",
+    symbol = c(
+      paste0("The mean prevalence for this simulation is ", mean_prevalence, "\\\\%"),
+      "True $MOR$ is 4.52",
+      "True $\\\\sigma^2_u$ is 2.5",
+      "True Values of $\\\\beta_0 = -1.85$, $\\\\beta_1 = 1.75$, $\\\\beta_2 = 0.67$"
+    ),
+    number = c("Ratio$\\\\;=\\\\;\\\\dfrac{\\\\widehat{SE}_{MOR}}{Simulation\\\\;\\\\widehat{SE}_{MOR}}$"),
     escape = FALSE
   )
 
@@ -194,15 +157,3 @@ kableExtra::kbl(sim_output_table, booktabs = TRUE, digits = 2, linesep = "",
 
 
 \endgroup
-
-\vspace{10mm}
-
-\newpage
-
-Here,
-
-- True $MOR$ is 4.52
-- True $\sigma^2_u$ is 2.5
-- True Values of $\beta_0 = -1.85$, $\beta_1 = 1.75$, $\beta_2 = 0.67$ 
-- "Runs used" column represent how many simulation runs were used to calculate the numbers in the corresponding row.
-

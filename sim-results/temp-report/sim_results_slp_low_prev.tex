@@ -95,6 +95,8 @@
 \usepackage{makecell}
 \usepackage{xcolor}
 \usepackage{typearea}
+\usepackage{caption}
+\captionsetup{font=tiny}
 \KOMAoption{captions}{tableheading}
 \makeatletter
 \makeatother
@@ -172,52 +174,94 @@
   \apptocmd{\@title}{\par {\large #1 \par}}{}{}
 }
 \makeatother
-\subtitle{The mean prevalence for this simulation is 26 \%}
+\subtitle{The mean prevalence for this simulation is 9 \%}
 \author{Shafayet Khan Shafee}
-\date{27 August 2023}
+\date{03 September 2023}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, borderline west={3pt}{0pt}{shadecolor}, interior hidden, enhanced, sharp corners, boxrule=0pt, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, borderline west={3pt}{0pt}{shadecolor}, breakable, enhanced, boxrule=0pt, sharp corners, frame hidden]}{\end{tcolorbox}}\fi
 
 \newpage
 
-\hypertarget{histograms-for-logwidehatmor-when-number-of-cluster-is-10}{%
-\section{\texorpdfstring{Histograms for \(log(\widehat{MOR})\) When
-Number of Cluster is
-10}{Histograms for log(\textbackslash widehat\{MOR\}) When Number of Cluster is 10}}\label{histograms-for-logwidehatmor-when-number-of-cluster-is-10}}
+\hypertarget{histograms-for-logwidehatmor-when-first-quartile-of-x-is-used}{%
+\section{\texorpdfstring{Histograms for \(log(\widehat{MOR})\) when
+First Quartile of \(X\) is
+used}{Histograms for log(\textbackslash widehat\{MOR\}) when First Quartile of X is used}}\label{histograms-for-logwidehatmor-when-first-quartile-of-x-is-used}}
 
-\vspace{5mm}
+\vspace{10mm}
 
 \begin{figure}
 
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.05\linewidth}
 
 {\centering 
 
-\raisebox{-\height}{
-
-\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_10_5_two_lvl_slp_low_prev.png}
-
-}
-
-\caption{For cluster size 5}
+\rotatebox[origin=br]{90}{\tiny Cluster Number 10}
 
 }
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.24\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_10_10_two_lvl_slp_low_prev.png}
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_10_5_two_lvl_slp_low_prev_q1.png}
 
 }
 
-\caption{For cluster size 10}
+\caption{Cluster size 5}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_10_10_two_lvl_slp_low_prev_q1.png}
+
+}
+
+\caption{Cluster size 10}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_10_30_two_lvl_slp_low_prev_q1.png}
+
+}
+
+\caption{Cluster size 30}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_10_50_two_lvl_slp_low_prev_q1.png}
+
+}
+
+\caption{Cluster size 50}
 
 }
 
@@ -233,33 +277,243 @@ Number of Cluster is
 
 \end{minipage}%
 \newline
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.05\linewidth}
 
 {\centering 
 
-\raisebox{-\height}{
-
-\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_10_30_two_lvl_slp_low_prev.png}
-
-}
-
-\caption{For cluster size 30}
+\rotatebox[origin=br]{90}{\tiny Cluster Number 30}
 
 }
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.24\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_10_50_two_lvl_slp_low_prev.png}
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_30_5_two_lvl_slp_low_prev_q1.png}
 
 }
 
-\caption{For cluster size 50}
+\caption{Cluster size 5}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_30_10_two_lvl_slp_low_prev_q1.png}
+
+}
+
+\caption{Cluster size 10}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_30_30_two_lvl_slp_low_prev_q1.png}
+
+}
+
+\caption{Cluster size 30}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_30_50_two_lvl_slp_low_prev_q1.png}
+
+}
+
+\caption{Cluster size 50}
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+\rotatebox[origin=br]{90}{\tiny Cluster Number 50}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_50_5_two_lvl_slp_low_prev_q1.png}
+
+}
+
+\caption{Cluster size 5}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_50_10_two_lvl_slp_low_prev_q1.png}
+
+}
+
+\caption{Cluster size 10}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_50_30_two_lvl_slp_low_prev_q1.png}
+
+}
+
+\caption{Cluster size 30}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_50_50_two_lvl_slp_low_prev_q1.png}
+
+}
+
+\caption{Cluster size 50}
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+\rotatebox[origin=br]{90}{\tiny Cluster Number 100}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_100_5_two_lvl_slp_low_prev_q1.png}
+
+}
+
+\caption{Cluster size 5}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_100_10_two_lvl_slp_low_prev_q1.png}
+
+}
+
+\caption{Cluster size 10}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_100_30_two_lvl_slp_low_prev_q1.png}
+
+}
+
+\caption{Cluster size 30}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_100_50_two_lvl_slp_low_prev_q1.png}
+
+}
+
+\caption{Cluster size 50}
 
 }
 
@@ -269,42 +523,84 @@ Number of Cluster is
 
 \newpage
 
-\hypertarget{histograms-for-logwidehatmor-when-number-of-cluster-is-30}{%
-\section{\texorpdfstring{Histograms for \(log(\widehat{MOR})\) When
-Number of Cluster is
-30}{Histograms for log(\textbackslash widehat\{MOR\}) When Number of Cluster is 30}}\label{histograms-for-logwidehatmor-when-number-of-cluster-is-30}}
+\hypertarget{histograms-for-logwidehatmor-when-mean-of-x-is-used}{%
+\section{\texorpdfstring{Histograms for \(log(\widehat{MOR})\) when Mean
+of \(X\) is
+used}{Histograms for log(\textbackslash widehat\{MOR\}) when Mean of X is used}}\label{histograms-for-logwidehatmor-when-mean-of-x-is-used}}
 
-\vspace{5mm}
+\vspace{10mm}
 
 \begin{figure}
 
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.05\linewidth}
 
 {\centering 
 
-\raisebox{-\height}{
-
-\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_30_5_two_lvl_slp_low_prev.png}
-
-}
-
-\caption{For cluster size 5}
+\rotatebox[origin=br]{90}{\tiny Cluster Number 10}
 
 }
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.24\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_30_10_two_lvl_slp_low_prev.png}
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_10_5_two_lvl_slp_low_prev_q2.png}
 
 }
 
-\caption{For cluster size 10}
+\caption{Cluster size 5}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_10_10_two_lvl_slp_low_prev_q2.png}
+
+}
+
+\caption{Cluster size 10}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_10_30_two_lvl_slp_low_prev_q2.png}
+
+}
+
+\caption{Cluster size 30}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_10_50_two_lvl_slp_low_prev_q2.png}
+
+}
+
+\caption{Cluster size 50}
 
 }
 
@@ -320,33 +616,243 @@ Number of Cluster is
 
 \end{minipage}%
 \newline
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.05\linewidth}
 
 {\centering 
 
-\raisebox{-\height}{
-
-\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_30_30_two_lvl_slp_low_prev.png}
-
-}
-
-\caption{For cluster size 30}
+\rotatebox[origin=br]{90}{\tiny Cluster Number 30}
 
 }
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.24\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_30_50_two_lvl_slp_low_prev.png}
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_30_5_two_lvl_slp_low_prev_q2.png}
 
 }
 
-\caption{For cluster size 50}
+\caption{Cluster size 5}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_30_10_two_lvl_slp_low_prev_q2.png}
+
+}
+
+\caption{Cluster size 10}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_30_30_two_lvl_slp_low_prev_q2.png}
+
+}
+
+\caption{Cluster size 30}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_30_50_two_lvl_slp_low_prev_q2.png}
+
+}
+
+\caption{Cluster size 50}
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+\rotatebox[origin=br]{90}{\tiny Cluster Number 50}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_50_5_two_lvl_slp_low_prev_q2.png}
+
+}
+
+\caption{Cluster size 5}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_50_10_two_lvl_slp_low_prev_q2.png}
+
+}
+
+\caption{Cluster size 10}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_50_30_two_lvl_slp_low_prev_q2.png}
+
+}
+
+\caption{Cluster size 30}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_50_50_two_lvl_slp_low_prev_q2.png}
+
+}
+
+\caption{Cluster size 50}
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+\rotatebox[origin=br]{90}{\tiny Cluster Number 100}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_100_5_two_lvl_slp_low_prev_q2.png}
+
+}
+
+\caption{Cluster size 5}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_100_10_two_lvl_slp_low_prev_q2.png}
+
+}
+
+\caption{Cluster size 10}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_100_30_two_lvl_slp_low_prev_q2.png}
+
+}
+
+\caption{Cluster size 30}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_100_50_two_lvl_slp_low_prev_q2.png}
+
+}
+
+\caption{Cluster size 50}
 
 }
 
@@ -356,42 +862,84 @@ Number of Cluster is
 
 \newpage
 
-\hypertarget{histograms-for-logwidehatmor-when-number-of-cluster-is-50}{%
-\section{\texorpdfstring{Histograms for \(log(\widehat{MOR})\) When
-Number of Cluster is
-50}{Histograms for log(\textbackslash widehat\{MOR\}) When Number of Cluster is 50}}\label{histograms-for-logwidehatmor-when-number-of-cluster-is-50}}
+\hypertarget{histograms-for-logwidehatmor-when-third-quartile-of-x-is-used}{%
+\section{\texorpdfstring{Histograms for \(log(\widehat{MOR})\) when
+Third Quartile of \(X\) is
+used}{Histograms for log(\textbackslash widehat\{MOR\}) when Third Quartile of X is used}}\label{histograms-for-logwidehatmor-when-third-quartile-of-x-is-used}}
 
-\vspace{5mm}
+\vspace{10mm}
 
 \begin{figure}
 
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.05\linewidth}
 
 {\centering 
 
-\raisebox{-\height}{
-
-\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_50_5_two_lvl_slp_low_prev.png}
-
-}
-
-\caption{For cluster size 5}
+\rotatebox[origin=br]{90}{\tiny Cluster Number 10}
 
 }
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.24\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_50_10_two_lvl_slp_low_prev.png}
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_10_5_two_lvl_slp_low_prev_q3.png}
 
 }
 
-\caption{For cluster size 10}
+\caption{Cluster size 5}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_10_10_two_lvl_slp_low_prev_q3.png}
+
+}
+
+\caption{Cluster size 10}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_10_30_two_lvl_slp_low_prev_q3.png}
+
+}
+
+\caption{Cluster size 30}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_10_50_two_lvl_slp_low_prev_q3.png}
+
+}
+
+\caption{Cluster size 50}
 
 }
 
@@ -407,78 +955,75 @@ Number of Cluster is
 
 \end{minipage}%
 \newline
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.05\linewidth}
 
 {\centering 
 
-\raisebox{-\height}{
-
-\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_50_30_two_lvl_slp_low_prev.png}
-
-}
-
-\caption{For cluster size 30}
+\rotatebox[origin=br]{90}{\tiny Cluster Number 30}
 
 }
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.24\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_50_50_two_lvl_slp_low_prev.png}
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_30_5_two_lvl_slp_low_prev_q3.png}
 
 }
 
-\caption{For cluster size 50}
-
-}
-
-\end{minipage}%
-
-\end{figure}
-
-\newpage
-
-\hypertarget{histograms-for-logwidehatmor-when-number-of-cluster-is-100}{%
-\section{\texorpdfstring{Histograms for \(log(\widehat{MOR})\) When
-Number of Cluster is
-100}{Histograms for log(\textbackslash widehat\{MOR\}) When Number of Cluster is 100}}\label{histograms-for-logwidehatmor-when-number-of-cluster-is-100}}
-
-\vspace{5mm}
-
-\begin{figure}
-
-\begin{minipage}[t]{0.50\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_100_5_two_lvl_slp_low_prev.png}
-
-}
-
-\caption{For cluster size 5}
+\caption{Cluster size 5}
 
 }
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.24\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_100_10_two_lvl_slp_low_prev.png}
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_30_10_two_lvl_slp_low_prev_q3.png}
 
 }
 
-\caption{For cluster size 10}
+\caption{Cluster size 10}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_30_30_two_lvl_slp_low_prev_q3.png}
+
+}
+
+\caption{Cluster size 30}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_30_50_two_lvl_slp_low_prev_q3.png}
+
+}
+
+\caption{Cluster size 50}
 
 }
 
@@ -494,33 +1039,159 @@ Number of Cluster is
 
 \end{minipage}%
 \newline
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.05\linewidth}
 
 {\centering 
 
-\raisebox{-\height}{
-
-\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_100_30_two_lvl_slp_low_prev.png}
-
-}
-
-\caption{For cluster size 30}
+\rotatebox[origin=br]{90}{\tiny Cluster Number 50}
 
 }
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.24\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_100_50_two_lvl_slp_low_prev.png}
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_50_5_two_lvl_slp_low_prev_q3.png}
 
 }
 
-\caption{For cluster size 50}
+\caption{Cluster size 5}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_50_10_two_lvl_slp_low_prev_q3.png}
+
+}
+
+\caption{Cluster size 10}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_50_30_two_lvl_slp_low_prev_q3.png}
+
+}
+
+\caption{Cluster size 30}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_50_50_two_lvl_slp_low_prev_q3.png}
+
+}
+
+\caption{Cluster size 50}
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+\rotatebox[origin=br]{90}{\tiny Cluster Number 100}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_100_5_two_lvl_slp_low_prev_q3.png}
+
+}
+
+\caption{Cluster size 5}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_100_10_two_lvl_slp_low_prev_q3.png}
+
+}
+
+\caption{Cluster size 10}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_100_30_two_lvl_slp_low_prev_q3.png}
+
+}
+
+\caption{Cluster size 30}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-slope/low-prev/hist_100_50_two_lvl_slp_low_prev_q3.png}
+
+}
+
+\caption{Cluster size 50}
 
 }
 
@@ -539,61 +1210,272 @@ Number of Cluster is
 
 \begingroup
 
-\fontsize{8pt}{12pt}\selectfont
-\addtolength{\tabcolsep}{0.05pt}
+\fontsize{10pt}{16pt}\selectfont
+\addtolength{\tabcolsep}{0.1pt}
 
-\begin{threeparttable}
-\begin{tabular}[t]{>{\centering\arraybackslash}m{1.1cm}>{\centering\arraybackslash}m{1.1cm}>{\centering\arraybackslash}m{1.1cm}>{\centering\arraybackslash}m{1.1cm}>{\centering\arraybackslash}m{1.1cm}>{\centering\arraybackslash}m{1.1cm}>{\centering\arraybackslash}m{1.1cm}>{\centering\arraybackslash}m{1.1cm}>{\centering\arraybackslash}m{1.1cm}>{\centering\arraybackslash}m{1.1cm}>{\centering\arraybackslash}m{1.1cm}>{\centering\arraybackslash}m{1.1cm}>{\centering\arraybackslash}m{1.1cm}>{\centering\arraybackslash}m{1.1cm}>{\centering\arraybackslash}m{1.1cm}>{\centering\arraybackslash}m{1.1cm}>{\centering\arraybackslash}m{1.1cm}}
+\begin{tabular}[t]{>{\centering\arraybackslash}m{2.5cm}>{\raggedleft\arraybackslash}m{2.5cm}>{\raggedleft\arraybackslash}m{2.5cm}>{\raggedleft\arraybackslash}m{2.5cm}>{\raggedleft\arraybackslash}m{2.5cm}>{\raggedleft\arraybackslash}m{2.5cm}>{\raggedleft\arraybackslash}m{2.5cm}>{\raggedleft\arraybackslash}m{2.5cm}>{\raggedleft\arraybackslash}m{2.5cm}}
 \toprule
-Number of Cluster & Cluster Size & $\widehat{\beta_0}$ & $\widehat{\beta_1}$ & $\widehat{\beta_2}$ & $\widehat{\sigma_{u_1}^2}$ & $\widehat{\sigma_{u_2}^2}$ & $\widehat{\sigma_{u_{12}}^2}$ & $MOR$ & $\widehat{MOR}$ & Relative Bias (\%) & $\widehat{SE}_{MOR}$ & Simulation $\widehat{SE}_{MOR}$ & Ratio\textsuperscript{1} & CI coverage (95\%) & Runs used & Runs Required\\
+Number of Cluster & Cluster Size & $\widehat{\beta_0}$ & $\widehat{\beta_1}$ & $\widehat{\beta_2}$ & $\widehat{\sigma_{u_1}^2}$ & $\widehat{\sigma_{u_2}^2}$ & $\widehat{\sigma_{u_{12}}^2}$ & Model Convergence (\%)\\
 \midrule
-10 & 5 & -2.29 & 2.10 & 0.76 & 1.81 & 3.57 & 0.23 & 2.64 & 4.07 & 54.25 & 3.71 & 2.10 & 1.77 & 0.99 & 1000 & 1258\\
-10 & 10 & -2.17 & 1.93 & 0.71 & 1.31 & 2.53 & 0.04 & 2.62 & 3.12 & 19.21 & 2.07 & 1.76 & 1.17 & 0.97 & 1000 & 1025\\
-10 & 30 & -2.05 & 1.79 & 0.68 & 1.00 & 1.99 & 0.02 & 2.60 & 2.60 & -0.11 & 1.44 & 1.47 & 0.98 & 0.91 & 1000 & 1000\\
-10 & 50 & -2.00 & 1.76 & 0.67 & 0.94 & 1.90 & 0.00 & 2.60 & 2.53 & -2.89 & 1.35 & 1.37 & 0.98 & 0.89 & 1000 & 1000\\
-\midrule
-30 & 5 & -2.13 & 1.84 & 0.72 & 1.32 & 2.61 & 0.07 & 2.61 & 3.07 & 17.68 & 1.80 & 1.68 & 1.07 & 0.98 & 1000 & 1006\\
-30 & 10 & -2.01 & 1.78 & 0.65 & 1.01 & 2.19 & 0.06 & 2.60 & 2.62 & 0.54 & 1.41 & 1.39 & 1.01 & 0.97 & 1000 & 1000\\
-30 & 30 & -2.00 & 1.75 & 0.67 & 0.97 & 1.99 & 0.01 & 2.60 & 2.56 & -1.55 & 1.22 & 1.23 & 0.99 & 0.93 & 1000 & 1000\\
-30 & 50 & -2.00 & 1.74 & 0.67 & 0.97 & 1.94 & 0.01 & 2.60 & 2.56 & -1.51 & 1.18 & 1.19 & 1.00 & 0.92 & 1000 & 1000\\
-\midrule
-50 & 5 & -2.06 & 1.82 & 0.68 & 1.17 & 2.33 & 0.06 & 2.61 & 2.83 & 8.82 & 1.54 & 1.50 & 1.03 & 0.97 & 1000 & 1000\\
-50 & 10 & -2.00 & 1.75 & 0.66 & 1.00 & 2.08 & 0.04 & 2.60 & 2.60 & 0.16 & 1.29 & 1.29 & 1.00 & 0.97 & 1000 & 1000\\
-50 & 30 & -2.00 & 1.74 & 0.67 & 0.98 & 1.98 & 0.02 & 2.60 & 2.57 & -0.87 & 1.16 & 1.16 & 1.00 & 0.94 & 1000 & 1000\\
-50 & 50 & -1.99 & 1.74 & 0.67 & 0.99 & 1.95 & 0.01 & 2.60 & 2.58 & -0.74 & 1.14 & 1.14 & 1.00 & 0.93 & 1000 & 1000\\
-\midrule
-100 & 5 & -2.01 & 1.75 & 0.66 & 1.07 & 2.10 & 0.05 & 2.60 & 2.68 & 3.18 & 1.34 & 1.33 & 1.01 & 0.97 & 1000 & 1000\\
-100 & 10 & -2.01 & 1.75 & 0.67 & 1.01 & 2.03 & 0.02 & 2.60 & 2.60 & 0.23 & 1.19 & 1.19 & 1.00 & 0.96 & 1000 & 1000\\
-100 & 30 & -2.00 & 1.75 & 0.67 & 1.00 & 1.98 & 0.01 & 2.60 & 2.59 & -0.17 & 1.11 & 1.12 & 0.99 & 0.92 & 1000 & 1000\\
-100 & 50 & -2.01 & 1.74 & 0.67 & 1.00 & 1.97 & 0.01 & 2.60 & 2.59 & -0.05 & 1.10 & 1.10 & 1.00 & 0.95 & 1000 & 1000\\
+ & 5 & -3.80 & 1.77 & 0.61 & 1.02 & 1.32 & 0.17 & 18.74\\
+
+ & 10 & -4.21 & 1.86 & 0.62 & 1.07 & 1.92 & 0.16 & 55.83\\
+
+ & 30 & -4.27 & 1.88 & 0.68 & 1.01 & 1.89 & 0.05 & 95.42\\
+
+\multirow{-4}{2.5cm}{\centering\arraybackslash 10} & 50 & -4.17 & 1.78 & 0.69 & 0.95 & 1.85 & 0.01 & 98.62\\
+\cmidrule{1-9}
+ & 5 & -4.38 & 1.88 & 0.69 & 1.31 & 2.22 & 0.16 & 68.31\\
+
+ & 10 & -4.29 & 1.85 & 0.65 & 1.20 & 2.22 & 0.09 & 96.81\\
+
+ & 30 & -4.13 & 1.76 & 0.67 & 0.92 & 1.96 & 0.04 & 100.00\\
+
+\multirow{-4}{2.5cm}{\centering\arraybackslash 30} & 50 & -4.10 & 1.73 & 0.67 & 0.93 & 1.91 & 0.05 & 100.00\\
+\cmidrule{1-9}
+ & 5 & -4.36 & 1.90 & 0.68 & 1.28 & 2.35 & 0.04 & 89.13\\
+
+ & 10 & -4.21 & 1.81 & 0.69 & 1.06 & 2.19 & 0.03 & 99.80\\
+
+ & 30 & -4.10 & 1.75 & 0.68 & 0.95 & 1.97 & 0.05 & 100.00\\
+
+\multirow{-4}{2.5cm}{\centering\arraybackslash 50} & 50 & -4.10 & 1.74 & 0.67 & 0.97 & 1.96 & 0.03 & 100.00\\
+\cmidrule{1-9}
+ & 5 & -4.26 & 1.83 & 0.70 & 1.17 & 2.25 & 0.05 & 98.72\\
+
+ & 10 & -4.12 & 1.76 & 0.67 & 0.97 & 2.00 & 0.03 & 100.00\\
+
+ & 30 & -4.10 & 1.75 & 0.67 & 0.97 & 1.97 & 0.01 & 100.00\\
+
+\multirow{-4}{2.5cm}{\centering\arraybackslash 100} & 50 & -4.10 & 1.74 & 0.66 & 0.98 & 1.98 & 0.01 & 100.00\\
 \bottomrule
+\multicolumn{9}{l}{\rule{0pt}{1em}\textsuperscript{*} The mean prevalence for this simulation is 9\%}\\
+\multicolumn{9}{l}{\rule{0pt}{1em}\textsuperscript{\dag} True $\sigma^2_{u_1}$ = $1$, $\sigma^2_{u_2}$ = $2$, $\sigma^2_{u_{12}}$ = $0$}\\
+\multicolumn{9}{l}{\rule{0pt}{1em}\textsuperscript{\ddag} True Values of $\beta_0 = -4.1$, $\beta_1 = 1.75$, $\beta_2 = 0.67$}\\
 \end{tabular}
-\begin{tablenotes}
-\item \textit{Note: } 
-\item The mean prevalence for this simulation is 26\%
-\item[1] Ratio$\;=\;\dfrac{\widehat{SE}_{MOR}}{Simulation\;\widehat{SE}_{MOR}}$
-\end{tablenotes}
-\end{threeparttable}
 
 \endgroup
 
-\vspace{10mm}
+\newpage
+
+\hypertarget{simulation-result-table-when-first-quartile-of-x-is-used}{%
+\section{Simulation Result Table When First Quartile of X is
+used}\label{simulation-result-table-when-first-quartile-of-x-is-used}}
+
+\begingroup
+
+\fontsize{10pt}{12pt}\selectfont
+\addtolength{\tabcolsep}{3pt}
+
+\begin{tabular}[t]{>{\centering\arraybackslash}m{2.5cm}>{\raggedleft\arraybackslash}m{2.2cm}>{\raggedleft\arraybackslash}m{2.2cm}>{\raggedleft\arraybackslash}m{2.2cm}>{\raggedleft\arraybackslash}m{2.2cm}>{\raggedleft\arraybackslash}m{2.2cm}>{\raggedleft\arraybackslash}m{2.2cm}>{\raggedleft\arraybackslash}m{2.2cm}>{\raggedleft\arraybackslash}m{2.2cm}}
+\toprule
+Number of Cluster & Cluster Size & $MOR$ & $\widehat{MOR}$ & $Bias\textsuperscript{1}$ & $\widehat{SE}_{MOR}$ & Sim. $\widehat{SE}_{MOR}\textsuperscript{2}$ & Ratio\textsuperscript{3} & CI Coverage (95\%)\\
+\midrule
+ & 5 & 3.69 & 3.32 & -9.23 & 10.44 & 1.95 & 5.34 & 1.00\\
+
+ & 10 & 3.76 & 3.88 & 2.75 & 7.40 & 1.98 & 3.73 & 1.00\\
+
+ & 30 & 3.73 & 3.88 & 4.29 & 3.52 & 1.90 & 1.86 & 0.99\\
+
+\multirow{-4}{2.5cm}{\centering\arraybackslash 10} & 50 & 3.74 & 3.79 & 1.22 & 2.57 & 1.86 & 1.38 & 0.99\\
+\cmidrule{1-9}
+ & 5 & 3.74 & 4.41 & 18.55 & 6.85 & 2.07 & 3.31 & 1.00\\
+
+ & 10 & 3.73 & 4.29 & 15.39 & 3.32 & 1.95 & 1.70 & 0.98\\
+
+ & 30 & 3.73 & 3.62 & -3.15 & 1.65 & 1.58 & 1.04 & 0.98\\
+
+\multirow{-4}{2.5cm}{\centering\arraybackslash 30} & 50 & 3.74 & 3.55 & -4.96 & 1.45 & 1.46 & 1.00 & 0.97\\
+\cmidrule{1-9}
+ & 5 & 3.72 & 4.69 & 26.16 & 4.10 & 2.06 & 1.99 & 0.99\\
+
+ & 10 & 3.74 & 4.11 & 9.96 & 2.16 & 1.83 & 1.18 & 0.97\\
+
+ & 30 & 3.74 & 3.62 & -3.14 & 1.41 & 1.46 & 0.96 & 0.96\\
+
+\multirow{-4}{2.5cm}{\centering\arraybackslash 50} & 50 & 3.74 & 3.67 & -1.76 & 1.30 & 1.35 & 0.96 & 0.94\\
+\cmidrule{1-9}
+ & 5 & 3.74 & 4.29 & 14.75 & 2.44 & 1.87 & 1.30 & 0.97\\
+
+ & 10 & 3.73 & 3.73 & -0.09 & 1.57 & 1.57 & 1.00 & 0.96\\
+
+ & 30 & 3.73 & 3.67 & -1.64 & 1.24 & 1.30 & 0.95 & 0.91\\
+
+\multirow{-4}{2.5cm}{\centering\arraybackslash 100} & 50 & 3.74 & 3.70 & -1.03 & 1.19 & 1.24 & 0.96 & 0.91\\
+\bottomrule
+\multicolumn{9}{l}{\rule{0pt}{1em}\textit{Note: }}\\
+\multicolumn{9}{l}{\rule{0pt}{1em} }\\
+\multicolumn{9}{l}{\rule{0pt}{1em}\textsuperscript{1} It is Relative Bias = $\dfrac{\widehat{\theta} - \theta}{\theta} \times 100$}\\
+\multicolumn{9}{l}{\rule{0pt}{1em}\textsuperscript{2} Simulation Standard Error of $MOR$}\\
+\multicolumn{9}{l}{\rule{0pt}{1em}\textsuperscript{3} Ratio$\;=\;\dfrac{\widehat{SE}_{MOR}}{Simulation\;\widehat{SE}_{MOR}}$}\\
+\multicolumn{9}{l}{\rule{0pt}{1em}\textsuperscript{*} The mean prevalence for this simulation is 9\%}\\
+\multicolumn{9}{l}{\rule{0pt}{1em}\textsuperscript{\dag} True $\sigma^2_{u_1}$ = $1$, $\sigma^2_{u_2}$ = $2$, $\sigma^2_{u_{12}}$ = $0$}\\
+\multicolumn{9}{l}{\rule{0pt}{1em}\textsuperscript{\ddag} True Values of $\beta_0 = -4.1$, $\beta_1 = 1.75$, $\beta_2 = 0.67$}\\
+\end{tabular}
+
+\endgroup
 
 \newpage
 
-Here,
+\hypertarget{simulation-result-table-when-second-quartile-of-x-is-used}{%
+\section{Simulation Result Table When Second Quartile of X is
+used}\label{simulation-result-table-when-second-quartile-of-x-is-used}}
 
-\begin{itemize}
-\item
-  True \(\sigma^2_{u_1}\) = \(1\), \(\sigma^2_{u_2}\) = \(2\),
-  \(\sigma^2_{u_{12}}\) = \(0\)
-\item
-  True Values of \(\beta_0 = -2\), \(\beta_1 = 1.75\),
-  \(\beta_2 = 0.67\)
-\item
-  ``Runs used'' column represent how many simulation runs were used to
-  calculate the numbers in the corresponding row.
-\end{itemize}
+\begingroup
+
+\fontsize{10pt}{12pt}\selectfont
+\addtolength{\tabcolsep}{3pt}
+
+\begin{tabular}[t]{>{\centering\arraybackslash}m{2.5cm}>{\raggedleft\arraybackslash}m{2.2cm}>{\raggedleft\arraybackslash}m{2.2cm}>{\raggedleft\arraybackslash}m{2.2cm}>{\raggedleft\arraybackslash}m{2.2cm}>{\raggedleft\arraybackslash}m{2.2cm}>{\raggedleft\arraybackslash}m{2.2cm}>{\raggedleft\arraybackslash}m{2.2cm}>{\raggedleft\arraybackslash}m{2.2cm}}
+\toprule
+Number of Cluster & Cluster Size & $MOR$ & $\widehat{MOR}$ & $Bias\textsuperscript{1}$ & $\widehat{SE}_{MOR}$ & Sim. $\widehat{SE}_{MOR}\textsuperscript{2}$ & Ratio\textsuperscript{3} & CI Coverage (95\%)\\
+\midrule
+ & 5 & 2.64 & 2.77 & 4.68 & 4.75 & 1.89 & 2.51 & 1.00\\
+
+ & 10 & 2.62 & 2.76 & 5.34 & 3.56 & 1.78 & 2.00 & 1.00\\
+
+ & 30 & 2.60 & 2.62 & 0.82 & 2.04 & 1.67 & 1.23 & 0.98\\
+
+\multirow{-4}{2.5cm}{\centering\arraybackslash 10} & 50 & 2.60 & 2.54 & -2.37 & 1.70 & 1.58 & 1.08 & 0.95\\
+\cmidrule{1-9}
+ & 5 & 2.61 & 3.10 & 18.64 & 3.21 & 1.80 & 1.78 & 1.00\\
+
+ & 10 & 2.60 & 2.88 & 10.76 & 2.06 & 1.66 & 1.24 & 1.00\\
+
+ & 30 & 2.60 & 2.49 & -4.26 & 1.45 & 1.40 & 1.04 & 0.95\\
+
+\multirow{-4}{2.5cm}{\centering\arraybackslash 30} & 50 & 2.60 & 2.50 & -3.66 & 1.33 & 1.31 & 1.01 & 0.96\\
+\cmidrule{1-9}
+ & 5 & 2.60 & 3.03 & 16.42 & 2.49 & 1.74 & 1.43 & 1.00\\
+
+ & 10 & 2.60 & 2.69 & 3.39 & 1.72 & 1.55 & 1.11 & 0.98\\
+
+ & 30 & 2.60 & 2.53 & -2.76 & 1.33 & 1.33 & 1.00 & 0.96\\
+
+\multirow{-4}{2.5cm}{\centering\arraybackslash 50} & 50 & 2.60 & 2.56 & -1.45 & 1.24 & 1.25 & 1.00 & 0.95\\
+\cmidrule{1-9}
+ & 5 & 2.60 & 2.83 & 8.76 & 1.86 & 1.62 & 1.15 & 0.99\\
+
+ & 10 & 2.60 & 2.55 & -1.71 & 1.47 & 1.41 & 1.05 & 0.96\\
+
+ & 30 & 2.60 & 2.55 & -1.79 & 1.21 & 1.21 & 1.00 & 0.96\\
+
+\multirow{-4}{2.5cm}{\centering\arraybackslash 100} & 50 & 2.60 & 2.57 & -0.90 & 1.16 & 1.17 & 0.99 & 0.95\\
+\bottomrule
+\multicolumn{9}{l}{\rule{0pt}{1em}\textit{Note: }}\\
+\multicolumn{9}{l}{\rule{0pt}{1em} }\\
+\multicolumn{9}{l}{\rule{0pt}{1em}\textsuperscript{1} It is Relative Bias = $\dfrac{\widehat{\theta} - \theta}{\theta} \times 100$}\\
+\multicolumn{9}{l}{\rule{0pt}{1em}\textsuperscript{2} Simulation Standard Error of $MOR$}\\
+\multicolumn{9}{l}{\rule{0pt}{1em}\textsuperscript{3} Ratio$\;=\;\dfrac{\widehat{SE}_{MOR}}{Simulation\;\widehat{SE}_{MOR}}$}\\
+\multicolumn{9}{l}{\rule{0pt}{1em}\textsuperscript{*} The mean prevalence for this simulation is 9\%}\\
+\end{tabular}
+
+\endgroup
+
+\newpage
+
+\hypertarget{simulation-result-table-when-third-quartile-of-x-is-used}{%
+\section{Simulation Result Table When Third Quartile of X is
+used}\label{simulation-result-table-when-third-quartile-of-x-is-used}}
+
+\begingroup
+
+\fontsize{10pt}{12pt}\selectfont
+\addtolength{\tabcolsep}{3pt}
+
+\begin{tabular}[t]{>{\centering\arraybackslash}m{2.5cm}>{\raggedleft\arraybackslash}m{2.2cm}>{\raggedleft\arraybackslash}m{2.2cm}>{\raggedleft\arraybackslash}m{2.2cm}>{\raggedleft\arraybackslash}m{2.2cm}>{\raggedleft\arraybackslash}m{2.2cm}>{\raggedleft\arraybackslash}m{2.2cm}>{\raggedleft\arraybackslash}m{2.2cm}>{\raggedleft\arraybackslash}m{2.2cm}}
+\toprule
+Number of Cluster & Cluster Size & $MOR$ & $\widehat{MOR}$ & $Bias\textsuperscript{1}$ & $\widehat{SE}_{MOR}$ & Sim. $\widehat{SE}_{MOR}\textsuperscript{2}$ & Ratio\textsuperscript{3} & CI Coverage (95\%)\\
+\midrule
+ & 5 & 3.84 & 4.20 & 8.90 & 9.19 & 1.89 & 4.86 & 1.00\\
+
+ & 10 & 3.78 & 4.45 & 17.20 & 6.42 & 1.78 & 3.61 & 1.00\\
+
+ & 30 & 3.76 & 3.96 & 5.42 & 2.96 & 1.67 & 1.77 & 0.99\\
+
+\multirow{-4}{2.5cm}{\centering\arraybackslash 10} & 50 & 3.74 & 3.70 & -1.20 & 2.37 & 1.58 & 1.50 & 0.98\\
+\cmidrule{1-9}
+ & 5 & 3.76 & 5.02 & 33.84 & 5.24 & 1.80 & 2.90 & 1.00\\
+
+ & 10 & 3.75 & 4.55 & 21.05 & 2.69 & 1.66 & 1.62 & 0.98\\
+
+ & 30 & 3.75 & 3.74 & -0.27 & 1.51 & 1.40 & 1.08 & 0.99\\
+
+\multirow{-4}{2.5cm}{\centering\arraybackslash 30} & 50 & 3.75 & 3.72 & -0.63 & 1.38 & 1.31 & 1.05 & 0.98\\
+\cmidrule{1-9}
+ & 5 & 3.76 & 4.81 & 27.40 & 3.73 & 1.74 & 2.14 & 0.99\\
+
+ & 10 & 3.74 & 4.14 & 10.40 & 1.85 & 1.55 & 1.19 & 0.98\\
+
+ & 30 & 3.75 & 3.78 & 0.98 & 1.35 & 1.33 & 1.02 & 0.98\\
+
+\multirow{-4}{2.5cm}{\centering\arraybackslash 50} & 50 & 3.74 & 3.75 & 0.24 & 1.28 & 1.25 & 1.02 & 0.98\\
+\cmidrule{1-9}
+ & 5 & 3.74 & 4.36 & 16.60 & 2.02 & 1.62 & 1.25 & 0.98\\
+
+ & 10 & 3.75 & 3.81 & 1.64 & 1.48 & 1.41 & 1.05 & 0.98\\
+
+ & 30 & 3.74 & 3.71 & -0.77 & 1.23 & 1.21 & 1.02 & 0.99\\
+
+\multirow{-4}{2.5cm}{\centering\arraybackslash 100} & 50 & 3.74 & 3.74 & 0.06 & 1.19 & 1.17 & 1.02 & 0.98\\
+\bottomrule
+\multicolumn{9}{l}{\rule{0pt}{1em}\textit{Note: }}\\
+\multicolumn{9}{l}{\rule{0pt}{1em} }\\
+\multicolumn{9}{l}{\rule{0pt}{1em}\textsuperscript{1} It is Relative Bias = $\dfrac{\widehat{\theta} - \theta}{\theta} \times 100$}\\
+\multicolumn{9}{l}{\rule{0pt}{1em}\textsuperscript{2} Simulation Standard Error of $MOR$}\\
+\multicolumn{9}{l}{\rule{0pt}{1em}\textsuperscript{3} Ratio$\;=\;\dfrac{\widehat{SE}_{MOR}}{Simulation\;\widehat{SE}_{MOR}}$}\\
+\multicolumn{9}{l}{\rule{0pt}{1em}\textsuperscript{*} The mean prevalence for this simulation is 9\%}\\
+\end{tabular}
+
+\endgroup
+
+\newpage
+
+\hypertarget{simulation-result-table-all-together}{%
+\section{Simulation Result Table (All
+Together)}\label{simulation-result-table-all-together}}
+
+\begingroup
+
+\fontsize{7pt}{11pt}\selectfont
+\addtolength{\tabcolsep}{-0.2pt}
+
+\begin{tabular}[t]{>{\raggedright\arraybackslash}m{0.9cm}>{\raggedleft\arraybackslash}m{0.8cm}>{\raggedleft\arraybackslash}m{0.8cm}>{\raggedleft\arraybackslash}m{0.8cm}>{\raggedleft\arraybackslash}m{0.8cm}>{\raggedleft\arraybackslash}m{0.8cm}>{\raggedleft\arraybackslash}m{0.8cm}>{\raggedleft\arraybackslash}m{0.8cm}>{\raggedleft\arraybackslash}m{0.8cm}>{\raggedleft\arraybackslash}m{0.8cm}>{\raggedleft\arraybackslash}m{0.8cm}>{\raggedleft\arraybackslash}m{0.8cm}>{\raggedleft\arraybackslash}m{0.8cm}>{\raggedleft\arraybackslash}m{0.8cm}>{\raggedleft\arraybackslash}m{0.8cm}>{\raggedleft\arraybackslash}m{0.8cm}>{\raggedleft\arraybackslash}m{0.8cm}>{\raggedleft\arraybackslash}m{0.8cm}>{\raggedleft\arraybackslash}m{0.8cm}>{\raggedleft\arraybackslash}m{0.8cm}>{\raggedleft\arraybackslash}m{0.8cm}>{\raggedleft\arraybackslash}m{0.8cm}}
+\toprule
+\multicolumn{1}{c}{ } & \multicolumn{7}{c}{$Q_{1X}$} & \multicolumn{7}{c}{$Q_{2X}$} & \multicolumn{7}{c}{$Q_{3X}$} \\
+\cmidrule(l{3pt}r{3pt}){2-8} \cmidrule(l{3pt}r{3pt}){9-15} \cmidrule(l{3pt}r{3pt}){16-22}
+M, N\textsuperscript{1} & $MOR$ & $\widehat{MOR}$ & $Bias\textsuperscript{2}$ & $\widehat{SE}_{MOR}$ & Sim. $\widehat{SE}_{MOR}\textsuperscript{3}$ & Ratio\textsuperscript{3} & Coverage (95\%) & $MOR$ & $\widehat{MOR}$ & $Bias\textsuperscript{2}$ & $\widehat{SE}_{MOR}$ & Sim. $\widehat{SE}_{MOR}\textsuperscript{3}$ & Ratio\textsuperscript{3} & Coverage (95\%) & $MOR$ & $\widehat{MOR}$ & $Bias\textsuperscript{2}$ & $\widehat{SE}_{MOR}$ & Sim. $\widehat{SE}_{MOR}\textsuperscript{3}$ & Ratio\textsuperscript{3} & Coverage (95\%)\\
+\midrule
+10, 5 & 3.69 & 3.32 & -9.23 & 10.44 & 1.95 & 5.34 & 1.00 & 2.64 & 2.77 & 4.68 & 4.75 & 1.89 & 2.51 & 1.00 & 3.84 & 4.20 & 8.90 & 9.19 & 1.89 & 4.86 & 1.00\\
+10, 10 & 3.76 & 3.88 & 2.75 & 7.40 & 1.98 & 3.73 & 1.00 & 2.62 & 2.76 & 5.34 & 3.56 & 1.78 & 2.00 & 1.00 & 3.78 & 4.45 & 17.20 & 6.42 & 1.78 & 3.61 & 1.00\\
+10, 30 & 3.73 & 3.88 & 4.29 & 3.52 & 1.90 & 1.86 & 0.99 & 2.60 & 2.62 & 0.82 & 2.04 & 1.67 & 1.23 & 0.98 & 3.76 & 3.96 & 5.42 & 2.96 & 1.67 & 1.77 & 0.99\\
+10, 50 & 3.74 & 3.79 & 1.22 & 2.57 & 1.86 & 1.38 & 0.99 & 2.60 & 2.54 & -2.37 & 1.70 & 1.58 & 1.08 & 0.95 & 3.74 & 3.70 & -1.20 & 2.37 & 1.58 & 1.50 & 0.98\\
+\midrule
+30, 5 & 3.74 & 4.41 & 18.55 & 6.85 & 2.07 & 3.31 & 1.00 & 2.61 & 3.10 & 18.64 & 3.21 & 1.80 & 1.78 & 1.00 & 3.76 & 5.02 & 33.84 & 5.24 & 1.80 & 2.90 & 1.00\\
+30, 10 & 3.73 & 4.29 & 15.39 & 3.32 & 1.95 & 1.70 & 0.98 & 2.60 & 2.88 & 10.76 & 2.06 & 1.66 & 1.24 & 1.00 & 3.75 & 4.55 & 21.05 & 2.69 & 1.66 & 1.62 & 0.98\\
+30, 30 & 3.73 & 3.62 & -3.15 & 1.65 & 1.58 & 1.04 & 0.98 & 2.60 & 2.49 & -4.26 & 1.45 & 1.40 & 1.04 & 0.95 & 3.75 & 3.74 & -0.27 & 1.51 & 1.40 & 1.08 & 0.99\\
+30, 50 & 3.74 & 3.55 & -4.96 & 1.45 & 1.46 & 1.00 & 0.97 & 2.60 & 2.50 & -3.66 & 1.33 & 1.31 & 1.01 & 0.96 & 3.75 & 3.72 & -0.63 & 1.38 & 1.31 & 1.05 & 0.98\\
+\midrule
+50, 5 & 3.72 & 4.69 & 26.16 & 4.10 & 2.06 & 1.99 & 0.99 & 2.60 & 3.03 & 16.42 & 2.49 & 1.74 & 1.43 & 1.00 & 3.76 & 4.81 & 27.40 & 3.73 & 1.74 & 2.14 & 0.99\\
+50, 10 & 3.74 & 4.11 & 9.96 & 2.16 & 1.83 & 1.18 & 0.97 & 2.60 & 2.69 & 3.39 & 1.72 & 1.55 & 1.11 & 0.98 & 3.74 & 4.14 & 10.40 & 1.85 & 1.55 & 1.19 & 0.98\\
+50, 30 & 3.74 & 3.62 & -3.14 & 1.41 & 1.46 & 0.96 & 0.96 & 2.60 & 2.53 & -2.76 & 1.33 & 1.33 & 1.00 & 0.96 & 3.75 & 3.78 & 0.98 & 1.35 & 1.33 & 1.02 & 0.98\\
+50, 50 & 3.74 & 3.67 & -1.76 & 1.30 & 1.35 & 0.96 & 0.94 & 2.60 & 2.56 & -1.45 & 1.24 & 1.25 & 1.00 & 0.95 & 3.74 & 3.75 & 0.24 & 1.28 & 1.25 & 1.02 & 0.98\\
+\midrule
+100, 5 & 3.74 & 4.29 & 14.75 & 2.44 & 1.87 & 1.30 & 0.97 & 2.60 & 2.83 & 8.76 & 1.86 & 1.62 & 1.15 & 0.99 & 3.74 & 4.36 & 16.60 & 2.02 & 1.62 & 1.25 & 0.98\\
+100, 10 & 3.73 & 3.73 & -0.09 & 1.57 & 1.57 & 1.00 & 0.96 & 2.60 & 2.55 & -1.71 & 1.47 & 1.41 & 1.05 & 0.96 & 3.75 & 3.81 & 1.64 & 1.48 & 1.41 & 1.05 & 0.98\\
+100, 30 & 3.73 & 3.67 & -1.64 & 1.24 & 1.30 & 0.95 & 0.91 & 2.60 & 2.55 & -1.79 & 1.21 & 1.21 & 1.00 & 0.96 & 3.74 & 3.71 & -0.77 & 1.23 & 1.21 & 1.02 & 0.99\\
+100, 50 & 3.74 & 3.70 & -1.03 & 1.19 & 1.24 & 0.96 & 0.91 & 2.60 & 2.57 & -0.90 & 1.16 & 1.17 & 0.99 & 0.95 & 3.74 & 3.74 & 0.06 & 1.19 & 1.17 & 1.02 & 0.98\\
+\bottomrule
+\multicolumn{22}{l}{\rule{0pt}{1em}\textit{Note: }}\\
+\multicolumn{22}{l}{\rule{0pt}{1em} }\\
+\multicolumn{22}{l}{\rule{0pt}{1em}\textsuperscript{1} M is Number of Cluster and N is Cluster size}\\
+\multicolumn{22}{l}{\rule{0pt}{1em}\textsuperscript{2} It is Relative Bias = $\dfrac{\widehat{\theta} - \theta}{\theta} \times 100$}\\
+\multicolumn{22}{l}{\rule{0pt}{1em}\textsuperscript{3} Simulation Standard Error of $MOR$}\\
+\multicolumn{22}{l}{\rule{0pt}{1em}\textsuperscript{4} Ratio$\;=\;\dfrac{\widehat{SE}_{MOR}}{Simulation\;\widehat{SE}_{MOR}}$}\\
+\multicolumn{22}{l}{\rule{0pt}{1em}\textsuperscript{*} The mean prevalence for this simulation is 9\%}\\
+\end{tabular}
+
+\endgroup
 
 
 

@@ -95,6 +95,8 @@
 \usepackage{makecell}
 \usepackage{xcolor}
 \usepackage{typearea}
+\usepackage{caption}
+\captionsetup{font=tiny}
 \KOMAoption{captions}{tableheading}
 \makeatletter
 \makeatother
@@ -175,24 +177,33 @@ Prevalence}
 \makeatother
 \subtitle{The mean prevalence for this simulation is 10 \%}
 \author{Shafayet Khan Shafee}
-\date{29 August 2023}
+\date{03 September 2023}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, sharp corners, boxrule=0pt, frame hidden, enhanced, borderline west={3pt}{0pt}{shadecolor}, interior hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, frame hidden, breakable, sharp corners, boxrule=0pt, enhanced, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
 
 \newpage
 
-\hypertarget{histograms-for-logwidehatmor-when-number-of-cluster-is-10}{%
-\section{\texorpdfstring{Histograms for \(log(\widehat{MOR})\) When
-Number of Cluster is
-10}{Histograms for log(\textbackslash widehat\{MOR\}) When Number of Cluster is 10}}\label{histograms-for-logwidehatmor-when-number-of-cluster-is-10}}
+\hypertarget{histograms-for-logwidehatmor}{%
+\section{\texorpdfstring{Histograms for
+\(log(\widehat{MOR})\)}{Histograms for log(\textbackslash widehat\{MOR\})}}\label{histograms-for-logwidehatmor}}
 
-\vspace{5mm}
+\vspace{10mm}
 
 \begin{figure}
 
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+\rotatebox[origin=br]{90}{\tiny Cluster Number 10}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
 
 {\centering 
 
@@ -202,13 +213,13 @@ Number of Cluster is
 
 }
 
-\caption{For cluster size 5}
+\caption{Cluster size 5}
 
 }
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.24\linewidth}
 
 {\centering 
 
@@ -218,23 +229,13 @@ Number of Cluster is
 
 }
 
-\caption{For cluster size 10}
+\caption{Cluster size 10}
 
 }
 
 \end{minipage}%
-\newline
-\begin{minipage}[t]{\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-\newline
-\begin{minipage}[t]{0.50\linewidth}
+%
+\begin{minipage}[t]{0.24\linewidth}
 
 {\centering 
 
@@ -244,13 +245,13 @@ Number of Cluster is
 
 }
 
-\caption{For cluster size 30}
+\caption{Cluster size 30}
 
 }
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.24\linewidth}
 
 {\centering 
 
@@ -260,26 +261,33 @@ Number of Cluster is
 
 }
 
-\caption{For cluster size 50}
+\caption{Cluster size 50}
 
 }
 
 \end{minipage}%
+\newline
+\begin{minipage}[t]{\linewidth}
 
-\end{figure}
+{\centering 
 
-\newpage
+~
 
-\hypertarget{histograms-for-logwidehatmor-when-number-of-cluster-is-30}{%
-\section{\texorpdfstring{Histograms for \(log(\widehat{MOR})\) When
-Number of Cluster is
-30}{Histograms for log(\textbackslash widehat\{MOR\}) When Number of Cluster is 30}}\label{histograms-for-logwidehatmor-when-number-of-cluster-is-30}}
+}
 
-\vspace{5mm}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.05\linewidth}
 
-\begin{figure}
+{\centering 
 
-\begin{minipage}[t]{0.50\linewidth}
+\rotatebox[origin=br]{90}{\tiny Cluster Number 30}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
 
 {\centering 
 
@@ -289,13 +297,13 @@ Number of Cluster is
 
 }
 
-\caption{For cluster size 5}
+\caption{Cluster size 5}
 
 }
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.24\linewidth}
 
 {\centering 
 
@@ -305,23 +313,13 @@ Number of Cluster is
 
 }
 
-\caption{For cluster size 10}
+\caption{Cluster size 10}
 
 }
 
 \end{minipage}%
-\newline
-\begin{minipage}[t]{\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-\newline
-\begin{minipage}[t]{0.50\linewidth}
+%
+\begin{minipage}[t]{0.24\linewidth}
 
 {\centering 
 
@@ -331,13 +329,13 @@ Number of Cluster is
 
 }
 
-\caption{For cluster size 30}
+\caption{Cluster size 30}
 
 }
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.24\linewidth}
 
 {\centering 
 
@@ -347,26 +345,33 @@ Number of Cluster is
 
 }
 
-\caption{For cluster size 50}
+\caption{Cluster size 50}
 
 }
 
 \end{minipage}%
+\newline
+\begin{minipage}[t]{\linewidth}
 
-\end{figure}
+{\centering 
 
-\newpage
+~
 
-\hypertarget{histograms-for-logwidehatmor-when-number-of-cluster-is-50}{%
-\section{\texorpdfstring{Histograms for \(log(\widehat{MOR})\) When
-Number of Cluster is
-50}{Histograms for log(\textbackslash widehat\{MOR\}) When Number of Cluster is 50}}\label{histograms-for-logwidehatmor-when-number-of-cluster-is-50}}
+}
 
-\vspace{5mm}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.05\linewidth}
 
-\begin{figure}
+{\centering 
 
-\begin{minipage}[t]{0.50\linewidth}
+\rotatebox[origin=br]{90}{\tiny Cluster Number 50}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
 
 {\centering 
 
@@ -376,13 +381,13 @@ Number of Cluster is
 
 }
 
-\caption{For cluster size 5}
+\caption{Cluster size 5}
 
 }
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.24\linewidth}
 
 {\centering 
 
@@ -392,23 +397,13 @@ Number of Cluster is
 
 }
 
-\caption{For cluster size 10}
+\caption{Cluster size 10}
 
 }
 
 \end{minipage}%
-\newline
-\begin{minipage}[t]{\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-\newline
-\begin{minipage}[t]{0.50\linewidth}
+%
+\begin{minipage}[t]{0.24\linewidth}
 
 {\centering 
 
@@ -418,13 +413,13 @@ Number of Cluster is
 
 }
 
-\caption{For cluster size 30}
+\caption{Cluster size 30}
 
 }
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.24\linewidth}
 
 {\centering 
 
@@ -434,52 +429,7 @@ Number of Cluster is
 
 }
 
-\caption{For cluster size 50}
-
-}
-
-\end{minipage}%
-
-\end{figure}
-
-\newpage
-
-\hypertarget{histograms-for-logwidehatmor-when-number-of-cluster-is-100}{%
-\section{\texorpdfstring{Histograms for \(log(\widehat{MOR})\) When
-Number of Cluster is
-100}{Histograms for log(\textbackslash widehat\{MOR\}) When Number of Cluster is 100}}\label{histograms-for-logwidehatmor-when-number-of-cluster-is-100}}
-
-\vspace{5mm}
-
-\begin{figure}
-
-\begin{minipage}[t]{0.50\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{../../plots/two-lvl-ran-int/low-prev/hist_100_5_two_lvl_low_prev.png}
-
-}
-
-\caption{For cluster size 5}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.50\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{../../plots/two-lvl-ran-int/low-prev/hist_100_10_two_lvl_low_prev.png}
-
-}
-
-\caption{For cluster size 10}
+\caption{Cluster size 50}
 
 }
 
@@ -495,7 +445,49 @@ Number of Cluster is
 
 \end{minipage}%
 \newline
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+\rotatebox[origin=br]{90}{\tiny Cluster Number 100}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-int/low-prev/hist_100_5_two_lvl_low_prev.png}
+
+}
+
+\caption{Cluster size 5}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{../../plots/two-lvl-ran-int/low-prev/hist_100_10_two_lvl_low_prev.png}
+
+}
+
+\caption{Cluster size 10}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.24\linewidth}
 
 {\centering 
 
@@ -505,13 +497,13 @@ Number of Cluster is
 
 }
 
-\caption{For cluster size 30}
+\caption{Cluster size 30}
 
 }
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.24\linewidth}
 
 {\centering 
 
@@ -521,7 +513,7 @@ Number of Cluster is
 
 }
 
-\caption{For cluster size 50}
+\caption{Cluster size 50}
 
 }
 
@@ -543,7 +535,6 @@ Number of Cluster is
 \fontsize{10pt}{14pt}\selectfont
 \addtolength{\tabcolsep}{0.1pt}
 
-\begin{threeparttable}
 \begin{tabular}[t]{>{\centering\arraybackslash}m{1.55cm}>{\centering\arraybackslash}m{1.55cm}>{\centering\arraybackslash}m{1.55cm}>{\centering\arraybackslash}m{1.55cm}>{\centering\arraybackslash}m{1.55cm}>{\centering\arraybackslash}m{1.55cm}>{\centering\arraybackslash}m{1.55cm}>{\centering\arraybackslash}m{1.55cm}>{\centering\arraybackslash}m{1.55cm}>{\centering\arraybackslash}m{1.55cm}>{\centering\arraybackslash}m{1.55cm}>{\centering\arraybackslash}m{1.55cm}>{\centering\arraybackslash}m{1.55cm}}
 \toprule
 Number of Cluster & Cluster Size & $\widehat{\beta_0}$ & $\widehat{\beta_1}$ & $\widehat{\beta_2}$ & $\widehat{\sigma_u^2}$ & $\widehat{MOR}$ & Relative Bias (\%) & $\widehat{SE}_{MOR}$ & Simulation $\widehat{SE}_{MOR}$ & Ratio\textsuperscript{1} & CI coverage (95\%) & Model Convergence\\
@@ -568,35 +559,16 @@ Number of Cluster & Cluster Size & $\widehat{\beta_0}$ & $\widehat{\beta_1}$ & $
 100 & 30 & -4.11 & 1.76 & 0.67 & 2.47 & 4.49 & -0.58 & 1.19 & 1.18 & 1.00 & 0.94 & 1.00\\
 100 & 50 & -4.12 & 1.75 & 0.67 & 2.47 & 4.49 & -0.60 & 1.16 & 1.16 & 1.00 & 0.93 & 1.00\\
 \bottomrule
+\multicolumn{13}{l}{\rule{0pt}{1em}\textit{Note: }}\\
+\multicolumn{13}{l}{\rule{0pt}{1em} }\\
+\multicolumn{13}{l}{\rule{0pt}{1em}\textsuperscript{1} Ratio$\;=\;\dfrac{\widehat{SE}_{MOR}}{Simulation\;\widehat{SE}_{MOR}}$}\\
+\multicolumn{13}{l}{\rule{0pt}{1em}\textsuperscript{*} The mean prevalence for this simulation is 10\%}\\
+\multicolumn{13}{l}{\rule{0pt}{1em}\textsuperscript{\dag} True $MOR$ is 4.52}\\
+\multicolumn{13}{l}{\rule{0pt}{1em}\textsuperscript{\ddag} True $\sigma^2_u$ is 2.5}\\
+\multicolumn{13}{l}{\rule{0pt}{1em}\textsuperscript{\S} True Values of $\beta_0 = -4.1$, $\beta_1 = 1.75$, $\beta_2 = 0.67$}\\
 \end{tabular}
-\begin{tablenotes}
-\item \textit{Note: } 
-\item The mean prevalence for this simulation is 10\%
-\item[1] Ratio$\;=\;\dfrac{\widehat{SE}_{MOR}}{Simulation\;\widehat{SE}_{MOR}}$
-\end{tablenotes}
-\end{threeparttable}
 
 \endgroup
-
-\vspace{10mm}
-
-\newpage
-
-Here,
-
-\begin{itemize}
-\tightlist
-\item
-  True \(MOR\) is 4.52
-\item
-  True \(\sigma^2_u\) is 2.5
-\item
-  True Values of \(\beta_0 = -4.1\), \(\beta_1 = 1.75\),
-  \(\beta_2 = 0.67\)
-\item
-  ``Runs used'' column represent how many simulation runs were used to
-  calculate the numbers in the corresponding row.
-\end{itemize}
 
 
 

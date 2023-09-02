@@ -1,0 +1,62 @@
+\newpage
+
+\KOMAoptions{usegeometry,paper=landscape,pagesize}
+\recalctypearea
+\newgeometry{right=10mm,left=10mm}
+
+# Simulation Result Table
+
+
+```{r}
+#| echo: false
+sim_output_table <- final_res_slp_low_prev %>%
+  arrange(cluster_number) %>%
+  mutate(ratio = se_mor_hat / sim_se_mor_hat) %>%
+  select(cluster_number, cluster_size, beta0_hat, beta1_hat, beta2_hat,
+         sigma_u1_sq_hat, sigma_u2_sq_hat, sigma_u12_sq_hat,
+         true_mor, mor_hat, relative_bias, se_mor_hat, sim_se_mor_hat,
+         ratio, coverage, runs_used, runs_required)
+```
+
+
+\begingroup
+<!-- \setlength{\LTleft}{0pt minus 5000pt} -->
+<!-- \setlength{\LTright}{0pt minus 5000pt} -->
+\fontsize{8pt}{12pt}\selectfont
+\addtolength{\tabcolsep}{0.05pt}
+
+
+```{r}
+#| echo: false
+kableExtra::kbl(sim_output_table, booktabs = TRUE, digits = 2, linesep = "",
+                align = paste0(rep('c', ncol(sim_output_table)),collapse = ""),
+                col.names = c("Number of Cluster", "Cluster Size",
+                            "$\\widehat{\\beta_0}$", "$\\widehat{\\beta_1}$",
+                            "$\\widehat{\\beta_2}$",
+                            "$\\widehat{\\sigma_{u_1}^2}$", "$\\widehat{\\sigma_{u_2}^2}$",
+                            "$\\widehat{\\sigma_{u_{12}}^2}$",
+                            "$MOR$", "$\\widehat{MOR}$", "Relative Bias (\\%)",
+                            "$\\widehat{SE}_{MOR}$",
+                            "Simulation $\\widehat{SE}_{MOR}$",
+                            "Ratio\\textsuperscript{1}",
+                            "CI coverage (95\\%)", "Runs used",
+                            "Runs Required"), escape = FALSE) %>%
+  column_spec(1:ncol(sim_output_table), width = "1.1cm", latex_valign = "m") %>%
+  row_spec(
+    seq(
+      n_distinct(sim_output_table$cluster_number),
+      nrow(sim_output_table) - 1,
+      n_distinct(sim_output_table$cluster_size)), hline_after = TRUE
+  ) %>%
+  footnote(
+    general = paste0("The mean prevalence for this simulation is ", mean_prevalence, "\\\\%"),
+    threeparttable = TRUE,
+    # footnote_as_chunk = TRUE,
+    number = c("Ratio$\\\\;=\\\\;\\\\dfrac{\\\\widehat{SE}_{MOR}}{Simulation\\\\;\\\\widehat{SE}_{MOR}}$"),
+    escape = FALSE
+  )
+
+```
+
+
+\endgroup

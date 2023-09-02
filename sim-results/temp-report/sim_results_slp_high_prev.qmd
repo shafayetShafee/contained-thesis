@@ -14,6 +14,8 @@ format:
     include-in-header:
       text: |
         \usepackage{typearea}
+        \usepackage{caption}
+        \captionsetup{font=tiny}
 ---
 
 \newpage
@@ -25,6 +27,7 @@ format:
 #| warning: false
 
 library(dplyr)
+library(tidyr)
 library(kableExtra)
 
 final_res_slp_high_prev <- readRDS(
@@ -39,69 +42,52 @@ mean_prevalence <- round(mean(final_res_slp_high_prev$prevalence), 2)*100
 subtitle: "The mean prevalence for this simulation is `r mean_prevalence` %"
 ---
 
-# Histograms for $log(\widehat{MOR})$ When Number of Cluster is 10
+# Histograms for $log(\widehat{MOR})$ when First Quartile of $X$ is used
 
-\vspace{5mm}
+\vspace{10mm}
 
-::: {layout="[[50, 50], [-20], [50,50]]"}
+::: {layout="[[0.2,1,1,1,1], [-3], [0.2,1,1,1,1], [-3], [0.2,1,1,1,1], [-3], [0.2,1,1,1,1]]"}
 
-![For cluster size 5](../../plots/two-lvl-ran-slope/high-prev/hist_10_5_two_lvl_slp_high_prev.png){#m10n5}
+\rotatebox[origin=br]{90}{\tiny Cluster Number 10}
 
-![For cluster size 10](../../plots/two-lvl-ran-slope/high-prev/hist_10_10_two_lvl_slp_high_prev.png){#m10n10}
+![Cluster size 5](../../plots/two-lvl-ran-slope/high-prev/hist_10_5_two_lvl_slp_high_prev_q1.png){#m10n5}
 
-![For cluster size 30](../../plots/two-lvl-ran-slope/high-prev/hist_10_30_two_lvl_slp_high_prev.png){#m10n30}
+![Cluster size 10](../../plots/two-lvl-ran-slope/high-prev/hist_10_10_two_lvl_slp_high_prev_q1.png){#m10n10}
 
+![Cluster size 30](../../plots/two-lvl-ran-slope/high-prev/hist_10_30_two_lvl_slp_high_prev_q1.png){#m10n30}
 
-![For cluster size 50](../../plots/two-lvl-ran-slope/high-prev/hist_10_50_two_lvl_slp_high_prev.png){#m10n50}
+![Cluster size 50](../../plots/two-lvl-ran-slope/high-prev/hist_10_50_two_lvl_slp_high_prev_q1.png){#m10n50}
 
-:::
+\rotatebox[origin=br]{90}{\tiny Cluster Number 30}
 
-\newpage
+![Cluster size 5](../../plots/two-lvl-ran-slope/high-prev/hist_30_5_two_lvl_slp_high_prev_q1.png){#m30n5}
 
-<!-- --------------------------------------------------------------------------- -->
-<!-- --------------------------------------------------------------------------- -->
-<!-- --------------------------------------------------------------------------- -->
+![Cluster size 10](../../plots/two-lvl-ran-slope/high-prev/hist_30_10_two_lvl_slp_high_prev_q1.png){#m30n10}
 
-
-# Histograms for $log(\widehat{MOR})$ When Number of Cluster is 30
-
-\vspace{5mm}
-
-::: {layout="[[50, 50], [-20], [50,50]]"}
-
-![For cluster size 5](../../plots/two-lvl-ran-slope/high-prev/hist_30_5_two_lvl_slp_high_prev.png){#m30n5}
-
-![For cluster size 10](../../plots/two-lvl-ran-slope/high-prev/hist_30_10_two_lvl_slp_high_prev.png){#m30n10}
-
-![For cluster size 30](../../plots/two-lvl-ran-slope/high-prev/hist_30_30_two_lvl_slp_high_prev.png){#m30n30}
+![Cluster size 30](../../plots/two-lvl-ran-slope/high-prev/hist_30_30_two_lvl_slp_high_prev_q1.png){#m30n30}
 
 
-![For cluster size 50](../../plots/two-lvl-ran-slope/high-prev/hist_30_50_two_lvl_slp_high_prev.png){#m30n50}
+![Cluster size 50](../../plots/two-lvl-ran-slope/high-prev/hist_30_50_two_lvl_slp_high_prev_q1.png){#m30n50}
 
-:::
+\rotatebox[origin=br]{90}{\tiny Cluster Number 50}
 
-\newpage
+![Cluster size 5](../../plots/two-lvl-ran-slope/high-prev/hist_50_5_two_lvl_slp_high_prev_q1.png){#m50n5}
 
-<!-- --------------------------------------------------------------------------- -->
-<!-- --------------------------------------------------------------------------- -->
-<!-- --------------------------------------------------------------------------- -->
+![Cluster size 10](../../plots/two-lvl-ran-slope/high-prev/hist_50_10_two_lvl_slp_high_prev_q1.png){#m50n10}
 
+![Cluster size 30](../../plots/two-lvl-ran-slope/high-prev/hist_50_30_two_lvl_slp_high_prev_q1.png){#m50n30}
 
-# Histograms for $log(\widehat{MOR})$ When Number of Cluster is 50
+![Cluster size 50](../../plots/two-lvl-ran-slope/high-prev/hist_50_50_two_lvl_slp_high_prev_q1.png){#m50n50}
 
-\vspace{5mm}
+\rotatebox[origin=br]{90}{\tiny Cluster Number 100}
 
-::: {layout="[[50, 50], [-20], [50,50]]"}
+![Cluster size 5](../../plots/two-lvl-ran-slope/high-prev/hist_100_5_two_lvl_slp_high_prev_q1.png){#m100n5}
 
-![For cluster size 5](../../plots/two-lvl-ran-slope/high-prev/hist_50_5_two_lvl_slp_high_prev.png){#m50n5}
+![Cluster size 10](../../plots/two-lvl-ran-slope/high-prev/hist_100_10_two_lvl_slp_high_prev_q1.png){#m100n10}
 
-![For cluster size 10](../../plots/two-lvl-ran-slope/high-prev/hist_50_10_two_lvl_slp_high_prev.png){#m50n10}
+![Cluster size 30](../../plots/two-lvl-ran-slope/high-prev/hist_100_30_two_lvl_slp_high_prev_q1.png){#m100n30}
 
-![For cluster size 30](../../plots/two-lvl-ran-slope/high-prev/hist_50_30_two_lvl_slp_high_prev.png){#m50n30}
-
-
-
-![For cluster size 50](../../plots/two-lvl-ran-slope/high-prev/hist_50_50_two_lvl_slp_high_prev.png){#m50n50}
+![Cluster size 50](../../plots/two-lvl-ran-slope/high-prev/hist_100_50_two_lvl_slp_high_prev_q1.png){#m100n50}
 
 :::
 
@@ -112,27 +98,110 @@ subtitle: "The mean prevalence for this simulation is `r mean_prevalence` %"
 <!-- --------------------------------------------------------------------------- -->
 
 
-# Histograms for $log(\widehat{MOR})$ When Number of Cluster is 100
+# Histograms for $log(\widehat{MOR})$ when Mean of $X$ is used
 
-\vspace{5mm}
+\vspace{10mm}
 
-::: {layout="[[50, 50], [-20], [50,50]]"}
+::: {layout="[[0.2,1,1,1,1], [-3], [0.2,1,1,1,1], [-3], [0.2,1,1,1,1], [-3], [0.2,1,1,1,1]]"}
 
-![For cluster size 5](../../plots/two-lvl-ran-slope/high-prev/hist_100_5_two_lvl_slp_high_prev.png){#m100n5}
+\rotatebox[origin=br]{90}{\tiny Cluster Number 10}
 
-![For cluster size 10](../../plots/two-lvl-ran-slope/high-prev/hist_100_10_two_lvl_slp_high_prev.png){#m100n10}
+![Cluster size 5](../../plots/two-lvl-ran-slope/high-prev/hist_10_5_two_lvl_slp_high_prev_q2.png){#m10n5}
 
-![For cluster size 30](../../plots/two-lvl-ran-slope/high-prev/hist_100_30_two_lvl_slp_high_prev.png){#m100n30}
+![Cluster size 10](../../plots/two-lvl-ran-slope/high-prev/hist_10_10_two_lvl_slp_high_prev_q2.png){#m10n10}
+
+![Cluster size 30](../../plots/two-lvl-ran-slope/high-prev/hist_10_30_two_lvl_slp_high_prev_q2.png){#m10n30}
+
+![Cluster size 50](../../plots/two-lvl-ran-slope/high-prev/hist_10_50_two_lvl_slp_high_prev_q2.png){#m10n50}
+
+\rotatebox[origin=br]{90}{\tiny Cluster Number 30}
+
+![Cluster size 5](../../plots/two-lvl-ran-slope/high-prev/hist_30_5_two_lvl_slp_high_prev_q2.png){#m30n5}
+
+![Cluster size 10](../../plots/two-lvl-ran-slope/high-prev/hist_30_10_two_lvl_slp_high_prev_q2.png){#m30n10}
+
+![Cluster size 30](../../plots/two-lvl-ran-slope/high-prev/hist_30_30_two_lvl_slp_high_prev_q2.png){#m30n30}
 
 
-![For cluster size 50](../../plots/two-lvl-ran-slope/high-prev/hist_100_50_two_lvl_slp_high_prev.png){#m100n50}
+![Cluster size 50](../../plots/two-lvl-ran-slope/high-prev/hist_30_50_two_lvl_slp_high_prev_q2.png){#m30n50}
+
+\rotatebox[origin=br]{90}{\tiny Cluster Number 50}
+
+![Cluster size 5](../../plots/two-lvl-ran-slope/high-prev/hist_50_5_two_lvl_slp_high_prev_q2.png){#m50n5}
+
+![Cluster size 10](../../plots/two-lvl-ran-slope/high-prev/hist_50_10_two_lvl_slp_high_prev_q2.png){#m50n10}
+
+![Cluster size 30](../../plots/two-lvl-ran-slope/high-prev/hist_50_30_two_lvl_slp_high_prev_q2.png){#m50n30}
+
+![Cluster size 50](../../plots/two-lvl-ran-slope/high-prev/hist_50_50_two_lvl_slp_high_prev_q2.png){#m50n50}
+
+\rotatebox[origin=br]{90}{\tiny Cluster Number 100}
+
+![Cluster size 5](../../plots/two-lvl-ran-slope/high-prev/hist_100_5_two_lvl_slp_high_prev_q2.png){#m100n5}
+
+![Cluster size 10](../../plots/two-lvl-ran-slope/high-prev/hist_100_10_two_lvl_slp_high_prev_q2.png){#m100n10}
+
+![Cluster size 30](../../plots/two-lvl-ran-slope/high-prev/hist_100_30_two_lvl_slp_high_prev_q2.png){#m100n30}
+
+![Cluster size 50](../../plots/two-lvl-ran-slope/high-prev/hist_100_50_two_lvl_slp_high_prev_q2.png){#m100n50}
 
 :::
 
+\newpage
 
 <!-- --------------------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------------------- -->
+
+
+# Histograms for $log(\widehat{MOR})$ when Third Quartile of $X$ is used
+
+\vspace{10mm}
+
+::: {layout="[[0.2,1,1,1,1], [-3], [0.2,1,1,1,1], [-3], [0.2,1,1,1,1], [-3], [0.2,1,1,1,1]]"}
+
+\rotatebox[origin=br]{90}{\tiny Cluster Number 10}
+
+![Cluster size 5](../../plots/two-lvl-ran-slope/high-prev/hist_10_5_two_lvl_slp_high_prev_q3.png){#m10n5}
+
+![Cluster size 10](../../plots/two-lvl-ran-slope/high-prev/hist_10_10_two_lvl_slp_high_prev_q3.png){#m10n10}
+
+![Cluster size 30](../../plots/two-lvl-ran-slope/high-prev/hist_10_30_two_lvl_slp_high_prev_q3.png){#m10n30}
+
+![Cluster size 50](../../plots/two-lvl-ran-slope/high-prev/hist_10_50_two_lvl_slp_high_prev_q3.png){#m10n50}
+
+\rotatebox[origin=br]{90}{\tiny Cluster Number 30}
+
+![Cluster size 5](../../plots/two-lvl-ran-slope/high-prev/hist_30_5_two_lvl_slp_high_prev_q3.png){#m30n5}
+
+![Cluster size 10](../../plots/two-lvl-ran-slope/high-prev/hist_30_10_two_lvl_slp_high_prev_q3.png){#m30n10}
+
+![Cluster size 30](../../plots/two-lvl-ran-slope/high-prev/hist_30_30_two_lvl_slp_high_prev_q3.png){#m30n30}
+
+
+![Cluster size 50](../../plots/two-lvl-ran-slope/high-prev/hist_30_50_two_lvl_slp_high_prev_q3.png){#m30n50}
+
+\rotatebox[origin=br]{90}{\tiny Cluster Number 50}
+
+![Cluster size 5](../../plots/two-lvl-ran-slope/high-prev/hist_50_5_two_lvl_slp_high_prev_q3.png){#m50n5}
+
+![Cluster size 10](../../plots/two-lvl-ran-slope/high-prev/hist_50_10_two_lvl_slp_high_prev_q3.png){#m50n10}
+
+![Cluster size 30](../../plots/two-lvl-ran-slope/high-prev/hist_50_30_two_lvl_slp_high_prev_q3.png){#m50n30}
+
+![Cluster size 50](../../plots/two-lvl-ran-slope/high-prev/hist_50_50_two_lvl_slp_high_prev_q3.png){#m50n50}
+
+\rotatebox[origin=br]{90}{\tiny Cluster Number 100}
+
+![Cluster size 5](../../plots/two-lvl-ran-slope/high-prev/hist_100_5_two_lvl_slp_high_prev_q3.png){#m100n5}
+
+![Cluster size 10](../../plots/two-lvl-ran-slope/high-prev/hist_100_10_two_lvl_slp_high_prev_q3.png){#m100n10}
+
+![Cluster size 30](../../plots/two-lvl-ran-slope/high-prev/hist_100_30_two_lvl_slp_high_prev_q3.png){#m100n30}
+
+![Cluster size 50](../../plots/two-lvl-ran-slope/high-prev/hist_100_50_two_lvl_slp_high_prev_q3.png){#m100n50}
+
+:::
 
 \newpage
 
@@ -142,53 +211,265 @@ subtitle: "The mean prevalence for this simulation is `r mean_prevalence` %"
 
 # Simulation Result Table
 
-
 ```{r}
 #| echo: false
-sim_output_table <- final_res_slp_high_prev %>% 
-  arrange(cluster_number) %>% 
-  mutate(ratio = se_mor_hat / sim_se_mor_hat) %>% 
-  select(cluster_number, cluster_size, beta0_hat, beta1_hat, beta2_hat, 
+#| message: false
+#| warning: false
+model_table <- final_res_slp_high_prev %>%
+  select(cluster_number, cluster_size, beta0_hat, beta1_hat, beta2_hat,
          sigma_u1_sq_hat, sigma_u2_sq_hat, sigma_u12_sq_hat,
-         true_mor, mor_hat, relative_bias, se_mor_hat, sim_se_mor_hat, 
-         ratio, coverage, runs_used, runs_required)
+         convergence = converged) %>% 
+  mutate(
+    convergence = convergence * 100
+  ) %>% 
+  arrange(cluster_number)
+
+mor_table <- final_res_slp_high_prev %>% 
+  arrange(cluster_number) %>% 
+  mutate(
+    cluster_info = paste0(cluster_number, ", ", cluster_size),
+    ratio_q1 = se_mor_hat_q1 / sim_se_mor_hat_q1,
+    ratio_q2 = se_mor_hat_q2 / sim_se_mor_hat_q2,
+    ratio_q3 = se_mor_hat_q3 / sim_se_mor_hat_q3,
+    rel_bias_q1 = rel_bias_q1 * 100,
+    rel_bias_q2 = rel_bias_q2 * 100,
+    rel_bias_q3 = rel_bias_q3 * 100
+  ) %>% 
+  select(
+    cluster_info,
+    true_mor_q1, mor_hat_q1, rel_bias_q1, se_mor_hat_q1, sim_se_mor_hat_q1, ratio_q1, coverage_q1,
+    true_mor_q2, mor_hat_q2, rel_bias_q2, se_mor_hat_q2, sim_se_mor_hat_q2, ratio_q2, coverage_q2,
+    true_mor_q3, mor_hat_q3, rel_bias_q3, se_mor_hat_q3, sim_se_mor_hat_q3, ratio_q3, coverage_q3
+  )
+
+mor_table_q1 <- mor_table %>% 
+   separate_wider_delim(cluster_info, delim = ", ",
+                        names = c("cluster_number", "cluster_size")) %>% 
+  select(cluster_number, cluster_size, matches("q1"))
+
+mor_table_q2 <- mor_table %>% 
+  separate_wider_delim(cluster_info, delim = ", ",
+                        names = c("cluster_number", "cluster_size")) %>% 
+  select(cluster_number, cluster_size, matches("q2"))
+
+mor_table_q3 <- mor_table %>% 
+  separate_wider_delim(cluster_info, delim = ", ",
+                        names = c("cluster_number", "cluster_size")) %>% 
+  select(cluster_number, cluster_size, matches("q3"))
+  
 ```
 
 
 \begingroup
 <!-- \setlength{\LTleft}{0pt minus 5000pt} -->
 <!-- \setlength{\LTright}{0pt minus 5000pt} -->
-\fontsize{8pt}{12pt}\selectfont
+\fontsize{10pt}{16pt}\selectfont
 \addtolength{\tabcolsep}{0.1pt}
 
 
 ```{r}
 #| echo: false
-kableExtra::kbl(sim_output_table, booktabs = TRUE, digits = 2, linesep = "",
-                align = paste0(rep('c', ncol(sim_output_table)),collapse = ""),
+kableExtra::kbl(model_table, booktabs = TRUE, digits = 2, linesep = "",
+                align = paste0('c',paste0(rep('r', ncol(model_table)-1), collapse = "")),
                 col.names = c("Number of Cluster", "Cluster Size",
-                            "$\\widehat{\\beta_0}$", "$\\widehat{\\beta_1}$", 
-                            "$\\widehat{\\beta_2}$", 
+                            "$\\widehat{\\beta_0}$", "$\\widehat{\\beta_1}$",
+                            "$\\widehat{\\beta_2}$",
                             "$\\widehat{\\sigma_{u_1}^2}$", "$\\widehat{\\sigma_{u_2}^2}$",
                             "$\\widehat{\\sigma_{u_{12}}^2}$",
-                            "$MOR$", "$\\widehat{MOR}$", "Relative Bias (\\%)",
-                            "$\\widehat{SE}_{MOR}$", 
-                            "Simulation $\\widehat{SE}_{MOR}$", 
-                            "Ratio\\textsuperscript{1}",
-                            "CI coverage (95\\%)", "Runs used",
-                            "Runs Required"), escape = FALSE) %>% 
-  column_spec(1:ncol(sim_output_table), width = "1.1cm", latex_valign = "m") %>% 
+                            "Model Convergence (\\%)"), escape = FALSE) %>%
+  column_spec(1:ncol(model_table), width = "2.5cm", latex_valign = "m") %>%
+  # ) %>%
+  footnote(
+    general = " ",
+    symbol = c(
+      paste0("The mean prevalence for this simulation is ", mean_prevalence, "\\\\%"),
+      "True $\\\\sigma^2_{u_1}$ = $1$, $\\\\sigma^2_{u_2}$ = $2$, $\\\\sigma^2_{u_{12}}$ = $0$",
+      "True Values of $\\\\beta_0 = -1.85$, $\\\\beta_1 = 1.75$, $\\\\beta_2 = 0.67$"
+      ),
+    escape = FALSE
+  ) %>% 
+  collapse_rows(columns = 1, latex_hline = "major")
+
+```
+
+\endgroup
+
+
+\newpage
+
+# Simulation Result Table When First Quartile of X is used
+
+\begingroup
+<!-- \setlength{\LTleft}{0pt minus 5000pt} -->
+<!-- \setlength{\LTright}{0pt minus 5000pt} -->
+\fontsize{10pt}{14pt}\selectfont
+\addtolength{\tabcolsep}{3pt}
+
+
+```{r}
+#| echo: false
+kableExtra::kbl(mor_table_q1, booktabs = TRUE, digits = 2, linesep = "",
+                align = paste0('c',paste0(rep('r', ncol(mor_table_q1)-1), collapse = "")),
+                col.names = c(
+                  "Number of Cluster", "Cluster Size",
+                  rep(c("$MOR$", "$\\widehat{MOR}$", "$Bias\\textsuperscript{1}$",
+                  "$\\widehat{SE}_{MOR}$", 
+                  "Sim. $\\widehat{SE}_{MOR}\\textsuperscript{2}$", 
+                  "Ratio\\textsuperscript{3}",
+                  "CI Coverage (95\\%)"), times = 1)
+                ), 
+                escape = FALSE) %>%
+  column_spec(1, width = "2.5cm", latex_valign = "m") %>% 
+  column_spec(2:ncol(mor_table_q1), width = "2.2cm", latex_valign = "m") %>%
+  footnote(
+    general = " ",
+    number = c(
+      "It is Relative Bias = $\\\\dfrac{\\\\widehat{\\\\theta} - \\\\theta}{\\\\theta} \\\\times 100$",
+      "Simulation Standard Error of $MOR$",
+      "Ratio$\\\\;=\\\\;\\\\dfrac{\\\\widehat{SE}_{MOR}}{Simulation\\\\;\\\\widehat{SE}_{MOR}}$"),
+    symbol = c(
+      paste0("The mean prevalence for this simulation is ", mean_prevalence, "\\\\%")
+      ),
+    escape = FALSE
+  ) %>% 
+  collapse_rows(columns = 1, latex_hline = "major")
+```
+
+
+\endgroup
+
+\newpage
+
+# Simulation Result Table When Second Quartile of X is used
+
+\begingroup
+<!-- \setlength{\LTleft}{0pt minus 5000pt} -->
+<!-- \setlength{\LTright}{0pt minus 5000pt} -->
+\fontsize{10pt}{14pt}\selectfont
+\addtolength{\tabcolsep}{3pt}
+
+
+```{r}
+#| echo: false
+kableExtra::kbl(mor_table_q2, booktabs = TRUE, digits = 2, linesep = "",
+                align = paste0('c',paste0(rep('r', ncol(mor_table_q2)-1), collapse = "")),
+                col.names = c(
+                  "Number of Cluster", "Cluster Size",
+                  rep(c("$MOR$", "$\\widehat{MOR}$", "$Bias\\textsuperscript{1}$",
+                  "$\\widehat{SE}_{MOR}$", 
+                  "Sim. $\\widehat{SE}_{MOR}\\textsuperscript{2}$", 
+                  "Ratio\\textsuperscript{3}",
+                  "CI Coverage (95\\%)"), times = 1)
+                ), 
+                escape = FALSE) %>%
+  column_spec(1, width = "2.5cm", latex_valign = "m") %>% 
+  column_spec(2:ncol(mor_table_q1), width = "2.2cm", latex_valign = "m") %>%
+  footnote(
+    general = " ",
+    number = c(
+      "It is Relative Bias = $\\\\dfrac{\\\\widehat{\\\\theta} - \\\\theta}{\\\\theta} \\\\times 100$",
+      "Simulation Standard Error of $MOR$",
+      "Ratio$\\\\;=\\\\;\\\\dfrac{\\\\widehat{SE}_{MOR}}{Simulation\\\\;\\\\widehat{SE}_{MOR}}$"),
+    symbol = c(
+      paste0("The mean prevalence for this simulation is ", mean_prevalence, "\\\\%")
+      ),
+    escape = FALSE
+  ) %>% 
+  collapse_rows(columns = 1, latex_hline = "major")
+
+```
+
+
+\endgroup
+
+\newpage
+
+# Simulation Result Table When Third Quartile of X is used
+
+\begingroup
+<!-- \setlength{\LTleft}{0pt minus 5000pt} -->
+<!-- \setlength{\LTright}{0pt minus 5000pt} -->
+\fontsize{10pt}{14pt}\selectfont
+\addtolength{\tabcolsep}{3pt}
+
+
+```{r}
+#| echo: false
+kableExtra::kbl(mor_table_q3, booktabs = TRUE, digits = 2, linesep = "",
+                align = paste0('c',paste0(rep('r', ncol(mor_table_q3)-1), collapse = "")),
+                col.names = c(
+                  "Number of Cluster", "Cluster Size",
+                  rep(c("$MOR$", "$\\widehat{MOR}$", "$Bias\\textsuperscript{1}$",
+                  "$\\widehat{SE}_{MOR}$", 
+                  "Sim. $\\widehat{SE}_{MOR}\\textsuperscript{2}$", 
+                  "Ratio\\textsuperscript{3}",
+                  "CI Coverage (95\\%)"), times = 1)
+                ), 
+                escape = FALSE) %>%
+  column_spec(1, width = "2.5cm", latex_valign = "m") %>% 
+  column_spec(2:ncol(mor_table_q1), width = "2.2cm", latex_valign = "m") %>%
+  footnote(
+    general = " ",
+    number = c(
+      "It is Relative Bias = $\\\\dfrac{\\\\widehat{\\\\theta} - \\\\theta}{\\\\theta} \\\\times 100$",
+      "Simulation Standard Error of $MOR$",
+      "Ratio$\\\\;=\\\\;\\\\dfrac{\\\\widehat{SE}_{MOR}}{Simulation\\\\;\\\\widehat{SE}_{MOR}}$"),
+    symbol = c(
+      paste0("The mean prevalence for this simulation is ", mean_prevalence, "\\\\%")
+      ),
+    escape = FALSE
+  ) %>% 
+  collapse_rows(columns = 1, latex_hline = "major")
+```
+
+\endgroup
+
+\newpage
+
+# Simulation Result Table (All Together)
+
+\begingroup
+<!-- \setlength{\LTleft}{0pt minus 5000pt} -->
+<!-- \setlength{\LTright}{0pt minus 5000pt} -->
+\fontsize{7pt}{11pt}\selectfont
+\addtolength{\tabcolsep}{-0.2pt}
+
+
+```{r}
+#| echo: false
+kableExtra::kbl(mor_table, booktabs = TRUE, digits = 2, linesep = "",
+                align = paste0("l",paste0(rep('r', ncol(mor_table)-1), collapse = "")),
+                col.names = c(
+                  "M, N\\textsuperscript{1}",
+                  rep(c("$MOR$", "$\\widehat{MOR}$", "$Bias\\textsuperscript{2}$",
+                  "$\\widehat{SE}_{MOR}$", 
+                  "Sim. $\\widehat{SE}_{MOR}\\textsuperscript{3}$", 
+                  "Ratio\\textsuperscript{3}",
+                  "Coverage (95\\%)"), times = 3)
+                ), 
+                escape = FALSE) %>%
+  column_spec(1, width = "0.9cm", latex_valign = "m") %>% 
+  column_spec(2:ncol(mor_table), width = "0.8cm", latex_valign = "m") %>%
   row_spec(
     seq(
-      n_distinct(sim_output_table$cluster_number), 
-      nrow(sim_output_table) - 1, 
-      n_distinct(sim_output_table$cluster_size)), hline_after = TRUE
-  ) %>% 
+      n_distinct(model_table$cluster_number),
+      nrow(model_table) - 1,
+      n_distinct(model_table$cluster_size)), hline_after = TRUE
+  ) %>%
   footnote(
-    general = paste0("The mean prevalence for this simulation is ", mean_prevalence, "\\\\%"),
-    threeparttable = TRUE,
-    # footnote_as_chunk = TRUE,
-    number = c("Ratio$\\\\;=\\\\;\\\\dfrac{\\\\widehat{SE}_{MOR}}{Simulation\\\\;\\\\widehat{SE}_{MOR}}$"), 
+    general = " ",
+    number = c(
+      "M is Number of Cluster and N is Cluster size",
+      "It is Relative Bias = $\\\\dfrac{\\\\widehat{\\\\theta} - \\\\theta}{\\\\theta} \\\\times 100$",
+      "Simulation Standard Error of $MOR$",
+      "Ratio$\\\\;=\\\\;\\\\dfrac{\\\\widehat{SE}_{MOR}}{Simulation\\\\;\\\\widehat{SE}_{MOR}}$"),
+    symbol = c(
+      paste0("The mean prevalence for this simulation is ", mean_prevalence, "\\\\%")
+      ),
+    escape = FALSE
+  ) %>% 
+  add_header_above(
+    header = c(" ", "$Q_{1X}$" = 7, "$Q_{2X}$" = 7, "$Q_{3X}$" = 7),
     escape = FALSE
   )
 
@@ -196,14 +477,3 @@ kableExtra::kbl(sim_output_table, booktabs = TRUE, digits = 2, linesep = "",
 
 
 \endgroup
-
-\vspace{10mm}
-
-\newpage
-
-Here,
-
-- True $\sigma^2_{u_1}$ = $1$, $\sigma^2_{u_2}$ = $2$, $\sigma^2_{u_{12}}$ = $0$ 
-- True Values of $\beta_0 = 2$, $\beta_1 = 1.75$, $\beta_2 = 0.67$ 
-- "Runs used" column represent how many simulation runs were used to calculate the numbers in the corresponding row.
-
