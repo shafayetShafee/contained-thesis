@@ -53,6 +53,8 @@ calc_two_lvl_slp_mor_stats <- function(sigma_mat, sigma_u_sq_hat,
   
   # delta method -------------------
   log_mor_expr <- function(x, x1_val) {
+    # here ran-effect is parameterized as function of variance term
+    # instead of standard dev.
     sqrt((2*x[1]) + (2*x1_val^2*x[3]) + (4*x1_val*x[2])) * qnorm(0.75)
   }
   
@@ -135,12 +137,6 @@ est_two_lvl_slope_mor <- function(m, n, fixed_coeff, sigma_mat, data_seed) {
   
   # returned values by above three is 
   # true_mor, mor_hat, se_mor_hat, coverage, rel_bias
-  
-  # creating output vector ---------
-  # out_vec <- c(true_mor = true_mor, mor_hat = mor_hat, 
-  #              se_mor_hat = se_mor_hat,
-  #              coverage = coverage,
-
   
   out_vec <- c(mor_stats_q1, mor_stats_q2, mor_stats_q3,
               sigma_u1_sq_hat = sigma_u1_sq_hat,
