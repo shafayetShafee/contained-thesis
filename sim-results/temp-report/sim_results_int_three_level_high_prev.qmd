@@ -1,0 +1,173 @@
+---
+title: "Simulation Result For Three-Level Intercept Model With High Prevalence"
+author: Shafayet Khan Shafee
+date: last-modified
+date-format: "DD MMMM YYYY"
+format: 
+  pdf:
+    classoption: titlepage
+    fig-pos: 'H'
+    keep-tex: true
+    geometry:
+      - top=20mm
+      - bottom=5mm
+    include-in-header:
+      text: |
+        \usepackage{typearea}
+        \usepackage{caption}
+        \usepackage{subcaption}
+---
+
+\newpage
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(dplyr)
+library(kableExtra)
+
+final_res_int_high_prev <- readRDS(
+  here::here("sim-results/rds/sim_res_three_lvl_int_high_prev.rds")
+  )
+
+mean_prevalence <- round(mean(final_res_int_high_prev$prevalence), 2)*100
+```
+
+
+---
+subtitle: "The mean prevalence for this simulation is `r mean_prevalence` %"
+---
+
+# Histograms for $log(\widehat{MOR})$
+
+
+\begin{figure}
+\centering
+\begin{subfigure}{.49\textwidth}
+    \centering
+    \includegraphics[width=.95\linewidth]{../../plots/three-lvl-ran-int/high-prev/hist_20_10_5_three_lvl_high_prev_mor1.png}  
+    \caption{MOR\textsubscript{1}}
+    \label{l20m10n51}
+\end{subfigure}
+\begin{subfigure}{.49\textwidth}
+    \centering
+    \includegraphics[width=.95\linewidth]{../../plots/three-lvl-ran-int/high-prev/hist_20_10_5_three_lvl_high_prev_mor2.png}  
+    \caption{MOR\textsubscript{2}}
+    \label{l20m10n52}
+\end{subfigure}
+\caption{Hospitals = 20, Doctors = 10, Patients = 5}
+\label{mor1}
+\end{figure}
+
+\vspace{15mm}
+
+\begin{figure}
+\centering
+\begin{subfigure}{.49\textwidth}
+    \centering
+    \includegraphics[width=.95\linewidth]{../../plots/three-lvl-ran-int/high-prev/hist_40_20_5_three_lvl_high_prev_mor1.png}  
+    \caption{MOR\textsubscript{1}}
+    \label{l40m20n101}
+\end{subfigure}
+\begin{subfigure}{.49\textwidth}
+    \centering
+    \includegraphics[width=.95\linewidth]{../../plots/three-lvl-ran-int/high-prev/hist_40_20_5_three_lvl_high_prev_mor2.png}
+    \caption{MOR\textsubscript{2}}
+    \label{l40m20n102}
+\end{subfigure}
+\caption{Hospitals = 40, Doctors = 20, Patients = 5}
+\label{mor2}
+\end{figure}
+
+
+\newpage
+
+<!-- --------------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------------- -->
+
+
+\KOMAoptions{usegeometry,paper=landscape,pagesize}
+\recalctypearea
+\newgeometry{right=10mm,left=10mm}
+
+# Simulation Result Table
+
+
+```{r}
+#| echo: false
+sim_output_table <- final_res_int_high_prev %>% 
+  mutate(
+    ratio1 = se_mor1_hat / sim_se_mor1_hat,
+    ratio2 = se_mor2_hat / sim_se_mor2_hat
+    ) %>% 
+  select(ea_number, hh_number, hh_size, beta0_hat, beta1_hat, beta2_hat, 
+         sigma_u_sq_hat, sigma_v_sq_hat, 
+         mor1_hat, relative_bias_1, se_mor1_hat, 
+         sim_se_mor1_hat, ratio1, coverage_1,
+         mor2_hat, relative_bias_2, se_mor2_hat, 
+         sim_se_mor2_hat, ratio2, coverage_2,
+         convergence = converged)
+```
+
+
+\begingroup
+<!-- \setlength{\LTleft}{0pt minus 5000pt} -->
+<!-- \setlength{\LTright}{0pt minus 5000pt} -->
+\fontsize{8pt}{12pt}\selectfont
+<!-- \addtolength{\tabcolsep}{0.pt} -->
+
+
+```{r}
+#| echo: false
+kableExtra::kbl(sim_output_table, booktabs = TRUE, digits = 2, linesep = "",
+                align = paste0(rep('c', ncol(sim_output_table)),collapse = ""),
+                col.names = c("L\\textsuperscript{1}", "M\\textsuperscript{2}",
+                              "N\\textsuperscript{3}",
+                            "$\\widehat{\\beta_0}$", "$\\widehat{\\beta_1}$", 
+                            "$\\widehat{\\beta_2}$", 
+                            "$\\widehat{\\sigma^2_{u_{jk}}}$",
+                            "$\\widehat{\\sigma^2_{v_k}}$",
+                            "$\\widehat{MOR_1}$", "Rel. $Bias_1$ (\\%)",
+                            "$\\widehat{SE_1}_{MOR}$", 
+                            "Sim. $\\widehat{SE_1}_{MOR}$", 
+                            "$Ratio_1$\\textsuperscript{4}",
+                            "$CI-coverage_1$ (95\\%)",
+                            "$\\widehat{MOR_2}$", "Rel. $Bias_2$ (\\%)",
+                            "$\\widehat{SE_2}_{MOR}$", 
+                            "Sim. $\\widehat{SE_2}_{MOR}$", 
+                            "$Ratio_2$\\textsuperscript{4}",
+                            "$CI-coverage_2$ (95\\%)",
+                            "Model Convergence"), escape = FALSE) %>% 
+  column_spec(1:3, width = "0.4cm", latex_valign = "m") %>% 
+  column_spec(4:8, width = "0.7cm", latex_valign = "m") %>% 
+  column_spec(9:ncol(sim_output_table), width = "0.95cm", latex_valign = "m") %>% 
+  footnote(
+    general = " ",
+    symbol = c(
+      paste0("The mean prevalence for this simulation is ", mean_prevalence, "\\\\%"),
+      "True $MOR_1$ is 3.85",
+      "True $MOR_2$ is 7.56",
+      "True $\\\\sigma^2_{u_{jk}}$ is 2",
+      "True $\\\\sigma^2_{v_k}$ is 2.5",
+      "True Values of $\\\\beta_0 = -1.85$, $\\\\beta_1 = 1.75$, $\\\\beta_2 = 0.67$"
+    ),
+    number = c(
+      "Number of Hospital", 
+      "Number of Doctors",
+      "Number of patients",
+      "Ratio$\\\\;=\\\\;\\\\dfrac{\\\\widehat{SE}_{MOR}}{Simulation\\\\;\\\\widehat{SE}_{MOR}}$"), 
+    escape = FALSE
+  ) %>% 
+  add_header_above(
+    header = c(" " = 8, "$MOR_1$" = 6, "$MOR_2$" = 6, " " = 1),
+    escape = FALSE
+  )
+
+```
+
+
+\endgroup
