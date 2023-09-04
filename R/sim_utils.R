@@ -127,15 +127,19 @@ calc_slope_se_mor <- function(sigma_u_hat, var_ran_effect, x1_val) {
 unnamed_quantile <- function(...) unname(quantile(...))
 
 
-save_plot <- function(m, n, log_mor_hat, plot_name_suffix, plot_path) {
+save_plot <- function(m, n, log_mor_hat, plot_name_suffix, plot_path, l = NULL) {
   hist_plot <- ggplot(drop_na(tibble(log_mor_hat)), aes(x = log_mor_hat)) +
     geom_histogram(bins = 30) +
     labs(x = "log(MOR)",
          y = "frequency") +
     theme_classic()
   
+  # whether plotting is used in three lvl settingss
+  sep = "_"
+  if(is.null(l)) sep = ""
+  
   ggsave(
-    filename = paste0("hist_", m, "_", n, "_", plot_name_suffix, ".png"), 
+    filename = paste0("hist_", l, sep, m, "_", n, "_", plot_name_suffix, ".png"), 
     plot = hist_plot,
     path = plot_path
   )  
@@ -167,4 +171,10 @@ vcov.VarCorr.merMod <- function(object,fit,...) {
                function(x) paste(na.omit(x),collapse="."))
   dimnames(vv2) <- list(nms,nms)
   return(vv2)
+}
+
+
+sd_mat_ran_eff <- function(model_obj) {
+  sd_mat <- diag(diag(vcov(VarCorr(model_obj), model_obj)))
+  return(sd_mat)
 }

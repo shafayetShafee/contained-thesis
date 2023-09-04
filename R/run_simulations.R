@@ -11,12 +11,13 @@ source(here::here("R/two_level_slope_sim_funcs.R"))
 
 
 run_simulations <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000, 
-                            simulation_type = c("int", "slope"),
-                            seed = 1083, log_file, append = FALSE,
-                            plot_path, plot_name_suffix, 
-                            more_iter) {
-  # sigma_u_sq => a single element for (int)
-  # sigma_u_sq => a 2x2 matrix for (slope)
+                        simulation_type = c("two_lvl_int", "two_lvl_slope", "three_lvl_int"),
+                        seed = 1083, log_file, append = FALSE,
+                        plot_path, plot_name_suffix, 
+                        more_iter) {
+  # sigma_u_sq => a single element for (two_lvl_int)
+  # sigma_u_sq => a 2x2 matrix for (two_lvl_slope)
+  # sigma_u_sq => a vector of 2 element for three lvl int 
 
   cat(
     paste("Simulation Log for", Sys.time(), "\n"), 
@@ -31,7 +32,7 @@ run_simulations <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000,
   # getting simulation matrix -------------------
   sim_type <- match.arg(simulation_type)
   sim_output <- switch(sim_type, 
-                       int = simulate_two_lvl_int(m = m, n = n, 
+                       two_lvl_int = simulate_two_lvl_int(m = m, n = n, 
                                           fixed_coeff = fixed_coeff,
                                           sigma_u_sq = sigma_u_sq,
                                           nsims = nsims, 
@@ -39,21 +40,30 @@ run_simulations <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000,
                                           seed = seed,
                                           more_iter = more_iter),
                        
-                       slope = simulate_two_lvl_slope(m = m, n = n,
+                       two_lvl_slope = simulate_two_lvl_slope(m = m, n = n,
                                           fixed_coeff = fixed_coeff,
                                           sigma_mat = sigma_u_sq,
                                           nsims = nsims,
                                           log_file = log_file,
                                           seed = seed, 
+                                          more_iter = more_iter),
+                       
+                       three_lvl_int = simulate_three_lvl_int(l = l, m = m,
+                                          n = n, fixed_coeff = fixed_coeff,
+                                          sigma_sq = sigma_u_sq,
+                                          nsims = nsims,
+                                          log_file = log_file,
+                                          seed = seed,
                                           more_iter = more_iter)
   )
   
   out_mat <- sim_output$out_mat
+  out_mat_means <- colMeans(out_mat, na.rm = TRUE)
   runs_used = unname(sum(out_mat[, "converged"], na.rm = TRUE))
   runs_required = sim_output$runs_required
   
-  if(sim_type == "int") {
-    out_mat_means <- colMeans(out_mat, na.rm = TRUE)
+  if(sim_type == "two_lvl_int") {
+    
     log_mor_hat <- log(out_mat[, "mor_hat"])
     sim_se_mor_hat <- exp(sd(log_mor_hat, na.rm = TRUE))
     
@@ -73,8 +83,8 @@ run_simulations <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000,
              runs_used = runs_used,
              runs_required = runs_required))
     
-  } else if(sim_type == "slope") {
-    out_mat_means <- colMeans(out_mat, na.rm = TRUE)
+  } else if(sim_type == "two_lvl_slope") {
+    
     log_mor_hat_q1 <- log(out_mat[, "mor_hat_q1"])
     log_mor_hat_q2 <- log(out_mat[, "mor_hat_q2"])
     log_mor_hat_q3 <- log(out_mat[, "mor_hat_q2"])
@@ -103,6 +113,40 @@ run_simulations <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000,
              sim_se_mor_hat_q1 = sim_se_mor_hat_q1,
              sim_se_mor_hat_q2 = sim_se_mor_hat_q2,
              sim_se_mor_hat_q3 = sim_se_mor_hat_q3,
+             runs_used = runs_used,
+             runs_required = runs_required))
+    
+  } else if(sim_type == "three_lvl_int") {
+    
+    log_mor1_hat <- log(out_mat[, "mor1_hat"])
+    log_mor2_hat <- log(out_mat[, "mor2_hat"])
+    sim_se_mor1_hat <- exp(sd(log_mor1_hat, na.rm = TRUE))
+    sim_se_mor2_hat <- exp(sd(log_mor2_hat, na.rm = TRUE))
+    
+    # relative bias clac --------------------------
+    true_mor1 <- out_mat_means["true_mor1"]
+    relative_bias_1 <- as.numeric(((out_mat_means["mor1_hat"] - true_mor1) / true_mor1) * 100)
+    
+    true_mor2 <- out_mat_means["true_mor2"]
+    relative_bias_2 <- as.numeric(((out_mat_means["mor2_hat"] - true_mor2) / true_mor2) * 100)
+    
+    # generating histograms for checking ----------
+    plot_name_suffix <- paste0(plot_name_suffix, "_mor", 1:2)
+    
+    save_plot(m, n, log_mor_hat = log_mor1_hat, 
+              plot_name_suffix = plot_name_suffix[1],
+              plot_path = plot_path, l = l)
+    
+    save_plot(m, n, log_mor_hat = log_mor2_hat, 
+              plot_name_suffix = plot_name_suffix[2],
+              plot_path = plot_path, l = l)
+    
+    return(c(cluster_number = m, cluster_size = n, 
+             out_mat_means, 
+             sim_se_mor1_hat = sim_se_mor1_hat,
+             sim_se_mor2_hat = sim_se_mor2_hat,
+             relative_bias_1 = relative_bias_1,
+             relative_bias_2 = relative_bias_2,
              runs_used = runs_used,
              runs_required = runs_required))
   }

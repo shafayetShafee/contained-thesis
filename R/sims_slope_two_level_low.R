@@ -30,7 +30,7 @@ for (i in m) {
                          .f = ~ run_simulations(m = .x, n = .y, 
                                                 fixed_coeff = fixed_coeff,
                                                 sigma_u_sq = sigma_mat, 
-                                                simulation_type = "slope",
+                                                simulation_type = "two_lvl_slope",
                                                 nsims = 1000, seed = 1083,
                                                 log_file = log_file, append = TRUE,
                                                 plot_path = plot_path,
