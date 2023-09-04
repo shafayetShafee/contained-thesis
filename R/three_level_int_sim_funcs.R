@@ -118,20 +118,24 @@ est_three_lvl_int_mor <- function(l, m, n, fixed_coeff, sigma_sq, data_seed) {
   is_model_converged <- performance::check_convergence(multi_model_int)
   
   # creating output vector ---------
-  out_vec <- c(true_mor1 = true_mor1, mor1_hat = mor1_hat, 
-               se_mor1_hat = se_mor1_hat,
-               true_mor2 = true_mor2, mor2_hat = mor2_hat, 
-               se_mor2_hat = se_mor2_hat,
+  out_vec <- c(true_mor1 = true_mor1, 
+               mor1_hat = mor1_hat, 
+               se_mor1_hat = se_mor1_hat, 
                coverage_1 = coverage_1,
+               true_mor2 = true_mor2, 
+               mor2_hat = mor2_hat, 
+               se_mor2_hat = se_mor2_hat, 
                coverage_2 = coverage_2,
                sigma_u_sq_hat = sigma_sq_hat[1],
                sigma_v_sq_hat = sigma_sq_hat[2],
-               beta0_hat = beta0_hat, beta1_hat = beta1_hat, 
+               beta0_hat = beta0_hat, 
+               beta1_hat = beta1_hat, 
                beta2_hat = beta2_hat,
                prevalence = prevalence,
                converged = is_model_converged)
   
-  if(is.na(is_model_converged) || !is_model_converged) {
+  if(is.na(is_model_converged) || !is_model_converged || mor1_hat > 20 ||
+     mor2_hat > 20 || se_mor1_hat > 20 || se_mor2_hat > 20) {
     out_vec_names <- names(out_vec)
     out_vec <- c(rep(NA, length(out_vec) - 1), FALSE)
     names(out_vec) <- out_vec_names

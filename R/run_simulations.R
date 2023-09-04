@@ -8,13 +8,14 @@ library(GLMMadaptive)
 source(here::here("R/sim_utils.R"))
 source(here::here("R/two_level_int_sim_funcs.R"))
 source(here::here("R/two_level_slope_sim_funcs.R"))
+source(here::here("R/three_level_int_sim_funcs.R"))
 
 
 run_simulations <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000, 
                         simulation_type = c("two_lvl_int", "two_lvl_slope", "three_lvl_int"),
                         seed = 1083, log_file, append = FALSE,
                         plot_path, plot_name_suffix, 
-                        more_iter) {
+                        more_iter, l = NULL) {
   # sigma_u_sq => a single element for (two_lvl_int)
   # sigma_u_sq => a 2x2 matrix for (two_lvl_slope)
   # sigma_u_sq => a vector of 2 element for three lvl int 
@@ -24,13 +25,21 @@ run_simulations <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000,
     file = log_file, append = append
   )
   
-  # logging simulation param info ---------------
-  cluster_info <- paste0("Simulations for cluster size: ", n, 
-                         " and cluster number: ", m, "\n")
+  sim_type <- match.arg(simulation_type)
+  
+  if(sim_type == "three_lvl_int") {
+    # logging simulation param info ---------------
+    cluster_info <- paste0("Simulations for ea no: ", l, 
+                           ", hh no: ", m, " and hh size: ", n,"\n")
+  } else {
+    cluster_info <- paste0("Simulations for cluster size: ", n, 
+                           " and cluster number: ", m, "\n")
+  }
+  
   log_output(cluster_info, type = "Info", file = log_file)
   
   # getting simulation matrix -------------------
-  sim_type <- match.arg(simulation_type)
+  
   sim_output <- switch(sim_type, 
                        two_lvl_int = simulate_two_lvl_int(m = m, n = n, 
                                           fixed_coeff = fixed_coeff,
@@ -141,7 +150,9 @@ run_simulations <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000,
               plot_name_suffix = plot_name_suffix[2],
               plot_path = plot_path, l = l)
     
-    return(c(cluster_number = m, cluster_size = n, 
+    return(c(ea_number = l, 
+             hh_number = m,
+             hh_size = n,
              out_mat_means, 
              sim_se_mor1_hat = sim_se_mor1_hat,
              sim_se_mor2_hat = sim_se_mor2_hat,
