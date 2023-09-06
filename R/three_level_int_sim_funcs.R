@@ -51,6 +51,8 @@ gen_three_level_int_data <- function(l, m, n, fixed_coeff, sigma_sq, data_seed) 
 
 
 est_three_lvl_int_mor <- function(l, m, n, fixed_coeff, sigma_sq, data_seed) {
+  
+  browser()
   # data generation ----------------
   multi_data_int <- gen_three_level_int_data(l, m, n, fixed_coeff, 
                                              sigma_sq, data_seed)
@@ -79,6 +81,10 @@ est_three_lvl_int_mor <- function(l, m, n, fixed_coeff, sigma_sq, data_seed) {
   sigma_sq_hat <- as.data.frame(model_sum$varcor)$vcov
   sd_sigma_hat = sd_mat_ran_eff(multi_model_int) # gets sd of rand effect
   
+  if(any(diag(sd_sigma_hat) <= 0)) {
+    stop("Estimated sd of ran effect is negative")
+  }
+  
   # mor1 calc. ----------------------
   true_mor1 <- exp(sqrt(2 * sigma_u_sq) * qnorm(0.75))
   mor1_hat <- exp(sqrt(2 * sigma_hat[1]^2) * qnorm(0.75))
@@ -90,7 +96,7 @@ est_three_lvl_int_mor <- function(l, m, n, fixed_coeff, sigma_sq, data_seed) {
   }
   
   J1 <- numDeriv::jacobian(log_mor1_expr, x = sigma_hat[1])
-  log_se_mor1_hat <- as.numeric(sqrt(t(J1) %*% sd_sigma_hat[1, 1] %*% J1))
+  log_se_mor1_hat <- as.numeric(t(J1) %*% sd_sigma_hat[1, 1] %*% J1)
   se_mor1_hat <- exp(log_se_mor1_hat)
   
   # mor2 calc. ----------------------
@@ -103,7 +109,7 @@ est_three_lvl_int_mor <- function(l, m, n, fixed_coeff, sigma_sq, data_seed) {
   }
   
   J2 <- numDeriv::jacobian(log_mor2_expr, x = sigma_hat)
-  log_se_mor2_hat <- as.numeric(sqrt(J2 %*% sd_sigma_hat %*% t(J2)))
+  log_se_mor2_hat <- as.numeric(J2 %*% sd_sigma_hat %*% t(J2))
   se_mor2_hat <- exp(log_se_mor2_hat)
   
   # coverage calc ------------------

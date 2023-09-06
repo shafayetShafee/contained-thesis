@@ -1,15 +1,15 @@
 source(here::here("R/run_simulations.R"))
 
-ea_number <- c(40)
+# 20, 40
+ea_number <- c(20)
 
-# m = 10, 30, 50, 100
-hh_number <- c(20)
+# m = 10, 30
+hh_number <- c(10)
 
-# n = 5, 10
-hh_size <- c(5)
+# n = 5, 15, 30
+hh_size <- c(15)
 
-cluster_params <- tidyr::expand_grid(ea_number = ea_number,
-                                     hh_number = hh_number, 
+cluster_params <- tidyr::expand_grid(hh_number = hh_number, 
                                      hh_size = hh_size)
 
 fixed_coeff <- c(-1.85, 1.75, 0.67)
@@ -33,8 +33,8 @@ res <- purrr::map2_dfr(.x = cluster_params$hh_number,
                                               log_file = log_file, append = TRUE,
                                               plot_path = plot_path,
                                               plot_name_suffix = plot_name_prefix,
-                                              more_iter = 100, 
-                                              l = cluster_params$ea_number)
+                                              more_iter = 500, 
+                                              l = ea_number)
 )
 
 tictoc::toc()

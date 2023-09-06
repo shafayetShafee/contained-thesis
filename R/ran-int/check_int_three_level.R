@@ -7,9 +7,9 @@ library(broom.mixed)
 source(here::here("R/sim_utils.R"))
 source(here::here("R/three_level_int_sim_funcs.R"))
 
-l = 50 # number of EA
-m = 30 # number of HH
-n = 5 # size of each HH
+l = 20 # number of EA
+m = 10 # number of HH
+n = 15 # size of each HH
 N = l*m*n 
 
 set.seed(1083)
@@ -88,14 +88,14 @@ J2 <- numDeriv::jacobian(log_mor2_expr, x = sigma_hat)
 log_se_mor2_hat <- as.numeric(sqrt(J2 %*% sd_sigma_hat %*% t(J2)))
 se_mor2_hat <- exp(log_se_mor2_hat)
 
-t_mor_info = est_three_lvl_int_mor(l, m, n, c(beta0, beta1, beta2), 
-                                   sigma_sq = c(2.5, 1.5), 1083)
+t_mor_info = est_three_lvl_int_mor(l, m, n, c(-1.85, 1.75, 0.67),
+                                   sigma_sq = c(2, 2.5), 344920) # 284350
 
 mor_info <- c(true_mor1, mor1_hat, se_mor_hat, true_mor2, mor2_hat, se_mor2_hat, 
               sigma_hat^2, unname(s$coefficients[, "Estimate"]))
 
 
-sim_test = simulate_three_lvl_int(l, m, n, fixed_coeff = c(beta0, beta1, beta2), 
-                                  sigma_sq = c(2.5, 1.5), nsims = 10, 
+sim_test = simulate_three_lvl_int(l, m, n, fixed_coeff = c(-1.85, 1.75, 0.67), 
+                                  sigma_sq = c(2, 2.5), nsims = 30, 
                                   log_file = "test.txt", seed = 1083, 
-                                  more_iter = 1)
+                                  more_iter = 10)
