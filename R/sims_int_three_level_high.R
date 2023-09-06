@@ -4,7 +4,7 @@ source(here::here("R/run_simulations.R"))
 ea_number <- c(20)
 
 # m = 10, 30
-hh_number <- c(10)
+hh_number <- c(30)
 
 # n = 5, 15, 30
 hh_size <- c(30)
