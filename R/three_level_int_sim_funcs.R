@@ -52,7 +52,6 @@ gen_three_level_int_data <- function(l, m, n, fixed_coeff, sigma_sq, data_seed) 
 
 est_three_lvl_int_mor <- function(l, m, n, fixed_coeff, sigma_sq, data_seed) {
   
-  browser()
   # data generation ----------------
   multi_data_int <- gen_three_level_int_data(l, m, n, fixed_coeff, 
                                              sigma_sq, data_seed)
