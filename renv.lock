@@ -105,6 +105,22 @@
       ],
       "Hash": "1e035db628cefb315c571202d70202fe"
     },
+    "TMB": {
+      "Package": "TMB",
+      "Version": "1.9.6",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "Matrix",
+        "R",
+        "RcppEigen",
+        "graphics",
+        "methods",
+        "stats",
+        "utils"
+      ],
+      "Hash": "b062cb79db56803311ea22b90ed6f57a"
+    },
     "askpass": {
       "Package": "askpass",
       "Version": "1.1",
@@ -580,6 +596,23 @@
         "withr"
       ],
       "Hash": "3a147ee02e85a8941aad9909f1b43b7b"
+    },
+    "glmmTMB": {
+      "Package": "glmmTMB",
+      "Version": "1.1.7",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "Matrix",
+        "R",
+        "RcppEigen",
+        "TMB",
+        "lme4",
+        "methods",
+        "nlme",
+        "numDeriv"
+      ],
+      "Hash": "1f05010509ced5b0f1a55cc46a67b1ef"
     },
     "globals": {
       "Package": "globals",

@@ -1,4 +1,4 @@
-library(lme4)
+library(glmmTMB)
 
 gen_three_level_int_data <- function(l, m, n, fixed_coeff, sigma_sq, data_seed) {
   # l => Number of EA
@@ -64,51 +64,64 @@ est_three_lvl_int_mor <- function(l, m, n, fixed_coeff, sigma_sq, data_seed) {
   sigma_v_sq <- sigma_sq[2]
   
   # model fitting ------------------
-  multi_model_int <- glmer(Yijk ~ X1c + X2b + (1 | ea) + (1 | ea:hh),
-                           data = multi_data_int, 
-                           family = binomial(link = "logit"))
+  multi_model_int <- glmmTMB(Yijk ~ X1c + X2b + (1 | ea) + (1 | ea:hh),
+                             data = multi_data_int, 
+                             family = "binomial")
   
   model_sum <- summary(multi_model_int)
   
   # extracting value from model ----
-  fixed_effect <- unname(model_sum$coefficients[, "Estimate"])
+  fixed_effect <- unname(model_sum$coefficients$cond[, "Estimate"])
   beta0_hat <- fixed_effect[1]
   beta1_hat <- fixed_effect[2]
   beta2_hat <- fixed_effect[3]
-  # rand effect as sd in order of (ujk, vk)
-  sigma_hat <- as.data.frame(model_sum$varcor)$sdcor
-  sigma_sq_hat <- as.data.frame(model_sum$varcor)$vcov
-  sd_sigma_hat = sd_mat_ran_eff(multi_model_int) # gets sd of rand effect
   
-  if(any(diag(sd_sigma_hat) <= 0)) {
-    stop("Estimated sd of ran effect is negative")
+  # glmmTMB gives the var comp in log-sd scale
+  
+  # se(log(sd))
+  se_logsd <- sqrt(diag(vcov(multi_model_int,full=TRUE)))[4:5] 
+  # log(sd)
+  logsd <- multi_model_int$sdr$par.fixed[4:5]
+  
+  # by delta method
+  # se(sigma_sq_hat) = sqrt((2 * exp(2*logsd))^2) * se(logsd)
+  se_sigma_sq_hat <- diag(unname(se_logsd*2*exp(2*logsd))) 
+  # se of (sigma_vk, sigma_ujk)
+  
+  sigma_sq_hat <- unname(exp(2*logsd)) 
+  # (sigma_vk, sigma_ujk)
+  var_sigma_sq_hat <- se_sigma_sq_hat^2
+  
+  if(any(diag(var_sigma_sq_hat) <= 0)) {
+    stop("Estimated var of ran effect is negative")
   }
   
   # mor1 calc. ----------------------
   true_mor1 <- exp(sqrt(2 * sigma_u_sq) * qnorm(0.75))
-  mor1_hat <- exp(sqrt(2 * sigma_hat[1]^2) * qnorm(0.75))
+  mor1_hat <- exp(sqrt(2 * sigma_sq_hat[2]) * qnorm(0.75))
   log_mor1_hat <- log(mor1_hat)
   
   log_mor1_expr <- function(x) {
     # x is ran-effect parameterized as sd
-    sqrt(2 * x^2) * qnorm(0.75)
+    sqrt(2 * x) * qnorm(0.75)
   }
   
-  J1 <- numDeriv::jacobian(log_mor1_expr, x = sigma_hat[1])
-  log_se_mor1_hat <- as.numeric(t(J1) %*% sd_sigma_hat[1, 1] %*% J1)
+  J1 <- numDeriv::jacobian(log_mor1_expr, x = sigma_sq_hat[2])
+  log_se_mor1_hat <- as.numeric(sqrt(t(J1) %*% var_sigma_sq_hat[2, 2] %*% J1))
   se_mor1_hat <- exp(log_se_mor1_hat)
   
   # mor2 calc. ----------------------
   true_mor2 <- exp(sqrt(2 * (sigma_u_sq + sigma_v_sq)) * qnorm(0.75))
-  mor2_hat <- exp(sqrt(2 * sum(sigma_hat^2)) * qnorm(0.75))
+  mor2_hat <- exp(sqrt(2 * sum(sigma_sq_hat)) * qnorm(0.75))
   log_mor2_hat <- log(mor2_hat)
   
   log_mor2_expr <- function(x) {
-    sqrt(2 * sum(x^2)) * qnorm(0.75)
+    # x is ran-effect parameterized as variance
+    sqrt(2 * sum(x)) * qnorm(0.75)
   }
   
-  J2 <- numDeriv::jacobian(log_mor2_expr, x = sigma_hat)
-  log_se_mor2_hat <- as.numeric(J2 %*% sd_sigma_hat %*% t(J2))
+  J2 <- numDeriv::jacobian(log_mor2_expr, x = sigma_sq_hat)
+  log_se_mor2_hat <- as.numeric(sqrt(J2 %*% var_sigma_sq_hat %*% t(J2)))
   se_mor2_hat <- exp(log_se_mor2_hat)
   
   # coverage calc ------------------
@@ -120,6 +133,7 @@ est_three_lvl_int_mor <- function(l, m, n, fixed_coeff, sigma_sq, data_seed) {
   ci_2_exp <- exp(ci_2)
   coverage_2 <- as.numeric(ci_2_exp[1] <= true_mor2 && ci_2_exp[2] >= true_mor2)
   
+  # model conv check ---------------
   is_model_converged <- performance::check_convergence(multi_model_int)
   
   # creating output vector ---------

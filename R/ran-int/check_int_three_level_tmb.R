@@ -5,6 +5,14 @@ library(glmmTMB)
 source(here::here("R/sim_utils.R"))
 source(here::here("R/three_level_int_sim_funcs.R"))
 
+t_mor_info = est_three_lvl_int_mor(20, 10, 15, c(-1.85, 1.75, 0.67),
+                                   sigma_sq = c(2, 2.5), 344920) # 284350 344920
+
+sim_test = simulate_three_lvl_int(20, 10, 15, fixed_coeff = c(-1.85, 1.75, 0.67), 
+                                  sigma_sq = c(2, 2.5), nsims = 30, 
+                                  log_file = "test.txt", seed = 1083, 
+                                  more_iter = 10)
+
 l = 20 # number of EA
 m = 10 # number of HH
 n = 15 # size of each HH
