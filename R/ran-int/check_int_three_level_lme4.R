@@ -56,7 +56,7 @@ s = summary(model)
 sigma_hat <- broom.mixed::tidy(model) %>% filter(effect == "ran_pars") %>% pull(estimate)
 # returns in order of (sigma_ujk, sigma_vk)
 
-sd_sigma_hat = diag(diag(vcov(VarCorr(model), model)))
+var_sigma_hat = diag(diag(vcov(VarCorr(model), model)))^2
 
 true_mor1 <- exp(sqrt(2 * sigma_u_sq) * qnorm(0.75))
 
@@ -70,7 +70,7 @@ log_mor1_expr <- function(x) {
 }
 
 J <- numDeriv::jacobian(log_mor1_expr, x = sigma_hat[1])
-log_se_mor_hat <- as.numeric(sqrt(t(J) %*% sd_sigma_hat[1, 1] %*% J))
+log_se_mor_hat <- as.numeric(sqrt(t(J) %*% var_sigma_hat[1, 1] %*% J))
 se_mor_hat <- exp(log_se_mor_hat)
 
 
@@ -85,11 +85,11 @@ log_mor2_expr <- function(x) {
 }
 
 J2 <- numDeriv::jacobian(log_mor2_expr, x = sigma_hat)
-log_se_mor2_hat <- as.numeric(sqrt(J2 %*% sd_sigma_hat %*% t(J2)))
+log_se_mor2_hat <- as.numeric(sqrt(J2 %*% var_sigma_hat %*% t(J2)))
 se_mor2_hat <- exp(log_se_mor2_hat)
 
 t_mor_info = est_three_lvl_int_mor(l, m, n, c(-1.85, 1.75, 0.67),
-                                   sigma_sq = c(2, 2.5), 344920) # 284350
+                                   sigma_sq = c(2, 2.5), 284350) # 284350 344920
 
 mor_info <- c(true_mor1, mor1_hat, se_mor_hat, true_mor2, mor2_hat, se_mor2_hat, 
               sigma_hat^2, unname(s$coefficients[, "Estimate"]))

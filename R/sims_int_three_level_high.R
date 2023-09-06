@@ -7,7 +7,7 @@ ea_number <- c(20)
 hh_number <- c(10)
 
 # n = 5, 15, 30
-hh_size <- c(5)
+hh_size <- c(30)
 
 cluster_params <- tidyr::expand_grid(hh_number = hh_number, 
                                      hh_size = hh_size)
@@ -40,8 +40,8 @@ res <- purrr::map2_dfr(.x = cluster_params$hh_number,
 tictoc::toc()
 beepr::beep(3)
 
-final_res_int_high_prev <- res
-# final_res_int_high_prev <- dplyr::bind_rows(final_res_int_high_prev, res)
+# final_res_int_high_prev <- res
+final_res_int_high_prev <- dplyr::bind_rows(final_res_int_high_prev, res)
 
 save(final_res_int_high_prev, 
      file = here::here("sim-results/rdata/sim_res_three_lvl_int_high_prev.RData"))

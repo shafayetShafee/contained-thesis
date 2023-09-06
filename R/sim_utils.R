@@ -162,7 +162,7 @@ vcov.VarCorr.merMod <- function(object,fit,...) {
   if (isGLMM(fit)) {
     pars <- c(pars,fixef(fit))
   }
-  hh1 <- hessian(dd,pars)
+  hh1 <- optimHess(pars, dd)
   vv2 <- 2*solve(hh1)
   if (isGLMM(fit)) {
     vv2 <- vv2[1:npar0,1:npar0,drop=FALSE]
