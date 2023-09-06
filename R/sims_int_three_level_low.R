@@ -1,15 +1,15 @@
 source(here::here("R/run_simulations.R"))
 
-ea_number <- c(40)
+# 20, 40
+ea_number <- c(20)
 
-# m = 10, 30, 50, 100
-hh_number <- c(20)
+# m = 10, 30
+hh_number <- c(10)
 
-# n = 5, 10
-hh_size <- c(10)
+# n = 5, 15, 30
+hh_size <- c(5, 15, 30)
 
-cluster_params <- tidyr::expand_grid(ea_number = ea_number,
-                                     hh_number = hh_number, 
+cluster_params <- tidyr::expand_grid(hh_number = hh_number, 
                                      hh_size = hh_size)
 
 fixed_coeff <- c(-4.1, 1.75, 0.67)
@@ -34,14 +34,14 @@ res <- purrr::map2_dfr(.x = cluster_params$hh_number,
                                               plot_path = plot_path,
                                               plot_name_suffix = plot_name_prefix,
                                               more_iter = 500, 
-                                              l = cluster_params$ea_number)
+                                              l = ea_number)
 )
 
 tictoc::toc()
 beepr::beep(3)
 
-# final_res_int_low_prev <- res
-final_res_int_low_prev <- dplyr::bind_rows(final_res_int_low_prev, res)
+final_res_int_low_prev <- res
+# final_res_int_low_prev <- dplyr::bind_rows(final_res_int_low_prev, res)
 
 save(final_res_int_low_prev, 
      file = here::here("sim-results/rdata/sim_res_three_lvl_int_low_prev.RData"))
