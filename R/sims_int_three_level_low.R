@@ -2,13 +2,13 @@
 source(here::here("R/run_simulations.R"))
 
 # 20, 40
-ea_number <- c(20)
+ea_number <- c(40)
 
 # m = 10, 30
-hh_number <- c(30)
+hh_number <- c(10)
 
 # n = 5, 15, 30
-hh_size <- c(30)
+hh_size <- c(5, 15, 30)
 
 cluster_params <- tidyr::expand_grid(hh_number = hh_number, 
                                      hh_size = hh_size)
