@@ -1,7 +1,7 @@
 source(here::here("R/run_simulations.R"))
 
 # 20, 40
-ea_number <- c(20)
+ea_number <- c(40)
 
 # m = 10, 30
 hh_number <- c(30)
@@ -43,10 +43,10 @@ beepr::beep(3)
 # final_res_int_high_prev <- res
 final_res_int_high_prev <- dplyr::bind_rows(final_res_int_high_prev, res)
 
-final_res_int_high_prev[, c("sigma_u_sq_hat", "sigma_v_sq_hat")] = final_res_int_high_prev[, c("sigma_v_sq_hat", "sigma_u_sq_hat")]
-
 save(final_res_int_high_prev, 
      file = here::here("sim-results/rdata/sim_res_three_lvl_int_high_prev.RData"))
 
 saveRDS(final_res_int_high_prev, 
         file=here::here("sim-results/rds/sim_res_three_lvl_int_high_prev.rds"))
+
+# final_res_int_high_prev[, c("sigma_u_sq_hat", "sigma_v_sq_hat")] = final_res_int_high_prev[, c("sigma_v_sq_hat", "sigma_u_sq_hat")]
