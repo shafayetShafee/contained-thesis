@@ -8,7 +8,7 @@ ea_number <- c(40)
 hh_number <- c(30)
 
 # n = 5, 15, 30
-hh_size <- c(15)
+hh_size <- c(30)
 
 cluster_params <- tidyr::expand_grid(hh_number = hh_number, 
                                      hh_size = hh_size)
