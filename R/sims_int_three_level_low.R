@@ -1,13 +1,14 @@
+# install.packages('TMB', type = 'source')
 source(here::here("R/run_simulations.R"))
 
 # 20, 40
 ea_number <- c(20)
 
 # m = 10, 30
-hh_number <- c(10)
+hh_number <- c(30)
 
 # n = 5, 15, 30
-hh_size <- c(5, 15, 30)
+hh_size <- c(30)
 
 cluster_params <- tidyr::expand_grid(hh_number = hh_number, 
                                      hh_size = hh_size)
@@ -38,10 +39,10 @@ res <- purrr::map2_dfr(.x = cluster_params$hh_number,
 )
 
 tictoc::toc()
-beepr::beep(3)
+# beepr::beep(3)
 
-final_res_int_low_prev <- res
-# final_res_int_low_prev <- dplyr::bind_rows(final_res_int_low_prev, res)
+# final_res_int_low_prev <- res
+final_res_int_low_prev <- dplyr::bind_rows(final_res_int_low_prev, res)
 
 save(final_res_int_low_prev, 
      file = here::here("sim-results/rdata/sim_res_three_lvl_int_low_prev.RData"))
@@ -56,3 +57,6 @@ saveRDS(final_res_int_low_prev,
 #          hh_size = cluster_size) %>% 
 #   select(-c(cluster_number, cluster_size)) %>% 
 #   select(ea_number, hh_number, hh_size, everything()) -> final_res_int_low_prev
+
+# final_res_int_low_prev[, c("sigma_u_sq_hat", "sigma_v_sq_hat")] = final_res_int_low_prev[, c("sigma_v_sq_hat", "sigma_u_sq_hat")]
+ 
