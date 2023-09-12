@@ -8,11 +8,9 @@ sigma2_u12 <- 0 # 0.75
 sigma_mat <- matrix(c(sigma2_u1, sigma2_u12, sigma2_u12, sigma2_u2), 
                     byrow = TRUE, nrow = 2, ncol = 2)
 
-# m = 10, 30, 50, 100
-cluster_numbers <- c(100)
 
-# n = 5, 10, 30, 50
-cluster_size <- c(50)
+cluster_numbers <- c(10, 30, 50, 100)
+cluster_size <- c(5, 10, 30, 50)
 
 cluster_params <- tidyr::expand_grid(cluster_size = cluster_size, 
                                      cluster_numbers = cluster_numbers)
@@ -21,7 +19,7 @@ log_file <- here::here("log/log_two_lvl_slp_high_prev.txt")
 plot_path <- here::here("plots/two-lvl-ran-slope/high-prev/")
 plot_name_prefix <- "two_lvl_slp_high_prev"
 
-tictoc::tic()
+
 res <- purrr::map2_dfr(.x = cluster_params$cluster_numbers,
                        .y = cluster_params$cluster_size,
                        .f = ~ run_simulations(m = .x, n = .y,
@@ -32,18 +30,9 @@ res <- purrr::map2_dfr(.x = cluster_params$cluster_numbers,
                                               log_file = log_file, append = TRUE,
                                               plot_path = plot_path,
                                               plot_name_suffix = plot_name_prefix,
-                                              more_iter = 50)
+                                              more_iter = 1000)
 )
 
-tictoc::toc()
-beepr::beep(3)
-
-# library(dplyr)
-# res %>% 
-#   select(!ends_with("q2")) %>% 
-#   select(!ends_with("q3")) %>% View()
-
-# c(3072.542, 2310.165, 3411.527, 3000, 1420.109, 1420.109, 1018.283)
 
 # final_res_slp_high_prev <- res
 final_res_slp_high_prev <- dplyr::bind_rows(final_res_slp_high_prev, res)

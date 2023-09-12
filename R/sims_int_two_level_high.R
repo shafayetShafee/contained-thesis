@@ -1,10 +1,7 @@
 source(here::here("R/run_simulations.R"))
 
-# m = 10, 30, 50, 100
-cluster_numbers <- c(100)
-
-# n = 5, 10, 30, 50
-cluster_size <- c(50)
+cluster_numbers <- c(10, 30, 50, 100)
+cluster_size <- c(5, 10, 30, 50)
 
 cluster_params <- tidyr::expand_grid(cluster_size = cluster_size, 
                                      cluster_numbers = cluster_numbers)
@@ -19,8 +16,6 @@ log_file <- here::here("log/log_two_lvl_int_high_prev.txt")
 plot_path <- here::here("plots/two-lvl-ran-int/high-prev")
 plot_name_prefix <- "two_lvl_high_prev"
 
-
-tictoc::tic()
 res <- purrr::map2_dfr(.x = cluster_params$cluster_numbers, 
                        .y = cluster_params$cluster_size, 
                        .f = ~ run_simulations(m = .x, n = .y, 
@@ -34,8 +29,6 @@ res <- purrr::map2_dfr(.x = cluster_params$cluster_numbers,
                                               more_iter = 1500)
 )
 
-tictoc::toc()
-# beepr::beep(3)
 
 # final_res_int_high_prev <- res
 final_res_int_high_prev <- dplyr::bind_rows(final_res_int_high_prev, res)
