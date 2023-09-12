@@ -4,21 +4,10 @@ author: Shafayet Khan Shafee
 date: last-modified
 date-format: "DD MMMM YYYY"
 format: 
-  pdf:
-    classoption: titlepage
-    fig-pos: 'H'
-    keep-tex: true
-    geometry:
-      - top=20mm
-      - bottom=5mm
-    include-in-header:
-      text: |
-        \usepackage{typearea}
-        \usepackage{caption}
-        \captionsetup{font=tiny}
+  html: default
+embed-resources: true
 ---
 
-\newpage
 
 
 ```{r}
@@ -45,9 +34,8 @@ subtitle: "The mean prevalence for this simulation is `r mean_prevalence` %"
 
 \vspace{10mm}
 
-::: {layout="[[0.2,1,1,1,1], [-3], [0.2,1,1,1,1], [-3], [0.2,1,1,1,1], [-3], [0.2,1,1,1,1]]"}
+::: {layout="[[1,1,1,1], [-3], [1,1,1,1], [-3], [1,1,1,1], [-3], [1,1,1,1]]"}
 
-\rotatebox[origin=br]{90}{\tiny Cluster Number 10}
 
 ![Cluster size 5](../../plots/two-lvl-ran-int/high-prev/hist_10_5_two_lvl_high_prev.png){#m10n5}
 
@@ -57,7 +45,7 @@ subtitle: "The mean prevalence for this simulation is `r mean_prevalence` %"
 
 ![Cluster size 50](../../plots/two-lvl-ran-int/high-prev/hist_10_50_two_lvl_high_prev.png){#m10n50}
 
-\rotatebox[origin=br]{90}{\tiny Cluster Number 30}
+
 
 ![Cluster size 5](../../plots/two-lvl-ran-int/high-prev/hist_30_5_two_lvl_high_prev.png){#m30n5}
 
@@ -67,7 +55,7 @@ subtitle: "The mean prevalence for this simulation is `r mean_prevalence` %"
 
 ![Cluster size 50](../../plots/two-lvl-ran-int/high-prev/hist_30_50_two_lvl_high_prev.png){#m30n50}
 
-\rotatebox[origin=br]{90}{\tiny Cluster Number 50}
+
 
 ![Cluster size 5](../../plots/two-lvl-ran-int/high-prev/hist_50_5_two_lvl_high_prev.png){#m50n5}
 
@@ -77,7 +65,6 @@ subtitle: "The mean prevalence for this simulation is `r mean_prevalence` %"
 
 ![Cluster size 50](../../plots/two-lvl-ran-int/high-prev/hist_50_50_two_lvl_high_prev.png){#m50n50}
 
-\rotatebox[origin=br]{90}{\tiny Cluster Number 100}
 
 ![Cluster size 5](../../plots/two-lvl-ran-int/high-prev/hist_100_5_two_lvl_high_prev.png){#m100n5}
 
@@ -94,11 +81,6 @@ subtitle: "The mean prevalence for this simulation is `r mean_prevalence` %"
 <!-- --------------------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------------------- -->
 
-\newpage
-
-\KOMAoptions{usegeometry,paper=landscape,pagesize}
-\recalctypearea
-\newgeometry{right=10mm,left=10mm}
 
 # Simulation Result Table
 
@@ -114,46 +96,9 @@ sim_output_table <- final_res_int_high_prev %>%
 ```
 
 
-\begingroup
-<!-- \setlength{\LTleft}{0pt minus 5000pt} -->
-<!-- \setlength{\LTright}{0pt minus 5000pt} -->
-\fontsize{10pt}{14pt}\selectfont
-\addtolength{\tabcolsep}{0.1pt}
-
-
 ```{r}
 #| echo: false
-kableExtra::kbl(sim_output_table, booktabs = TRUE, digits = 2, linesep = "",
-                align = paste0(rep('c', ncol(sim_output_table)),collapse = ""),
-                col.names = c("Number of Cluster", "Cluster Size",
-                            "$\\widehat{\\beta_0}$", "$\\widehat{\\beta_1}$", 
-                            "$\\widehat{\\beta_2}$", "$\\widehat{\\sigma_u^2}$",
-                            "$\\widehat{MOR}$", "Relative Bias (\\%)",
-                            "$\\widehat{SE}_{MOR}$", 
-                            "Simulation $\\widehat{SE}_{MOR}$", 
-                            "Ratio\\textsuperscript{1}",
-                            "CI coverage (95\\%)", 
-                            "Model Convergence"), escape = FALSE) %>% 
-  column_spec(1:ncol(sim_output_table), width = "1.55cm", latex_valign = "m") %>% 
-  row_spec(
-    seq(
-      n_distinct(sim_output_table$cluster_number), 
-      nrow(sim_output_table) - 1, 
-      n_distinct(sim_output_table$cluster_size)), hline_after = TRUE
-  ) %>% 
-  footnote(
-    general = " ",
-    symbol = c(
-      paste0("The mean prevalence for this simulation is ", mean_prevalence, "\\\\%"),
-      "True $MOR$ is 4.52",
-      "True $\\\\sigma^2_u$ is 2.5",
-      "True Values of $\\\\beta_0 = -1.85$, $\\\\beta_1 = 1.75$, $\\\\beta_2 = 0.67$"
-    ),
-    number = c("Ratio$\\\\;=\\\\;\\\\dfrac{\\\\widehat{SE}_{MOR}}{Simulation\\\\;\\\\widehat{SE}_{MOR}}$"),
-    escape = FALSE
-  )
-
+kable(sim_output_table, digits = 2) %>% 
+  kable_styling(bootstrap_options = c("striped", "hover", "responsive"))
 ```
 
-
-\endgroup
