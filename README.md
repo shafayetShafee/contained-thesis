@@ -5,6 +5,7 @@
 [![Formatted with air v0.7.1](https://img.shields.io/badge/formatted%20with-air%200.7.1-purple)](https://github.com/posit-dev/air)
 [![License: MIT](https://img.shields.io/badge/License-MIT-orange)](https://opensource.org/licenses/MIT)
 [![Docker Image](https://img.shields.io/badge/docker-ghcr.io/shafayetshafee/contained--thesis-blue?logo=docker)](https://ghcr.io/shafayetshafee/contained-thesis)
+[![Docker](https://github.com/shafayetShafee/contained-thesis/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/shafayetShafee/contained-thesis/actions/workflows/docker-publish.yml)
 
 This repository contains the code materials and docker image to reproduce the simulation findings of the manuscript, 
 
@@ -46,7 +47,7 @@ There are two ways to reproduce the analysis:
 **Prerequisites:**
 
 - [Git](https://git-scm.com/)
-- [R](https://www.r-project.org/) (version 4.3.1 recommended)
+- [R](https://www.r-project.org/) [version 4.3.1 recommended]
 - [RStudio](https://posit.co/downloads/)
 
 **Steps**
