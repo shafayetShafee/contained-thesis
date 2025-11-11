@@ -1,0 +1,10 @@
+
+services:
+  rstudio:
+    image: ghcr.io/shafayetshafee/contained-thesis:2.0.0
+    container_name: mor-interval
+    ports:
+      - "8787:8787"
+    environment:
+      DISABLE_AUTH: "true"
+    restart: unless-stopped
