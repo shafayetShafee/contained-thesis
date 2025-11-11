@@ -40,8 +40,11 @@ gen_two_level_int_data <- function(m, n, fixed_coeff, sigma_u_sq, data_seed) {
 est_two_lvl_int_mor <- function(m, n, fixed_coeff, sigma_u_sq, data_seed) {
   # data generation ----------------
   multi_data_int <- gen_two_level_int_data(
-    m, n, fixed_coeff,
-    sigma_u_sq, data_seed
+    m,
+    n,
+    fixed_coeff,
+    sigma_u_sq,
+    data_seed
   )
 
   # prevalence ---------------------
@@ -52,7 +55,8 @@ est_two_lvl_int_mor <- function(m, n, fixed_coeff, sigma_u_sq, data_seed) {
     fixed = Yij ~ X1c + X2b,
     random = ~ 1 | cluster,
     family = binomial("logit"),
-    nAGQ = 20, data = multi_data_int
+    nAGQ = 20,
+    data = multi_data_int
   )
 
   # extracting value from model ----
@@ -66,7 +70,6 @@ est_two_lvl_int_mor <- function(m, n, fixed_coeff, sigma_u_sq, data_seed) {
   # mor calc. ----------------------
   mor_hat <- exp(sqrt(2 * sigma_u_sq_hat) * qnorm(0.75))
   log_mor_hat <- log(mor_hat)
-
 
   # delta method -------------------
   log_mor_int_expr <- function(x) {
@@ -88,16 +91,24 @@ est_two_lvl_int_mor <- function(m, n, fixed_coeff, sigma_u_sq, data_seed) {
 
   # creating output vector ---------
   out_vec <- c(
-    true_mor = true_mor, mor_hat = mor_hat,
+    true_mor = true_mor,
+    mor_hat = mor_hat,
     se_mor_hat = se_mor_hat,
     sigma_u_sq_hat = sigma_u_sq_hat,
-    beta0_hat = beta0_hat, beta1_hat = beta1_hat,
-    beta2_hat = beta2_hat, coverage = coverage,
+    beta0_hat = beta0_hat,
+    beta1_hat = beta1_hat,
+    beta2_hat = beta2_hat,
+    coverage = coverage,
     prevalence = prevalence,
     converged = is_model_converged
   )
 
-  if (is.na(is_model_converged) || !is_model_converged || mor_hat > 40 || se_mor_hat > 30) {
+  if (
+    is.na(is_model_converged) ||
+      !is_model_converged ||
+      mor_hat > 40 ||
+      se_mor_hat > 30
+  ) {
     out_vec_names <- names(out_vec)
     out_vec <- c(rep(NA, length(out_vec) - 1), FALSE)
     names(out_vec) <- out_vec_names
@@ -107,9 +118,17 @@ est_two_lvl_int_mor <- function(m, n, fixed_coeff, sigma_u_sq, data_seed) {
 }
 
 
-
-simulate_two_lvl_int <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000,
-                                 log_file, seed, more_iter, ...) {
+simulate_two_lvl_int <- function(
+  m,
+  n,
+  fixed_coeff,
+  sigma_u_sq,
+  nsims = 1000,
+  log_file,
+  seed,
+  more_iter,
+  ...
+) {
   # creating extra sims to get nsims after accounting
   # for non-converged cases ---------------------
   total_sims <- nsims + more_iter
@@ -119,9 +138,16 @@ simulate_two_lvl_int <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000,
   # creating placeholder matrix for result --------
   out_mat <- matrix(NA, nrow = total_sims, ncol = 10)
   out_colnames <- c(
-    "true_mor", "mor_hat", "se_mor_hat", "sigma_u_sq_hat",
-    "beta0_hat", "beta1_hat", "beta2_hat", "coverage",
-    "prevalence", "converged"
+    "true_mor",
+    "mor_hat",
+    "se_mor_hat",
+    "sigma_u_sq_hat",
+    "beta0_hat",
+    "beta1_hat",
+    "beta2_hat",
+    "coverage",
+    "prevalence",
+    "converged"
   )
   colnames(out_mat) <- out_colnames
 
@@ -140,7 +166,8 @@ simulate_two_lvl_int <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000,
     data_seed <- iteration_seeds[i]
     model_output <- safe_and_quietly(
       fun = est_two_lvl_int_mor,
-      m = m, n = n,
+      m = m,
+      n = n,
       fixed_coeff = fixed_coeff,
       sigma_u_sq = sigma_u_sq,
       data_seed = data_seed
@@ -157,8 +184,12 @@ simulate_two_lvl_int <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000,
     warning_detected <- is_valid_str(paste0(model_warnings, collapse = ""))
     error_detected <- is_valid_str(paste0(model_error, collapse = ""))
 
-    if (is_na_result(model_result) ||
-      msg_prob_detected || warning_detected || error_detected) {
+    if (
+      is_na_result(model_result) ||
+        msg_prob_detected ||
+        warning_detected ||
+        error_detected
+    ) {
       # setting model_result to be vec of NA in case of
       # non-convergence
       model_result <- c(rep(NA, ncol(out_mat) - 1), 0)
@@ -174,9 +205,13 @@ simulate_two_lvl_int <- function(m, n, fixed_coeff, sigma_u_sq, nsims = 1000,
 
     # logging simulation run ----------------------
     log_sim_run(
-      convergence = model_convergence, message = model_messages,
-      warning = model_warnings, error = model_error,
-      data_seed = data_seed, log_file = log_file, iter_no = i
+      convergence = model_convergence,
+      message = model_messages,
+      warning = model_warnings,
+      error = model_error,
+      data_seed = data_seed,
+      log_file = log_file,
+      iter_no = i
     )
 
     # storing sim-run ---------------------------

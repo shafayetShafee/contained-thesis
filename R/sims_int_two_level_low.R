@@ -22,12 +22,15 @@ res <- purrr::map2_dfr(
   .x = cluster_params$cluster_numbers,
   .y = cluster_params$cluster_size,
   .f = ~ run_simulations(
-    m = .x, n = .y,
+    m = .x,
+    n = .y,
     fixed_coeff = fixed_coeff,
     sigma_u_sq = sigma_u_sq,
     simulation_type = "two_lvl_int",
-    nsims = 1000, seed = 1083,
-    log_file = log_file, append = TRUE,
+    nsims = 1000,
+    seed = 1083,
+    log_file = log_file,
+    append = TRUE,
     plot_path = plot_path,
     plot_name_suffix = plot_name_prefix,
     more_iter = 1500
@@ -38,10 +41,12 @@ res <- purrr::map2_dfr(
 # final_res_int_low_prev <- res
 final_res_int_low_prev <- dplyr::bind_rows(final_res_int_low_prev, res)
 
-save(final_res_int_low_prev,
+save(
+  final_res_int_low_prev,
   file = here::here("sim-results/rdata/sim_res_two_lvl_int_low_prev.RData")
 )
 
-saveRDS(final_res_int_low_prev,
+saveRDS(
+  final_res_int_low_prev,
   file = here::here("sim-results/rds/sim_res_two_lvl_int_low_prev.rds")
 )

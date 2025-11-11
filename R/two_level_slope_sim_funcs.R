@@ -35,8 +35,12 @@ gen_two_level_slope_data <- function(m, n, fixed_coeff, sigma_mat, data_seed) {
 }
 
 
-calc_two_lvl_slp_mor_stats <- function(sigma_mat, sigma_u_sq_hat,
-                                       var_sigma_u_sq_hat, x1_val) {
+calc_two_lvl_slp_mor_stats <- function(
+  sigma_mat,
+  sigma_u_sq_hat,
+  var_sigma_u_sq_hat,
+  x1_val
+) {
   # sigma mat components -----------
   sigma_u1_sq <- sigma_mat[1, 1]
   sigma_u12_sq <- sigma_mat[1, 2]
@@ -44,11 +48,15 @@ calc_two_lvl_slp_mor_stats <- function(sigma_mat, sigma_u_sq_hat,
 
   # calc mor -----------------------
   mor_hat <- exp(
-    sqrt(2 * sigma_u_sq_hat[1] + 2 * x1_val^2 * sigma_u_sq_hat[3] + 4 * x1_val * sigma_u_sq_hat[2])
-    * qnorm(0.75)
+    sqrt(
+      2 *
+        sigma_u_sq_hat[1] +
+        2 * x1_val^2 * sigma_u_sq_hat[3] +
+        4 * x1_val * sigma_u_sq_hat[2]
+    ) *
+      qnorm(0.75)
   )
   log_mor_hat <- log(mor_hat)
-
 
   # delta method -------------------
   log_mor_expr <- function(x, x1_val) {
@@ -66,7 +74,10 @@ calc_two_lvl_slp_mor_stats <- function(sigma_mat, sigma_u_sq_hat,
   ci_exp <- exp(ci)
 
   true_mor <- exp(
-    sqrt(2 * sigma_u1_sq + 2 * x1_val^2 * sigma_u2_sq + 4 * x1_val * sigma_u12_sq) * qnorm(0.75)
+    sqrt(
+      2 * sigma_u1_sq + 2 * x1_val^2 * sigma_u2_sq + 4 * x1_val * sigma_u12_sq
+    ) *
+      qnorm(0.75)
   )
   coverage <- as.numeric(ci_exp[1] <= true_mor && ci_exp[2] >= true_mor)
 
@@ -74,19 +85,24 @@ calc_two_lvl_slp_mor_stats <- function(sigma_mat, sigma_u_sq_hat,
 
   return(
     c(
-      true_mor = true_mor, mor_hat = mor_hat, se_mor_hat = se_mor_hat,
-      coverage = coverage, rel_bias = rel_bias
+      true_mor = true_mor,
+      mor_hat = mor_hat,
+      se_mor_hat = se_mor_hat,
+      coverage = coverage,
+      rel_bias = rel_bias
     )
   )
 }
 
 
-
 est_two_lvl_slope_mor <- function(m, n, fixed_coeff, sigma_mat, data_seed) {
   # data generation ----------------
   multi_data_slope <- gen_two_level_slope_data(
-    m, n, fixed_coeff,
-    sigma_mat, data_seed
+    m,
+    n,
+    fixed_coeff,
+    sigma_mat,
+    data_seed
   )
 
   # sigma mat components -----------
@@ -102,7 +118,8 @@ est_two_lvl_slope_mor <- function(m, n, fixed_coeff, sigma_mat, data_seed) {
     fixed = Yij ~ X1c + X2b,
     random = ~ X1c | cluster,
     data = multi_data_slope,
-    nAGQ = 11, family = binomial("logit")
+    nAGQ = 11,
+    family = binomial("logit")
   )
 
   # extracting value from model ----
@@ -127,31 +144,41 @@ est_two_lvl_slope_mor <- function(m, n, fixed_coeff, sigma_mat, data_seed) {
   x1_q3 <- unnamed_quantile(multi_data_slope$X1c, probs = 0.75)
 
   mor_stats_q1 <- calc_two_lvl_slp_mor_stats(
-    sigma_mat, sigma_u_sq_hat,
-    var_sigma_u_sq_hat, x1_q1
+    sigma_mat,
+    sigma_u_sq_hat,
+    var_sigma_u_sq_hat,
+    x1_q1
   )
   names(mor_stats_q1) <- paste0(names(mor_stats_q1), "_q1")
 
   mor_stats_q2 <- calc_two_lvl_slp_mor_stats(
-    sigma_mat, sigma_u_sq_hat,
-    var_sigma_u_sq_hat, x1_q2
+    sigma_mat,
+    sigma_u_sq_hat,
+    var_sigma_u_sq_hat,
+    x1_q2
   )
   names(mor_stats_q2) <- paste0(names(mor_stats_q2), "_q2")
 
   mor_stats_q3 <- calc_two_lvl_slp_mor_stats(
-    sigma_mat, sigma_u_sq_hat,
-    var_sigma_u_sq_hat, x1_q3
+    sigma_mat,
+    sigma_u_sq_hat,
+    var_sigma_u_sq_hat,
+    x1_q3
   )
   names(mor_stats_q3) <- paste0(names(mor_stats_q3), "_q3")
 
   # returned values by above three is
   # true_mor, mor_hat, se_mor_hat, coverage, rel_bias
 
-  out_vec <- c(mor_stats_q1, mor_stats_q2, mor_stats_q3,
+  out_vec <- c(
+    mor_stats_q1,
+    mor_stats_q2,
+    mor_stats_q3,
     sigma_u1_sq_hat = sigma_u1_sq_hat,
     sigma_u12_sq_hat = sigma_u12_sq_hat,
     sigma_u2_sq_hat = sigma_u2_sq_hat,
-    beta0_hat = beta0_hat, beta1_hat = beta1_hat,
+    beta0_hat = beta0_hat,
+    beta1_hat = beta1_hat,
     beta2_hat = beta2_hat,
     prevalence = prevalence,
     converged = is_model_converged
@@ -169,8 +196,12 @@ est_two_lvl_slope_mor <- function(m, n, fixed_coeff, sigma_mat, data_seed) {
     na.rm = FALSE
   )
 
-  if (is.na(is_model_converged) || !is_model_converged || mean_mor_hat > 20 ||
-    mean_se_mor_hat > 20) {
+  if (
+    is.na(is_model_converged) ||
+      !is_model_converged ||
+      mean_mor_hat > 20 ||
+      mean_se_mor_hat > 20
+  ) {
     out_vec_names <- names(out_vec)
     out_vec <- c(rep(NA, length(out_vec) - 1), FALSE)
     names(out_vec) <- out_vec_names
@@ -180,8 +211,17 @@ est_two_lvl_slope_mor <- function(m, n, fixed_coeff, sigma_mat, data_seed) {
 }
 
 
-simulate_two_lvl_slope <- function(m, n, fixed_coeff, sigma_mat, nsims = 1000,
-                                   log_file, seed, more_iter, ...) {
+simulate_two_lvl_slope <- function(
+  m,
+  n,
+  fixed_coeff,
+  sigma_mat,
+  nsims = 1000,
+  log_file,
+  seed,
+  more_iter,
+  ...
+) {
   # creating extra sims to get nsims after accounting
   # for non-converged cases ---------------------
   total_sims <- nsims + more_iter
@@ -192,17 +232,29 @@ simulate_two_lvl_slope <- function(m, n, fixed_coeff, sigma_mat, nsims = 1000,
   out_mat <- matrix(NA, nrow = total_sims, ncol = 23)
 
   # mor stats names -----
-  mor_stats_names <- c("true_mor", "mor_hat", "se_mor_hat", "coverage", "rel_bias")
+  mor_stats_names <- c(
+    "true_mor",
+    "mor_hat",
+    "se_mor_hat",
+    "coverage",
+    "rel_bias"
+  )
   mor_stats_names_q1 <- paste0(mor_stats_names, "_q1")
   mor_stats_names_q2 <- paste0(mor_stats_names, "_q2")
   mor_stats_names_q3 <- paste0(mor_stats_names, "_q3")
 
   out_colnames <- c(
-    mor_stats_names_q1, mor_stats_names_q2,
+    mor_stats_names_q1,
+    mor_stats_names_q2,
     mor_stats_names_q3,
-    "sigma_u1_sq_hat", "sigma_u12_sq_hat", "sigma_u2_sq_hat",
-    "beta0_hat", "beta1_hat", "beta2_hat",
-    "prevalence", "converged"
+    "sigma_u1_sq_hat",
+    "sigma_u12_sq_hat",
+    "sigma_u2_sq_hat",
+    "beta0_hat",
+    "beta1_hat",
+    "beta2_hat",
+    "prevalence",
+    "converged"
   )
   colnames(out_mat) <- out_colnames
 
@@ -221,7 +273,8 @@ simulate_two_lvl_slope <- function(m, n, fixed_coeff, sigma_mat, nsims = 1000,
     data_seed <- iteration_seeds[i]
     model_output <- safe_and_quietly(
       fun = est_two_lvl_slope_mor,
-      m = m, n = n,
+      m = m,
+      n = n,
       fixed_coeff = fixed_coeff,
       sigma_mat = sigma_mat,
       data_seed = data_seed
@@ -238,8 +291,12 @@ simulate_two_lvl_slope <- function(m, n, fixed_coeff, sigma_mat, nsims = 1000,
     warning_detected <- is_valid_str(paste0(model_warnings, collapse = ""))
     error_detected <- is_valid_str(paste0(model_error, collapse = ""))
 
-    if (is_na_result(model_result) ||
-      msg_prob_detected || warning_detected || error_detected) {
+    if (
+      is_na_result(model_result) ||
+        msg_prob_detected ||
+        warning_detected ||
+        error_detected
+    ) {
       # setting model_result to be vec of NA in case of
       # non-convergence
       model_result <- c(rep(NA, ncol(out_mat) - 1), 0)
@@ -255,9 +312,13 @@ simulate_two_lvl_slope <- function(m, n, fixed_coeff, sigma_mat, nsims = 1000,
 
     # logging simulation run ----------------------
     log_sim_run(
-      convergence = model_convergence, message = model_messages,
-      warning = model_warnings, error = model_error,
-      data_seed = data_seed, log_file = log_file, iter_no = i
+      convergence = model_convergence,
+      message = model_messages,
+      warning = model_warnings,
+      error = model_error,
+      data_seed = data_seed,
+      log_file = log_file,
+      iter_no = i
     )
 
     # storing sim-run ---------------------------

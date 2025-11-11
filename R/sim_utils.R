@@ -35,8 +35,15 @@ log_output <- function(x, type, file) {
 }
 
 
-log_sim_run <- function(convergence, message, warning, error,
-                        data_seed, log_file, iter_no) {
+log_sim_run <- function(
+  convergence,
+  message,
+  warning,
+  error,
+  data_seed,
+  log_file,
+  iter_no
+) {
   # started logging ----------------
   log_output(paste0(rep("-", 50), collapse = ""), type = "", file = log_file)
   log_output(data_seed, type = "Using data_seed", file = log_file)
@@ -46,7 +53,8 @@ log_sim_run <- function(convergence, message, warning, error,
   log_output(error, type = "error", file = log_file)
   log_output(
     paste0("Stored output for iteration ", iter_no, "\n"),
-    type = "Info", file = log_file
+    type = "Info",
+    file = log_file
   )
 }
 
@@ -115,7 +123,8 @@ calc_slope_se_mor <- function(sigma_u_hat, var_ran_effect, x1_val) {
     sqrt((2 * x[1]) + (2 * x1_val^2 * x[2]) + (4 * x1_val * x[3])) * qnorm(0.75)
   }
 
-  J <- numDeriv::jacobian(log_mor_expr,
+  J <- numDeriv::jacobian(
+    log_mor_expr,
     c(sigma_u_hat[1], sigma_u_hat[3], sigma_u_hat[2]),
     x1_val = x1_val
   )
@@ -128,7 +137,14 @@ calc_slope_se_mor <- function(sigma_u_hat, var_ran_effect, x1_val) {
 unnamed_quantile <- function(...) unname(quantile(...))
 
 
-save_plot <- function(m, n, log_mor_hat, plot_name_suffix, plot_path, l = NULL) {
+save_plot <- function(
+  m,
+  n,
+  log_mor_hat,
+  plot_name_suffix,
+  plot_path,
+  l = NULL
+) {
   hist_plot <- ggplot(drop_na(tibble(log_mor_hat)), aes(x = log_mor_hat)) +
     geom_histogram(bins = 30) +
     labs(
@@ -139,10 +155,22 @@ save_plot <- function(m, n, log_mor_hat, plot_name_suffix, plot_path, l = NULL) 
 
   # whether plotting is used in three lvl settingss
   sep <- "_"
-  if (is.null(l)) sep <- ""
+  if (is.null(l)) {
+    sep <- ""
+  }
 
   ggsave(
-    filename = paste0("hist_", l, sep, m, "_", n, "_", plot_name_suffix, ".png"),
+    filename = paste0(
+      "hist_",
+      l,
+      sep,
+      m,
+      "_",
+      n,
+      "_",
+      plot_name_suffix,
+      ".png"
+    ),
     plot = hist_plot,
     path = plot_path
   )
@@ -156,7 +184,9 @@ vcov.VarCorr.merMod <- function(object, fit, ...) {
     warning("refitting model with ML")
     fit <- refitML(fit)
   }
-  if (!require("numDeriv")) stop("numDeriv package required")
+  if (!require("numDeriv")) {
+    stop("numDeriv package required")
+  }
   useSc <- attr(object, "useSc")
   dd <- lme4:::devfun2(fit, useSc = useSc, signames = FALSE)
   vdd <- as.data.frame(object, order = "lower.tri")
@@ -171,7 +201,8 @@ vcov.VarCorr.merMod <- function(object, fit, ...) {
     vv2 <- vv2[1:npar0, 1:npar0, drop = FALSE]
   }
   nms <- apply(
-    vdd[, 1:3], 1,
+    vdd[, 1:3],
+    1,
     function(x) paste(na.omit(x), collapse = ".")
   )
   dimnames(vv2) <- list(nms, nms)
